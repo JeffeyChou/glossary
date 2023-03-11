@@ -3,6 +3,8 @@ title: "How to Contribute to the Glossary"
 tags:
 - help
 weight: -9
+categories:
+- about
 ---
 
 > [!info] General Infos

@@ -3,10 +3,7 @@ cover: https://cdn.pixabay.com/photo/2017/01/18/08/25/social-media-1989152__480.
 title: OVZ机型 x-ui +nginx 实现单端口多用户代理
 excerpt: OVZ机型 x-ui +nginx 实现单端口多用户代理
 tags:
-- OVZ
 - VPS
-- X-ui
-- 梯子
 - nginx
 rating: ⭐
 status: complete

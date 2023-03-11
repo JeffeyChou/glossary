@@ -3,9 +3,7 @@ cover: https://cdn.pixabay.com/photo/2014/10/22/12/44/tattoo-497932__480.jpg
 title: Debian 删除apache2
 excerpt: 关闭apache2防止使用Nginx出现问题
 tags:
-- Debian
 - Linus
-- apache
 - nginx
 rating: ⭐
 status: complete

@@ -6,4 +6,6 @@ content/.obsidian
 assets/indices/linkIndex.json
 assets/indices/contentIndex.json
 linkmap
-.vscode
+content/.trash/
+content/.vscode/
+content/private/

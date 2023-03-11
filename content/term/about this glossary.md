@@ -1,7 +1,7 @@
 ---
 title: "About this Glossary"
-tags:
-- help
+tags: 
+- help 
 ---
 The Airbyte Glossary is built on top of the [Digital Garden](https://jzhao.xyz/posts/networked-thought/) analogy. Instead of aligning all glossary terms in a single level, the digital garden approach lets you go inwards. You can learn about each term and go deeper into each of its connections. The Glossary will show you each link that is related to the above interactive graph to it and all backlinks.
 

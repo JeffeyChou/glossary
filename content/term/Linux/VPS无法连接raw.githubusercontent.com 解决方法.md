@@ -5,8 +5,6 @@ excerpt: 通过修改dns解决部分机型无法下载文件
 tags:
 - Linus
 - DNS
-- VPS
-- hosts
 rating: ⭐
 status: complete
 destination: 10-blog/source/_posts

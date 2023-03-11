@@ -1,5 +1,48 @@
 {
-  "file-explorer:open": [
+  "insert-current-time": [],
+  "daily-notes": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ],
+  "daily-notes:goto-next": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "["
+    }
+  ],
+  "daily-notes:goto-prev": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "]"
+    }
+  ],
+  "quickadd:choice:13aa960e-9e3e-4aec-b6aa-35adf841a841": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "I"
+    }
+  ],
+  "quickadd:choice:5e2dd8d4-b939-4d12-a766-9f8d4dc7e9db": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
+    }
+  ],
+  "quickadd:choice:afb39300-74a3-4d3a-9b5f-0ba1690692a7": [
     {
       "modifiers": [
         "Mod",
@@ -8,174 +51,149 @@
       "key": "E"
     }
   ],
-  "obsidian-auto-link-title:enhance-url-with-title": [],
-  "file-explorer:move-file": [
+  "quickadd:choice:b6c263c0-d19c-4c71-a702-4ebde741bfea": [
     {
       "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "P"
+    }
+  ],
+  "quickadd:choice:5dc244e3-4243-46a2-b865-4a8cbbc00d88": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "quickadd:choice:9ccf74df-935e-4554-abef-7e7188ebccba": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "R"
+    }
+  ],
+  "slides:start": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "quickadd:choice:38c1c363-5d3e-4203-b7f4-7e18d7c7b9f1": [
+    {
+      "modifiers": [
+        "Alt",
+        "Shift"
+      ],
+      "key": "T"
+    }
+  ],
+  "quickadd:runQuickAdd": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Q"
+    }
+  ],
+  "editor:attach-file": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Insert"
+    }
+  ],
+  "obsidian-excalidraw-plugin:toggle-lock": [],
+  "workspace:toggle-pin": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
+  ],
+  "obsidian-mind-map:app:markmap-preview": [
+    {
+      "modifiers": [
+        "Alt",
         "Mod"
       ],
       "key": "M"
     }
   ],
-  "app:toggle-left-sidebar": [
+  "templater-obsidian:create-new-note-from-template": [],
+  "editor:toggle-source": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "L"
+      "key": "0"
     }
   ],
-  "app:toggle-right-sidebar": [
+  "editor:toggle-blockquote": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "R"
+      "key": "Y"
     }
   ],
-  "file-explorer:reveal-active-file": [
+  "obsidian-advanced-slides:reload-advanced-slides-preview": [],
+  "obsidian-advanced-slides:open-advanced-slides-preview": [],
+  "obsidian-tabs:toggle-tabs": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Tab"
+    }
+  ],
+  "obsidian-tabs:toggle-horizontal-splits": [
     {
       "modifiers": [
         "Mod",
         "Shift"
       ],
-      "key": "R"
+      "key": "Tab"
     }
   ],
-  "editor:focus-left": [
+  "various-complements:reload-custom-dictionaries": [],
+  "obsidian-dictionary-plugin:dictionary-open-view": [
     {
       "modifiers": [
-        "Ctrl"
+        "Alt",
+        "Shift"
       ],
-      "key": "H"
+      "key": "D"
     }
   ],
-  "editor:focus-right": [
+  "obsidian-wordnet-plugin:open-wordnet-suggestor": [
     {
       "modifiers": [
-        "Ctrl"
-      ],
-      "key": "L"
-    }
-  ],
-  "templater-obsidian:insert-templater": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "T"
-    }
-  ],
-  "workspace:split-vertical": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "S"
-    }
-  ],
-  "workspace:split-horizontal": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "V"
-    }
-  ],
-  "workspace:close": [
-    {
-      "modifiers": [
-        "Ctrl"
+        "Mod",
+        "Shift"
       ],
       "key": "W"
-    },
+    }
+  ],
+  "obsidian-wakatime:wakatime-api-key": [
     {
       "modifiers": [
+        "Alt",
         "Mod"
       ],
       "key": "W"
     }
   ],
-  "switcher:open": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "O"
-    },
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "O"
-    }
-  ],
-  "graph:open-local": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "G"
-    }
-  ],
-  "note-folder-autorename:make-folder-note": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "S"
-    }
-  ],
-  "sliding-panes-obsidian:toggle-sliding-panes-leaf-auto-width": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": ";"
-    }
-  ],
-  "editor:toggle-bullet-list": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "B"
-    }
-  ],
-  "obsidian-admonition:insert-callout": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "C"
-    }
-  ],
-  "editor:insert-wikilink": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "I"
-    }
-  ],
-  "insert-template": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "T"
-    }
-  ],
-  "app:open-vault": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "O"
-    }
-  ]
+  "Enhanced-editing:del-lines": [],
+  "easy-typing-obsidian:easy-typing-format-switch": []
 }

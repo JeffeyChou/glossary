@@ -1,5 +1,5 @@
 baseURL = "https://glossary.jiefengzhou.com/" #make sure it ends with trailing slash 
-languageCode = "en-us"
+languageCode = "zh-cn"
 googleAnalytics = "G-HDBMVFQGBH"
 relativeURLs = false
 disablePathToLower = true

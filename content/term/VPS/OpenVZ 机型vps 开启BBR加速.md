@@ -4,7 +4,7 @@ title: OpenVZ 机型 vps 开启 BBR 加速
 excerpt: OVZ 开启 BBR 加速
 tags:
 - openvz
-- BBR
+- VPS
 rating: ⭐
 status: complete
 destination: 10-blog/source/\_posts

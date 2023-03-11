@@ -4,7 +4,6 @@ title: 从零开始使用便宜VPS搭建节点，开启CDN后可以油管4k
 excerpt: 购买自己的vps和域名，套上cf搭建自己的节点
 tags:
 - VPS
-- 梯子
 rating: ⭐
 status: complete
 destination: 10-blog/source/_posts
