@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>二叉树 on</title><link>https://glossary.jiefengzhou.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</link><description>Recent content in 二叉树 on</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 01 Nov 2022 21:14:02 +0000</lastBuildDate><atom:link href="https://glossary.jiefengzhou.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/index.xml" rel="self" type="application/rss+xml"/><item><title>树与森林</title><link>https://glossary.jiefengzhou.com/term/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/</link><pubDate>Tue, 01 Nov 2022 21:14:02 +0000</pubDate><guid>https://glossary.jiefengzhou.com/term/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/</guid><description>树 树的特点：
+每个结点有零个或多个子结点 没有父节点的结点称为根节点 每一个非根结点有且只有一个父节点 除了根结点外，每个子结点可以分为多个不相交的子树。 树的常见术语 结点的度：结点拥有的子树的数目
+子节点(child)： 结点子树的根称为该节点的子节点。
+父节点(parents)： 子节点的上层节点叫做该节点的父节点。
+姊妹节点(sibling)： 具有同一父节结点的结点。
+堂结点(cousin)：双亲在同一层的结点互为堂兄弟。
+叶结点(leaf)：度为0的结点
+分支结点：度不为0的结点
+树的度：树中结点的最大的度
+层次：根结点的层次为1，其余结点的层次等于该结点的双亲结点的层次加1
+树的高度：树中结点的最大层次</description></item></channel></rss>

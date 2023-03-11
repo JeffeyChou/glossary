@@ -1,0 +1,331 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="树 树的特点：
+每个结点有零个或多个子结点 没有父节点的结点称为根节点 每一个非根结点有且只有一个父节点 除了根结点外，每个子结点可以分为多个不相交的子树。 树的常见术语 结点的度：结点拥有的子树的数目
+子节点(child)： 结点子树的根称为该节点的子节点。
+父节点(parents)： 子节点的上层节点叫做该节点的父节点。
+姊妹节点(sibling)： 具有同一父节结点的结点。
+堂结点(cousin)：双亲在同一层的结点互为堂兄弟。
+叶结点(leaf)：度为0的结点
+分支结点：度不为0的结点
+树的度：树中结点的最大的度
+层次：根结点的层次为1，其余结点的层次等于该结点的双亲结点的层次加1
+树的高度：树中结点的最大层次"><title>树与森林</title><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:title" content="树与森林"><meta property="og:image" content="https://glossary.airbyte.com/glossary-feature.jpeg"><meta property="og:type" content="website"><meta property="og:url" content="https://glossary.jiefengzhou.com/term/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/"><meta property="og:width" content="1119"><meta property="og:height" content="630"><meta name=twitter:card content="summary"><meta name=twitter:site content="@airbytehq"><meta name=twitter:title content="树与森林"><meta name=twitter:description content="树 树的特点：
+每个结点有零个或多个子结点 没有父节点的结点称为根节点 每一个非根结点有且只有一个父节点 除了根结点外，每个子结点可以分为多个不相交的子树。 树的常见术语 结点的度：结点拥有的子树的数目
+子节点(child)： 结点子树的根称为该节点的子节点。
+父节点(parents)： 子节点的上层节点叫做该节点的父节点。
+姊妹节点(sibling)： 具有同一父节结点的结点。
+堂结点(cousin)：双亲在同一层的结点互为堂兄弟。
+叶结点(leaf)：度为0的结点
+分支结点：度不为0的结点
+树的度：树中结点的最大的度
+层次：根结点的层次为1，其余结点的层次等于该结点的双亲结点的层次加1
+树的高度：树中结点的最大层次"><meta name=twitter:image content="https://glossary.airbyte.com/glossary-feature.jpeg"><link rel="shortcut icon" type=image/png href=https://glossary.jiefengzhou.com//icon.png><link href=https://glossary.jiefengzhou.com/styles.ca80fb7e9665b85b994eecb565963630.min.css rel=stylesheet><link href=https://glossary.jiefengzhou.com/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://glossary.jiefengzhou.com/js/darkmode.d85601aaf791691d70de141d63aa54fb.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/util.9825137f5e7825e8553c68ce39ac9e44.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script src=https://glossary.jiefengzhou.com/js/popover.53ad9a087e3feeaaa12b63bfd02d923b.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const BASE_URL="https://glossary.jiefengzhou.com/",fetchData=Promise.all([fetch("https://glossary.jiefengzhou.com/indices/linkIndex.e64fa941dc3868043add265d9d9926b1.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://glossary.jiefengzhou.com/indices/contentIndex.7056cffdb2d8d7eaa5ccda991fa9da88.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://glossary.jiefengzhou.com",!0,!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://glossary.jiefengzhou.com",t,[{"/moc":"#4388cc"}],t?{centerForce:1,depth:-1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:1,scale:1.4}:{centerForce:2,depth:1,enableDrag:!0,enableLegend:!1,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:8,scale:1.5})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{"’":"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/glossary.jiefengzhou.com\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
+    attachSPARouting(init, render)
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-156258629-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-156258629-2")</script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://glossary.jiefengzhou.com/js/full-text-search.24827f874defbbc6d529926cbfcfb493.min.js></script><div class=singlePage><article><header><h1 id=page-title><a href=https://glossary.jiefengzhou.com/>Data Glossary 🧠</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><a href=/tags><div class=darkmode><input class=toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle-bla tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 490 490" style="enable-background:new 0 0 35 35"><title>All Tags</title><path d="M64.333 490h58.401l33.878-137.69h122.259L245.39 490h58.401l33.878-137.69h119.92v-48.162h-108.24l29.2-117.324h79.04v-48.162H390.23L424.108.0H365.31l-33.878 138.661H208.79L242.668.0h-58.415l-33.864 138.661H32.411v48.162h106.298l-28.818 117.324h-77.48v48.162h65.8L64.333 490zM197.11 186.824h122.642l-29.2 117.324H168.292L197.11 186.824z"/></svg></label><label id=toggle-label-dark for=darkmode-togglead tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 490 490" style="enable-background:new 0 0 35 35"><title>All Tags</title><path d="M64.333 490h58.401l33.878-137.69h122.259L245.39 490h58.401l33.878-137.69h119.92v-48.162h-108.24l29.2-117.324h79.04v-48.162H390.23L424.108.0H365.31l-33.878 138.661H208.79L242.668.0h-58.415l-33.864 138.661H32.411v48.162h106.298l-28.818 117.324h-77.48v48.162h65.8L64.333 490zM197.11 186.824h122.642l-29.2 117.324H168.292L197.11 186.824z"/></svg></label></div></a><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><h1>树与森林</h1><p class=meta>Last updated
+Nov 1, 2022
+- <a href=https://github.com/jeffeychou/glossary/tree/hugo/content/term/%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%b8%8e%e7%ae%97%e6%b3%95/%e6%a0%91%e4%b8%8e%e4%ba%8c%e5%8f%89%e6%a0%91.md rel=noopener>Edit Source</a></p><ul class=tags><li><a href=https://glossary.jiefengzhou.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/>数据结构与算法</a></li><li><a href=https://glossary.jiefengzhou.com/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/>二叉树</a></li></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#树的常见术语>树的常见术语</a></li></ol><ol><li><a href=#二叉树>二叉树</a><ol><li><a href=#二叉树的性质>二叉树的性质</a></li><li><a href=#满二叉树>满二叉树</a></li><li><a href=#完全二叉树>完全二叉树</a></li><li><a href=#二叉树的链式储存结构>二叉树的链式储存结构</a></li><li><a href=#二叉树的遍历>二叉树的遍历</a></li><li><a href=#哈夫曼树>哈夫曼树</a></li><li><a href=#树和森林>树和森林</a></li><li><a href=#堆排序>堆排序</a></li><li><a href=#参考文献>参考文献</a></li></ol></li></ol></nav></details></aside><a href=#树><h1 id=树><span class=hanchor arialabel=Anchor># </span>树</h1></a><p><img src=https://i.imgur.com/89m5b9K.png width=auto alt></p><p><strong>树的特点</strong>：</p><ul><li>每个结点有零个或多个子结点</li><li>没有父节点的结点称为<strong>根节点</strong></li><li>每一个非根结点有且只有一个父节点</li><li>除了根结点外，每个子结点可以分为多个不相交的<strong>子树</strong>。</li></ul><a href=#树的常见术语><h2 id=树的常见术语><span class=hanchor arialabel=Anchor># </span>树的常见术语</h2></a><p><strong>结点的度</strong>：结点拥有的子树的数目</p><p><strong>子节点(child)</strong>： 结点子树的根称为该节点的子节点。</p><p><strong>父节点(parents)</strong>： 子节点的上层节点叫做该节点的父节点。</p><p><strong>姊妹节点(sibling)</strong>： 具有同一父节结点的结点。</p><p><strong>堂结点(cousin)</strong>：双亲在同一层的结点互为堂兄弟。</p><p><strong>叶结点(leaf)</strong>：度为0的结点</p><p><strong>分支结点</strong>：度不为0的结点</p><p><strong>树的度</strong>：树中结点的最大的度</p><p><strong>层次</strong>：根结点的层次为1，其余结点的层次等于该结点的双亲结点的层次加1</p><p><strong>树的高度</strong>：树中结点的最大层次</p><p><strong>森林</strong>：0个或多个不相交的树组成。对森林加上一个根，森林即成为树；删去根，树即成为森林。</p><p><strong>有序树</strong>： 树中结点各子树从左至右是有序的，不能互换。</p><p><strong>无序树</strong>： 树中结点各子树从左至右是无序的，可以互换。</p><p><strong>m叉树</strong>： 允许所有的节点的度都不大于m。可以是空树。</p><p><img src=https://i.imgur.com/tXdOMmb.png width=auto alt></p><hr><a href=#树结构与线性结构的比较><h1 id=树结构与线性结构的比较><span class=hanchor arialabel=Anchor># </span>树结构与线性结构的比较</h1></a><table><thead><tr><th style=text-align:center>线性结构</th><th style=text-align:center>树结构</th></tr></thead><tbody><tr><td style=text-align:center>头结点无前驱</td><td style=text-align:center>头结点无双亲</td></tr><tr><td style=text-align:center>尾结点无后继</td><td style=text-align:center>叶结点无孩子</td></tr><tr><td style=text-align:center>其它元素一个前驱一个后驱</td><td style=text-align:center>其它结点一个双亲，多个孩子</td></tr><tr><td style=text-align:center>元素之间一对一</td><td style=text-align:center>元素之间一对多</td></tr><tr><td style=text-align:center></td><td style=text-align:center></td></tr></tbody></table><a href=#二叉树><h2 id=二叉树><span class=hanchor arialabel=Anchor># </span>二叉树</h2></a><p>二叉树是每个结点最多有两个子树的树结构。它有五种基本形态：
+<img src=https://i.imgur.com/OOEpZM1.png width=auto alt></p><a href=#二叉树的性质><h3 id=二叉树的性质><span class=hanchor arialabel=Anchor># </span>二叉树的性质</h3></a><ol><li>二叉树第$i$层上的结点数目最多为$2^i-1(i>=1)$</li><li>深度为$k$的二叉树至多有$2^k-1$个结点$(k>=1)$</li><li>包含$n$个结点的二叉树的高度至少为$(log2n)+1$</li><li>在任意一棵二叉树中，若终端结点的个数为$n^0$，度为2的结点数为$n^2$，则$n^0=n^2+1$</li></ol><a href=#满二叉树><h3 id=满二叉树><span class=hanchor arialabel=Anchor># </span>满二叉树</h3></a><p>高度为$h$，并且由$2^h-1$个结点组成的二叉树，称为满二叉树。<em>满二叉树的叶结点只能出现在树的最底层</em></p><a href=#完全二叉树><h3 id=完全二叉树><span class=hanchor arialabel=Anchor># </span>完全二叉树</h3></a><p>一棵二叉树中，只有最下面两层结点的度可以小于2，并且最下层的叶结点集中在靠左的若干位置上，这样的二叉树称为完全二叉树。<em>叶结点只能出现在最下两层</em> <strong>满二叉树一定是完全二叉树，完全二叉树不一定是满二叉树</strong>
+<img src=https://i.imgur.com/GwLOv7s.png width=auto alt></p><a href=#二叉树的链式储存结构><h3 id=二叉树的链式储存结构><span class=hanchor arialabel=Anchor># </span>二叉树的链式储存结构</h3></a><p><strong>二叉树的链式储存结构</strong>：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=k>typedef</span> <span class=k>struct</span> <span class=n>Node</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=n>ElemType</span> <span class=n>data</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=k>struct</span> <span class=n>Node</span><span class=o>*</span> <span class=n>lchild</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=k>struct</span> <span class=n>Node</span><span class=o>*</span> <span class=n>rchild</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=n>BTNode</span><span class=p>,</span> <span class=o>*</span><span class=n>BT</span><span class=o>*</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>typedef</span> <span class=k>struct</span><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=n>BTNode</span><span class=o>*</span> <span class=n>data</span><span class=p>[</span><span class=n>MAXSIZE</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>	<span class=kt>int</span> <span class=n>top</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=n>SqStack</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><p><strong>三叉树的链式储存结构</strong>：在二叉树的基础上增加一个指向父结点的指针域。</p><a href=#二叉树的遍历><h3 id=二叉树的遍历><span class=hanchor arialabel=Anchor># </span>二叉树的遍历</h3></a><a href=#深度遍历-前序遍历alr><h4 id=深度遍历-前序遍历alr><span class=hanchor arialabel=Anchor># </span>深度遍历-前序遍历ALR</h4></a><p>根结点 —> 左子树 —> 右子树</p><ul><li>递归形式</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>void</span> <span class=nf>visit</span><span class=p>(</span><span class=n>Tree</span> <span class=n>t</span><span class=p>,</span> <span class=kt>int</span> <span class=n>level</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>	<span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%c位于第%d层</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>t</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>,</span> <span class=n>level</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>scan</span><span class=p>(</span><span class=n>Tree</span> <span class=n>t</span><span class=p>,</span><span class=kt>int</span> <span class=n>level</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=p>(</span><span class=n>t</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>visit</span><span class=p>(</span><span class=n>t</span><span class=p>,</span> <span class=n>level</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>scan</span><span class=p>(</span><span class=n>t</span><span class=o>-&gt;</span><span class=n>LeftChild</span><span class=p>,</span> <span class=n>level</span> <span class=o>+</span> <span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>scan</span><span class=p>(</span><span class=n>t</span><span class=o>-&gt;</span><span class=n>RightChild</span><span class=p>,</span><span class=n>level</span> <span class=o>+</span> <span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	 <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>非递归形式</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>void</span> <span class=nf>inorder</span><span class=p>(</span><span class=n>PBT</span> <span class=n>pbt</span><span class=p>){</span> 
+</span></span><span class=line><span class=cl>	<span class=n>PStack</span> <span class=n>ps</span> <span class=o>=</span> <span class=nf>init_stack</span><span class=p>(</span><span class=n>MAXSIZE</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=k>while</span> <span class=p>((</span><span class=n>pbt</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>)</span> <span class=o>||</span> <span class=o>!</span> <span class=nf>is_empty</span><span class=p>(</span><span class=n>ps</span><span class=p>)){</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=p>(</span><span class=n>pbt</span> <span class=o>!=</span><span class=nb>NULL</span><span class=p>){</span> 
+</span></span><span class=line><span class=cl>		<span class=nf>printf</span> <span class=p>(</span><span class=err>“</span><span class=o>%</span><span class=n>c</span><span class=err>”</span><span class=p>,</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>);</span> <span class=c1>// 访问当前结点
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nf>push_stack</span><span class=p>(</span><span class=n>ps</span><span class=p>,</span> <span class=n>pbt</span><span class=p>);</span> <span class=c1>// 将pbt压栈 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=n>pbt</span> <span class=o>=</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>lchild</span><span class=p>;</span> <span class=c1>// 将pbt指向其左子树 
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=k>else</span><span class=p>{</span> 
+</span></span><span class=line><span class=cl>		<span class=n>pbt</span> <span class=o>=</span> <span class=nf>pop_stack</span><span class=p>(</span><span class=n>ps</span><span class=p>);</span> <span class=c1>// 栈顶元素退栈  
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=n>pbt</span> <span class=o>=</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>rchild</span><span class=p>;</span> <span class=c1>// 将pbt指向其右子树 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=nf>destroy_stack</span><span class=p>(</span><span class=o>&amp;</span><span class=n>ps</span><span class=p>);</span> <span class=c1>// 释放为栈分配的内存 
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#深度遍历-中序遍历lar><h4 id=深度遍历-中序遍历lar><span class=hanchor arialabel=Anchor># </span>深度遍历-中序遍历LAR</h4></a><p>左子树—> 根结点 —> 右子树</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>void</span> <span class=nf>visit</span><span class=p>(</span><span class=n>Tree</span> <span class=n>t</span><span class=p>,</span> <span class=kt>int</span> <span class=n>level</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>	<span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%c位于第%d层</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>t</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>,</span> <span class=n>level</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>scan</span><span class=p>(</span><span class=n>Tree</span> <span class=n>t</span><span class=p>,</span><span class=kt>int</span> <span class=n>level</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=p>(</span><span class=n>t</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>scan</span><span class=p>(</span><span class=n>t</span><span class=o>-&gt;</span><span class=n>LeftChild</span><span class=p>,</span> <span class=n>level</span> <span class=o>+</span> <span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>visit</span><span class=p>(</span><span class=n>t</span><span class=p>,</span> <span class=n>level</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>scan</span><span class=p>(</span><span class=n>t</span><span class=o>-&gt;</span><span class=n>RightChild</span><span class=p>,</span><span class=n>level</span> <span class=o>+</span> <span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>	 <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>非递归形式</strong></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>void</span> <span class=nf>inorder</span><span class=p>(</span><span class=n>PBT</span> <span class=n>pbt</span><span class=p>){</span> 
+</span></span><span class=line><span class=cl>	<span class=n>PStack</span> <span class=n>ps</span> <span class=o>=</span> <span class=nf>init_stack</span><span class=p>(</span><span class=n>MAXSIZE</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=k>while</span> <span class=p>((</span><span class=n>pbt</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>)</span> <span class=o>||</span> <span class=o>!</span> <span class=nf>is_empty</span><span class=p>(</span><span class=n>ps</span><span class=p>)){</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=p>(</span><span class=n>pbt</span> <span class=o>!=</span><span class=nb>NULL</span><span class=p>){</span> 
+</span></span><span class=line><span class=cl>		<span class=nf>push_stack</span><span class=p>(</span><span class=n>ps</span><span class=p>,</span> <span class=n>pbt</span><span class=p>);</span> <span class=c1>// 将pbt压栈 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=n>pbt</span> <span class=o>=</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>lchild</span><span class=p>;</span> <span class=c1>// 将pbt指向其左子树 
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=k>else</span><span class=p>{</span> 
+</span></span><span class=line><span class=cl>		<span class=n>pbt</span> <span class=o>=</span> <span class=nf>pop_stack</span><span class=p>(</span><span class=n>ps</span><span class=p>);</span> <span class=c1>// 栈顶元素退栈 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nf>printf</span> <span class=p>(</span><span class=err>“</span><span class=o>%</span><span class=n>c</span><span class=err>”</span><span class=p>,</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>);</span> <span class=c1>// 访问当前结点 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=n>pbt</span> <span class=o>=</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>rchild</span><span class=p>;</span> <span class=c1>// 将pbt指向其右子树 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=nf>destroy_stack</span><span class=p>(</span><span class=o>&amp;</span><span class=n>ps</span><span class=p>);</span> <span class=c1>// 释放为栈分配的内存 
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#深度遍历-后序遍历lra><h4 id=深度遍历-后序遍历lra><span class=hanchor arialabel=Anchor># </span>深度遍历-后序遍历LRA</h4></a><p>左子树 —> 右子树 —> 根结点</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>void</span> <span class=nf>visit</span><span class=p>(</span><span class=n>Tree</span> <span class=n>t</span><span class=p>,</span> <span class=kt>int</span> <span class=n>level</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>	<span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%c位于第%d层</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>t</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>,</span> <span class=n>level</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>scan</span><span class=p>(</span><span class=n>Tree</span> <span class=n>t</span><span class=p>,</span><span class=kt>int</span> <span class=n>level</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=p>(</span><span class=n>t</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>scan</span><span class=p>(</span><span class=n>t</span><span class=o>-&gt;</span><span class=n>LeftChild</span><span class=p>,</span> <span class=n>level</span> <span class=o>+</span> <span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>scan</span><span class=p>(</span><span class=n>t</span><span class=o>-&gt;</span><span class=n>RightChild</span><span class=p>,</span><span class=n>level</span> <span class=o>+</span> <span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		 <span class=nf>visit</span><span class=p>(</span><span class=n>t</span><span class=p>,</span> <span class=n>level</span><span class=p>);</span><span class=o>-</span> <span class=p><a class="internal-link broken">span><span class=p></a></span>
+</span></span><span class=line><span class=cl>	 <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li><strong>非递归形式</strong></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>void</span> <span class=nf>inorder</span><span class=p>(</span><span class=n>PBT</span> <span class=n>pbt</span><span class=p>){</span> 
+</span></span><span class=line><span class=cl>	<span class=n>PStack</span> <span class=n>ps</span> <span class=o>=</span> <span class=nf>init_stack</span><span class=p>(</span><span class=n>MAXSIZE</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=k>while</span> <span class=p>((</span><span class=n>pbt</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>)</span> <span class=o>||</span> <span class=o>!</span> <span class=nf>is_empty</span><span class=p>(</span><span class=n>ps</span><span class=p>)){</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span> <span class=p>(</span><span class=n>pbt</span> <span class=o>!=</span><span class=nb>NULL</span><span class=p>){</span> 
+</span></span><span class=line><span class=cl>		<span class=k>if</span> <span class=p>(</span><span class=o>!</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>visited</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>			<span class=nf>push_stack</span><span class=p>(</span><span class=n>ps</span><span class=p>,</span> <span class=n>pbt</span><span class=p>);</span> <span class=c1>// 将pbt压栈 
+</span></span></span><span class=line><span class=cl><span class=c1></span>			<span class=p>}</span>
+</span></span><span class=line><span class=cl>		<span class=n>pbt</span> <span class=o>=</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>lchild</span><span class=p>;</span> <span class=c1>// 将pbt指向其左子树 
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=k>else</span><span class=p>{</span> 
+</span></span><span class=line><span class=cl>		<span class=n>pbt</span> <span class=o>=</span> <span class=nf>pop_stack</span><span class=p>(</span><span class=n>ps</span><span class=p>);</span> <span class=c1>// 栈顶元素退栈 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=k>if</span> <span class=p>(</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>visited</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>		<span class=nf>printf</span> <span class=p>(</span><span class=err>“</span><span class=o>%</span><span class=n>c</span><span class=err>”</span><span class=p>,</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>);</span> <span class=c1>// 访问当前结点 }
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=k>else</span><span class=p>{</span> 
+</span></span><span class=line><span class=cl>			<span class=n>pbt</span><span class=o>-&gt;</span><span class=n>visited</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>			<span class=nf>push_stack</span><span class=p>(</span><span class=n>pb</span><span class=p>,</span> <span class=n>pbt</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>		<span class=p>}</span>
+</span></span><span class=line><span class=cl>		<span class=n>pbt</span> <span class=o>=</span> <span class=n>pbt</span><span class=o>-&gt;</span><span class=n>rchild</span><span class=p>;</span> <span class=c1>// 将pbt指向其右子树 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=nf>destroy_stack</span><span class=p>(</span><span class=o>&amp;</span><span class=n>ps</span><span class=p>);</span> <span class=c1>// 释放为栈分配的内存 
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#广度遍历><h4 id=广度遍历><span class=hanchor arialabel=Anchor># </span>广度遍历</h4></a><ul><li><strong>层次遍历算法</strong><ul><li>从根节点开始从上到下逐层遍历</li><li>同一层中从左到右依次遍历</li><li>按照先进先出特点使用<em>队列</em>结构。</li></ul></li><li>算法描述<ul><li>首先将根节点指针入队</li><li>循环读取队首元素，递归操作知道队空<ul><li>访问该节点的数据部分</li><li>若该节点有左子节点，将其入队</li><li>若该节点有右子节点，将其入队</li></ul></li></ul></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>void</span> <span class=nf>level_order</span><span class=p>(</span><span class=n>PBT</span> <span class=n>pbt</span><span class=p>)</span> <span class=p>{</span> <span class=c1>// 层序遍历 
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=n>PBT</span> <span class=n>p</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>	<span class=n>PQue</span> <span class=n>que</span> <span class=o>=</span> <span class=nf>init_que</span><span class=p>(</span><span class=n>MAXSIZE</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span><span class=p>(</span><span class=n>pbt</span><span class=p>){</span> <span class=c1>// 二叉树非空 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nf>enque</span><span class=p>(</span><span class=n>que</span><span class=p>,</span> <span class=n>pbt</span><span class=p>);</span> <span class=c1>// 根节点（指针）入队 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=k>while</span> <span class=p>(</span><span class=o>!</span> <span class=nf>is_empty</span><span class=p>(</span><span class=n>que</span><span class=p>)){</span> <span class=n>p</span> <span class=o>=</span> <span class=nf>deque</span><span class=p>(</span><span class=n>que</span><span class=p>);</span> <span class=c1>// 队首元素出队 
+</span></span></span><span class=line><span class=cl><span class=c1></span>		<span class=nf>printf</span><span class=p>(</span><span class=s>&#34;%c&#34;</span><span class=p>,</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>data</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>		<span class=k>if</span> <span class=p>(</span><span class=n>p</span><span class=o>-&gt;</span><span class=n>lchild</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>			<span class=nf>enque</span><span class=p>(</span><span class=n>que</span><span class=p>,</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>lchild</span><span class=p>);</span> <span class=p>}</span> 
+</span></span><span class=line><span class=cl>		<span class=k>if</span> <span class=p>(</span><span class=n>p</span><span class=o>-&gt;</span><span class=n>rchild</span> <span class=o>!=</span> <span class=nb>NULL</span><span class=p>)</span> <span class=p>{</span> 
+</span></span><span class=line><span class=cl>			<span class=nf>enque</span><span class=p>(</span><span class=n>que</span><span class=p>,</span> <span class=n>p</span><span class=o>-&gt;</span><span class=n>rchild</span><span class=p>);</span> <span class=p>}</span> 
+</span></span><span class=line><span class=cl>		<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=nf>destroy_que</span><span class=p>(</span><span class=o>&amp;</span><span class=n>que</span><span class=p>);</span> <span class=c1>// 释放为队列分配的内存 
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#不同遍历算法的图示><h4 id=不同遍历算法的图示><span class=hanchor arialabel=Anchor># </span>不同遍历算法的图示</h4></a><p><img src=https://i.imgur.com/hLLXarw.png width=auto alt></p><hr><a href=#统计二叉树叶结点个数><h4 id=统计二叉树叶结点个数><span class=hanchor arialabel=Anchor># </span>统计二叉树叶结点个数</h4></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>int</span> <span class=nf>count_leavs</span><span class=p>(</span><span class=n>PBT</span> <span class=n>pbt</span><span class=p>){</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span><span class=p>(</span><span class=o>!</span> <span class=n>pbt</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=mi>0</span><span class=p>;</span> <span class=c1>//空树的叶节点数为零
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span><span class=p>((</span><span class=o>!</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>lchild</span><span class=p>)</span> <span class=o>&amp;&amp;</span> <span class=p>(</span><span class=o>!</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>rchild</span><span class=p>)){</span>
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=mi>1</span><span class=p>;</span> <span class=c1>//左右子树均为空，则为叶节点
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=k>return</span> <span class=nf>count_leavs</span><span class=p>(</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>lchild</span><span class=p>)</span> <span class=o>+</span> <span class=nf>count_leavs</span> <span class=p>(</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>rchild</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=c1>//存在左右子树。递归调用结点统计函数
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#二叉树深度><h4 id=二叉树深度><span class=hanchor arialabel=Anchor># </span>二叉树深度</h4></a><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=kt>int</span> <span class=nf>get_depth</span><span class=p>(</span><span class=n>PBT</span> <span class=n>pbt</span><span class=p>){</span> 
+</span></span><span class=line><span class=cl>	<span class=kt>int</span> <span class=n>dL</span> <span class=o>=</span> <span class=mi>0</span><span class=p>,</span> <span class=n>dR</span> <span class=o>=</span> <span class=mi>0</span> 
+</span></span><span class=line><span class=cl>	<span class=k>if</span><span class=p>(</span> <span class=n>pbt</span> <span class=o>==</span> <span class=nb>NULL</span> <span class=p>){</span>
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=mi>0</span><span class=p>;</span> <span class=c1>//空树深度为0
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span>
+</span></span><span class=line><span class=cl>	<span class=k>if</span><span class=p>((</span><span class=o>!</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>lchild</span><span class=p>)</span> <span class=o>&amp;&amp;</span> <span class=p>(</span><span class=o>!</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>rchild</span><span class=p>)){</span> 
+</span></span><span class=line><span class=cl>		<span class=k>return</span> <span class=mi>1</span><span class=p>;</span> <span class=c1>//叶节点深度为1
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=p>}</span> 
+</span></span><span class=line><span class=cl>	<span class=n>dL</span> <span class=o>=</span> <span class=nf>get_depth</span> <span class=p>(</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>lchild</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=n>dR</span> <span class=o>=</span> <span class=nf>get_depth</span> <span class=p>(</span><span class=n>pbt</span><span class=o>-&gt;</span><span class=n>rchild</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl>	<span class=c1>// 二叉树的深度为根结点左、右子树的深度值较大者加一 
+</span></span></span><span class=line><span class=cl><span class=c1></span>	<span class=k>return</span> <span class=mi>1</span> <span class=o>+</span> <span class=p>((</span><span class=n>dL</span> <span class=o>&gt;</span> <span class=n>dR</span><span class=p>)</span> <span class=o>?</span> <span class=nl>dL</span> <span class=p>:</span> <span class=n>dR</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><hr><a href=#哈夫曼树><h3 id=哈夫曼树><span class=hanchor arialabel=Anchor># </span>哈夫曼树</h3></a><a href=#树和森林><h3 id=树和森林><span class=hanchor arialabel=Anchor># </span>树和森林</h3></a><a href=#树的储存结构><h4 id=树的储存结构><span class=hanchor arialabel=Anchor># </span>树的储存结构</h4></a><a href=#1-双亲数组表示><h5 id=1-双亲数组表示><span class=hanchor arialabel=Anchor># </span>1. 双亲数组表示</h5></a><ul><li><strong>实现:</strong> 定义结构数组存放树的结点，每个结点含两个域 <ul><li><strong>数据域:</strong> 存放结点本身信息</li><li><strong>双亲域:</strong> 指示本结点的双亲结点在数组中的位置</li><li><strong>特点:</strong> 找双亲容易，找孩子难</li></ul></li></ul><p><img src=https://i.imgur.com/Xb03Pnz.png width=auto alt></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-C data-lang=C><span class=line><span class=cl><span class=cp>#define SIZE 10
+</span></span></span><span class=line><span class=cl><span class=cp></span> 
+</span></span><span class=line><span class=cl><span class=k>typedef</span> <span class=kt>char</span> <span class=n>Datatype</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>typedef</span> <span class=k>struct</span> <span class=n>PTNode</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=n>Datatype</span> <span class=n>ch</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>	<span class=kt>int</span> <span class=n>parent</span><span class=p>;</span>             <span class=c1>//双亲位置域
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span><span class=n>PTNode</span><span class=p>;</span>           
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl><span class=k>typedef</span> <span class=n>sturct</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>	<span class=n>PTNode</span> <span class=n>nodes</span><span class=p>[</span><span class=n>SIZE</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>	<span class=kt>int</span> <span class=n>r</span><span class=p>,</span> <span class=n>n</span><span class=p>;</span>                              <span class=c1>//根结点的位置和结点个数
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span><span class=n>PTree</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><a href=#2-孩子链表><h5 id=2-孩子链表><span class=hanchor arialabel=Anchor># </span>2. 孩子链表</h5></a><a href=#堆排序><h3 id=堆排序><span class=hanchor arialabel=Anchor># </span>堆排序</h3></a><a href=#参考文献><h3 id=参考文献><span class=hanchor arialabel=Anchor># </span>参考文献</h3></a><hr><div class=page-end id=footer><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://glossary.jiefengzhou.com/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><ul><li><a href=https://glossary.jiefengzhou.com/>Home</a></li><li><a href=https://github.com/jeffeychou>Github</a></li><li><a href="mailto: littcal@foxmail.com">Email</a></li></ul></footer></div></article><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div></div></body></html>
