@@ -36,4 +36,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: gh-pages
-          cname: glossary.airbyte.com
+          cname: glossary.jiefengzhou.com
