@@ -1,7 +1,7 @@
 {
   "userAdmonitions": {},
   "syntaxHighlight": false,
-  "copyButton": false,
+  "copyButton": true,
   "version": "9.0.5",
   "autoCollapse": false,
   "defaultCollapseType": "open",
@@ -18,7 +18,7 @@
   "icons": [],
   "useFontAwesome": true,
   "rpgDownloadedOnce": false,
-  "msDocConverted": false,
+  "msDocConverted": true,
   "useSnippet": false,
   "snippetPath": "custom-admonitions.c7a0ad",
   "syncLinks": true,

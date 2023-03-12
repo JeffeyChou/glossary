@@ -82,3 +82,5 @@ echo -e "185.199.108.133 \t\t raw.githubusercontent.com" >> /etc/hosts
 echo -e "128.1.164.230 \t\t www.aapanel.com" >> /etc/hosts
 /etc/init.d/networking restart
 ```
+
+- [Linux](term/Linux/Linux.md)

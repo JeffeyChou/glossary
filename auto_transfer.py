@@ -118,6 +118,32 @@ def main():
                             print(f'- [[{name}]]')
  
 
+
+ def frontmatter_format_share_to_draft(fp):
+    linelist = []
+    # 原理是先按行读取原文件，在tags一行中替换
+    # 同时利用之前读取到的front-matter 文件对tags下的一行添加文字
+    # 最后得到修改后的数据，重新打开源文件，从头覆写一遍得到
+    match_pattern = re.compile(r'share: false')
+    info = fetch_front_matter(fp)
+    with open(fp, 'r', encoding='utf-8') as f:
+        while 1:
+            line = f.readline()
+            # 按行读取保存
+            if not line:
+                print("read file End")
+                break
+            elif match_pattern.search(line):
+                # 读取到share一行
+                o_line = "draft: true"
+                linelist.append(o_line)
+                continue
+            linelist.append(line)
+    with open(fp, 'w', encoding='utf-8') as f:
+        for i in linelist:
+            f.write(i)
+
+
 def mmmain():
     '''
     解析「本周事务」中笔记的front-matter信息
@@ -129,7 +155,7 @@ def mmmain():
     # vault = Obsidian()
     # rootdir = vault.paths['vault']
     # 这里必须是.md文件才有效，我这里出现了其他文件导致files出现了非目标文件
-    this_week = 'E:\VSCODE\Markdown\glossary\content\term'
+    this_week = 'E:\VSCODE\Markdown\glossary\content\private'
     # this_week = rootdir + '/01-Diary/本周事务'
     files = os.listdir(this_week)
     for file in files:

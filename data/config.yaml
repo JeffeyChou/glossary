@@ -15,9 +15,9 @@ GitHubLink: https://github.com/jeffeychou/glossary/tree/hugo/content
 enableSemanticSearch: false
 operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
 description:
-  A single place for all data knowledge
+  A single place for all my knowledge
 page_title:
-  "Data Glossary 🧠"
+  "Glossary 🧠"
 links:
   - link_name: Github
     link: https://github.com/jeffeychou

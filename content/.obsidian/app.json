@@ -1,7 +1,7 @@
 {
   "accentColor": "",
   "attachmentFolderPath": "private/08-Assets",
-  "trashOption": "local",
+  "trashOption": "system",
   "promptDelete": false,
   "pdfExportSettings": {
     "pageSize": "A4",
@@ -27,7 +27,8 @@
     "10-blog/source/",
     "10-blog/node_modules/",
     "10-blog/scaffolds/",
-    "10-blog/themes/"
+    "10-blog/themes/",
+    "private/08-Assets/"
   ],
   "useMarkdownLinks": true
 }
