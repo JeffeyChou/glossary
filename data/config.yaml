@@ -11,7 +11,7 @@ enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: true
 enableGitHubEdit: true
-GitHubLink: https://github.com/jeffeychou/glossary/tree/hugo/content
+GitHubLink: https://github.com/jeffeychou/glossary/tree/gh-page/content
 enableSemanticSearch: false
 operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
 description:
