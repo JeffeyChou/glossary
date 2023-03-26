@@ -195,5 +195,14 @@
     }
   ],
   "Enhanced-editing:del-lines": [],
-  "easy-typing-obsidian:easy-typing-format-switch": []
+  "easy-typing-obsidian:easy-typing-format-switch": [],
+  "obsidian-zotero-desktop-connector:zdc-Latex": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Z"
+    }
+  ]
 }

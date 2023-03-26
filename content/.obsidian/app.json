@@ -30,5 +30,8 @@
     "10-blog/themes/",
     "private/08-Assets/"
   ],
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "spellcheckDictionary": [
+    "Shannon entropy"
+  ]
 }
