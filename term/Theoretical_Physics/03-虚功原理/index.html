@@ -1,0 +1,94 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="约束与广义坐标 若无特殊说明，今后对时间的导数使用符号上面的点 “ · ” 来表示，如 $\boldsymbol{v}=\boldsymbol{\dot r}$
+为了确定由 $N$ 个质点组成的系统在空间中的位置，需要给定 $N$ 个位矢。如在笛卡尔坐标系中需要使用 $3N$ 个坐标。
+自由度： 唯一的确定系统位置所需独立变量的数目。对上述而言，该系统的自由度为 $3N$
+广义坐标： 对于自由度为 $S$ 的系统而言，可以用 $s$ 个相互独立的变量 $q_1, q_2, \cdots q_s$ 表示。这些称为该系统的广义坐标。他们的导数 $\dot q_i$ 称为广义速度。给定系统的所有广义坐标和速度就可以确定系统的状态。"><title>03-虚功原理</title><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:title" content="03-虚功原理"><meta property="og:image" content="https://glossary.airbyte.com/glossary-feature.jpeg"><meta property="og:type" content="website"><meta property="og:url" content="https://glossary.jiefengzhou.com/term/Theoretical_Physics/03-%E8%99%9A%E5%8A%9F%E5%8E%9F%E7%90%86/"><meta property="og:width" content="1119"><meta property="og:height" content="630"><meta name=twitter:card content="summary"><meta name=twitter:site content="@airbytehq"><meta name=twitter:title content="03-虚功原理"><meta name=twitter:description content="约束与广义坐标 若无特殊说明，今后对时间的导数使用符号上面的点 “ · ” 来表示，如 $\boldsymbol{v}=\boldsymbol{\dot r}$
+为了确定由 $N$ 个质点组成的系统在空间中的位置，需要给定 $N$ 个位矢。如在笛卡尔坐标系中需要使用 $3N$ 个坐标。
+自由度： 唯一的确定系统位置所需独立变量的数目。对上述而言，该系统的自由度为 $3N$
+广义坐标： 对于自由度为 $S$ 的系统而言，可以用 $s$ 个相互独立的变量 $q_1, q_2, \cdots q_s$ 表示。这些称为该系统的广义坐标。他们的导数 $\dot q_i$ 称为广义速度。给定系统的所有广义坐标和速度就可以确定系统的状态。"><meta name=twitter:image content="https://glossary.airbyte.com/glossary-feature.jpeg"><link rel="shortcut icon" type=image/png href=https://glossary.jiefengzhou.com//icon.png><link href=https://glossary.jiefengzhou.com/styles.ca80fb7e9665b85b994eecb565963630.min.css rel=stylesheet><link href=https://glossary.jiefengzhou.com/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://glossary.jiefengzhou.com/js/darkmode.d85601aaf791691d70de141d63aa54fb.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/util.9825137f5e7825e8553c68ce39ac9e44.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script src=https://glossary.jiefengzhou.com/js/popover.53ad9a087e3feeaaa12b63bfd02d923b.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const BASE_URL="https://glossary.jiefengzhou.com/",fetchData=Promise.all([fetch("https://glossary.jiefengzhou.com/indices/linkIndex.b3d8e62456ad417eab984b21e222f141.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://glossary.jiefengzhou.com/indices/contentIndex.2bd21573d1cb0ba2012a8e162faecc3d.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://glossary.jiefengzhou.com",!0,!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://glossary.jiefengzhou.com",t,[{"/moc":"#4388cc"}],t?{centerForce:2,depth:-1,enableDrag:!0,enableLegend:!0,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:2,scale:1.4}:{centerForce:1,depth:3,enableDrag:!0,enableLegend:!0,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:7,scale:1.5})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{"’":"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/glossary.jiefengzhou.com\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
+    attachSPARouting(init, render)
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-156258629-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-156258629-2")</script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://glossary.jiefengzhou.com/js/full-text-search.24827f874defbbc6d529926cbfcfb493.min.js></script><div class=singlePage><article><header><h1 id=page-title><a href=https://glossary.jiefengzhou.com/>Glossary 🧠</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><a href=/tags><div class=darkmode><input class=toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle-bla tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 490 490" style="enable-background:new 0 0 35 35"><title>All Tags</title><path d="M64.333 490h58.401l33.878-137.69h122.259L245.39 490h58.401l33.878-137.69h119.92v-48.162h-108.24l29.2-117.324h79.04v-48.162H390.23L424.108.0H365.31l-33.878 138.661H208.79L242.668.0h-58.415l-33.864 138.661H32.411v48.162h106.298l-28.818 117.324h-77.48v48.162h65.8L64.333 490zM197.11 186.824h122.642l-29.2 117.324H168.292L197.11 186.824z"/></svg></label><label id=toggle-label-dark for=darkmode-togglead tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 490 490" style="enable-background:new 0 0 35 35"><title>All Tags</title><path d="M64.333 490h58.401l33.878-137.69h122.259L245.39 490h58.401l33.878-137.69h119.92v-48.162h-108.24l29.2-117.324h79.04v-48.162H390.23L424.108.0H365.31l-33.878 138.661H208.79L242.668.0h-58.415l-33.864 138.661H32.411v48.162h106.298l-28.818 117.324h-77.48v48.162h65.8L64.333 490zM197.11 186.824h122.642l-29.2 117.324H168.292L197.11 186.824z"/></svg></label></div></a><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><h1>03-虚功原理</h1><p class=meta>Last updated
+Nov 7, 2022
+- <a href=https://github.com/jeffeychou/glossary/tree/gh-page/content/term/Theoretical_Physics/03-%e8%99%9a%e5%8a%9f%e5%8e%9f%e7%90%86.md rel=noopener>Edit Source</a></p><ul class=tags><li><a href=https://glossary.jiefengzhou.com/tags/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/>理论力学</a></li><li><a href=https://glossary.jiefengzhou.com/tags/%E5%88%86%E6%9E%90%E5%8A%9B%E5%AD%A6/>分析力学</a></li></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#约束与广义坐标>约束与广义坐标</a></li><li><a href=#虚功原理与达朗贝尔原理>虚功原理与达朗贝尔原理</a><ol><li><a href=#改写达朗贝尔原理>改写达朗贝尔原理</a></li></ol></li><li><a href=#参考资料>参考资料</a></li></ol></nav></details></aside><a href=#约束与广义坐标><h1 id=约束与广义坐标><span class=hanchor arialabel=Anchor># </span>约束与广义坐标</h1></a><blockquote><p>若无特殊说明，今后对时间的导数使用符号上面的点 “ · ” 来表示，如 $\boldsymbol{v}=\boldsymbol{\dot r}$</p></blockquote><p>为了确定由 $N$ 个质点组成的系统在空间中的位置，需要给定 $N$ 个位矢。如在笛卡尔坐标系中需要使用 $3N$ 个坐标。</p><ul><li><p><strong>自由度</strong>： 唯一的确定<em>系统位置</em>所需独立变量的数目。对上述而言，该系统的自由度为 $3N$</p></li><li><p><strong>广义坐标</strong>： 对于自由度为 $S$ 的系统而言，可以用 $s$ 个相互独立的变量 $q_1, q_2, \cdots q_s$ 表示。这些称为该系统的<strong>广义坐标</strong>。他们的导数 $\dot q_i$ 称为<strong>广义速度</strong>。给定系统的所有广义坐标和速度就可以确定系统的状态。</p></li></ul><p>但是实际上，在力学体系中常常存在着限制各质点自由运动的条件，我们把这些条件称为<strong>约束</strong>。约束可以分为好几种，下面一一介绍。</p><ul><li><p>按约束方程是否含有时间：</p><ul><li><strong>稳定约束</strong>：如果约束方程中不显含时间，也就是限制系统的位置不是时间的函数。</li><li><strong>不稳定约束</strong>：约束方程中显含时间</li></ul></li><li><p>按约束方程形式</p><ul><li><strong>可解约束</strong>：质点位置虽然被约束在某一平面上但是在某一方向可以脱离，约束方程同时含有等式和不等式</li><li><strong>不可解约束</strong>：质点被约束在曲面上，约束方程由等式表示</li></ul></li><li><p>按约束方程是否含速度</p><ul><li><strong>几何约束</strong>：约束方程只含坐标</li><li><strong>运动(微分)约束</strong>：约束方程含有速度</li></ul></li></ul><p>如果这些约束方程都是可积的（即没有不可积的微分约束），那么称这个系统是 <strong>完整的</strong>。若存在不可积的微分约束，那么称这个系统是 <strong>非完整的</strong></p><p>下面用几个例子说明完整约束和非完整约束<sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup></p><center><img style="border-radius:.3125em;box-shadow:0 2px 4px rgba(34,36,38,.12),0 2px 10px rgba(34,36,38,8%)" src=https://i.imgur.com/eBJZ1Ea.png><br><div style="color:orange;border-bottom:1px solid #d9d9d9;display:inline-block;color:#999;padding:2px">二维空间中的纯滚动</div></center><p>该条件是一个完整的约束：$\mathrm{d}x=R \mathrm{d} \theta = 0$ ,积分后得到一个几何约束：$x=R \theta +C$</p><center><img style="border-radius:.3125em;box-shadow:0 2px 4px rgba(34,36,38,.12),0 2px 10px rgba(34,36,38,8%)" src=https://i.imgur.com/jwKJDcF.png><br><div style="color:orange;border-bottom:1px solid #d9d9d9;display:inline-block;color:#999;padding:2px">三维空间中的纯滚动</div></center><p>纯滚动条件是一个不完整的微分约束。<br>很容易发现，一个球可以通过任意的路径回到原点，因此同样的位置对应的角量不一定相同。这个微分约束不可积，该系统是不完整的</p><hr><a href=#虚功原理与达朗贝尔原理><h1 id=虚功原理与达朗贝尔原理><span class=hanchor arialabel=Anchor># </span>虚功原理与达朗贝尔原理</h1></a><p>在解释哈密顿原理和达朗贝尔原理之前，还需要了解虚功原理，达朗贝尔原理就是动力学版本的虚功原理。</p><p>在静力学中，施加于某物体的作用力，对于给定的 <strong>虚位移</strong> ，所做的机械功，称为 <strong>虚功</strong>。</p><p>什么是虚位移呢？一方面，虚位移就是不真实的位移，是我们假象出来的，是不会真实发生的。我们记做 $\delta r$。另一方面，虚位移是在满足约束的条件下任意选取的可能位移，是一个 <strong>自变量</strong><sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup>。对于一个稳定约束的系统来说，实位移 $\mathrm{d} r$ 是众多虚位移 $\delta r$ 中的一个，但是对于不稳定约束来说，两者并不一致<sup id=fnref:3><a href=#fn:3 class=footnote-ref role=doc-noteref>3</a></sup>。</p><p>如果作用在一力学体系上的众多<strong>约束反力</strong>在任意虚位移 $\delta r$ 中所作的虚功之和为零，即
+$$
+\sum_{i=1}^n \boldsymbol{F}_{ri} \cdot \delta \boldsymbol{r}_i=0\tag{1}
+$$
+那么称这个约束为<strong>理想约束</strong>。光滑面、光滑曲线、光滑铰链、刚性杆、不可伸长的绳、无滑动的滚动等都是理想约束。</p><p>以下我们只讨论不可解约束的情况. 设受有 $k$ 个几何约束的某力学体系处于平衡状态. 取体系中任一质点 $P_i$, 并设作用在此质点上主动力的合力为 $\boldsymbol{F}<em>i$, 约束反力的合力为 $\boldsymbol{N}</em>{i}$, 则因在此体系中每一质点都必须处于平衡状态中, 故此时必有
+$$
+\boldsymbol{F}<em>i+\boldsymbol{N}</em>{i}=0 \quad(i=1,2, \cdots, n)
+$$
+现在让每一质点自它的平衡位置发生一虚位移 $\delta r_i$, 则由上式得
+$$
+\boldsymbol{F}<em>i \cdot \delta \boldsymbol{r}<em>i+\boldsymbol{N}</em>{i} \cdot \delta \boldsymbol{r}<em>i=0 \quad(i=1,2, \cdots, n)
+$$
+把上式中各等式相加, 就得到
+$$
+\sum</em>{i=1}^n \boldsymbol{F}<em>i \cdot \delta \boldsymbol{r}<em>i+\sum</em>{i=1}^n \boldsymbol{N}</em>{i} \cdot \delta \boldsymbol{r}<em>i=0
+$$
+但如为理想约束, 则根据式(1), $\sum</em>{i=1}^n \boldsymbol{N}</em>{i} \cdot \delta \boldsymbol{r}<em>i=0$, 因此, 如果这样的力学体系处于平衡状态, 则其平衡条件是
+$$
+\delta W=\sum</em>{i=1}^n \boldsymbol{F}<em>i \cdot \delta \boldsymbol{r}<em>i=0\tag{2}
+$$
+或
+$$
+\delta W=\sum</em>{i=1}^n\left(F</em>{i x} \delta x_i+F_{i y} \delta y_i+F_{i z} \delta z_i\right)=0
+$$
+等式(2)便是<strong>虚功原理</strong>：受理想约束的力学体系平衡的充要条件是该体系中的主动力在任意虚位移所作的功之和为零。</p><p>达朗贝尔将静力学中虚功原理推广到动力学系统。单粒子的牛顿运动方程写做：
+$$
+\boldsymbol{F}<em>{i}+\boldsymbol{N}</em>{i}={m}\boldsymbol{a}<em>{i}
+$$
+改一下形式:
+$$
+\boldsymbol{F}</em>{i}+\boldsymbol{N}<em>{i}-{m} \boldsymbol{a}</em>{i}=0
+$$
+这启发我们，只要引入惯性力，就可以将动力学问题转化为静力学问题。对应的“虚功原理"为如下性质：
+$$
+\sum_{i}\left(\boldsymbol{F}<em>{i}+\boldsymbol{N}</em>{i}-{m} \boldsymbol{a}<em>{i}\right) \cdot \delta \boldsymbol{r}</em>{i}=0
+$$
+由理想约束假定得到 <strong>达朗贝尔原理</strong>：
+$$
+\sum_{i}\left(\boldsymbol{F}<em>{i}-{m} \boldsymbol{a}</em>{i}\right) \cdot \delta \boldsymbol{r}_{i}=0\tag{3}
+$$
+上述式子消除了约束力，但还不够好。因为虚位移的选取并不是任意的，而是满足额外的约束条件。所以上述式子并没有摆脱约束。为此，我们需要使用广义坐标、广义力改写达朗贝尔原理。</p><hr><a href=#改写达朗贝尔原理><h2 id=改写达朗贝尔原理><span class=hanchor arialabel=Anchor># </span>改写达朗贝尔原理</h2></a><ul><li><strong>广义力</strong>：
+$$
+\begin{aligned}
+\delta W & =\sum \vec{F}<em>i \delta r_i \\ & =\sum</em>{i=1}^N \vec{F_i} \cdot \sum_{a=1}^s \frac{\partial \vec{r_i}}{\partial q_\alpha} \delta q_\alpha \\ & =\sum_{\alpha=1}^s \sum_{i=1}^N\left(F_i \cdot \frac{\partial \vec{r_i}}{\partial q_\alpha}\right) \delta q_{\alpha}\\ & = \sum_{\alpha=1}^{s} Q_{\alpha}\delta q_\alpha
+\end{aligned}$$
+这里我们得到广义力：
+$$
+Q_\alpha=\sum_{i=1}^N\left(F_i \cdot \frac{\partial \vec{r_i}}{\partial q_\alpha}\right)
+$$
+其中 $q_\alpha$ 为广义坐标。</li></ul><p>广义力改写达朗贝尔原理：
+牛顿第二定律有
+$$
+\quad \vec{F_i}+\vec{N_i}=m_i a_i
+$$
+平衡状态时:
+$$
+\vec{F_i}+\vec{N_i}=0
+$$</p><p>两边同时乘以虚位移
+$$
+\sum \vec{F}_i \delta \vec{r}_i+\sum \vec{N_i} \delta \vec{r}_i=0
+$$</p><p>运用虚功原理消去理想约束下的约束反力得到
+$$\begin{aligned}
+\delta W &=\sum_{i=1}^{N} \vec{F}<em>i \delta \vec{r}<em>i=0 \\ & =\sum</em>{\alpha=1}^s\left(\sum</em>{i=1}^N \vec{F}<em>i \frac{\partial \vec{r}<em>i}{\partial q_a}\right) \delta q_a \\ & =\sum</em>{\alpha=1}^s Q</em>\alpha \delta q_\alpha=0 \\ \Rightarrow Q_{\alpha} & \equiv 0
+\end{aligned}$$
+倒数第二行中，由于虚位移 $\delta q_{\alpha}$ 的任意性，导出广义力 $Q_{\alpha}$ 必恒为零。也就是说：<strong>对于理想约束，在平衡时力学体系的广义力必为零</strong>。</p><a href=#参考资料><h1 id=参考资料><span class=hanchor arialabel=Anchor># </span>参考资料</h1></a><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p>理论力学笔记（三）：达朗贝尔原理 | Haku. Available at:
+<a href=https://www.scigeek.cn/posts/44513/ rel=noopener>https://www.scigeek.cn/posts/44513/</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p>维基百科编者. 虛功[G/OL]. 维基百科, 201820180615(
+<a href=https://www.scigeek.cn/posts/44513/2018-06-15%29 rel=noopener>https://www.scigeek.cn/posts/44513/2018-06-15)</a>. 
+<a href="https://zh.wikipedia.org/w/index.php?title=%E8%99%9B%E5%8A%9F&amp;oldid=49991322" rel=noopener>https://zh.wikipedia.org/w/index.php?title=虛功&amp;oldid=49991322</a>.&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:3><p>周衍柏 理论力学教程. 高等教育出版社. P188, P189&#160;<a href=#fnref:3 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div><hr><div class=page-end id=footer><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://glossary.jiefengzhou.com/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><ul><li><a href=https://glossary.jiefengzhou.com/>Home</a></li><li><a href=https://github.com/jeffeychou>Github</a></li><li><a href="mailto: littcal@foxmail.com">Email</a></li></ul></footer></div></article><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/term/Theoretical_Physics/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/ data-ctx=03-虚功原理 data-src=/term/Theoretical_Physics/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6 class=internal-link>理论力学</a></li><li><a href=/term/Theoretical_Physics/04-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B/ data-ctx=term/Theoretical_Physics/03-虚功原理#虚功原理与达朗贝尔原理 data-src=/term/Theoretical_Physics/04-%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E6%96%B9%E7%A8%8B class=internal-link>04-拉格朗日方程</a></li></ul></div></div></body></html>
