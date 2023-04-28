@@ -1,0 +1,238 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="问题 minimize $f(\boldsymbol{x}) \quad$ 其中, 函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ 是一个实值函数。 $\Omega=\mathbb{R}^n$ subject to $\boldsymbol{x} \in \Omega$
+函数梯度迭代示意图 梯度方法 思想：令$x^0$作为初始搜索点，沿着梯度负方向构造一个新点$x^0-\alpha\bigtriangledown f(x^0)$，如果$\bigtriangledown f(x^0)\neq0$，那么$\alpha >0$足够小时，有$f(x^0-\alpha\bigtriangledown f(x^0))<f(x^0)$."><title>03-无约束优化</title><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:title" content="03-无约束优化"><meta property="og:image" content="https://glossary.airbyte.com/glossary-feature.jpeg"><meta property="og:type" content="website"><meta property="og:url" content="https://glossary.jiefengzhou.com/term/optimized-algorithm/03-%E6%97%A0%E7%BA%A6%E6%9D%9F%E4%BC%98%E5%8C%96/"><meta property="og:width" content="1119"><meta property="og:height" content="630"><meta name=twitter:card content="summary"><meta name=twitter:site content="@airbytehq"><meta name=twitter:title content="03-无约束优化"><meta name=twitter:description content="问题 minimize $f(\boldsymbol{x}) \quad$ 其中, 函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ 是一个实值函数。 $\Omega=\mathbb{R}^n$ subject to $\boldsymbol{x} \in \Omega$
+函数梯度迭代示意图 梯度方法 思想：令$x^0$作为初始搜索点，沿着梯度负方向构造一个新点$x^0-\alpha\bigtriangledown f(x^0)$，如果$\bigtriangledown f(x^0)\neq0$，那么$\alpha >0$足够小时，有$f(x^0-\alpha\bigtriangledown f(x^0))<f(x^0)$."><meta name=twitter:image content="https://glossary.airbyte.com/glossary-feature.jpeg"><link rel="shortcut icon" type=image/png href=https://glossary.jiefengzhou.com//icon.png><link href=https://glossary.jiefengzhou.com/styles.ca80fb7e9665b85b994eecb565963630.min.css rel=stylesheet><link href=https://glossary.jiefengzhou.com/styles/_light_syntax.86a48a52faebeaaf42158b72922b1c90.min.css rel=stylesheet id=theme-link><script src=https://glossary.jiefengzhou.com/js/darkmode.d85601aaf791691d70de141d63aa54fb.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/util.9825137f5e7825e8553c68ce39ac9e44.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/contrib/copy-tex.min.js integrity=sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A crossorigin=anonymous></script>
+<script src=https://unpkg.com/@floating-ui/core@0.7.3></script>
+<script src=https://unpkg.com/@floating-ui/dom@0.5.4></script>
+<script src=https://glossary.jiefengzhou.com/js/popover.53ad9a087e3feeaaa12b63bfd02d923b.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/code-title.b35124ad8db0ba37162b886afb711cbc.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/clipboard.c20857734e53a3fb733b7443879efa61.min.js></script>
+<script src=https://glossary.jiefengzhou.com/js/callouts.7723cac461d613d118ee8bb8216b9838.min.js></script>
+<script>const BASE_URL="https://glossary.jiefengzhou.com/",fetchData=Promise.all([fetch("https://glossary.jiefengzhou.com/indices/linkIndex.8c3af1f875c16f078efab53a486d14e7.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://glossary.jiefengzhou.com/indices/contentIndex.cfc99242453c4ba4932686fcdc8383b2.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n})),render=()=>{const e=new URL(BASE_URL),t=e.pathname,n=window.location.pathname,s=t==n;addCopyButtons(),addTitleToCodeBlocks(),addCollapsibleCallouts(),initPopover("https://glossary.jiefengzhou.com",!0,!0);const o=document.getElementById("footer");if(o){const e=document.getElementById("graph-container");if(!e)return requestAnimationFrame(render);e.textContent="";const t=s&&!1;drawGraph("https://glossary.jiefengzhou.com",t,[{"/moc":"#4388cc"}],t?{centerForce:2,depth:-1,enableDrag:!0,enableLegend:!0,enableZoom:!0,fontSize:.5,linkDistance:1,opacityScale:3,repelForce:2,scale:1.4}:{centerForce:1,depth:3,enableDrag:!0,enableLegend:!0,enableZoom:!0,fontSize:.6,linkDistance:1,opacityScale:3,repelForce:7,scale:1.5})}},init=(e=document)=>{addCopyButtons(),addTitleToCodeBlocks(),renderMathInElement(e.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],macros:{"’":"'"},throwOnError:!1})}</script><script type=module>
+    import { attachSPARouting } from "https:\/\/glossary.jiefengzhou.com\/js\/router.9d4974281069e9ebb189f642ae1e3ca2.min.js"
+    attachSPARouting(init, render)
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-156258629-2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-156258629-2")</script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=https://glossary.jiefengzhou.com/js/full-text-search.24827f874defbbc6d529926cbfcfb493.min.js></script><div class=singlePage><article><header><h1 id=page-title><a href=https://glossary.jiefengzhou.com/>Glossary 🧠</a></h1><div class=spacer></div><div id=search-icon><p>Search</p><svg tabindex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg></div><a href=/tags><div class=darkmode><input class=toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle-bla tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 490 490" style="enable-background:new 0 0 35 35"><title>All Tags</title><path d="M64.333 490h58.401l33.878-137.69h122.259L245.39 490h58.401l33.878-137.69h119.92v-48.162h-108.24l29.2-117.324h79.04v-48.162H390.23L424.108.0H365.31l-33.878 138.661H208.79L242.668.0h-58.415l-33.864 138.661H32.411v48.162h106.298l-28.818 117.324h-77.48v48.162h65.8L64.333 490zM197.11 186.824h122.642l-29.2 117.324H168.292L197.11 186.824z"/></svg></label><label id=toggle-label-dark for=darkmode-togglead tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 490 490" style="enable-background:new 0 0 35 35"><title>All Tags</title><path d="M64.333 490h58.401l33.878-137.69h122.259L245.39 490h58.401l33.878-137.69h119.92v-48.162h-108.24l29.2-117.324h79.04v-48.162H390.23L424.108.0H365.31l-33.878 138.661H208.79L242.668.0h-58.415l-33.864 138.661H32.411v48.162h106.298l-28.818 117.324h-77.48v48.162h65.8L64.333 490zM197.11 186.824h122.642l-29.2 117.324H168.292L197.11 186.824z"/></svg></label></div></a><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><h1>03-无约束优化</h1><p class=meta>Last updated
+Dec 2, 2022
+- <a href=https://github.com/jeffeychou/glossary/tree/gh-page/content/term/optimized%20algorithm/03-%e6%97%a0%e7%ba%a6%e6%9d%9f%e4%bc%98%e5%8c%96.md rel=noopener>Edit Source</a></p><ul class=tags><li><a href=https://glossary.jiefengzhou.com/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95/>最优化算法</a></li><li><a href=https://glossary.jiefengzhou.com/tags/%E6%97%A0%E7%BA%A6%E6%9D%9F%E4%BC%98%E5%8C%96/>无约束优化</a></li><li><a href=https://glossary.jiefengzhou.com/tags/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95/>梯度下降法</a></li><li><a href=https://glossary.jiefengzhou.com/tags/%E7%89%9B%E9%A1%BF%E6%B3%95/>牛顿法</a></li><li><a href=https://glossary.jiefengzhou.com/tags/%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95/>共轭梯度法</a></li><li><a href=https://glossary.jiefengzhou.com/tags/%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%85%B1%E8%BD%AD%E6%A2%AF%E5%BA%A6%E6%B3%95/>非线性共轭梯度法</a></li><li><a href=https://glossary.jiefengzhou.com/tags/%E6%8B%9F%E7%89%9B%E9%A1%BF%E6%B3%95/>拟牛顿法</a></li><li><a href=https://glossary.jiefengzhou.com/tags/DFP%E5%85%AC%E5%BC%8F/>Dfp公式</a></li><li><a href=https://glossary.jiefengzhou.com/tags/BFGS%E5%85%AC%E5%BC%8F/>Bfgs公式</a></li><li><a href=https://glossary.jiefengzhou.com/tags/Sherman-Morison%E5%85%AC%E5%BC%8F/>Sherman morison公式</a></li></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><ol><li><a href=#问题>问题</a></li><li><a href=#梯度方法>梯度方法</a><ol><li><a href=#最速下降法>最速下降法</a></li><li><a href=#固定步长梯度法>固定步长梯度法</a></li></ol></li><li><a href=#牛顿法>牛顿法</a><ol><li><a href=#牛顿法收敛性分析>牛顿法收敛性分析</a></li><li><a href=#修正牛顿法>修正牛顿法</a></li><li><a href=#牛顿法求解非线性最小二乘>牛顿法求解非线性最小二乘</a></li></ol></li><li><a href=#共轭类方法>共轭类方法</a><ol><li><a href=#共轭方向法>共轭方向法</a></li><li><a href=#共轭梯度法>共轭梯度法</a></li><li><a href=#非线性共轭梯度法>非线性共轭梯度法</a></li></ol></li><li><a href=#拟牛顿法>拟牛顿法</a><ol><li><a href=#秩1修正公式>秩1修正公式</a></li><li><a href=#dfp算法>DFP算法</a></li><li><a href=#bfsgs公式>BFSGS公式</a></li></ol></li></ol></li></ol></nav></details></aside><a href=#问题><h2 id=问题><span class=hanchor arialabel=Anchor># </span>问题</h2></a><p>minimize $f(\boldsymbol{x}) \quad$ 其中, 函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ 是一个实值函数。 $\Omega=\mathbb{R}^n$
+subject to $\boldsymbol{x} \in \Omega$</p><center><img style="border-radius:.3125em;box-shadow:0 2px 4px rgba(34,36,38,.12),0 2px 10px rgba(34,36,38,8%)" src=https://i.imgur.com/r05qQWI.png><br><div style="color:orange;border-bottom:1px solid #d9d9d9;display:inline-block;color:#999;padding:2px">函数梯度迭代示意图</div></center><a href=#梯度方法><h2 id=梯度方法><span class=hanchor arialabel=Anchor># </span>梯度方法</h2></a><ul><li><strong>思想</strong>：令$x^0$作为初始搜索点，沿着梯度负方向构造一个新点$x^0-\alpha\bigtriangledown f(x^0)$，如果$\bigtriangledown f(x^0)\neq0$，那么$\alpha >0$足够小时，有$f(x^0-\alpha\bigtriangledown f(x^0))&lt;f(x^0)$.</li><li><strong>迭代公式</strong>：$x^{k+1}=x^k-\alpha_k\bigtriangledown f(x^k)$.</li><li><strong>最速下降法</strong>：选择合适的步长$\alpha_k$，使得目标函数能够得到最大程度的减小。
+$$
+\alpha_k = {arg \\ min}_{a \ge 0}\\ \\ f(x^k-\alpha \bigtriangledown f(x^k))
+$$</li></ul><hr><a href=#最速下降法><h3 id=最速下降法><span class=hanchor arialabel=Anchor># </span>最速下降法</h3></a><ul><li><strong>定理</strong>： 最速下降法搜索函数 $f: \mathbb{R}^2 \rightarrow \mathbb{R}$ 的极小点, 迭代过程产生的序列为 $\left{\boldsymbol{x}^{(k)}\right}_{k=0}^{\infty}$, 那么, $\boldsymbol{x}^{(k+1)}-\boldsymbol{x}^{(k)}$ 与 $\boldsymbol{x}^{(k+2)}-\boldsymbol{x}^{(k+1)}$ 正交对于所有的 $k \geqslant 0$ 都成立。</li><li><strong>下降性质</strong>：利用梯度的本质，只要$\bigtriangledown f(x^k) \neq 0$，就能保证每次迭代得到的新数值比原数值小。</li><li>实际计算中的停止搜索准则：定义最小变化量。
+一阶必要条件: $\left|\nabla f\left(\boldsymbol{x}^{(k)}\right)\right|&lt;\varepsilon$</li></ul><a href=#最速下降法例题><h4 id=最速下降法例题><span class=hanchor arialabel=Anchor># </span>最速下降法例题</h4></a><p>最速下降法求 $f\left(x_1, x_2, x_3\right)=\left(x_1-4\right)^4+\left(x_2-3\right)^2+4\left(x_3+5\right)^4$ 的极小点。初始搜索点为 $\boldsymbol{x}^{(0)}=[4,2-1]^{\top}$, 开展 3 次迭代。</p><ul><li>Step1:
+$$
+\begin{aligned}
+\alpha_0 &=\underset{\alpha \geqslant 0}{\arg \min } f\left(\boldsymbol{x}^{(0)}-\alpha \nabla f\left(\boldsymbol{x}^{(0)}\right)\right) \\ &=\underset{\alpha \geqslant 0}{\arg \min }\left(0+(2+2 \alpha-3)^2+4(-1-1024 \alpha+5)^4\right)=3.967 \times 10^{-3} \\ \boldsymbol{x}^{(1)} &=\boldsymbol{x}^{(0)}-\alpha_0 \nabla f\left(\boldsymbol{x}^{(0)}\right)=[4.000,2.008,-5.062]^{\top}
+\end{aligned}
+$$
+Step2: $\quad \alpha_1=\underset{\alpha \geqslant 0}{\arg \min }\left(0+(2.008+1.984 \alpha-3)^2+4(-5.062+0.003875 \alpha+5)^4\right)=0.5000$ $\boldsymbol{x}^{(2)}=\boldsymbol{x}^{(1)}-\alpha_1 \nabla f\left(\boldsymbol{x}^{(1)}\right)=[4.000,3.000,-5.060]^{\top}$
+Step3: $\quad \alpha_2=\underset{\alpha \geqslant 0}{\arg \min }\left(0.000+0.000+4(-5.060+0.003525 \alpha+5)^4\right)=16.29$ $\boldsymbol{x}^{(3)}=[4.000,3.000,-5.002]^{\top}$
+理论上：函数 $f$ 的极小点就是 $[4,3,-5]^{\top}$</li></ul><a href=#梯度方法特性以及收敛性分析><h4 id=梯度方法特性以及收敛性分析><span class=hanchor arialabel=Anchor># </span>梯度方法特性以及收敛性分析</h4></a><ul><li><strong>特性</strong>：
+单调下降算法；全局收敛</li><li><strong>收敛性分析</strong>：
+将目标函数设定为二次函数：
+$$
+\begin{align}
+V(\boldsymbol{x})=f(\boldsymbol{x})+\frac{1}{2} \boldsymbol{x}^{* \top} \boldsymbol{Q} \boldsymbol{x}^<em>&=\frac{1}{2}\left(\boldsymbol{x}-\boldsymbol{x}^</em>\right)^{\top} \boldsymbol{Q}\left(\boldsymbol{x}-\boldsymbol{x}^*\right) \\ \bigtriangledown f(x) &= Qx-b
+\end{align}
+$$</li></ul><p>其中, $\boldsymbol{Q}=\boldsymbol{Q}^{\top}>0$ $\quad \boldsymbol{x}^*=\boldsymbol{Q}^{-1} \boldsymbol{b}$</p><ul><li><strong>瑞利不等式</strong>：对于任意的 $\boldsymbol{Q}=\boldsymbol{Q}^{\top}>0$, 有
+$$
+\begin{gathered}
+\lambda_{\min }(\boldsymbol{Q})|\boldsymbol{x}|^2 \leqslant \boldsymbol{x}^{\top} \boldsymbol{Q} \boldsymbol{x} \leqslant \lambda_{\max }(\boldsymbol{Q})|\boldsymbol{x}|^2 \\ \lambda_{\min }\left(\boldsymbol{Q}^{-1}\right)|\boldsymbol{x}|^2 \leqslant \boldsymbol{x}^{\top} \boldsymbol{Q}^{-1} \boldsymbol{x} \leqslant \lambda_{\max }\left(\boldsymbol{Q}^{-1}\right)|\boldsymbol{x}|^2
+\end{gathered}
+$$</li><li><strong>收敛性</strong>:
+对于最速下降法，对于任意的初始点 $\boldsymbol{x}^{(0)}$ ,都有 $\boldsymbol{x}^{(k)} \rightarrow \boldsymbol{x}^*$ 。</li></ul><a href=#固定步长梯度法><h3 id=固定步长梯度法><span class=hanchor arialabel=Anchor># </span>固定步长梯度法</h3></a><p>对于所有步长 $\alpha_{k}=\alpha \in \mathbb{R}$,迭代公式为：$\boldsymbol{x}^{(k+1)}=\boldsymbol{x}^{(k)}-\alpha \boldsymbol{g}^{(k)}$</p><ul><li><strong>定理8.3</strong>:
+对于步长固定梯度法, 当且仅当步长
+$$
+0&lt;\alpha&lt;\frac{2}{\lambda_{\max }(\boldsymbol{Q})}
+$$
+时, $\boldsymbol{x}^{(k)} \rightarrow \boldsymbol{x}^*$ 。 ^0n57g4</li></ul><hr><a href=#收敛率><h4 id=收敛率><span class=hanchor arialabel=Anchor># </span>收敛率</h4></a><ul><li><p><strong>定义8.1(收敛阶)</strong>:
+存在一个序列 $\left{\boldsymbol{x}^{(k)}\right}$, 能够收敛到 $\boldsymbol{x}^<em>$, 即 $\lim _{k \rightarrow \infty}\left|\boldsymbol{x}^{(k)}-\boldsymbol{x}^</em>\right|=0$ 。 如果
+$$
+0&lt;\lim <em>{k \rightarrow \infty} \frac{|\boldsymbol{x}^{(k+1)}-\boldsymbol{x}^<em>|}{|\boldsymbol{x}^{(k)}-\boldsymbol{x}^</em>|^p}&lt;\infty
+$$
+则序列 $\left{\boldsymbol{x}^{(k)}\right}$ 的收敛阶数为 $p$, 其中, $p \in \mathbb{R}</em>{\text {。 }}$
+如果对任意的 $p>0$ ，上式极限都为 $0$ ，那么称收敛阶数为 $\infty$ 。</p></li><li><p><strong>定理8.6</strong>：
+最速下降法在求解目标函数 $f$ 的极小点时,产生一个收敛的迭代点 $\left{\boldsymbol{x}^{(k)}\right}$, 该序列在最坏情况下的收敛阶数为 1 。也就是说, 存在一个目标函数 $f$ 和某 始点 $\boldsymbol{x}^{(0)}$, 能够使得 $\left{\boldsymbol{x}^{(k)}\right}$ 的收敛阶数为 1 。</p></li></ul><a href=#牛顿法><h2 id=牛顿法><span class=hanchor arialabel=Anchor># </span>牛顿法</h2></a><ul><li><p><strong>思路</strong>：最速下降法只用到了目标函数的一阶导数，如果能够在迭代方法中引入高阶导数，其效率可能优于最速下降法。</p><ul><li>首先构造一个二次型函数，其与目标函数在该点的一阶和二阶导数相等，以此可以作为目标函数的近似表达式。</li><li>求改二次型函数的极小点，以此作为下一次迭代的起始点。</li><li>重复上述过程，直到满足迭代条件后退出。</li></ul></li><li><p><strong>迭代操作</strong>
+目标函数 $f: \mathbb{R}^n \rightarrow \mathbb{R}$ 二阶连续可微, 将函数 $f$ 在点 $\boldsymbol{x}^{(k)}$ 处进行泰勒展开, 可得到二次型近似函数:
+$$
+f(\boldsymbol{x}) \approx f\left(\boldsymbol{x}^{(k)}\right)+\left(\boldsymbol{x}-\boldsymbol{x}^{(k)}\right)^{\top} \boldsymbol{g}^{(k)}+\frac{1}{2}\left(\boldsymbol{x}-\boldsymbol{x}^{(k)}\right)^{\bar{\top}} \boldsymbol{F}\left(\boldsymbol{x}^{(k)}\right)\left(\boldsymbol{x}-\boldsymbol{x}^{(k)}\right) \triangleq q(\boldsymbol{x})
+$$
+其中 $\boldsymbol{g}^{(k)}=\nabla \boldsymbol{f}\left(\boldsymbol{x}^{(k)}\right)$,局部极小点的一阶必要条件
+$$
+\mathbf{0}=\nabla q(\boldsymbol{x})=\boldsymbol{g}^{(k)}+\boldsymbol{F}\left(\boldsymbol{x}^{(k)}\right)\left(\boldsymbol{x}-\boldsymbol{x}^{(k)}\right)
+$$
+如果 $\boldsymbol{F}\left(\boldsymbol{x}^{(k)}\right)>0$, 函数 $q$ 的极小点为$\boldsymbol{x}^{(k+1)}=\boldsymbol{x}^{(k)}-\boldsymbol{F}\left(\boldsymbol{x}^{(k)}\right)^{-1} \boldsymbol{g}^{(k)} \quad$</p></li></ul><a href=#牛顿法收敛性分析><h3 id=牛顿法收敛性分析><span class=hanchor arialabel=Anchor># </span>牛顿法收敛性分析</h3></a><ul><li>如果初始点靠近极大（小）点，那么牛顿法将具有非常好的收敛性，如果初始点离极大（小）点较远，牛顿法并不一定收敛。</li></ul><a href=#修正牛顿法><h3 id=修正牛顿法><span class=hanchor arialabel=Anchor># </span>修正牛顿法</h3></a><ul><li><strong>带步长牛顿法</strong>：$\boldsymbol{x}^{(k+1)}=\boldsymbol{x}^{(k)}-\alpha_{k}\boldsymbol{F}\left(\boldsymbol{x}^{(k)}\right)^{-1} \boldsymbol{g}^{(k)}$ , $\alpha_{k}= argmin f(\boldsymbol{x}^{(k)}-\alpha \boldsymbol{F}(\boldsymbol{x}^{(k)})^{-1}\boldsymbol{g}^{(k)})$</li></ul><a href=#牛顿法求解非线性最小二乘><h3 id=牛顿法求解非线性最小二乘><span class=hanchor arialabel=Anchor># </span>牛顿法求解非线性最小二乘</h3></a><ul><li><strong>非线性最小二乘问题</strong> $minimize \sum_{i=1}^m\left(r_i(\boldsymbol{x})\right)^2$ 其中, $r_i: \mathbb{R}^n \rightarrow \mathbb{R}, i=1, \cdots, m$ 为给定的函数。</li><li><strong>分析</strong>：令 $\boldsymbol{r}=\left[r_1, \cdots, r_m\right]^{\top}$, 可将目标函数写为 $f(\boldsymbol{x})=\boldsymbol{r}(\boldsymbol{x})^{\top} \boldsymbol{r}(\boldsymbol{x})$ 。 计算函数 $f$ 的梯度和黑塞矩阵
+$$
+(\nabla f(\boldsymbol{x}))<em>j=\frac{\partial f}{\partial x_j}(\boldsymbol{x})=2 \sum</em>{i=1}^m r_i(\boldsymbol{x}) \frac{\partial r_i}{\partial x_j}(\boldsymbol{x})
+$$
+$\boldsymbol{r}$ 的雅可比矩阵为：
+$$
+\begin{aligned}
+\quad \boldsymbol{J}(\boldsymbol{x})=\left[\begin{array}{ccc}
+\frac{\partial r_1}{\partial x_1}(\boldsymbol{x}) & \cdots & \frac{\partial r_1}{\partial x_n}(\boldsymbol{x}) \\ \vdots & & \vdots \\ \frac{\partial r_m}{\partial x_1}(\boldsymbol{x}) & \cdots & \frac{\partial r_m}{\partial x_n}(\boldsymbol{x})
+\end{array}\right]
+\end{aligned}
+$$
+函数 $\boldsymbol{f}$ 的梯度可以表示为 $\nabla f(\boldsymbol{x})=2\boldsymbol{J} (\boldsymbol{x})^{\top}\boldsymbol{r}(\boldsymbol{x})$
+函数 $\boldsymbol{f}$ 的黑塞矩阵$\boldsymbol{F(\boldsymbol{x})=2\left(\boldsymbol{J}(\boldsymbol{x})^{\top} \boldsymbol{J}(\boldsymbol{x})+\boldsymbol{S}(\boldsymbol{x})\right)}$
+$\boldsymbol{S}(\boldsymbol{x})<em>{k,j} = \sum</em>{i=1}^m r_i(\boldsymbol{x}) \frac{\partial^2 r_i}{\partial x_k \partial x_j}(\boldsymbol{x})$
+牛顿法求解非线性最小二乘迭代公式：
+$$
+\boldsymbol{x}^{(k+1)}=\boldsymbol{x}^{(k)}-\left(\boldsymbol{J}(\boldsymbol{x})^{\top} \boldsymbol{J}(\boldsymbol{x})+\boldsymbol{S}(\boldsymbol{x})\right)^{-1} \boldsymbol{J}(\boldsymbol{x})^{\top} \boldsymbol{r}(\boldsymbol{x})
+$$
+矩阵 $\boldsymbol{S}(\boldsymbol{x})$ 包含函数 $\boldsymbol{r}$ 的二阶导数, 其中的元素都很小
+高斯一牛顿法求解非线性最小二乘迭代公式：即略掉 $S(x)$ 项
+$$
+\boldsymbol{x}^{(k+1)}=\boldsymbol{x}^{(k)}-\left(\boldsymbol{J}(\boldsymbol{x})^{\top} \boldsymbol{J}(\boldsymbol{x})\right)^{-1} \boldsymbol{J}(\boldsymbol{x})^{\top} \boldsymbol{r}(\boldsymbol{x})
+$$</li></ul><hr><a href=#共轭类方法><h2 id=共轭类方法><span class=hanchor arialabel=Anchor># </span>共轭类方法</h2></a><p><strong>方法特性：</strong></p><ol><li>对于n维二次型问题，能够在n步之内得到结果。</li><li>共轭梯度法不需要计算黑塞矩阵</li><li>不需要储存n·n矩阵，也不需要对矩阵进行求逆</li><li>计算速度介于最速下降法和牛顿法之间。</li></ol><p><strong>定义10.1(共轭)</strong>：
+$Q$ 为 $n \times n$ 的对称实矩阵, 对于方向 $\boldsymbol{d}^{(0)}, \boldsymbol{d}^{(1)}, \boldsymbol{d}^{(2)}, \cdots, \boldsymbol{d}^{(m)}$, 如果对 于所有的 $i \neq j$, 有 $\boldsymbol{d}^{(i)} \boldsymbol{Q} \boldsymbol{d}^{(j)}=0$, 则称它们是关于 $\boldsymbol{Q}$ 共轭的</p><p><strong>引理10.1</strong>：
+$Q$ 为 $n \times n$ 的对称正定矩阵, 如果方向 $\boldsymbol{d}^{(0)}, \boldsymbol{d}^{(1)}, \cdots, \boldsymbol{d}^{(k)} \in \mathbb{R}^n, k \leqslant n-$ 1 非零, 且是关于 $\boldsymbol{Q}$ 共轭的, 那么它们是线性无关的。</p><hr><a href=#共轭方向法><h3 id=共轭方向法><span class=hanchor arialabel=Anchor># </span>共轭方向法</h3></a><p>针对 $n$ 维二次型函数的最小化问题:
+$$
+f(\boldsymbol{x})=\frac{1}{2} \boldsymbol{x}^{\top} \boldsymbol{Q} \boldsymbol{x}-\boldsymbol{x}^{\top} \boldsymbol{b}
+$$
+其中, $\boldsymbol{Q}=\boldsymbol{Q}^{\top}>0, \boldsymbol{x} \in \mathbb{R}^n$ 。注意, 由于 $\boldsymbol{Q}>0$, 因此函数 $f$ 有一个全局极小点, 可通过求解 $Q x=b$ 得到。</p><p><strong>基本的共轭方向算法</strong>
+给定初始点 $\boldsymbol{x}^{(0)}$ 和一组关于 $\boldsymbol{Q}$ 共轭的方向 $\boldsymbol{d}^{(0)}, \boldsymbol{d}^{(1)}, \cdots$, $\boldsymbol{d}^{(n-1)}$
+$$
+\begin{aligned}
+\boldsymbol{g}^{(k)} &=\nabla f\left(\boldsymbol{x}^{(k)}\right)=\boldsymbol{Q} \boldsymbol{x}^{(k)}-\boldsymbol{b} \\ \alpha_k &=-\frac{\boldsymbol{g}^{(k) \top} \boldsymbol{d}^{(k)}}{\boldsymbol{d}^{(k) \top} \boldsymbol{Q} \boldsymbol{d}^{(k)}} \\ \boldsymbol{x}^{(k+1)} &=\boldsymbol{x}^{(k)}+\alpha_k \boldsymbol{d}^{(k)}
+\end{aligned}
+$$
+<strong>定理10.1</strong>：
+对于任意的初始点 $\boldsymbol{x} ^{(0)}$，基本的共轭方向算法都能在 $n$ 次迭代之内收敛到唯一的全局极小点 $\boldsymbol{x}^<em>$ ,即 $\boldsymbol{x}^{(n)}=\boldsymbol{x}^</em>$ 。</p><p><strong>引理10.2(精确步长)</strong>：
+在共轭方向算法中, 对于所有 $k, 0 \leqslant k \leqslant n-1,0 \leqslant i \leqslant k$, 都有
+$$
+\boldsymbol{g}^{(k+1) \top} \boldsymbol{d}^{(i)}=0
+$$</p><a href=#扩展子空间定理><h4 id=扩展子空间定理><span class=hanchor arialabel=Anchor># </span>扩展子空间定理</h4></a><p>共轭方向法满足 $f\left(\boldsymbol{x}^{(k+1)}\right)=\min _\alpha f\left(\boldsymbol{x}^{(k)}+\alpha d^{(k)}\right)$,
+而且还能满足 $f\left(\boldsymbol{x}^{(k+1)}\right)=\min <em>{a_0, \cdots, a_k} f\left(\boldsymbol{x}^{(0)}+\sum</em>{i=0}^k a_i \boldsymbol{d}^{(i)}\right)$
+记 $\mathcal{V}_k=\boldsymbol{x}^{(0)}+\operatorname{span}\left[\boldsymbol{d}^{(0)}, \boldsymbol{d}^{(1)}, \cdots, \boldsymbol{d}^{(k)}\right]$ 则有 $f\left(\boldsymbol{x}^{(k+1)}\right)=\min _{\boldsymbol{x} \in \nu_k} f(\boldsymbol{x})$</p><hr><a href=#共轭梯度法><h3 id=共轭梯度法><span class=hanchor arialabel=Anchor># </span>共轭梯度法</h3></a><p><strong>特性</strong>：
+共轭方向法虽然计算效率高，但是需要提供一组 $Q$ 共轭方向，共轭梯度法不需要预先给定 $Q$ 共轭方向，而是随着迭代的进行不断产生 $Q$共轭方向。利用上一个搜索方向和目标函数在当前已经产生的搜索方向组成 $Q$ 共轭方向。</p><p><strong>计算步骤</strong>:</p><ol><li>令 $k=0$; 选择初始值 $\boldsymbol{x}^{(0)}$ 。</li><li>计算 $\boldsymbol{g}^{(0)}=\nabla f\left(\boldsymbol{x}^{(0)}\right)$, 如果 $\boldsymbol{g}^{(0)}=\mathbf{0}$, 停止迭代; 否则, 令 $\boldsymbol{d}^{(0)}=-\boldsymbol{g}^{(0)}$ 。</li><li>计算 $\alpha_k=-\frac{\boldsymbol{g}^{(k) \top} \boldsymbol{d}^{(k)}}{\boldsymbol{d}^{(k) \top} \boldsymbol{Q} \boldsymbol{d}^{(k)}}$ 。</li><li>计算 $\boldsymbol{x}^{(k+1)}=\boldsymbol{x}^{(k)}+\alpha_k \boldsymbol{d}^{(k)}$ 。</li><li>计算 $\boldsymbol{g}^{(k+1)}=\nabla f\left(\boldsymbol{x}^{(k+1)}\right)$, 如果 $\boldsymbol{g}^{(k+1)}=\mathbf{0}$, 停止迭代。</li><li>计算 $\beta_k=\frac{\boldsymbol{g}^{(k+1) \top} \boldsymbol{Q} \boldsymbol{d}^{(k)}}{\boldsymbol{d}^{(k) \top} \boldsymbol{Q} \boldsymbol{d}^{(k)}}$ 。</li><li>计算 $\boldsymbol{d}^{(k+1)}=-\boldsymbol{g}^{(k+1)}+\beta_k \boldsymbol{d}^{(k)}$ 。</li><li>令 $k:=k+1$, 回到第 3 步。</li></ol><a href=#共轭梯度法实例><h4 id=共轭梯度法实例><span class=hanchor arialabel=Anchor># </span>共轭梯度法实例</h4></a><p>例: $f\left(x_1, x_2, x_3\right)=\frac{3}{2} x_1^2+2 x_2^2+\frac{3}{2} x_3^2+x_1 x_3+2 x_2 x_3-3 x_1-x_3$ 用共轭梯度法求其极小点, 初始点为 $\boldsymbol{x}^{(0)}=[0,0,0]^{\top}$ 。</p><p>$$\begin{array}{ll}\text { Step 1: }& \boldsymbol{g}^{(0)}=[-3,0,-1]^{\top} \quad \boldsymbol{d}^{(0)}=-\boldsymbol{g}^{(0)} \\ & \alpha_0=-\frac{\boldsymbol{g}^{(0) \top} \boldsymbol{d}^{(0)}}{\boldsymbol{d}^{(0) \top} \boldsymbol{Q} \boldsymbol{d}^{(0)}}=\frac{10}{36} \\ & \boldsymbol{x}^{(1)}=\boldsymbol{x}^{(0)}+\alpha_0 \boldsymbol{d}^{(0)}=[0.8333,0,0.2778]^{\top} \\ \\ \text { Step 2: } & \boldsymbol{g}^{(1)}=\nabla f\left(\boldsymbol{x}^{(1)}\right)=[-0.2222,0.5556,0.6667]^{\top} \\ & \beta_0=\frac{\boldsymbol{g}^{(1) \top} \boldsymbol{Q} \boldsymbol{d}^{(0)}}{\boldsymbol{d}^{(0) \top} \boldsymbol{Q} \boldsymbol{d}^{(0)}}=0.08025 \\ & \boldsymbol{d}^{(1)}=-\boldsymbol{g}^{(1)}+\beta_0 \boldsymbol{d}^{(0)}=[0.4630,-0.5556,-0.5864]^{\top} \\ & \alpha_1=-\frac{\boldsymbol{g}^{(1) \top} \boldsymbol{d}^{(1)}}{\boldsymbol{d}^{(1) \top} \boldsymbol{Q} \boldsymbol{d}^{(1)}}=0.2187 \\ & \boldsymbol{x}^{(2)}=\boldsymbol{x}^{(1)}+\alpha_1 \boldsymbol{d}^{(1)}=[0.9346,-0.1215,0.1495]^{\top} \\ \\ \text { Step 3: } & \boldsymbol{g}^{(2)}=\nabla f\left(\boldsymbol{x}^{(2)}\right)=[-0.04673,-0.1869,0.1402]^{\top} \\ & \beta_1=\frac{\boldsymbol{g}^{(2) \top} \boldsymbol{Q} \boldsymbol{d}^{(1)}}{\boldsymbol{d}^{(1) \top} \boldsymbol{Q} \boldsymbol{d}^{(1)}}=0.07075 \\ & \boldsymbol{d}^{(2)}=-\boldsymbol{g}^{(2)}+\beta_1 \boldsymbol{d}^{(1)}=[0.07948,0.1476,-0.1817]^{\top} \\ & \alpha_2=-\frac{\boldsymbol{g}^{(2) \top} \boldsymbol{d}^{(2)}}{\boldsymbol{d}^{(2) \top} \boldsymbol{Q} \boldsymbol{d}^{(2)}}=0.8231 \\ & \boldsymbol{x}^{(3)}=\boldsymbol{x}^{(2)}+\alpha_2 \boldsymbol{d}^{(2)}=[1.000,0.000,0.000]^{\top} \\ \\ & \boldsymbol{g}^{(3)}=\nabla f\left(\boldsymbol{x}^{(3)}\right)=\mathbf{0} \quad \text { 即 } \boldsymbol{x}^*=\boldsymbol{x}^{(3)}\end{array}
+$$</p><hr><a href=#非线性共轭梯度法><h3 id=非线性共轭梯度法><span class=hanchor arialabel=Anchor># </span>非线性共轭梯度法</h3></a><p>理论上把线性共轭梯度法中的矩阵 Q 换成黑 塞矩阵。但是，对一般的非线性函数，每次迭代都必须重新计算黑 塞矩阵，这需要非常大的运算量
+所以需要对其进行修改，消除每次迭代中进行求黑塞矩阵的环节。</p><ul><li><strong>Hestenes-Stiefel公式</strong>：
+$$
+\beta_k=\frac{\boldsymbol{g}^{(k+1) \top}\left[\boldsymbol{g}^{(k+1)}-\boldsymbol{g}^{(k)}\right]}{\boldsymbol{d}^{(k) \top}\left[\boldsymbol{g}^{(k+1)}-\boldsymbol{g}^{(k)}\right]}
+$$</li><li><strong>Polak-Ribiere公式</strong>:
+将 $Hestenes-Stiefel$ 公式的分母部分展开。
+$$
+\beta_k=\frac{\boldsymbol{g}^{(k+1) \top}\left[\boldsymbol{g}^{(k+1)}-\boldsymbol{g}^{(k)}\right]}{\boldsymbol{g}^{(k) \top} \boldsymbol{g}^{(k)}}
+$$</li><li><strong>Fletcher_reeves公式</strong>：
+将 $Polak-Ribiere$ 公式的分子部分展开。
+$$
+\beta_k=\frac{\boldsymbol{g}^{(k+1) \top}\boldsymbol{g}^{(k+1)}}{\boldsymbol{g}^{(k) \top} \boldsymbol{g}^{(k)}}
+$$
+对于二次型问题，这三个公式是等价的；但是。当目标函数为一般的非线性函数时，这三个公式并不一致。</li></ul><hr><a href=#拟牛顿法><h2 id=拟牛顿法><span class=hanchor arialabel=Anchor># </span>拟牛顿法</h2></a><ul><li><strong>牛顿法的缺陷</strong>:</li></ul><ol><li>当目标函数为一般性的非线性函数时，牛顿法不能保证能够从任意起始点 $\boldsymbol{x}^{(0)}$ 收敛到函数的极小点。</li><li>必须计算黑塞矩阵 $\boldsymbol{F}(\boldsymbol{x}^{(k)})$ 和求解方程 $\boldsymbol{F}(\boldsymbol{x}^{(k)})\boldsymbol{d}^{(k)}=- \boldsymbol{g}^{(k)}$ 上进行一维搜索。</li><li>黑塞矩阵是非正定或奇异的。</li></ol><ul><li><strong>拟牛顿法的思路</strong>：
+设计黑塞矩阵的近似矩阵来代替黑塞矩阵。此时需要用到目标函数值和梯度。令 $\boldsymbol{H}<em>{0}, \boldsymbol{H}</em>{1}, \boldsymbol{H}<em>{2}, …$ 表示对应黑塞矩阵的逆的一系列近似矩阵。
+则 $\boldsymbol{H}</em>{k}$ 满足：</li></ul><ol><li>对称正定。(保证函数值迭代后下降)</li><li>从$\boldsymbol{H}<em>{k-1}$ 到 $\boldsymbol{H}</em>{k}$ 计算量较小。</li><li>$\boldsymbol{H}_{k}$ 与对应的黑塞矩阵近似。</li></ol><hr><p>分析: 黑塞矩阵性质 (即二阶导)：
+1维：近似计算 $f^{\prime \prime}\left(x^{(k)}\right): \frac{f^{\prime}\left(x^{(k)}\right)-f^{\prime}\left(x^{(k-1)}\right)}{x^{(k)}-x^{(k-1)}}$ $$f^{\prime}\left(x^{(k-1)}\right) \approx f^{\prime}\left(x^{(k)}\right)+f^{\prime \prime}\left(x^{(k)}\right)\left(x^{(k-1)}-x^{(k)}\right)$$
+n维: $$\nabla f\left(x^{(k-1)}\right) \approx \nabla f\left(x^{(k)}\right)+\nabla^2 f\left(x^{(k)}\right)\left(x^{(k-1)}-x^{(k)}\right)$$ 记 $$\Delta g^{(k-1)}=\nabla f\left(x^{(k)}\right)-\nabla f\left(x^{(k-1)}\right), \quad \Delta x^{(k-1)}=x^{(k)}-x^{(k-1)}$$
+简化为: $$\Delta g^{(k-1)} \approx \nabla^2 f\left(x^{(k)}\right) \Delta x^{(k-1)}$$ 或 $$\left[\nabla^2 f\left(x^{(k)}\right)\right]^{-1} \Delta g^{(k-1)} \approx \Delta x^{(k-1)}$$
+因此：$$
+\boldsymbol{H}_{k}\Delta\boldsymbol{g}^{(k-1)} = \Delta \boldsymbol{x}^{(k-1)}$$</p><ul><li><strong>拟牛顿法迭代公式</strong>:
+$$
+\begin{aligned}
+\boldsymbol{d}^{(k)} &=-\boldsymbol{H}_k \boldsymbol{g}^{(k)} \\ \alpha_k &=\underset{\alpha \geqslant 0}{\arg \min } f\left(\boldsymbol{x}^{(k)}+\alpha \boldsymbol{d}^{(k)}\right) \\ \boldsymbol{x}^{(k+1)} &=\boldsymbol{x}^{(k)}+\alpha_k \boldsymbol{d}^{(k)}
+\end{aligned}
+$$
+其中, 矩阵 $\boldsymbol{H}_0, \boldsymbol{H}_1, \boldsymbol{H}<em>2, \cdots$ 是$n \times n$ 对称实矩阵，是对黑塞矩阵的逆的近似。目标函数为二次型函数时, 它们必须满足
+$$
+\boldsymbol{H}</em>{k+1} \Delta \boldsymbol{g}^{(i)}=\Delta \boldsymbol{x}^{(i)}, \quad 0 \leqslant i \leqslant k
+$$
+其中, $\Delta \boldsymbol{x}^{(i)}=\boldsymbol{x}^{(i+1)}-\boldsymbol{x}^{(i)}=\alpha_i \boldsymbol{d}^{(i)}, \Delta \boldsymbol{g}^{(i)}=\boldsymbol{g}^{(i+1)}-\boldsymbol{g}^{(i)}=\boldsymbol{Q} \Delta \boldsymbol{x}^{(i)}$ 。实际上, 拟牛顿法也是 一种共轭方向法, 接下来给出证明。</li><li><strong>定理 11. 1</strong>:
+将拟牛顿法应用到二次型问题中, 黑塞矩阵为 $\boldsymbol{Q}=\boldsymbol{Q}^{\top}$, 对于 $0 \leqslant k&lt;n-1$, 有
+$$
+\boldsymbol{H}<em>{k+1} \Delta \boldsymbol{g}^{(i)}=\Delta \boldsymbol{x}^{(i)}, \quad 0 \leqslant i \leqslant k
+$$
+其中, $\boldsymbol{H}</em>{k+1}=\boldsymbol{H}_{k+1}^{\top}$ 。 如果 $\alpha_i \neq 0,0 \leqslant i \leqslant k$, 那么 $\boldsymbol{d}^{(0)}, \boldsymbol{d}^{(1)}, \cdots, \boldsymbol{d}^{(k+1)}$ 是 $\boldsymbol{Q}$ 共轭的。</li></ul><p>从矩阵 $\boldsymbol{H}<em>{k}$ 必须满足的方程来看，$\boldsymbol{H}</em>{k}$ 并不能唯一确定，常见的矩阵$\boldsymbol{H}<em>{k+1}$ 是通过在矩阵 $\boldsymbol{H}</em>{k}$ 上增加一个修正项来得到。(<strong>秩1修正、DFP，BFGS</strong>)</p><hr><a href=#秩1修正公式><h3 id=秩1修正公式><span class=hanchor arialabel=Anchor># </span>秩1修正公式</h3></a><p>$$\boldsymbol{H}_{k+1}=\boldsymbol{H}<em>k+a_k \boldsymbol{z}^{(k)} \boldsymbol{z}^{(k) \top}$$
+$$
+\boldsymbol{H}</em>{k+1} \Delta \boldsymbol{g}^{(k)}=\Delta \boldsymbol{x}^{(k)}
+$$
+在给定 $\boldsymbol{H}<em>k, \Delta \boldsymbol{g}^{(k)}, \Delta \boldsymbol{x}^{(k)}$ 后, 确定 $a_k$ 和 $\boldsymbol{z}^{(k)}$
+$$
+\boldsymbol{H}</em>{k+1}=\boldsymbol{H}_k+\frac{\left(\Delta \boldsymbol{x}^{(k)}-\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}\right)\left(\Delta \boldsymbol{x}^{(k)}-\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}\right)^{\top}}{\Delta \boldsymbol{g}^{(k) \top}\left(\Delta \boldsymbol{x}^{(k)}-\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}\right)}
+$$</p><ul><li><strong>算法步骤：</strong></li></ul><ol><li>令 $k=0$; 选择初始点 $\boldsymbol{x}^{(0)}$, 任选一个对称正定实矩阵 $\boldsymbol{H}_0$ 。</li><li>如果 $\boldsymbol{g}^{(k)}=\mathbf{0}$, 停止迭代; 否则, 令 $\boldsymbol{d}^{(k)}=-\boldsymbol{H}_k \boldsymbol{g}^{(k)}$ 。</li><li>计算 $$\begin{aligned}
+\alpha_k =\underset{\alpha \geqslant 0}{\arg \min } f\left(\boldsymbol{x}^{(k)}+\alpha d^{(k)}\right)
+\\ \boldsymbol{x}^{(k+1)} =\boldsymbol{x}^{(k)}+\alpha_k \boldsymbol{d}^{(k)}
+\end{aligned}
+$$</li><li>计算 $\Delta \boldsymbol{x}^{(k)}=\alpha_k \boldsymbol{d}^{(k)}$
+$$
+\begin{aligned}
+\Delta \boldsymbol{g}^{(k)} &=\boldsymbol{g}^{(k+1)}-\boldsymbol{g}^{(k)} \\ \boldsymbol{H}_{k+1} &=\boldsymbol{H}_k+\frac{\left(\Delta \boldsymbol{x}^{(k)}-\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}\right)\left(\Delta \boldsymbol{x}^{(k)}-\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}\right)^{\top}}{\Delta \boldsymbol{g}^{(k) \top}\left(\Delta \boldsymbol{x}^{(k)}-\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}\right)}
+\end{aligned}
+$$</li><li>令 $k:=k+1$, 回到第 2 步。</li></ol><a href=#秩1校正公式实例><h4 id=秩1校正公式实例><span class=hanchor arialabel=Anchor># </span>秩1校正公式实例</h4></a><p>例：用秩 1 算法求函数 $f$ 极小点。 $f\left(x_1, x_2\right)=x_1^2+\frac{1}{2} x_2^2+3$ 初始值为 $\boldsymbol{x}^{(0)}=[1,2]^{\top}, \boldsymbol{H}_0=\boldsymbol{I}_2$
+解:
+$$
+\boldsymbol{g}^{(k)}=\left[\begin{array}{ll}
+2 & 0 \\ 0 & 1
+\end{array}\right] \boldsymbol{x}^{(k)}
+$$
+Step 1:
+$$
+\begin{aligned}
+& \boldsymbol{d}^{(0)}=-\boldsymbol{g}^{(0)}=[-2,-2]^{\top} \\ & \alpha_0=\underset{\alpha \geqslant 0}{\arg \min } f\left(\boldsymbol{x}^{(0)}+\alpha \boldsymbol{d}^{(0)}\right)=-\frac{\boldsymbol{g}^{(0) \top} \boldsymbol{d}^{(0)}}{\boldsymbol{d}^{(0) \top} \boldsymbol{Q} \boldsymbol{d}^{(0)}}=\frac{2}{3} \\ & \boldsymbol{x}^{(1)}=\boldsymbol{x}^{(0)}+\alpha_0 \boldsymbol{d}^{(0)}=\left[-\frac{1}{3}, \frac{2}{3}\right]^{\top}
+\end{aligned}
+$$
+Step 2:
+$$
+\begin{aligned}
+& \Delta \boldsymbol{x}^{(0)}=\alpha_0 \boldsymbol{d}^{(0)}=\left[-\frac{4}{3},-\frac{4}{3}\right]^{\top} \\ & \boldsymbol{g}^{(1)}=\boldsymbol{Q} \boldsymbol{x}^{(1)}=\left[-\frac{2}{3}, \frac{2}{3}\right]^{\top} \\ & \Delta \boldsymbol{g}^{(0)}=\boldsymbol{g}^{(1)}-\boldsymbol{g}^{(0)}=\left[-\frac{8}{3},-\frac{4}{3}\right]^{\top} \\ & \boldsymbol{H}_1=\boldsymbol{H}_0+\frac{\left(\Delta \boldsymbol{x}^{(0)}-\boldsymbol{H}_0 \Delta \boldsymbol{g}^{(0)}\right)\left(\Delta \boldsymbol{x}^{(0)}-\boldsymbol{H}_0 \Delta \boldsymbol{g}^{(0)}\right)^{\top}}{\Delta \boldsymbol{g}^{(0) \top}\left(\Delta \boldsymbol{x}^{(0)}-\boldsymbol{H}_0 \Delta \boldsymbol{g}^{(0)}\right)}=\left[\begin{array}{ll}
+\frac{1}{2} & 0 \\ 0 & 1
+\end{array}\right] \\ & \boldsymbol{d}^{(1)}=-\boldsymbol{H}_1 \boldsymbol{g}^{(1)}=\left[\frac{1}{3},-\frac{2}{3}\right]^{\top} \\ & \alpha_1=-\frac{\boldsymbol{g}^{(1) \top} \boldsymbol{d}^{(1)}}{\boldsymbol{d}^{(1) \top} \boldsymbol{Q d}^{(1)}}=1 \\ & \boldsymbol{x}^{(2)}=\boldsymbol{x}^{(1)}+\alpha_1 \boldsymbol{d}^{(1)}=[0,0]^{\top} \quad \boldsymbol{g}^{(2)}=\mathbf{0}, \text { 也就是说 } \boldsymbol{x}^{(2)}=\boldsymbol{x}^*
+\end{aligned}
+$$</p><hr><a href=#dfp算法><h3 id=dfp算法><span class=hanchor arialabel=Anchor># </span>DFP算法</h3></a><ul><li><strong>秩一修正公式缺陷</strong></li></ul><ol><li>秩1算法产生的矩阵 $\boldsymbol{H}_{k+1}$ 可能非正定, 将导致 $d^{(k+1)}$ 可能不是下降方向(即使是二次型问题）。</li><li>秩 1 公式的分母如果接近 0 ,会出现计算困难。</li></ol><hr><p>寻找 $\boldsymbol{F}\left(\boldsymbol{x}^{(k)}\right)^{-1}$ 的近似
+具体公式:
+$$
+\begin{aligned}
+&\Delta \boldsymbol{x}^{(k)}=\alpha_k \boldsymbol{d}^{(k)} \\ &\Delta \boldsymbol{g}^{(k)}=\boldsymbol{g}^{(k+1)}-\boldsymbol{g}^{(k)} \\ &\boldsymbol{H}_{k+1}=\boldsymbol{H}_k+\frac{\Delta \boldsymbol{x}^{(k)} \Delta \boldsymbol{x}^{(k)\top}}{\Delta \boldsymbol{x}^{(k)\top} \Delta \boldsymbol{g}^{(k)}}-\frac{\left[\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}\right]\left[\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}\right]^{\top}}{\Delta \boldsymbol{g}^{(k)\top} \boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)}}
+\end{aligned}
+$$</p><p>使用秩一算法或者 $DFP$ 算法求解二次型问题时，黑塞矩阵为 $\boldsymbol{Q}=\boldsymbol{Q}^{\top}$ 有 $\boldsymbol{H}_{k+1} \Delta\boldsymbol{g}^{(i}=\Delta \boldsymbol{x}^{ (i)}$ ，$0 \le \boldsymbol{i} \le \boldsymbol{k}$</p><ul><li><strong>DFP算法特性</strong>：</li><li>在 $DFP$ 算法中，只要矩阵 $\boldsymbol{H}<em>k$ 正定，$\boldsymbol{H}</em>{k+1}$ 就一定是正定的。</li><li>当矩阵 $\boldsymbol{H}_k$ 接近为奇异矩阵时，迭代有时无法展开。</li></ul><a href=#dfp公式实例><h4 id=dfp公式实例><span class=hanchor arialabel=Anchor># </span>DFP公式实例</h4></a><p>例：用 DFP 算法求函数 $f(\boldsymbol{x})=\frac{1}{2} \boldsymbol{x}^{\top}\left[\begin{array}{ll}4 & 2 \\ 2 & 2\end{array}\right] \boldsymbol{x}-\boldsymbol{x}^{\top}\left[\begin{array}{c}-1 \\ 1\end{array}\right], \quad \boldsymbol{x} \in \mathbb{R}^2$ 的极小点。初始点为 $\boldsymbol{x}^{(0)}=[0,0]^{\top}, \boldsymbol{H}_0=\boldsymbol{I}_2$ 。
+step 1:
+$$
+\begin{aligned}
+& \boldsymbol{g}^{(0)}=[1,-1]^{\top} \\ & \boldsymbol{d}^{(0)}=-\boldsymbol{H}_0 \boldsymbol{g}^{(0)}=\left[\begin{array}{c}
+-1 \\ 1
+\end{array}\right] \\ & \alpha_0=\underset{\alpha \geqslant 0}{\arg \min } f\left(\boldsymbol{x}^{(0)}+\alpha \boldsymbol{d}^{(0)}\right)=1 \\ & \boldsymbol{x}^{(1)}=\boldsymbol{x}^{(0)}+\alpha_0 \boldsymbol{d}^{(0)}=[-1,1]^{\top}\\ & \boldsymbol{g}^{(k)}=\left[\begin{array}{ll}
+4 & 2 \\ 2 & 2
+\end{array}\right] \boldsymbol{x}^{(k)}-\left[\begin{array}{c}
+-1 \\ 1
+\end{array}\right]
+\end{aligned}
+$$
+step 2:
+$$
+\begin{aligned}
+& \boldsymbol{g}^{(1)}=\left[\begin{array}{ll}
+4 & 2 \\ 2 & 2
+\end{array}\right]\left[\begin{array}{c}
+-1 \\ 1
+\end{array}\right]-\left[\begin{array}{c}
+-1 \\ 1
+\end{array}\right]=\left[\begin{array}{l}
+-1 \\ -1
+\end{array}\right] \\ & \Delta \boldsymbol{g}^{(0)}=g^{(1)}-g^{(0)}=[-2,0]^{\top} \\ & \Delta \boldsymbol{x}^{(0)}=\boldsymbol{x}^{(1)}-\boldsymbol{x}^{(0)}=[-1,1]^{\top} \\ & \boldsymbol{H}_1=\boldsymbol{H}_0+\frac{\Delta \boldsymbol{x}^{(0)} \Delta \boldsymbol{x}^{(0) \top}}{\Delta \boldsymbol{x}^{(0) \top} \Delta \boldsymbol{g}^{(0)}}-\frac{\left(\boldsymbol{H}_0 \Delta \boldsymbol{g}^{(0)}\right)\left(\boldsymbol{H}_0 \Delta \boldsymbol{g}^{(0)}\right)^{\top}}{\Delta \boldsymbol{g}^{(0) \top} \boldsymbol{H}_0 \Delta \boldsymbol{g}^{(0)}}=\left[\begin{array}{cc}
+\frac{1}{2} & -\frac{1}{2} \\ -\frac{1}{2} & \frac{3}{2}
+\end{array}\right] \\ & \boldsymbol{d}^{(1)}=-\boldsymbol{H}_1 \boldsymbol{g}^{(1)}=[0,1]^{\top} \\ & \alpha_1=\underset{\alpha \geqslant 0}{\arg \min } f\left(\boldsymbol{x}^{(1)}+\alpha \boldsymbol{d}^{(1)}\right)=\frac{1}{2} \\ & \boldsymbol{x}^{(2)}=\boldsymbol{x}^{(1)}+\alpha_1 \boldsymbol{d}^{(1)}=[-1,3 / 2]^{\top} \\ &
+\end{aligned}
+$$
+函数 $f$ 为两变量二次型函数, $\boldsymbol{x}^{(2)}$ 就是极小点 $\boldsymbol{x}^*$。可以验证 $\boldsymbol{d}^{(0)}$ 和 $\boldsymbol{d}^{(1)}$ 是 $\boldsymbol{Q}$ 共轭方向。</p><hr><a href=#bfsgs公式><h3 id=bfsgs公式><span class=hanchor arialabel=Anchor># </span>BFSGS公式</h3></a><ul><li><p><strong>旧思路</strong>：根据 $\Delta \boldsymbol{g}^{(i)}=\boldsymbol{Q} \Delta \boldsymbol{x}^{(i)}, 0 \leqslant i \leqslant k$
+黑塞矩阵逆矩阵的近似矩阵需要满足以下条件:
+$$
+\boldsymbol{H}_{k+1} \Delta \boldsymbol{g}^{(i)}=\Delta \boldsymbol{x}^{(i)}, \quad 0 \leqslant i \leqslant k
+$$
+基于上述等式, 可以构造黑塞矩阵逆矩阵 $Q^{-1}$ 的近似矩阵的更新公式。
+如秩1公式和DFP公式都是据此而来的。</p></li><li><p><strong>新思路</strong>: 除了构造 $Q^{-1}$ 的近似矩阵, 还可以构造矩阵 $Q$ 的近似矩阵
+令矩阵 $B_k$ 表示在第 $k$ 次迭代中关于矩阵 $Q$ 的估计
+则 $\boldsymbol{B}<em>{\boldsymbol{k}+1}$ 应该满足 $\Delta \boldsymbol{g}^{(i)}=\boldsymbol{B}</em>{k+1} \Delta \boldsymbol{x}^{(i)}, \quad 0 \leqslant i \leqslant k$</p></li></ul><p>由DFP公式: $$\boldsymbol{H}_{k+1}^{\mathrm{DFP}}=\boldsymbol{H}_k+\frac{\Delta \boldsymbol{x}^{(k)} \Delta \boldsymbol{x}^{(k) \top}}{\Delta \boldsymbol{x}^{(k) \top} \Delta \boldsymbol{g}^{(k)}}-\frac{\boldsymbol{H}_k \Delta \boldsymbol{g}^{(k)} \Delta \boldsymbol{g}^{(k) \top} \boldsymbol{H}_k}{\Delta \boldsymbol{g}^{(k) \top} \boldsymbol{H}<em>k \Delta \boldsymbol{g}^{(k)}}$$
+用对称性，得BFGS公式
+$$
+\boldsymbol{B}</em>{k+1}=\boldsymbol{B}_k+\frac{\Delta \boldsymbol{g}^{(k)} \Delta \boldsymbol{g}^{(k) \top}}{\Delta \boldsymbol{g}^{(k) \top} \Delta \boldsymbol{x}^{(k)}}-\frac{\boldsymbol{B}_k \Delta \boldsymbol{x}^{(k)} \Delta \boldsymbol{x}^{(k) \top} \boldsymbol{B}_k}{\Delta \boldsymbol{x}^{(k) \top} \boldsymbol{B}_k \Delta \boldsymbol{x}^{(k)}}
+$$
+注: <em>DFP公式与BFGS公式称为互补的（或对偶的）</em></p><ul><li><strong>BFGS公式的逆矩阵</strong>
+$$
+\left(\boldsymbol{B}_{k+1}\right)^{-1}=\left(\boldsymbol{B}_k+\frac{\Delta \boldsymbol{g}^{(k)} \Delta \boldsymbol{g}^{(k) T}}{\Delta \boldsymbol{g}^{(k)\top} \Delta \boldsymbol{x}^{(k)}}-\frac{\boldsymbol{B}_k \Delta \boldsymbol{x}^{(k)} \Delta \boldsymbol{x}^{(k) \top} \boldsymbol{B}_k}{\Delta \boldsymbol{x}^{(k) \top} \boldsymbol{B}_k \Delta \boldsymbol{x}^{(k)}}\right)^{-1}
+$$
+原理：应用两次 <a class="internal-link broken">Sherman-Morison公式</a> 即可</li></ul><hr><div class=page-end id=footer><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://glossary.jiefengzhou.com/js/graph.abd4bc2af3869a96524d7d23b76152c7.js></script></div></div><div id=contact_buttons><footer><ul><li><a href=https://glossary.jiefengzhou.com/>Home</a></li><li><a href=https://github.com/jeffeychou>Github</a></li><li><a href="mailto: littcal@foxmail.com">Email</a></li></ul></footer></div></article><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div></div></body></html>
