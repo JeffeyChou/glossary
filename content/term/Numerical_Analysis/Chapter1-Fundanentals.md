@@ -9,7 +9,7 @@ rating: ⭐
 refplus: true
 status: complete 
 tags:  
-- 数值分析
+- Numerical_Analysis
 title: Chapter1-Fundanentals
 share: false
 ---

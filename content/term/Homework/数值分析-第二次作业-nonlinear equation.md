@@ -9,7 +9,7 @@ rating: ⭐⭐
 draft: false
 tags:  
 - 作业
-- 数值分析
+- Numerical_Analysis
 title: 数值分析-第二次作业-nonlinear equation
 share: true
 ---

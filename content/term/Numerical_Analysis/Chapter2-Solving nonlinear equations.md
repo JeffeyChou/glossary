@@ -10,7 +10,7 @@ rating: ⭐
 draft: false
 status: complete
 tags:  
-- 数值分析
+- Numerical_Analysis
 title: "Chapter2-Solving nonlinear equations"
 share: true
 ---
