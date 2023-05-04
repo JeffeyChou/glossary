@@ -1,0 +1,33 @@
+ ---
+alias: Song2021
+tags: unread
+rating: 猸�
+share: false
+ptype: article
+---
+
+# Entropic Explanation of Power Set
+<cite>* Authors: Yutong Song, Yong Deng</cite>
+* URL: [http://univagora.ro/jour/index.php/ijccc/article/view/4413](http://univagora.ro/jour/index.php/ijccc/article/view/4413)
+* DOI: [10.15837/ijccc.2021.4.4413](https://doi.org/10.15837/ijccc.2021.4.4413)
+* Cite key: Song2021
+* PDF Attachments
+	- [Song 鍜� Deng - 2021 - Entropic Explanation of Power Set.pdf](zotero://open-pdf/library/items/3RZ5LZAZ)
+
+## Abstract
+
+A power set of a set S is de铿乶ed as the set of all subsets of S, including set S itself and empty set, denoted as P (S) or 2S. Given a 铿乶ite set S with |S|= n hypothesis, one property of power set is that the amount of subsets of S is |P (S)|= 2n. However, the physica meaning of power set needs exploration. To address this issue, a possible explanation of power set is proposed in this paper. A power set of n events can be seen as all possible k-combination, where k ranges from 0 to n. It means the power set extends the event space in probability theory into all possible combination of the single basic event. From the view of power set, all subsets or all combination of basic events, are created equal. These subsets are assigned with the mass function, whose uncertainty can be measured by Deng entropy. The relationship between combinatorial number, Pascal鈥檚 triangle and power set is revealed by Deng entropy quantitively from the view of information measure.
+
+
+* DOI: [10.15837/ijccc.2021.4.4413](https://doi.org/10.15837/ijccc.2021.4.4413)
+
+* [Local library](zotero://select/items/1_FVHUE3YD)
+
+---
+
+### 鍒濊鍗拌薄
+
+comment::
+
+
+

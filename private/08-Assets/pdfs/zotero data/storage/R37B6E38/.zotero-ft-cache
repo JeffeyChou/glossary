@@ -1,0 +1,196 @@
+A fusion-based enhancing approach for single sandstorm image
+
+Xueyang Fu 1, Yue Huang 1, Delu Zeng 1, Xiao-Ping Zhang 12, Xinghao Ding ∗1
+1 Department of Communication Engineering, Xiamen University Xiamen, China
+2 Department of Electrical and Computer Engineering, Ryerson University Toronto, ON, Canada ∗ dxh@xmu.edu.cn
+
+Abstract—In this paper, a novel image enhancing approach focuses on single sandstorm image is proposed. The degraded image has some problems, such as color distortion, low-visibility, fuzz and non-uniform luminance, due to the light is absorbed and scattered by particles in sandstorm. The proposed approach based on fusion principles aims to overcome the aforementioned limitations. First, the degraded image is color corrected by adopting a statistical strategy. Then two inputs, which represent different brightness, are derived only from the color corrected image by applying Gamma correction. Three weighted maps (sharpness, chromaticity and prominence), which contain important features to increase the quality of the degraded image, are computed from the derived inputs. Finally, the enhanced image is obtained by fusing the inputs with the weight maps. The proposed method is the ﬁrst to adopt a fusion-based method for enhancing single sandstorm image. Experimental results show that enhanced results can be improved by color correction, well enhanced details and local contrast while promoted global brightness, increasing the visibility, naturalness preservation. Moreover, the proposed algorithm is mostly calculated by per-pixel operation, which is appropriate for real-time applications.
+I. INTRODUCTION
+The sandstorm, which brings amount of disasters, has happened in the whole world more frequently in recent years. One of the disadvantages is degrading the visibility signiﬁcantly, which directly impacts on trafﬁc safety, surveillance system, intelligent vehicle and remote sensing systems. Since the light is absorbed and scattered by ﬂoating sand and dust in sandstorm, the observed image is degraded by color distortion, low-visibility, fuzz and darkness.
+Enhancement and restoration the visibility of degraded images in bad weather conditions have received much attention. For image enhancement technique, some effective and efﬁcient algorithms have been proposed [1][2][3][4][5][6][7] to deal with color distortion, low-contrast, darkness and naturalness preservation. When tackling sandstorm images, the mentioned algorithms fail to process since the color and detail information are lost seriously due to the absorption and scatter of the light. Recently, a kind of fusion-based algorithm is proposed and has a good performance on dealing with underwater images
+2014 IEEE 16th International Workshop on Multimedia Signal Processing (MMSP), Sep. 22-24, 2014, Jakarta, Indonesia. 978-1-4799-5896-2/14/$31.00 c 2014 IEEE.
+
+[8] and haze images [9]. For image restoration technique, most algorithms are generally based on the dichromatic model [10] and mainly focus on hazy or foggy images. Different priors are found and used to invert the degrading processing. Tan [11] restored the visibility by manipulating contrast in observed degraded images. Fattal [12] adopted independent Component Analysis (ICA) to estimate scene radiance and transmission to improve the quality of haze images. Taral [13] used median ﬁltering to estimate depth to recover scene. A novel prior, which called dark channel prior [14], is proposed to estimate transmission and has a satisfactory result on single image haze removal. A non-local total variation strategy [15]is used as a regularization to estimate transmission and latent image. Even though the aforementioned restoration methods have an effective result on hazy or foggy images, they also fail to process sandstorm images. Since the radius of particles in sandstorm is nearly 25µm [16], which is much larger than haze (0.01∼1µm) and fog (1∼10µm) [10], the dichromatic model and different priors are no longer applicable.
+According to the analysis mentioned above, for enhancing sandstorm images, a special strategy is needed to solve this challenging task. In this paper, a simple, fast and effective approach is proposed to enhance single sandstorm image based on a fusion technique. Different with conventional image fusion strategies, which require several input images [17] , the proposed algorithm derives two input images and weight maps from only one observed image. The main steps of the proposed algorithm are as follows. Firstly, based on a statistical method, the sandstorm image is pre-processed to solve the color distortion and make a natural appearance. Then two input images, which contain different luminance information to make a tradeoff between brightness and darkness, are derived from the color corrected image by simply using Gamma correction. In order to effectively utilize the useful information of the two derived inputs, three weighted maps (sharpness, chromaticity and prominence) are computed to enhance specify features. Finally, the enhanced image is obtained by fusing the two inputs which are weighted by the normalized weight maps.
+The proposed approach is the ﬁrst to enhance single sandstorm image by adopt a fusion-based method. One advantage of the proposed algorithm is that, additive images and other complex information about the sandstorm are not required.
+
+All the inputs and weight maps are derived from single observed sandstorm image. Another advantage is, inspired by dark channel prior [14] and bight channel prior [18] , a new prominence weighted map is proposed to salient objects that lose prominence. Moreover, the proposed algorithm is mostly calculated by per-pixel computation, which is easy to implement and appropriate for real-time applications. Experimental results demonstrate that enhanced images can be improved by color correction, well enhanced details and local contrast while promoted global brightness, increasing the visibility and naturalness preservation.
+II. FUSION-BASED ENHANCING ALGORITHM
+The proposed fusion-based enhancing algorithm for single sandstorm image is described in this section. The fundamental concept is to extract two input images and weight maps that derived from single observed image. Each input and weight map represents different important features. Then the derived inputs and weighted maps are combined by fusing operation to obtain the ﬁnal enhanced image, which is synthesized multiply features. There are mainly three steps of the proposed algorithm: deriving two inputs, computing weight maps and fusing the inputs and weight maps. Fig. 1 is the ﬂow chart of the proposed algorithm.
+
+The observed sandstorm image is deﬁned as O and the color correcting process is as follows. First, the maximum and minimum of color shifting in color channel (RGB-channel) is calculated as:
+
+Omc ax = Omc ean + µOvcar Omc in = Omc ean − µOvcar
+
+(1)
+
+where c ∈ {R, G, B}, Omc ean is the mean value of the channel, Ovcar is the mean square error, µ is a parameter to control the color corrected images saturation. Omc ax and Omc in are the maximum and the minimum of color shifting respectively. Then, the color corrected image is calculated as:
+
+OCc R
+
+=
+
+Oc − Omc in Omc ax − Omc in
+
+× 255
+
+(2)
+
+where OCR denotes the color corrected image. This operation based on simple statistical method can remove the color cast effectively.
+While the color correction cannot address the problem of non-uniform luminance due to the absorption and scattering of the light, therefore two inputs with different luminance are derived to make a tradeoff between brightness and darkness. The two inputs are obtained by adopting Gamma correction of OCR to adjust luminance. The Gamma correction is deﬁned as follows:
+
+V1
+
+V = 255( ) γ
+
+(3)
+
+255
+
+where V is the V channel in HSV color space that represent luminance information, γ is the adjusting parameter. The ﬁrst input I1 is derived by setting γ as 1.3 while the second input I2 is derived by setting γ as 0.7. the ﬁrst input I1 with high luminance can lightening darkness regions, and the second input I2 with low luminance has the effect of suppressing excessive brightness. This Gamma correction operation is to produces an appropriate uniform luminance and makes a balance between brightness and darkness.
+
+(a)
+Fig. 1. The ﬂow chart of the proposed approach
+A. Inputs Since amount of particles are ﬂoating in air under sandstorm
+condition, light is absorbed and scattered seriously. Generally, the sandstorm image appears yellow since the yellow light has the largest penetrability and scattering. Traditional white balancing algorithms [19][20] are not useful due to the absorbed colors are difﬁcult to be restored. Before deriving the inputs, a color corrected approach based on statistical method is adopted to remove the color cast and make a natural appearance.
+
+B. Weight Maps
+After the color correction and luminance adjustment, the derived inputs still suffer from fuzz and low-visibility. In order to overcome these unpleasant appearances, three weight maps (sharpness, chromaticity and saliency) are introduced to further improve the quality of degraded images.
+The ﬁrst weight map is sharpness weight map (MS) which is used to deal with fuzz. This map is obtained by adopting the contrast local adaptive histogram equalization (CLAHE) [21] on each input luminance component, i.e. the V channel. Details and edges can be enhanced effectively meanwhile noise ampliﬁcation can be avoided. This weight map makes the outline of distant objects observed clearly, in other words, the depth can be stood out.
+
+Generally, the human visual pleased with images with high saturation [9]. Therefore, the second weight map is chromatic weight map (MC) to adjust the saturation gain. This map is obtained by adopting the algorithm mentioned in [9]:
+
+MCk (x,
+
+y)
+
+=
+
+exp(−
+
+(Sk(x, y) 2σ2
+
+−
+
+1)2
+
+)
+
+(4)
+
+where S is the S channel in HSV color space, k indexes the derived inputs, σ is the standard deviation. Since the range of saturation value is [0, 1], equation (4) makes the saturated regions in original inputs can be enhanced in the ﬁnal result.
+In sandstorm environment, objects prominence is usually lost. Inspired by dark channel prior [14] and bight channel prior [18], the prominence weight map (MP ) is introduced to emphasize objects. After color correction operation, the two inputs appearance likes haze environment. Based on this observation, the dehazing algorithm using dark channel prior in [14] is adopted as the ﬁrst process on the two inputs. In order to avoid the halo artifacts and reduce the computing complexity, the dark channel is calculated by per-pixel operation. The haze-free image has the effect of emphasizing objects to some degree while cannot highlight the saliency. According to the bight channel prior [18], we simplify that at least one pixel has very high intensity in one color channel in most objects and this is used to extract objects saliency. Then the prominence weight map is obtained by calculating the bright channel of the haze-free images. As the same with dark channel calculation, the bright channel is also computed by per-pixel:
+
+III. EXPERIMENTAL RESULTS AND ANALYSIS
+In this paper, all experimental images are processed by Matlab R2012a on a PC with an Intel Core i3 CPU, 4GB RAM. The parameter µ in equation (1) is ﬁxed as 3, and the default value of the standard deviation σ is = 0.3 in equation (4), as the same in [9].
+Figure. 2 shows one of the experimental results. The enhanced result, derived inputs and corresponding normalized weight maps are displayed. As can be seen, the two derived inputs with different luminance make a balance with brightness and darkness. The input with low luminance can avoid overenhancement, such as distant objects in the high luminance input, which can lighten darkness regions. Meanwhile the corresponding normalized weight maps synthesize different features of derived inputs to improve the degraded images quality. Comparing with the observed sandstorm image, the ﬁnal enhanced result has the character of color correction, improved visibility and global brightness, well enhanced details and local contrast.
+
+(a)
+
+(b)
+
+MPk (x, y) = max (Jck(x, y))
+
+(5)
+
+c∈{R,G,B}
+
+(c)
+
+(d)
+
+where J is the haze-free image from the input by using
+
+dehazing algorithm.
+
+C. Fusion Process
+
+In order to generate consistent results, each weight M k are
+
+obtained by summing the previous computed weight maps:
+
+MSk, MCk and MPk . Then the ﬁnal weight map for each input
+
+(e)
+
+(f)
+
+is:
+
+M k(x, y) = M k(x, y) k M k(x, y)
+
+Fig. 2. Top: the sandstorm image and the enhanced result; Middle: the (6) two derived inputs with different luminance; Bottom: the corresponding
+normalized weight maps M .
+
+The enhanced image is calculated by fusing the derived inputs with the weight maps:
+
+Ienahcned = M k(x, y)Ik(x, y)
+
+(7)
+
+k
+
+where Ienahcned denotes the ﬁnal enhanced image. The normalized weight maps constrains the range of intensity in the result is the same as the inputs. In next section, experimental results are shown to demonstrate the effectiveness of the proposed methods.
+
+In ﬁgure. 3 and ﬁgure. 4, comparisons with Multi-Scale Retinex with Color Restoration (MSRCR) [2], Generalized Unsharp Masking (GUM) [4] and Tarels algorithm [13] are shown. It is clearly that all the other three algorithms fail to recover color information, which makes their results look unnatural. The results by MSRCR algorithm [2] are overenhancement meanwhile the distant objects become more fuzz. This due to the MSRCR algorithm merely takes reﬂectance as the ﬁnal result without considering other features. The results by GUM algorithm [4] have a good performance
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+Fig. 3. Comparison with other algorithms: (a) the sandstorm image. (b) the result of MSRCR [2]. (c) the result of GUM [4]. (d) the result of Tarel [13]. (e) the result of proposed approach.
+
+(a)
+
+(b)
+
+(c)
+
+(d)
+
+(e)
+
+Fig. 4. Comparison with other algorithms: (a) the sandstorm image. (b) the result of MSRCR [2]. (c) the result of GUM [4]. (d) the result of Tarel [13]. (e) the result of proposed approach.
+
+on improving contrast while still over-enhancement. Since the GUM algorithm cannot make a tradeoff between lowfrequency and high-frequency. The results by Tarels algorithm [13] have an obvious boundary due to the dichromatic model is not applicable to the sandstorm condition, which makes the atmospheric veil cannot be estimated correctly. The enhanced results by proposed approach have an improvement on color correction, naturalness preservation, contrast and global brightness promotion, well enhanced details and increasing the visibility. Since the proposed approach is based on fusion method which synthesizes multi-features of the two derived inputs, the ﬁnal enhanced images outperforms other three algorithms.
+Moreover, the computation time is satisfactory since most
+
+calculations are based on per-pixel operations. It takes about 1.03 seconds to process a color image with size 900×600. In comparisonthe MSRCR algorithm takes 1.02 seconds per image, the GUM algorithm requires 2 seconds and Tarels method needs 1.5 seconds. Based on hardware accelerating, the proposed approach can be appropriate for real-time applications.
+IV. CONCLUSION
+In this paper, a fusion-based approach is proposed to enhance single sandstorm image. The proposed approach is the ﬁrst to solve this challenging problem by utilizing only one degraded image. First, two inputs with different luminance are derived from the color corrected sandstorm image. Then
+
+three weight maps that contain different important information are computed to enhance corresponding features. The ﬁnal enhanced image is obtained by fusing the two inputs with the weight maps. Experimental results demonstrate both the effectiveness and efﬁciency of the proposed approach.
+
+[20] Weijer J. Van, De, T. Gevers, and A. Gijsenij, “Edge-based color constancy,” IEEE Trans. on Image Processing, vol. 16, no. 9, pp. 2207– 2214, 2007.
+[21] K. Zuiderveld, “Contrast limited adaptive histogram equalization,” pp. 474–485, 1994.
+
+ACKNOWLEDGMENT
+The project is supported by the National Natural Science Foundation of China (No. 30900328, 61172179, 61103121, 81301278), the Natural Science Foundation of Fujian Province of China (No. 2012J05160), The National Key Technology R&D Program (2012BAI07B06), the Fundamental Research Funds for the Central Universities (No. 2011121051, 2013121023), the NCETFJ.
+
+REFERENCES
+[1] D.J. Jobson, Z.U. Rahman, and G.A. Woodell, “A multiscale retinex for bridging the gap between color images and the human observation of scenes,” IEEE Trans. on Image Processing, vol. 6, no. 7, pp. 965–976, 1997.
+[2] Z. Rahman, D.J. Jobson, and G.A. Woodell, “Retinex processing for automatic image enhancement,” Journal of Electronic Imaging, vol. 13, no. 1, pp. 100–110, 2004.
+[3] S. Chen and A. Beghdadi, “Natural enhancement of color image,” IEEE Trans. on Image and Video Processing, vol. 2010, no. 2, 2010.
+[4] G. Deng, “A generalized unsharp masking algorithm,” IEEE Trans. on Image Processing, vol. 20, no. 5, pp. 1249–1261, 2011.
+[5] X. Wu, “A linear programming approach for optimal contrast-tone mapping,” IEEE Trans. on Image Processing, vol. 20, no. 5, pp. 1262– 1272, 2011.
+[6] X. Shu and X. Wu, “Image enhancement revisited: From ﬁrst order to second order statistics,” in Proc. 2013 IEEE Conf. on Image Processing, 2013, pp. 886–890.
+[7] S. Wang, J. Zheng, H. Hu, and B. Li, “Naturalness preserved enhancement algorithm for non-uniform illumination images,” IEEE Trans. on Image Processing, vol. 22, no. 9-10, pp. 3538–3548, 2013.
+[8] C. Ancuti, C. O. Ancuti, T. Haber, and P. Bekaert, “Enhancing underwater images and videos by fusion,” in Proc. 2012 IEEE Conf. on Computer Vision and Pattern Recognition, 2012, pp. 81–88.
+[9] C.O. Ancuti and C. Ancuti, “Single image dehazing by multi-scale fusion,” IEEE Trans. on Image Processing, vol. 22, no. 8, pp. 3271– 3282, 2013.
+[10] S. G. Narasimhan and S. K. Nayar, “Vision and the atmosphere,” International Journal on Computer Vision,, vol. 48, no. 3, pp. 233–254, 2002.
+[11] R. T. Tan, “Visibility in bad weather from a single image,” in Proc. 2008 IEEE Conf. on Computer Vision and Pattern Recognition, 2008, pp. 1–8.
+[12] R. Fattal, “Single image dehazing,” in ACM Trans. on Graphics (TOG), 2008, vol. 27, p. 72.
+[13] J.P. Tarel and N. Hautiere, “Fast visibility restoration from a single color or gray level image2,” in Proc. 12th IEEE Conf. on Computer Vision, 2009, pp. 2201–2208.
+[14] K. He, J. Sun, and X. Tang, “Single image haze removal using dark channel prior,” IEEE Trans. on Pattern Analysis and Machine Intelligence, vol. 33, no. 12, pp. 2341–2353, 2011.
+[15] Q. Yan, L. Xu, and J. Jia, “Dense scattering layer removal,” in ACM SIGGRAPH Asia 2013 Technical Briefs, 2013, p. 14.
+[16] J. W. Ryde, “Echo intensities and attenuation due to clouds, rain, hail, sand and dust storms at centimetre wavelengths,” Report, vol. 7831, pp. 22–24, 1941.
+[17] H.B. Mitchell, “Markov random ﬁelds,” Chapter 17 In HB Mitchell, Image fusion: Theories, techniques and applications, 2010.
+[18] X. Fu, D. Zeng, Y. Huang, X. Ding, and X-P. Zhang, “A variational framework for single low light image enhancement using bright channel prior,” in Proc. IEEE Global Conf. on Signal and Information Processing, 2013, pp. 1085–1088.
+[19] Finlayson. G and Trezzi. E, “Shades of gray and colour constancy,” in Proc. 12th Conf. on Color Image, 2004, pp. 37–41.
+

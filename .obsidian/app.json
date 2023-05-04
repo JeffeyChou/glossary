@@ -1,0 +1,42 @@
+{
+  "attachmentFolderPath": "private/08-Assets",
+  "trashOption": "system",
+  "promptDelete": false,
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  },
+  "alwaysUpdateLinks": true,
+  "foldIndent": true,
+  "foldHeading": true,
+  "showLineNumber": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "private/01-Diary/本周事务",
+  "fileSortOrder": "alphabetical",
+  "legacyEditor": false,
+  "livePreview": true,
+  "defaultViewMode": "source",
+  "spellcheck": true,
+  "autoPairMarkdown": true,
+  "useTab": false,
+  "newLinkFormat": "absolute",
+  "userIgnoreFilters": [
+    "10-blog/source/",
+    "10-blog/node_modules/",
+    "10-blog/scaffolds/",
+    "10-blog/themes/",
+    "private/08-Assets/"
+  ],
+  "useMarkdownLinks": true,
+  "spellcheckDictionary": [
+    "Shannon entropy"
+  ],
+  "communityThemeSortOrder": "download",
+  "showFrontmatter": true,
+  "spellcheckLanguages": [
+    "zh-CN",
+    "en-US"
+  ]
+}

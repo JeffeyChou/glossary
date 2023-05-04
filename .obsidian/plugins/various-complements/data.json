@@ -1,0 +1,319 @@
+{
+  "strategy": "default",
+  "matchStrategy": "prefix",
+  "maxNumberOfSuggestions": 5,
+  "maxNumberOfWordsAsPhrase": 3,
+  "minNumberOfCharactersTriggered": 0,
+  "minNumberOfWordsTriggeredPhrase": 1,
+  "complementAutomatically": true,
+  "delayMilliSeconds": 0,
+  "disableSuggestionsDuringImeOn": false,
+  "insertAfterCompletion": true,
+  "firstCharactersDisableSuggestions": ":/^",
+  "showMatchStrategy": true,
+  "showComplementAutomatically": true,
+  "showIndexingStatus": true,
+  "descriptionOnSuggestion": "Short",
+  "selectSuggestionKeys": "Enter",
+  "additionalCycleThroughSuggestionsKeys": "None",
+  "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
+  "openSourceFileKey": "None",
+  "propagateEsc": false,
+  "enableCurrentFileComplement": true,
+  "currentFileMinNumberOfCharacters": 0,
+  "onlyComplementEnglishOnCurrentFileComplement": false,
+  "enableCurrentVaultComplement": false,
+  "currentVaultMinNumberOfCharacters": 0,
+  "includeCurrentVaultPathPrefixPatterns": "",
+  "excludeCurrentVaultPathPrefixPatterns": "",
+  "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
+  "enableCustomDictionaryComplement": false,
+  "customDictionaryPaths": "https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english-no-swears.txt",
+  "columnDelimiter": "Tab",
+  "customDictionaryWordRegexPattern": "",
+  "delimiterToHideSuggestion": "",
+  "delimiterToDivideSuggestionsForDisplayFromInsertion": "",
+  "caretLocationSymbolAfterComplement": "",
+  "displayedTextSuffix": " => ...",
+  "enableInternalLinkComplement": true,
+  "suggestInternalLinkWithAlias": false,
+  "excludeInternalLinkPathPrefixPatterns": "",
+  "enableFrontMatterComplement": true,
+  "frontMatterComplementMatchStrategy": "inherit",
+  "insertCommaAfterFrontMatterCompletion": false,
+  "showLogAboutPerformanceInConsole": false,
+  "selectionHistoryTree": {
+    "作业": {
+      "作业": {
+        "frontMatter": {
+          "count": 11,
+          "lastUpdated": 1682648557489
+        }
+      }
+    },
+    "Probability_and_Statistics": {
+      "Probability_and_Statistics": {
+        "frontMatter": {
+          "count": 14,
+          "lastUpdated": 1682645588229
+        }
+      }
+    },
+    "Numerical_Analysis": {
+      "Numerical_Analysis": {
+        "frontMatter": {
+          "count": 10,
+          "lastUpdated": 1681736030931
+        }
+      }
+    },
+    "factorization": {
+      "factorization": {
+        "currentFile": {
+          "count": 5,
+          "lastUpdated": 1681090733983
+        }
+      }
+    },
+    "概率论作业-第二章": {
+      "概率论作业-第二章": {
+        "internalLink": {
+          "count": 4,
+          "lastUpdated": 1682309746058
+        }
+      }
+    },
+    "Homework": {
+      "Homework": {
+        "frontMatter": {
+          "count": 12,
+          "lastUpdated": 1682648554574
+        }
+      }
+    },
+    "Jacobi": {
+      "Jacobi": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1681008366941
+        }
+      }
+    },
+    "\\int_{-\\infty}^x": {
+      "\\int_{-\\infty}^x": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1680868790717
+        }
+      }
+    },
+    "概率密度函数，具有跟概率的相似性质，如非负性，归一性；，具有连续性": {
+      "概率密度函数，具有跟概率的相似性质，如非负性，归一性；，具有连续性": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1680855891353
+        }
+      }
+    },
+    "正态分布浅谈": {
+      "正态分布浅谈": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1680867860163
+        }
+      }
+    },
+    "联合分布函数": {
+      "联合分布函数": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1680870367556
+        }
+      }
+    },
+    "matrices": {
+      "matrices": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681089633799
+        }
+      }
+    },
+    "matrix": {
+      "matrix": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1681695777975
+        }
+      }
+    },
+    "symmetric": {
+      "symmetric": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681089831669
+        }
+      }
+    },
+    "positive-definite": {
+      "positive-definite": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681089863812
+        }
+      }
+    },
+    "reverse": {
+      "reverse": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681090946365
+        }
+      }
+    },
+    "Chapter3-多维随机变量": {
+      "Chapter3-多维随机变量": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1681194801846
+        }
+      }
+    },
+    "数值分析作业-第四次作业": {
+      "数值分析作业-第四次作业": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1681694490030
+        }
+      }
+    },
+    "algorithm": {
+      "algorithm": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681695597199
+        }
+      }
+    },
+    "eigenvalues": {
+      "eigenvalues": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1681695659109
+        }
+      }
+    },
+    "excerpt": {
+      "excerpt": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681695723481
+        }
+      }
+    },
+    "\\begin{pmatrix}0": {
+      "\\begin{pmatrix}0": {
+        "currentFile": {
+          "count": 3,
+          "lastUpdated": 1681821202864
+        }
+      }
+    },
+    "数学期望、方差、矩": {
+      "数学期望、方差、矩": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681802068300
+        }
+      }
+    },
+    "\\begin{pmatrix}1": {
+      "\\begin{pmatrix}1": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681819062240
+        }
+      }
+    },
+    "mutation_rate": {
+      "mutation_rate": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1681833861879
+        }
+      }
+    },
+    "平均第一次出现最优解的迭代数": {
+      "平均第一次出现最优解的迭代数": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681872623730
+        }
+      }
+    },
+    "population_size": {
+      "population_size": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681872907429
+        }
+      }
+    },
+    "generations": {
+      "generations": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1681872912795
+        }
+      }
+    },
+    "人工智能": {
+      "人工智能": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1681873048794
+        }
+      }
+    },
+    "haha": {
+      "haha": {
+        "frontMatter": {
+          "count": 2,
+          "lastUpdated": 1682175153992
+        }
+      }
+    },
+    "工创": {
+      "工创": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1682310026629
+        }
+      }
+    },
+    "03-97": {
+      "03-97": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1682310051636
+        }
+      }
+    },
+    "Marketing": {
+      "Marketing": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1682825803071
+        }
+      }
+    },
+    "sljeif": {
+      "sljeif": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1683199919239
+        }
+      }
+    }
+  }
+}
