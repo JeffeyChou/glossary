@@ -1,12 +1,44 @@
-<!-- slide template="[[tpl-footer]]" -->
+---
+theme: consult
+width: 1920
+height: 1080
+margin: 0
+---
 
-# This header will be part of the content section defined in the template
+<!-- slide template="[[tpl-con-2-1-box]]" -->
 
-Everything define outside a block will be placed in the content section.
-Therefore every template has to contain at least a content variable.
+::: title
+# _**This is the Title of this Slide**_
+:::
 
-To place a text into the footer section you have to create a block comment with the name of the variable you defined in the template.
+::: left
+![[Image.jpg|1500](https://mszturc.github.io/obsidian-advanced-slides/images/templateSlide.png)]
+:::
 
-::: footer
-#### This header
+<style>
+.small-indent > ul { 
+   padding-left: 1em;
+}
+</style>
+
+::: right
+**Header #1**
+- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+- tium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequa
+- augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit a
+- Nam quam nunc
+Umsetzungsschritte[^1]
+**Header #2**
+- Curabitur
+- condimentum
+- Maecenas
+**Header #3**
+- justo
+- rhoncus
+- semper
+
+:::<!-- element align="left" style="font-size: 20px;" class="small-indent" -->
+
+::: source
+###### Source: [1]:selfisldkflisejf;ljsdf
 :::

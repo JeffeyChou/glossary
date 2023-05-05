@@ -5,6 +5,10 @@
       "path": "private/01-Diary/本周事务/slider test.md"
     },
     {
+      "basename": "tpl-con-2-1-box",
+      "path": "private/09-Templates/tpl-con-2-1-box.md"
+    },
+    {
       "basename": "tpl-footer",
       "path": "private/09-Templates/tpl-footer.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2023-05-04",
       "path": "private/01-Diary/日志存档/2023-05-04.md"
-    },
-    {
-      "basename": "Chapter4-随机变量的数字特征",
-      "path": "private/01-Diary/本周事务/Chapter4-随机变量的数字特征.md"
     }
   ],
   "omittedPaths": [],

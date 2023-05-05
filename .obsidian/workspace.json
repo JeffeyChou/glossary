@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "69f441f4c6a972c3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "private/09-Templates/tpl-footer.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "2fc1825f5eb274e6",
             "type": "leaf",
             "state": {
@@ -34,7 +21,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       },
       {
@@ -111,7 +97,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -272,8 +259,9 @@
   },
   "active": "2fc1825f5eb274e6",
   "lastOpenFiles": [
-    "private/09-Templates/tpl-footer.md",
+    "private/09-Templates/tpl-con-2-1-box.md",
     "private/01-Diary/本周事务/slider test.md",
+    "private/09-Templates/tpl-footer.md",
     "private/01-Diary/本周事务/Minal-slides.md",
     "private/01-Diary/本周事务/研讨一.md",
     "private/08-Assets/研讨一PPT.zip",
@@ -317,7 +305,6 @@
     "private/02-Reading/mdnotes/@martin2022belief.md",
     "private/08-Assets/Scripts/Mdnotes Default Template.md",
     "private/02-Reading/mdnotes/martin2022belief-zotero.md",
-    "private/08-Assets/Scripts/常用工具.md",
     "未命名.canvas"
   ]
 }

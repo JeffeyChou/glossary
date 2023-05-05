@@ -238,5 +238,7 @@
   "workspace:goto-tab-2": [],
   "workspace:goto-tab-3": [],
   "workspace:goto-tab-4": [],
-  "workspace:goto-tab-5": []
+  "workspace:goto-tab-5": [],
+  "Enhanced-editing:add-Line0": [],
+  "editor:toggle-checklist-status": []
 }
