@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "slider test",
+      "path": "private/01-Diary/本周事务/slider test.md"
+    },
+    {
+      "basename": "tpl-footer",
+      "path": "private/09-Templates/tpl-footer.md"
+    },
+    {
+      "basename": "Minal-slides",
+      "path": "private/01-Diary/本周事务/Minal-slides.md"
+    },
+    {
       "basename": "研讨一",
       "path": "private/01-Diary/本周事务/研讨一.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Chapter4-随机变量的数字特征",
       "path": "private/01-Diary/本周事务/Chapter4-随机变量的数字特征.md"
-    },
-    {
-      "basename": "FastStart-GenerateListOfInstalledPlugins",
-      "path": "private/09-Templates/FastStart-GenerateListOfInstalledPlugins.md"
-    },
-    {
-      "basename": "2023-05-03",
-      "path": "private/01-Diary/日志存档/2023-05-03.md"
-    },
-    {
-      "basename": "能见度工创PPT",
-      "path": "private/01-Diary/本周事务/能见度工创PPT.md"
     }
   ],
   "omittedPaths": [],
