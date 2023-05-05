@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "martin2022belief-zotero",
+      "path": "private/02-Reading/mdnotes/martin2022belief-zotero.md"
+    },
+    {
+      "basename": "@martin2022belief",
+      "path": "private/02-Reading/mdnotes/@martin2022belief.md"
+    },
+    {
       "basename": "常用工具",
       "path": "private/08-Assets/Scripts/常用工具.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Halo-Master-Chief-Collection 通关后",
       "path": "private/01-Diary/本周事务/Halo-Master-Chief-Collection 通关后.md"
-    },
-    {
-      "basename": "商业计划书",
-      "path": "private/01-Diary/本周事务/商业计划书.md"
-    },
-    {
-      "basename": "2023-04-19",
-      "path": "private/01-Diary/日志存档/2023-04-19.md"
     }
   ],
   "omittedPaths": [],

@@ -11,8 +11,26 @@
             "id": "d804a04a93a3d82d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "private/02-Reading/mdnotes/martin2022belief-zotero.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0f8d7a56898c9492",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "private/02-Reading/mdnotes/@martin2022belief.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -99,6 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "private/02-Reading/mdnotes/martin2022belief-zotero.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +178,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "private/02-Reading/mdnotes/martin2022belief-zotero.md"
+              }
             }
           },
           {
@@ -237,13 +258,18 @@
   },
   "active": "d804a04a93a3d82d",
   "lastOpenFiles": [
-    "private/08-Assets/pdfs/zotero data/zotero.sqlite-mj969A5F962",
-    "private/08-Assets/pdfs/zotero data/better-bibtex-search.sqlite-journal",
-    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite-journal",
-    "private/08-Assets/pdfs/zotero data/translators/BetterBibTeX JSON.js",
-    "private/08-Assets/pdfs/zotero data/tmp/translator.json",
-    "private/08-Assets/pdfs/zotero data/tmp",
-    "private/08-Assets/pdfs/zotero data/zotero.sqlite-journal",
+    "private/02-Reading/mdnotes/@martin2022belief.md",
+    "private/02-Reading/mdnotes/martin2022belief-zotero.md",
+    "private/08-Assets/pdfs/zotero data/storage/IAJSBLHG",
+    "private/08-Assets/pdfs/zotero data/storage/VZMZ4TTW",
+    "private/08-Assets/pdfs/zotero data/storage/Y4CG9RFP",
+    "private/08-Assets/pdfs/zotero data/storage/LV5AEEE6",
+    "private/08-Assets/pdfs/zotero data/storage/DZ65HTIX",
+    "private/08-Assets/pdfs/zotero data/storage/BH2AJ4GN",
+    "private/08-Assets/pdfs/zotero data/storage/ULWWGV54",
+    "private/08-Assets/pdfs/zotero data/storage/VIABZAZW",
+    "private/08-Assets/pdfs/zotero data/zotero.sqlite.tmp",
+    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite.tmp",
     "private/08-Assets/Scripts/常用工具.md",
     "private/00-MOC/TO-DO list.md",
     "private/08-Assets/Scripts/Buttons.md",
@@ -269,8 +295,6 @@
     "private/01-Diary/本周事务/teste.md",
     "private/01-Diary/本周事务/未命名.md",
     "private/03-Projects/97-作业-杂项/工程实践与创新项目课程说明.md",
-    "private/02-Reading/3-people/审稿人.md",
-    "private/01-Diary/本周事务/工创意见.md",
     "未命名.canvas",
     "images/etlt-extract-tweak-load-transform.png"
   ]
