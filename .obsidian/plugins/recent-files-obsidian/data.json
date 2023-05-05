@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "研讨一",
+      "path": "private/01-Diary/本周事务/研讨一.md"
+    },
+    {
+      "basename": "2022-04-02",
+      "path": "private/01-Diary/日志存档/2022-04-02.md"
+    },
+    {
       "basename": "测试",
       "path": "private/01-Diary/本周事务/测试.md"
     },
     {
       "basename": "思维导图模板",
       "path": "private/09-Templates/思维导图模板.md"
-    },
-    {
-      "basename": "2022-04-02",
-      "path": "private/01-Diary/日志存档/2022-04-02.md"
     },
     {
       "basename": "文件夹目录模板",
@@ -75,10 +79,6 @@
     {
       "basename": "Buttons",
       "path": "private/08-Assets/Scripts/Buttons.md"
-    },
-    {
-      "basename": "研讨一",
-      "path": "private/01-Diary/本周事务/研讨一.md"
     },
     {
       "basename": "FastStart-Plugins-LongDelay",

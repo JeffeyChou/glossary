@@ -4,45 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "f17ab15c57d0ec52",
-        "type": "split",
+        "id": "865c737c403bf1cc",
+        "type": "tabs",
         "children": [
           {
-            "id": "7e68857c205e778c",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "e43654fe6aa27e5e",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "private/01-Diary/本周事务/测试.md",
-                    "mode": "source",
-                    "backlinks": false,
-                    "source": false
-                  }
-                }
+            "id": "7812d668812ecd7b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "private/01-Diary/本周事务/研讨一.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
-            ],
-            "stacked": true
-          },
-          {
-            "id": "bfa0535dcc29f0d7",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "97ebcc7ec20689a9",
-                "type": "leaf",
-                "state": {
-                  "type": "mindmap",
-                  "state": {}
-                }
-              }
-            ]
+            }
           }
         ],
-        "direction": "horizontal"
+        "stacked": true
+      },
+      {
+        "id": "141b04e098a5c9e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b22a198f15b7a1ad",
+            "type": "leaf",
+            "state": {
+              "type": "reveal-preview-view",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,8 +97,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -125,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "private/01-Diary/本周事务/测试.md",
+                "file": "private/01-Diary/本周事务/研讨一.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/测试.md"
+                "file": "private/01-Diary/本周事务/研讨一.md"
               }
             }
           },
@@ -264,11 +256,15 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "e43654fe6aa27e5e",
+  "active": "7812d668812ecd7b",
   "lastOpenFiles": [
-    "private/09-Templates/思维导图模板.md",
-    "private/01-Diary/本周事务/测试.md",
+    "private/08-Assets/pdfs/zotero data/tmp/translator.json",
+    "private/08-Assets/pdfs/zotero data/zotero.sqlite-journal",
+    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite-journal",
+    "private/08-Assets/pdfs/zotero data/tmp",
     "private/01-Diary/日志存档/2022-04-02.md",
+    "private/01-Diary/本周事务/测试.md",
+    "private/09-Templates/思维导图模板.md",
     "private/09-Templates/文件夹目录模板.md",
     "private/09-Templates/日志模板.md",
     "private/09-Templates/草稿模板.md",
@@ -287,9 +283,6 @@
     "private/08-Assets/pdfs/zotero data/storage/ZSGBHA3N",
     "private/08-Assets/pdfs/zotero data/storage/YRE58BJM",
     "private/08-Assets/pdfs/zotero data/storage/YCL6CNVP",
-    "private/08-Assets/pdfs/zotero data/storage/WJ39QMN2",
-    "private/08-Assets/pdfs/zotero data/storage/WDEY8WBL",
-    "private/08-Assets/pdfs/zotero data/storage/VNDIQ2TT",
     "private/08-Assets/Scripts/Mdnotes Default Template.md",
     "private/02-Reading/mdnotes/martin2022belief-zotero.md",
     "private/08-Assets/Scripts/常用工具.md",
@@ -301,7 +294,6 @@
     "private/03-Projects/97-作业-杂项/FastStart-Plugins-ShortDelay.md",
     "private/00-MOC/试剂库存管理.md",
     "private/00-MOC/任务看板.md",
-    "private/00-MOC/愿望清单.md",
     "private/08-Assets/Pasted image 20230416185814.png",
     "private/08-Assets/1 1.png",
     "未命名.canvas",
