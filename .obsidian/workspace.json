@@ -4,37 +4,45 @@
     "type": "split",
     "children": [
       {
-        "id": "7e68857c205e778c",
-        "type": "tabs",
+        "id": "f17ab15c57d0ec52",
+        "type": "split",
         "children": [
           {
-            "id": "d804a04a93a3d82d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "private/02-Reading/mdnotes/martin2022belief-zotero.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
+            "id": "7e68857c205e778c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "e43654fe6aa27e5e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "private/01-Diary/本周事务/测试.md",
+                    "mode": "source",
+                    "backlinks": false,
+                    "source": false
+                  }
+                }
               }
-            }
+            ],
+            "stacked": true
           },
           {
-            "id": "0f8d7a56898c9492",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "private/02-Reading/mdnotes/@martin2022belief.md",
-                "mode": "preview",
-                "backlinks": false,
-                "source": false
+            "id": "bfa0535dcc29f0d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "97ebcc7ec20689a9",
+                "type": "leaf",
+                "state": {
+                  "type": "mindmap",
+                  "state": {}
+                }
               }
-            }
+            ]
           }
         ],
-        "stacked": true
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -63,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "buttons",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,12 +104,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "1779bd3879ef68a9",
@@ -117,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "private/02-Reading/mdnotes/martin2022belief-zotero.md",
+                "file": "private/01-Diary/本周事务/测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/02-Reading/mdnotes/martin2022belief-zotero.md"
+                "file": "private/01-Diary/本周事务/测试.md"
               }
             }
           },
@@ -256,20 +264,34 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "d804a04a93a3d82d",
+  "active": "e43654fe6aa27e5e",
   "lastOpenFiles": [
+    "private/09-Templates/思维导图模板.md",
+    "private/01-Diary/本周事务/测试.md",
+    "private/01-Diary/日志存档/2022-04-02.md",
+    "private/09-Templates/文件夹目录模板.md",
+    "private/09-Templates/日志模板.md",
+    "private/09-Templates/草稿模板.md",
+    "private/09-Templates/词条模板.md",
+    "private/09-Templates/大牛页面模板.md",
+    "private/09-Templates/代码整理模板.md",
+    "private/09-Templates/概括文章骨架.md",
+    "private/09-Templates/卡片模板.md",
+    "private/09-Templates/论文草稿模板.md",
+    "private/09-Templates/论文大纲模板.md",
     "private/02-Reading/mdnotes/@martin2022belief.md",
+    "private/08-Assets/pdfs/zotero data/zotero-Galaxy-book-4.sqlite",
+    "private/08-Assets/pdfs/zotero data/better-bibtex-Galaxy-book-5.sqlite",
+    "private/08-Assets/pdfs/zotero data/better-bibtex-search-Galaxy-book.sqlite",
+    "private/08-Assets/pdfs/zotero data/better-bibtex/cache.itemToExportFormat.json-Galaxy-book.bak",
+    "private/08-Assets/pdfs/zotero data/storage/ZSGBHA3N",
+    "private/08-Assets/pdfs/zotero data/storage/YRE58BJM",
+    "private/08-Assets/pdfs/zotero data/storage/YCL6CNVP",
+    "private/08-Assets/pdfs/zotero data/storage/WJ39QMN2",
+    "private/08-Assets/pdfs/zotero data/storage/WDEY8WBL",
+    "private/08-Assets/pdfs/zotero data/storage/VNDIQ2TT",
+    "private/08-Assets/Scripts/Mdnotes Default Template.md",
     "private/02-Reading/mdnotes/martin2022belief-zotero.md",
-    "private/08-Assets/pdfs/zotero data/storage/IAJSBLHG",
-    "private/08-Assets/pdfs/zotero data/storage/VZMZ4TTW",
-    "private/08-Assets/pdfs/zotero data/storage/Y4CG9RFP",
-    "private/08-Assets/pdfs/zotero data/storage/LV5AEEE6",
-    "private/08-Assets/pdfs/zotero data/storage/DZ65HTIX",
-    "private/08-Assets/pdfs/zotero data/storage/BH2AJ4GN",
-    "private/08-Assets/pdfs/zotero data/storage/ULWWGV54",
-    "private/08-Assets/pdfs/zotero data/storage/VIABZAZW",
-    "private/08-Assets/pdfs/zotero data/zotero.sqlite.tmp",
-    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite.tmp",
     "private/08-Assets/Scripts/常用工具.md",
     "private/00-MOC/TO-DO list.md",
     "private/08-Assets/Scripts/Buttons.md",
@@ -280,21 +302,8 @@
     "private/00-MOC/试剂库存管理.md",
     "private/00-MOC/任务看板.md",
     "private/00-MOC/愿望清单.md",
-    "private/00-MOC/Today's TODO.md",
-    "private/08-Assets/Excalidraw/Drawing 2023-05-04 20.20.15.excalidraw.md",
     "private/08-Assets/Pasted image 20230416185814.png",
-    "private/08-Assets/2_1.md",
     "private/08-Assets/1 1.png",
-    "private/08-Assets/MindMap/MindMap-发.md",
-    "private/00-MOC/阅读清单.md",
-    "private/00-MOC/本周事务表.md",
-    "private/06-Cards/202112201648.md",
-    "private/00-MOC/AuthorRanking.md",
-    "private/09-Templates/日志模板.md",
-    "private/09-Templates/草稿模板.md",
-    "private/01-Diary/本周事务/teste.md",
-    "private/01-Diary/本周事务/未命名.md",
-    "private/03-Projects/97-作业-杂项/工程实践与创新项目课程说明.md",
     "未命名.canvas",
     "images/etlt-extract-tweak-load-transform.png"
   ]

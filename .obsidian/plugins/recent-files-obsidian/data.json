@@ -1,12 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "martin2022belief-zotero",
-      "path": "private/02-Reading/mdnotes/martin2022belief-zotero.md"
+      "basename": "测试",
+      "path": "private/01-Diary/本周事务/测试.md"
+    },
+    {
+      "basename": "思维导图模板",
+      "path": "private/09-Templates/思维导图模板.md"
+    },
+    {
+      "basename": "2022-04-02",
+      "path": "private/01-Diary/日志存档/2022-04-02.md"
+    },
+    {
+      "basename": "文件夹目录模板",
+      "path": "private/09-Templates/文件夹目录模板.md"
+    },
+    {
+      "basename": "日志模板",
+      "path": "private/09-Templates/日志模板.md"
+    },
+    {
+      "basename": "草稿模板",
+      "path": "private/09-Templates/草稿模板.md"
+    },
+    {
+      "basename": "词条模板",
+      "path": "private/09-Templates/词条模板.md"
+    },
+    {
+      "basename": "大牛页面模板",
+      "path": "private/09-Templates/大牛页面模板.md"
+    },
+    {
+      "basename": "代码整理模板",
+      "path": "private/09-Templates/代码整理模板.md"
+    },
+    {
+      "basename": "概括文章骨架",
+      "path": "private/09-Templates/概括文章骨架.md"
+    },
+    {
+      "basename": "卡片模板",
+      "path": "private/09-Templates/卡片模板.md"
+    },
+    {
+      "basename": "论文草稿模板",
+      "path": "private/09-Templates/论文草稿模板.md"
+    },
+    {
+      "basename": "论文大纲模板",
+      "path": "private/09-Templates/论文大纲模板.md"
     },
     {
       "basename": "@martin2022belief",
       "path": "private/02-Reading/mdnotes/@martin2022belief.md"
+    },
+    {
+      "basename": "Mdnotes Default Template",
+      "path": "private/08-Assets/Scripts/Mdnotes Default Template.md"
+    },
+    {
+      "basename": "martin2022belief-zotero",
+      "path": "private/02-Reading/mdnotes/martin2022belief-zotero.md"
     },
     {
       "basename": "常用工具",
@@ -57,14 +113,6 @@
       "path": "private/08-Assets/Excalidraw/Drawing 2023-05-04 20.20.15.excalidraw.md"
     },
     {
-      "basename": "Pasted image 20230416185814",
-      "path": "private/08-Assets/Pasted image 20230416185814.png"
-    },
-    {
-      "basename": "1 1",
-      "path": "private/08-Assets/1 1.png"
-    },
-    {
       "basename": "MindMap-发",
       "path": "private/08-Assets/MindMap/MindMap-发.md"
     },
@@ -83,14 +131,6 @@
     {
       "basename": "AuthorRanking",
       "path": "private/00-MOC/AuthorRanking.md"
-    },
-    {
-      "basename": "日志模板",
-      "path": "private/09-Templates/日志模板.md"
-    },
-    {
-      "basename": "草稿模板",
-      "path": "private/09-Templates/草稿模板.md"
     },
     {
       "basename": "teste",
@@ -159,46 +199,6 @@
     {
       "basename": "能见度工创PPT",
       "path": "private/01-Diary/本周事务/能见度工创PPT.md"
-    },
-    {
-      "basename": "2023-04-16",
-      "path": "private/01-Diary/日志存档/2023-04-16.md"
-    },
-    {
-      "basename": "概率论作业-第二章",
-      "path": "term/Homework/概率论作业-第二章.md"
-    },
-    {
-      "basename": "概率统计第一章作业",
-      "path": "term/Homework/概率统计第一章作业.md"
-    },
-    {
-      "basename": "Chapter2- 随机变量",
-      "path": "term/Probability_and_Statistics/Chapter2- 随机变量.md"
-    },
-    {
-      "basename": "Chatper5-特征函数",
-      "path": "private/01-Diary/本周事务/Chatper5-特征函数.md"
-    },
-    {
-      "basename": "数值分析第六次作业-幂求法",
-      "path": "private/03-Projects/97-作业-杂项/数值分析第六次作业-幂求法.md"
-    },
-    {
-      "basename": "商业计划&创业路演",
-      "path": "private/01-Diary/本周事务/商业计划&创业路演.md"
-    },
-    {
-      "basename": "2023-04-24",
-      "path": "private/01-Diary/日志存档/2023-04-24.md"
-    },
-    {
-      "basename": "Gram-Schmidt",
-      "path": "private/01-Diary/本周事务/Gram-Schmidt.md"
-    },
-    {
-      "basename": "Halo-Master-Chief-Collection 通关后",
-      "path": "private/01-Diary/本周事务/Halo-Master-Chief-Collection 通关后.md"
     }
   ],
   "omittedPaths": [],

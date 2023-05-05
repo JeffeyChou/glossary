@@ -2,7 +2,7 @@
 alias: martin2022belief
 date: 2023-05-05 11:19:15
 obsidianUIMode: preview
-tags: unread
+tags: RPS
 rating: ⭐
 share: false
 ptype: article
