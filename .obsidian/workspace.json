@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1a523850a72fae97",
+        "id": "c242705e645681f4",
         "type": "tabs",
         "children": [
           {
-            "id": "2fc1825f5eb274e6",
+            "id": "6496529c0cb661a9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/slider test.md",
+                "file": "private/01-Diary/本周事务/研讨一.md",
                 "mode": "source",
                 "backlinks": false,
-                "source": false
+                "source": true
               }
             }
           }
@@ -24,11 +24,11 @@
         "stacked": true
       },
       {
-        "id": "5567e791f5da6ed0",
+        "id": "987b55dacdec5a11",
         "type": "tabs",
         "children": [
           {
-            "id": "6fb4be492490f549",
+            "id": "927a411300fb32e5",
             "type": "leaf",
             "state": {
               "type": "reveal-preview-view",
@@ -97,8 +97,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -118,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "private/01-Diary/本周事务/slider test.md",
+                "file": "private/01-Diary/本周事务/研讨一.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/slider test.md"
+                "file": "private/01-Diary/本周事务/研讨一.md"
               }
             }
           },
@@ -238,7 +237,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -257,18 +257,11 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "2fc1825f5eb274e6",
+  "active": "e4d452c6215790be",
   "lastOpenFiles": [
-    "private/09-Templates/tpl-con-2-1-box.md",
-    "private/01-Diary/本周事务/slider test.md",
-    "private/09-Templates/tpl-footer.md",
-    "private/01-Diary/本周事务/Minal-slides.md",
-    "private/01-Diary/本周事务/研讨一.md",
-    "private/08-Assets/研讨一PPT.zip",
-    "private/08-Assets/研讨一.zip",
     "private/08-Assets/研讨一/plugin/chalkboard/img/whiteboard.png",
-    "private/08-Assets/研讨一/plugin/chalkboard/img/sponge.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-yellow.png",
+    "private/08-Assets/研讨一/plugin/chalkboard/img/sponge.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-white.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-red.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-purple.png",
@@ -276,6 +269,7 @@
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-green.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-blue.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/boardmarker-yellow.png",
+    "private/08-Assets/研讨一/plugin/chalkboard/img/boardmarker-red.png",
     "private/08-Assets/研讨一/plugin/chalkboard/_style.css",
     "private/08-Assets/研讨一/plugin/chalkboard/style.css",
     "private/08-Assets/研讨一/plugin/chalkboard/README.md",
@@ -286,7 +280,14 @@
     "private/08-Assets/研讨一/plugin/chart/README.md",
     "private/08-Assets/研讨一/plugin/chart/plugin.js",
     "private/08-Assets/研讨一/plugin/chart/chart.min.js",
+    "private/08-Assets/研讨一/plugin/chart",
+    "private/08-Assets/研讨一/plugin/customcontrols/style.css",
     "private/08-Assets/研讨一/plugin/customcontrols/README.md",
+    "private/01-Diary/本周事务/slider test.md",
+    "private/09-Templates/tpl-con-2-1-box.md",
+    "private/09-Templates/tpl-footer.md",
+    "private/01-Diary/本周事务/Minal-slides.md",
+    "private/01-Diary/本周事务/研讨一.md",
     "private/08-Assets/研讨一/plugin/menu/README.md",
     "private/08-Assets/研讨一/plugin/menu/CONTRIBUTING.md",
     "private/01-Diary/日志存档/2022-04-02.md",
@@ -304,7 +305,6 @@
     "private/09-Templates/论文大纲模板.md",
     "private/02-Reading/mdnotes/@martin2022belief.md",
     "private/08-Assets/Scripts/Mdnotes Default Template.md",
-    "private/02-Reading/mdnotes/martin2022belief-zotero.md",
     "未命名.canvas"
   ]
 }

@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
 	<link rel="stylesheet" href="css/layout.css" />
 	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
 
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
 
 
     <script defer src="dist/fontawesome/all.min.js"></script>
@@ -97,41 +99,39 @@
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-证：设消息序列长度为`$L$`，信源符号`$X_i \in (a_1, ..., a_n)$` 则对任意一条消息`$A_{j_1...j_L}$`，存在长度为`$k_{j_1...j_L} , j_i \in {1,..,n}$`的码字，使得
-
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->`$ -{log_2^{P(A_{j_1...j_L})} \over log_2^t} \leqslant k_{j_1...j_L} < 1 -{log_2^{P(A_{j_1...j_L})} \over log_2^t} $`
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->将上式分别乘以`$P(A_{j_1...j_L})$` 再求和，则有
-
-- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->`$ -\sum_{j_1=1}^{n}...\sum_{j_L=1}^{n} P(A_{j_1...j_L}{log_2^{P(A_{j_1...j_L})} \over log_2^t}) \leqslant \sum_{j_1=1}^{n}...\sum_{j_L=1}^{n}P(A_{j_1...j_L})k_{j_1...j_L} < 1 - \sum_{j_1=1}^{n}...\sum_{j_L=1}^{n} P(A_{j_1...j_L}{log_2^{P(A_{j_1...j_L})} \over log_2^t})  $`
-- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->对 `$k_{j_1...j_L}$` 取数学期望就是 `$\bar{k}$`, 故
-
-- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->`$\frac{H(x_{1},\ldots x_{L})}{\log_{2 t }}\leqslant \bar{K}  < 1 + \frac{H(x_{1},\ldots, x_{L})}{\log_{2}t}$`
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->证：设消息序列长度为`$L$`，信源符号`$X_i \in (a_1, ..., a_n)$` 则对任意一条消息`$A_{j_1...j_L}$`，存在长度为`$k_{j_1...j_L} , j_i \in {1,..,n}$`的码字，使得
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->`$-{log_2^{P(A_{j_1...j_L})} \over log_2^t} \leqslant k_{j_1...j_L} < 1 -{log_2^{P(A_{j_1...j_L})} \over log_2^t}$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->将上式分别乘以`$P(A_{j_1...j_L})$` 再求和，则有
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->`$-\sum_{j_1=1}^{n}...\sum_{j_L=1}^{n} P(A_{j_1...j_L}{log_2^{P(A_{j_1...j_L})} \over log_2^t}) \leqslant \sum_{j_1=1}^{n}...\sum_{j_L=1}^{n}P(A_{j_1...j_L})k_{j_1...j_L} < 1 - \sum_{j_1=1}^{n}...\sum_{j_L=1}^{n} P(A_{j_1...j_L}{log_2^{P(A_{j_1...j_L})} \over log_2^t})$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->对 `$k_{j_1...j_L}$` 取数学期望就是 `$\bar{k}$`, 故
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->`$\frac{H(x_{1},\ldots x_{L})}{\log_{2 t }}\leqslant \bar{K}  < 1 + \frac{H(x_{1},\ldots, x_{L})}{\log_{2}t}$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->`$\frac{H(x_{1}) + \ldots + (L-m)H(x_{m+1}|x_{m} \ldots)}{\log_{2}t}  \leqslant \bar{k } < 1 + \frac{H(x_{1}) + \ldots + (L-m)H(x_{m+1}|x_{m} \ldots)}{\log_{2}t}$`
+	- &shy;<!-- .element: class="fragment" data-fragment-index="8" -->由 `$R=\frac{\bar{k}}{L}$` 知，令 `$H(x_{1}) + \ldots + (L-m)H(x_{m+1}|x_{m} \ldots x_{1})=c$` ，则：
+    	- &shy;<!-- .element: class="fragment" data-fragment-index="9" -->`$\frac{c}{L} + H(x_{m+1} | x_{m} \ldots x_{1}) \leqslant R < \frac{c+1}{L} +  H(x_{m+1} | x_{m} \ldots x_{1})$`
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-`$\frac{H(x_{1}) + \ldots + (L-m)H(x_{m+1}|x_{m} \ldots)}{\log_{2}t}  \leqslant \bar{k } < 1 + \frac{H(x_{1}) + \ldots + (L-m)H(x_{m+1}|x_{m} \ldots)}{\log_{2}t}$`
+## Kraft定理
 
-由 `$R=\frac{\bar{k}}{L}$` 知，令 `$H(x_{1}) + \ldots + (L-m)H(x_{m+1}|x_{m} \ldots x_{1})=c$` ，
+`$m$` 元长度为 `$k_i,i \in {1,..,n}$`  的异前置码存在的充要条件为：
 
-则：
-`$\frac{c}{L} + H(x_{m+1} | x_{m} \ldots x_{1}) \leqslant R < \frac{c+1}{L} +  H(x_{m+1} | x_{m} \ldots x_{1})$`
+`$\sum\limits_{i=1}^{n}m^{-k_i} \leqslant 1 $`
+
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->充分性：
+	- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->若`$\sum\limits_{i=1}^{n}m^{-k_i} \leqslant 1 $`成立，
+	- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->则必有`$\sum\limits_{i=1}^{n}m^{N-k_i} \leqslant m$`成立，
+	- &shy;<!-- .element: class="fragment" data-fragment-index="4" -->其中N是大于n的一个值。那么我们总可以把第N级上的树枝分成n组，各组从第N级开始删除`$m^{N-k_i}$`个树枝。
+	- &shy;<!-- .element: class="fragment" data-fragment-index="5" -->相对于N级满树而言，等于删除了所有可能的`$k_i$`级节点的`$\frac{1}{m^k_i}=m^{-k_i}$`。
+	- &shy;<!-- .element: class="fragment" data-fragment-index="6" -->在该组中以第k级的节点作为终节点，就构造好了第i个码字。对所有的n个码字均如法炮制，则总共删除了所有`$m^N$`个节点中的`$\sum\limits_{i=1}^{n}m^{-k_i}$`。
+	- &shy;<!-- .element: class="fragment" data-fragment-index="7" -->由于`$\sum\limits_{i=1}^{n}m^{-k_i} ≤1$`，于是就构造了一个异前置码。
 </div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
 <div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
 
-## 无失真
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->设异前置码第`$j_{1}\ldots j_{L}$`个码字的长度为`$k_{j_{1}\ldots j_{L}}$`,
 
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->`$\begin{align*}k_{j_{1}\ldots j_{L}} \geqslant - \frac{\log_{2} P(A_{j_{1}\ldots j_{L}})}{\log_{2} t} \\ \Rightarrow -L^{k_{j_{1}\ldots j_{L}}} \geqslant \frac{1}{P(A_{j_{1}\ldots j_{L}})} \\ \Rightarrow P(A_{j_{1}\ldots j_{L}}) \geqslant -L^{-k_{j_{1}\ldots j_{L}}}\end{align*}$`
 
-`$m$` 元长度为 `$k_{j_{1}}, \ldots k_{j_{n}}$` 的异前置码存在的充要条件为：
-
-`$\sum\limits_{j_{1}=1}^{n} \ldots \sum\limits_{j_{L}=1}^{n} m^{-k_{j_{1}\ldots j_{L}}} \leqslant 1 $`
-
-
-- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->$\begin{align*}
-k_{j_{1}\ldots j_{L}} &\geqslant - \frac{\log_{2} P(A_{j_{1}\ldots j_{L}})}{\log_{2} t} \\\\
-\Rightarrow -L^{k_{j_{1}\ldots j_{L}}} &\geqslant \frac{1}{P(A_{j_{1}\ldots j_{L}})} \\\\
-\Rightarrow P(A_{j_{1}\ldots j_{L}}) & \geqslant -L^{-k_{j_{1}\ldots j_{L}}}
-\end{align*}$
-- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->求和即得结果
+    - &shy;<!-- .element: class="fragment" data-fragment-index="3" -->求和即得结果
 </div></script></section></div>
     </div>
 
@@ -145,8 +145,9 @@ k_{j_{1}\ldots j_{L}} &\geqslant - \frac{\log_{2} P(A_{j_{1}\ldots j_{L}})}{\log
 	<script src="plugin/mermaid/mermaid.js"></script>
 	<script src="plugin/chart/chart.min.js"></script>
 	<script src="plugin/chart/plugin.js"></script>
-	<script src="plugin/menu/menu.js"></script>
 	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
 
     <script>
       function extend() {
@@ -202,7 +203,8 @@ k_{j_{1}\ldots j_{L}} &\geqslant - \frac{\log_{2} P(A_{j_{1}\ldots j_{L}})}{\log
 		  RevealMermaid,
 		  RevealChart,
 		  RevealCustomControls,
-		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
         ],
 
 
@@ -230,11 +232,16 @@ k_{j_{1}\ldots j_{L}} &\geqslant - \frac{\log_{2} P(A_{j_{1}\ldots j_{L}})}{\log
 				icon: '<i class="fa fa-th"></i>',
 				action: 'Reveal.toggleOverview();'
 				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
 			]
 		},
-		menu: {
-			loadIcons: false
-		}
       };
 
       // options from URL query string
