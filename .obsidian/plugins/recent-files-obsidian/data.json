@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "常用工具",
+      "path": "private/08-Assets/Scripts/常用工具.md"
+    },
+    {
+      "basename": "TO-DO list",
+      "path": "private/00-MOC/TO-DO list.md"
+    },
+    {
+      "basename": "Buttons",
+      "path": "private/08-Assets/Scripts/Buttons.md"
+    },
+    {
+      "basename": "研讨一",
+      "path": "private/01-Diary/本周事务/研讨一.md"
+    },
+    {
+      "basename": "FastStart-Plugins-LongDelay",
+      "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md"
+    },
+    {
+      "basename": "FastStart-StartupScript",
+      "path": "private/09-Templates/FastStart-StartupScript.md"
+    },
+    {
+      "basename": "FastStart-Plugins-ShortDelay",
+      "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-ShortDelay.md"
+    },
+    {
       "basename": "试剂库存管理",
       "path": "private/00-MOC/试剂库存管理.md"
     },
@@ -11,10 +39,6 @@
     {
       "basename": "愿望清单",
       "path": "private/00-MOC/愿望清单.md"
-    },
-    {
-      "basename": "TO-DO list",
-      "path": "private/00-MOC/TO-DO list.md"
     },
     {
       "basename": "Today's TODO",
@@ -59,14 +83,6 @@
     {
       "basename": "草稿模板",
       "path": "private/09-Templates/草稿模板.md"
-    },
-    {
-      "basename": "FastStart-Plugins-ShortDelay",
-      "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-ShortDelay.md"
-    },
-    {
-      "basename": "FastStart-Plugins-LongDelay",
-      "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md"
     },
     {
       "basename": "teste",
@@ -123,10 +139,6 @@
     {
       "basename": "Chapter4-随机变量的数字特征",
       "path": "private/01-Diary/本周事务/Chapter4-随机变量的数字特征.md"
-    },
-    {
-      "basename": "FastStart-StartupScript",
-      "path": "private/09-Templates/FastStart-StartupScript.md"
     },
     {
       "basename": "FastStart-GenerateListOfInstalledPlugins",
@@ -187,18 +199,6 @@
     {
       "basename": "2023-04-19",
       "path": "private/01-Diary/日志存档/2023-04-19.md"
-    },
-    {
-      "basename": "思维导图模板",
-      "path": "private/09-Templates/思维导图模板.md"
-    },
-    {
-      "basename": "试剂卡片",
-      "path": "private/09-Templates/试剂卡片.md"
-    },
-    {
-      "basename": "每周文献小结",
-      "path": "private/09-Templates/每周文献小结.md"
     }
   ],
   "omittedPaths": [],

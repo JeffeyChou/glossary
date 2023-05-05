@@ -38,5 +38,6 @@
   "spellcheckLanguages": [
     "zh-CN",
     "en-US"
-  ]
+  ],
+  "showInlineTitle": false
 }

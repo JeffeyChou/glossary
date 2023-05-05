@@ -14,10 +14,10 @@
 	"inRepository": false,
 	"configOptions": {
 		"getCollections": true,
-		"hash": "7f5580285be65c98017c00742e01aae136e26155866206b345668fd3447fb30e"
+		"hash": "c4fc4b8bf70a6cc57aa9682b90094c26d58c6679b115d9bec72904d735bf8693"
 	},
 	"priority": 100,
-	"lastUpdated": "2023-04-10"
+	"lastUpdated": "2023-05-02"
 }
 
 ZOTERO_CONFIG = {"GUID":"zotero@chnm.gmu.edu","ID":"zotero","CLIENT_NAME":"Zotero","DOMAIN_NAME":"zotero.org","PRODUCER":"Digital Scholar","PRODUCER_URL":"https://digitalscholar.org","REPOSITORY_URL":"https://repo.zotero.org/repo/","BASE_URI":"http://zotero.org/","WWW_BASE_URL":"https://www.zotero.org/","PROXY_AUTH_URL":"https://zoteroproxycheck.s3.amazonaws.com/test","API_URL":"https://api.zotero.org/","STREAMING_URL":"wss://stream.zotero.org/","SERVICES_URL":"https://services.zotero.org/","API_VERSION":3,"CONNECTOR_MIN_VERSION":"5.0.39","PREF_BRANCH":"extensions.zotero.","BOOKMARKLET_ORIGIN":"https://www.zotero.org","BOOKMARKLET_URL":"https://www.zotero.org/bookmarklet/","START_URL":"https://www.zotero.org/start","QUICK_START_URL":"https://www.zotero.org/support/quick_start_guide","PDF_TOOLS_URL":"https://www.zotero.org/download/xpdf/","SUPPORT_URL":"https://www.zotero.org/support/","SYNC_INFO_URL":"https://www.zotero.org/support/sync","TROUBLESHOOTING_URL":"https://www.zotero.org/support/getting_help","FEEDBACK_URL":"https://forums.zotero.org/","CONNECTORS_URL":"https://www.zotero.org/download/connectors","CHANGELOG_URL":"https://www.zotero.org/support/changelog","CREDITS_URL":"https://www.zotero.org/support/credits_and_acknowledgments","LICENSING_URL":"https://www.zotero.org/support/licensing","GET_INVOLVED_URL":"https://www.zotero.org/getinvolved","DICTIONARIES_URL":"https://download.zotero.org/dictionaries/"}
@@ -3516,6 +3516,7 @@ var { doExport } = (() => {
               }
             }
           }
+          var jurisdictionList = state.getJurisdictionList(Item.jurisdiction);
           if (state.opt.parallel.enable) {
             if (!state.parallel) {
               state.parallel = new CSL2.Parallel(state);
@@ -9874,7 +9875,7 @@ var { doExport } = (() => {
       };
       CSL2.Node["date-part"] = {
         build: function(state, target) {
-          var func, pos, len, first_date, value, value_end, real, have_collapsed, invoked, precondition, known_year, bc, ad, bc_end, ad_end, ready, curr, dcurr, number2, num, formatter, item;
+          var func, pos, len, first_date, value, value_end, real, have_collapsed, invoked, precondition, known_year, bc, ad, bc_end, ad_end, ready, curr, dcurr, number2, num, formatter, item, blob;
           if (!this.strings.form) {
             this.strings.form = "long";
           }
@@ -10004,13 +10005,19 @@ var { doExport } = (() => {
                     last_string_output = value_end;
                     state2.dateput.append(value_end, this);
                     if (first_date) {
-                      state2.dateput.current.value().blobs[0].strings.prefix = "";
+                      blob = state2.dateput.current.value().blobs[0];
+                      if (blob) {
+                        blob.strings.prefix = "";
+                      }
                     }
                   }
                   last_string_output = value;
                   state2.output.append(value, this);
                   curr = state2.output.current.value();
-                  curr.blobs[curr.blobs.length - 1].strings.suffix = "";
+                  blob = curr.blobs[curr.blobs.length - 1];
+                  if (blob) {
+                    blob.strings.suffix = "";
+                  }
                   if (this.strings["range-delimiter"]) {
                     state2.output.append(this.strings["range-delimiter"]);
                   } else {
@@ -10034,7 +10041,10 @@ var { doExport } = (() => {
                       last_string_output = value_end;
                       state2.dateput.append(value_end, this);
                       if (first_date) {
-                        state2.dateput.current.value().blobs[0].strings.prefix = "";
+                        blob = state2.dateput.current.value().blobs[0];
+                        if (blob) {
+                          blob.strings.prefix = "";
+                        }
                       }
                       if (bc) {
                         last_string_output = bc;
@@ -11185,10 +11195,10 @@ var { doExport } = (() => {
       };
       CSL2.NameOutput = function(state, Item, item) {
         this.debug = false;
-        if (this.debug) {
-          print("(1)");
-        }
         this.state = state;
+        if (this.debug) {
+          this.state.sys.print("(1)");
+        }
         this.Item = Item;
         this.item = item;
         this.nameset_base = 0;
@@ -11304,27 +11314,27 @@ var { doExport } = (() => {
           this.given_decor = false;
         }
         if (this.debug) {
-          print("(2)");
+          this.state.sys.print("(2)");
         }
         this.getEtAlConfig();
         if (this.debug) {
-          print("(3)");
+          this.state.sys.print("(3)");
         }
         this.divideAndTransliterateNames();
         if (this.debug) {
-          print("(4)");
+          this.state.sys.print("(4)");
         }
         this.truncatePersonalNameLists();
         if (this.debug) {
-          print("(5)");
+          this.state.sys.print("(5)");
         }
         if (this.debug) {
-          print("(6)");
+          this.state.sys.print("(6)");
         }
         this.disambigNames();
         this.constrainNames();
         if (this.debug) {
-          print("(7)");
+          this.state.sys.print("(7)");
         }
         if (this.name.strings.form === "count") {
           if (this.state.tmp.extension || this.names_count != 0) {
@@ -11334,19 +11344,19 @@ var { doExport } = (() => {
           return;
         }
         if (this.debug) {
-          print("(8)");
+          this.state.sys.print("(8)");
         }
         this.setEtAlParameters();
         if (this.debug) {
-          print("(9)");
+          this.state.sys.print("(9)");
         }
         this.setCommonTerm(this.requireMatch);
         if (this.debug) {
-          print("(10)");
+          this.state.sys.print("(10)");
         }
         this.renderAllNames();
         if (this.debug) {
-          print("(11)");
+          this.state.sys.print("(11)");
         }
         var blob_list = [];
         for (i = 0, ilen = variables.length; i < ilen; i += 1) {
@@ -11358,13 +11368,13 @@ var { doExport } = (() => {
             varblob = this._join([this.freeters[v]], "");
           } else {
             if (this.debug) {
-              print("(11a)");
+              this.state.sys.print("(11a)");
             }
             for (var j = 0, jlen = this.institutions[v].length; j < jlen; j += 1) {
               institution_sets.push(this.joinPersonsAndInstitutions([this.persons[v][j], this.institutions[v][j]]));
             }
             if (this.debug) {
-              print("(11b)");
+              this.state.sys.print("(11b)");
             }
             if (this.institutions[v].length) {
               var pos = this.nameset_base + this.variable_offset[v];
@@ -11374,11 +11384,11 @@ var { doExport } = (() => {
               institutions = this.joinInstitutionSets(institution_sets, pos);
             }
             if (this.debug) {
-              print("(11c)");
+              this.state.sys.print("(11c)");
             }
             var varblob = this.joinFreetersAndInstitutionSets([this.freeters[v], institutions]);
             if (this.debug) {
-              print("(11d)");
+              this.state.sys.print("(11d)");
             }
           }
           if (varblob) {
@@ -11388,19 +11398,19 @@ var { doExport } = (() => {
             blob_list.push(varblob);
           }
           if (this.debug) {
-            print("(11e)");
+            this.state.sys.print("(11e)");
           }
           if (this.common_term) {
             break;
           }
         }
         if (this.debug) {
-          print("(12)");
+          this.state.sys.print("(12)");
         }
         this.state.output.openLevel("empty");
         this.state.output.current.value().strings.delimiter = this.state.inheritOpt(this.names, "delimiter", "names-delimiter");
         if (this.debug) {
-          print("(13)");
+          this.state.sys.print("(13)");
         }
         for (i = 0, ilen = blob_list.length; i < ilen; i += 1) {
           this.state.output.append(blob_list[i], "literal", true);
@@ -11409,16 +11419,16 @@ var { doExport } = (() => {
           this.state.tmp.probably_rendered_something = true;
         }
         if (this.debug) {
-          print("(14)");
+          this.state.sys.print("(14)");
         }
         this.state.output.closeLevel("empty");
         if (this.debug) {
-          print("(15)");
+          this.state.sys.print("(15)");
         }
         var blob = this.state.output.pop();
         this.state.tmp.name_node.top = blob;
         if (this.debug) {
-          print("(16)");
+          this.state.sys.print("(16)");
         }
         var namesToken = CSL2.Util.cloneToken(this.names);
         if (this.state.tmp.group_context.tip.condition) {
@@ -11429,10 +11439,10 @@ var { doExport } = (() => {
           this.state.tmp.term_predecessor = true;
         }
         if (this.debug) {
-          print("(17)");
+          this.state.sys.print("(17)");
         }
         if (this.debug) {
-          print("(18)");
+          this.state.sys.print("(18)");
         }
         if (variables[0] !== "authority") {
           var name_node_string = [];
@@ -11480,7 +11490,7 @@ var { doExport } = (() => {
         this.variables = [];
         this.state.tmp.authority_stop_last = 0;
         if (this.debug) {
-          print("(19)");
+          this.state.sys.print("(19)");
         }
       };
       CSL2.NameOutput.prototype._applyLabels = function(blob, v) {
@@ -18072,7 +18082,7 @@ var { doExport } = (() => {
           CSL2.UPDATE_GROUP_CONTEXT_CONDITION(state, masterStyling.strings.prefix, null, masterStyling, `${num.particle}${num.value}`);
           if (num.collapsible) {
             var blob;
-            if (num.value.match(/^[1-9][0-9]*$/)) {
+            if (num.value.match(/^[1-9][0-9]*$/) && Number.isSafeInteger(parseInt(num.value, 10))) {
               blob = new CSL2.NumericBlob(state, num.particle, parseInt(num.value, 10), numStyling, itemID);
             } else {
               blob = new CSL2.NumericBlob(state, num.particle, num.value, numStyling, itemID);
@@ -18101,7 +18111,7 @@ var { doExport } = (() => {
       };
       CSL2.Util.PageRangeMangler = {};
       CSL2.Util.PageRangeMangler.getFunction = function(state, rangeType) {
-        var rangerex, pos, len, stringify2, listify, expand, minimize, minimize_internal, chicago, lst, m, b, e, ret, begin, end, ret_func;
+        var rangerex, pos, len, stringify2, listify, expand, minimize, minimize_internal, chicago15, chicago16, lst, m, b, e, ret, begin, end, ret_func;
         var range_delimiter = state.getTerm(rangeType + "-range-delimiter");
         rangerex = /([0-9]*[a-zA-Z]+0*)?([0-9]+[a-z]*)\s*(?:\u2013|-)\s*([0-9]*[a-zA-Z]+0*)?([0-9]+[a-z]*)/;
         stringify2 = /* @__PURE__ */ __name(function(lst2) {
@@ -18196,7 +18206,7 @@ var { doExport } = (() => {
           ret.reverse();
           return ret.join("");
         }, "minimize_internal");
-        chicago = /* @__PURE__ */ __name(function(lst2) {
+        chicago15 = /* @__PURE__ */ __name(function(lst2) {
           len = lst2.length;
           for (pos = 1; pos < len; pos += 2) {
             if ("object" === typeof lst2[pos]) {
@@ -18214,7 +18224,31 @@ var { doExport } = (() => {
             }
           }
           return stringify2(lst2);
-        }, "chicago");
+        }, "chicago15");
+        chicago16 = /* @__PURE__ */ __name(function(lst2) {
+          len = lst2.length;
+          for (pos = 1; pos < len; pos += 2) {
+            if ("object" === typeof lst2[pos]) {
+              m = lst2[pos];
+              begin = parseInt(m[1], 10);
+              end = parseInt(m[3], 10);
+              e = "" + end;
+              if (begin > 100 && begin % 100) {
+                for (var i = 2; i < e.length; i++) {
+                  var divisor = Math.pow(10, i);
+                  if (Math.floor(begin / divisor) === Math.floor(end / divisor)) {
+                    m[3] = "" + end % divisor;
+                    break;
+                  }
+                }
+              }
+            }
+            if (m[2].slice(1) === m[0]) {
+              m[2] = range_delimiter;
+            }
+          }
+          return stringify2(lst2);
+        }, "chicago16");
         var sniff = /* @__PURE__ */ __name(function(str, func, minchars, isyear) {
           var ret2;
           str = "" + str;
@@ -18240,7 +18274,15 @@ var { doExport } = (() => {
           }, "ret_func");
         } else if (state.opt[rangeType + "-range-format"] === "chicago") {
           ret_func = /* @__PURE__ */ __name(function(str) {
-            return sniff(str, chicago);
+            return sniff(str, chicago15);
+          }, "ret_func");
+        } else if (state.opt[rangeType + "-range-format"] === "chicago-15") {
+          ret_func = /* @__PURE__ */ __name(function(str) {
+            return sniff(str, chicago15);
+          }, "ret_func");
+        } else if (state.opt[rangeType + "-range-format"] === "chicago-16") {
+          ret_func = /* @__PURE__ */ __name(function(str) {
+            return sniff(str, chicago16);
           }, "ret_func");
         }
         return ret_func;
@@ -19275,7 +19317,7 @@ var { doExport } = (() => {
           return "\n" + str;
         },
         "@display/left-margin": function(state, str) {
-          return str;
+          return str + " ";
         },
         "@display/right-inline": function(state, str) {
           return str;
@@ -19579,7 +19621,7 @@ var { doExport } = (() => {
           return text;
         },
         "bibstart": "\\begin{thebibliography}{4}",
-        "bibend": "end{thebibliography}",
+        "bibend": "\\end{thebibliography}",
         "@font-style/italic": "{\\em %%STRING%%}",
         "@font-style/oblique": false,
         "@font-style/normal": false,
@@ -20097,6 +20139,9 @@ var { doExport } = (() => {
         }, "strip_periods");
         set_keys = /* @__PURE__ */ __name(function(state2, itemid, nameobj) {
           pkey = strip_periods(nameobj.family);
+          if (state2.opt["demote-non-dropping-particle"] === "never" && nameobj["non-dropping-particle"] && nameobj["family"]) {
+            pkey = `${pkey} ${nameobj["non-dropping-particle"]}`;
+          }
           skey = strip_periods(nameobj.given);
           var m = skey.match(/[,\!]* ([^,]+)$/);
           if (m && m[1] === m[1].toLowerCase()) {
@@ -20246,9 +20291,6 @@ var { doExport } = (() => {
           if (state.citation.opt["givenname-disambiguation-rule"] && state.citation.opt["givenname-disambiguation-rule"].slice(0, 8) === "primary-" && pos !== 0) {
             return;
           }
-          if (state.opt["demote-non-dropping-particle"] === "never" && nameobj["non-dropping-particle"] && nameobj["family"]) {
-            nameobj["family"] = nameobj["non-dropping-particle"] + " " + nameobj["family"];
-          }
           set_keys(this.state, "" + item_id, nameobj);
           if (pkey) {
             if ("undefined" === typeof this.namereg[pkey]) {
@@ -20320,7 +20362,7 @@ var { doExport } = (() => {
           return;
         }
         if (this.debug) {
-          print("[A] === RUN ===");
+          this.state.sys.print("[A] === RUN ===");
         }
         this.akey = akey;
         if (this.initVars(akey)) {
@@ -20330,7 +20372,7 @@ var { doExport } = (() => {
       CSL2.Disambiguation.prototype.runDisambig = function() {
         var ismax;
         if (this.debug) {
-          print("[C] === runDisambig() ===");
+          this.state.sys.print("[C] === runDisambig() ===");
         }
         this.initGivens = true;
         while (this.lists.length) {
@@ -20352,7 +20394,7 @@ var { doExport } = (() => {
       CSL2.Disambiguation.prototype.scanItems = function(list) {
         var pos, len, otherItem;
         if (this.debug) {
-          print("[2] === scanItems() ===");
+          this.state.sys.print("[2] === scanItems() ===");
         }
         this.Item = list[1][0];
         this.ItemCite = CSL2.getAmbiguousCite.call(this.state, this.Item, this.base, true);
@@ -20366,20 +20408,20 @@ var { doExport } = (() => {
           var otherItemCite = CSL2.getAmbiguousCite.call(this.state, otherItem, this.base, true);
           if (this.debug) {
             if (pos > 1) {
-              print("  -----------");
+              this.state.sys.print("  -----------");
             }
           }
           if (this.ItemCite === otherItemCite) {
             if (this.debug) {
-              print("  [CLASH]--> " + this.Item.id + ": " + this.ItemCite);
-              print("             " + otherItem.id + ": " + otherItemCite);
+              this.state.sys.print("  [CLASH]--> " + this.Item.id + ": " + this.ItemCite);
+              this.state.sys.print("             " + otherItem.id + ": " + otherItemCite);
             }
             clashes += 1;
             this.partners.push(otherItem);
           } else {
             if (this.debug) {
-              print("  [clear]--> " + this.Item.id + ": " + this.ItemCite);
-              print("             " + otherItem.id + ": " + otherItemCite);
+              this.state.sys.print("  [clear]--> " + this.Item.id + ": " + this.ItemCite);
+              this.state.sys.print("             " + otherItem.id + ": " + otherItemCite);
             }
             this.nonpartners.push(otherItem);
           }
@@ -20400,13 +20442,13 @@ var { doExport } = (() => {
       CSL2.Disambiguation.prototype.disNames = function(ismax) {
         var i, ilen;
         if (this.debug) {
-          print("[3] == disNames() ==");
+          this.state.sys.print("[3] == disNames() ==");
         }
         if (this.clashes[1] === 0 && this.nonpartners.length === 1) {
           this.captureStepToBase();
           if (this.debug) {
-            print("  ** RESOLUTION [a]: lone partner, one nonpartner");
-            print("  registering " + this.partners[0].id + " and " + this.nonpartners[0].id);
+            this.state.sys.print("  ** RESOLUTION [a]: lone partner, one nonpartner");
+            this.state.sys.print("  registering " + this.partners[0].id + " and " + this.nonpartners[0].id);
           }
           this.state.registry.registerAmbigToken(this.akey, "" + this.nonpartners[0].id, this.betterbase);
           this.state.registry.registerAmbigToken(this.akey, "" + this.partners[0].id, this.betterbase);
@@ -20414,8 +20456,8 @@ var { doExport } = (() => {
         } else if (this.clashes[1] === 0) {
           this.captureStepToBase();
           if (this.debug) {
-            print("  ** RESOLUTION [b]: lone partner, unknown number of remaining nonpartners");
-            print("  registering " + this.partners[0].id);
+            this.state.sys.print("  ** RESOLUTION [b]: lone partner, unknown number of remaining nonpartners");
+            this.state.sys.print("  registering " + this.partners[0].id);
           }
           this.state.registry.registerAmbigToken(this.akey, "" + this.partners[0].id, this.betterbase);
           this.lists[this.listpos] = [this.betterbase, this.nonpartners];
@@ -20425,28 +20467,28 @@ var { doExport } = (() => {
         } else if (this.nonpartners.length === 1) {
           this.captureStepToBase();
           if (this.debug) {
-            print("  ** RESOLUTION [c]: lone nonpartner, unknown number of partners remaining");
-            print("  registering " + this.nonpartners[0].id);
+            this.state.sys.print("  ** RESOLUTION [c]: lone nonpartner, unknown number of partners remaining");
+            this.state.sys.print("  registering " + this.nonpartners[0].id);
           }
           this.state.registry.registerAmbigToken(this.akey, "" + this.nonpartners[0].id, this.betterbase);
           this.lists[this.listpos] = [this.betterbase, this.partners];
         } else if (this.clashes[1] < this.clashes[0]) {
           this.captureStepToBase();
           if (this.debug) {
-            print("  ** RESOLUTION [d]: better result, but no entries safe to register");
+            this.state.sys.print("  ** RESOLUTION [d]: better result, but no entries safe to register");
           }
           this.lists[this.listpos] = [this.betterbase, this.partners];
           this.lists.push([this.betterbase, this.nonpartners]);
         } else {
           if (this.debug) {
-            print("  ** RESOLUTION [e]: no improvement, and clashes remain");
+            this.state.sys.print("  ** RESOLUTION [e]: no improvement, and clashes remain");
           }
           if (ismax) {
             this.lists[this.listpos] = [this.betterbase, this.nonpartners];
             this.lists.push([this.betterbase, this.partners]);
             if (this.modeindex === this.modes.length - 1) {
               if (this.debug) {
-                print("     (registering clashing entries because we've run out of options)");
+                this.state.sys.print("     (registering clashing entries because we've run out of options)");
               }
               for (var i = 0, ilen = this.partners.length; i < ilen; i += 1) {
                 this.state.registry.registerAmbigToken(this.akey, "" + this.partners[i].id, this.betterbase);
@@ -20458,7 +20500,7 @@ var { doExport } = (() => {
       };
       CSL2.Disambiguation.prototype.disExtraText = function() {
         if (this.debug) {
-          print("[3] === disExtraText ==");
+          this.state.sys.print("[3] === disExtraText ==");
         }
         var done = false;
         if (this.clashes[1] === 0 && this.nonpartners.length < 2) {
@@ -20499,7 +20541,7 @@ var { doExport } = (() => {
       CSL2.Disambiguation.prototype.disYears = function() {
         var pos, len, tokens, token;
         if (this.debug) {
-          print("[3] === disYears ==");
+          this.state.sys.print("[3] === disYears ==");
         }
         tokens = [];
         var base = this.lists[this.listpos][0];
@@ -20528,7 +20570,7 @@ var { doExport } = (() => {
       };
       CSL2.Disambiguation.prototype.incrementDisambig = function() {
         if (this.debug) {
-          print("\n[1] === incrementDisambig() ===");
+          this.state.sys.print("\n[1] === incrementDisambig() ===");
         }
         if (this.initGivens) {
           this.initGivens = false;
@@ -20573,25 +20615,25 @@ var { doExport } = (() => {
             }
           }
           if (this.debug) {
-            print("    ------------------");
-            print("    incremented values");
-            print("    ------------------");
-            print("    | gnameset: " + this.gnameset);
-            print("    | gname: " + this.gname);
-            print("    | names value: " + this.base.names[this.gnameset]);
+            this.state.sys.print("    ------------------");
+            this.state.sys.print("    incremented values");
+            this.state.sys.print("    ------------------");
+            this.state.sys.print("    | gnameset: " + this.gnameset);
+            this.state.sys.print("    | gname: " + this.gname);
+            this.state.sys.print("    | names value: " + this.base.names[this.gnameset]);
             if (this.base.givens.length) {
-              print("    | givens value: " + this.base.givens[this.gnameset][this.gname]);
+              this.state.sys.print("    | givens value: " + this.base.givens[this.gnameset][this.gname]);
             } else {
-              print("    | givens value: nil");
+              this.state.sys.print("    | givens value: nil");
             }
-            print("    | namesetsMax: " + this.namesetsMax);
-            print("    | namesMax: " + this.namesMax);
-            print("    | givensMax: " + this.givensMax);
+            this.state.sys.print("    | namesetsMax: " + this.namesetsMax);
+            this.state.sys.print("    | namesMax: " + this.namesMax);
+            this.state.sys.print("    | givensMax: " + this.givensMax);
           }
           if (("number" !== typeof this.namesetsMax || this.namesetsMax === -1 || this.gnameset === this.namesetsMax) && (!this.state.opt["disambiguate-add-names"] || "number" !== typeof this.namesMax || this.gname === this.namesMax) && ("number" != typeof this.givensMax || "undefined" === typeof this.base.givens[this.gnameset] || "undefined" === typeof this.base.givens[this.gnameset][this.gname] || this.base.givens[this.gnameset][this.gname] === this.givensMax)) {
             maxed = true;
             if (this.debug) {
-              print("    MAXED");
+              this.state.sys.print("    MAXED");
             }
           }
         } else if ("disExtraText" === this.modes[this.modeindex]) {
@@ -20603,7 +20645,7 @@ var { doExport } = (() => {
       CSL2.Disambiguation.prototype.initVars = function(akey) {
         var i, ilen, myIds, myItemBundles, myItems;
         if (this.debug) {
-          print("[B] === initVars() ===");
+          this.state.sys.print("[B] === initVars() ===");
         }
         this.lists = [];
         this.base = false;
@@ -22475,10 +22517,10 @@ ${obj.stack}]`;
   __name(stringify, "stringify");
 
   // content/logger.ts
-  function print2(msg) {
+  function print(msg) {
     dump(msg + "\n");
   }
-  __name(print2, "print");
+  __name(print, "print");
   function toString(obj) {
     try {
       if (typeof obj === "string")
@@ -22540,7 +22582,7 @@ ${obj.stack}]`;
     }
     dump(...msg) {
       if (this.enabled)
-        print2(this.format({}, msg));
+        print(this.format({}, msg));
     }
     error(...msg) {
       Zotero.debug(this.format({ error: true }, msg));
@@ -22710,6 +22752,7 @@ ${obj.stack}]`;
     filingDate: () => filingDate,
     "first page": () => first_page,
     firstPage: () => firstPage,
+    format: () => format,
     "forum title": () => forum_title,
     forumTitle: () => forumTitle,
     "gazette flag": () => gazette_flag,
@@ -22718,6 +22761,7 @@ ${obj.stack}]`;
     genre: () => genre,
     guest: () => guest,
     history: () => history,
+    identifier: () => identifier,
     illustrator: () => illustrator,
     institution: () => institution,
     "interview medium": () => interview_medium,
@@ -22773,6 +22817,7 @@ ${obj.stack}]`;
     "opening-date": () => opening_date2,
     openingDate: () => openingDate,
     opus: () => opus,
+    organization: () => organization,
     "original author": () => original_author,
     "original date": () => original_date,
     "original publisher": () => original_publisher,
@@ -22843,6 +22888,8 @@ ${obj.stack}]`;
     "reporter volume": () => reporter_volume,
     reporterVolume: () => reporterVolume,
     repository: () => repository,
+    "repository location": () => repository_location,
+    repositoryLocation: () => repositoryLocation,
     "resolution label": () => resolution_label,
     resolutionLabel: () => resolutionLabel,
     "reviewed author": () => reviewed_author,
@@ -23223,11 +23270,7 @@ ${obj.stack}]`;
     ],
     type: "text",
     zotero: [
-      "court",
-      "legislativeBody",
-      "issuingAuthority",
-      "institution",
-      "regulatoryBody"
+      "authority"
     ]
   };
   var bill_number = {
@@ -23627,7 +23670,8 @@ ${obj.stack}]`;
   var court = {
     type: "text",
     zotero: [
-      "court"
+      "court",
+      "authority"
     ]
   };
   var csl_type = {
@@ -23947,6 +23991,12 @@ ${obj.stack}]`;
       "pages"
     ]
   };
+  var format = {
+    type: "text",
+    zotero: [
+      "medium"
+    ]
+  };
   var forum_title = {
     type: "text",
     zotero: [
@@ -24003,6 +24053,15 @@ ${obj.stack}]`;
     type: "text",
     zotero: [
       "history"
+    ]
+  };
+  var identifier = {
+    csl: [
+      "number"
+    ],
+    type: "text",
+    zotero: [
+      "number"
     ]
   };
   var illustrator = {
@@ -24114,13 +24173,15 @@ ${obj.stack}]`;
   var issuing_authority = {
     type: "text",
     zotero: [
-      "issuingAuthority"
+      "issuingAuthority",
+      "authority"
     ]
   };
   var issuingAuthority = {
     type: "text",
     zotero: [
-      "issuingAuthority"
+      "issuingAuthority",
+      "authority"
     ]
   };
   var journal_abbreviation = {
@@ -24166,27 +24227,34 @@ ${obj.stack}]`;
     ]
   };
   var legal_status = {
+    csl: [
+      "status"
+    ],
     type: "text",
     zotero: [
-      "legalStatus"
+      "legalStatus",
+      "status"
     ]
   };
   var legalStatus = {
     type: "text",
     zotero: [
-      "legalStatus"
+      "legalStatus",
+      "status"
     ]
   };
   var legislative_body = {
     type: "text",
     zotero: [
-      "legislativeBody"
+      "legislativeBody",
+      "authority"
     ]
   };
   var legislativeBody = {
     type: "text",
     zotero: [
-      "legislativeBody"
+      "legislativeBody",
+      "authority"
     ]
   };
   var letter_type = {
@@ -24403,6 +24471,12 @@ ${obj.stack}]`;
     type: "text",
     zotero: [
       "opus"
+    ]
+  };
+  var organization = {
+    type: "text",
+    zotero: [
+      "authority"
     ]
   };
   var original_author = {
@@ -24886,6 +24960,22 @@ ${obj.stack}]`;
     type: "text",
     zotero: [
       "publisher"
+    ]
+  };
+  var repository_location = {
+    csl: [
+      "event-place",
+      "publisher-place"
+    ],
+    type: "text",
+    zotero: [
+      "place"
+    ]
+  };
+  var repositoryLocation = {
+    type: "text",
+    zotero: [
+      "place"
     ]
   };
   var resolution_label = {
@@ -25551,6 +25641,7 @@ ${obj.stack}]`;
     filingDate,
     "first page": first_page,
     firstPage,
+    format,
     "forum title": forum_title,
     forumTitle,
     "gazette flag": gazette_flag,
@@ -25559,6 +25650,7 @@ ${obj.stack}]`;
     genre,
     guest,
     history,
+    identifier,
     illustrator,
     institution,
     "interview medium": interview_medium,
@@ -25614,6 +25706,7 @@ ${obj.stack}]`;
     "opening-date": opening_date2,
     openingDate,
     opus,
+    organization,
     "original author": original_author,
     "original date": original_date,
     "original publisher": original_publisher,
@@ -25684,6 +25777,8 @@ ${obj.stack}]`;
     "reporter volume": reporter_volume,
     reporterVolume,
     repository,
+    "repository location": repository_location,
+    repositoryLocation,
     "resolution label": resolution_label,
     resolutionLabel,
     "reviewed author": reviewed_author,

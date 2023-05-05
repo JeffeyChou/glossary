@@ -9,7 +9,7 @@
 	"configOptions": {
 		"async": true,
 		"getCollections": true,
-		"hash": "3cb7a096db2e533a87932a8b8e128bc97459308127a433fc9738b222cdca8100"
+		"hash": "7f8fb88ff54b645af41f10faaedc4b9308e3a9772725ca187f97fbdf4296dc7b"
 	},
 	"displayOptions": {
 		"exportNotes": false,
@@ -22,7 +22,7 @@
 	"browserSupport": "gcsv",
 	"priority": 199,
 	"inRepository": false,
-	"lastUpdated": "2023-04-10"
+	"lastUpdated": "2023-05-02"
 }
 
 ZOTERO_CONFIG = {"GUID":"zotero@chnm.gmu.edu","ID":"zotero","CLIENT_NAME":"Zotero","DOMAIN_NAME":"zotero.org","PRODUCER":"Digital Scholar","PRODUCER_URL":"https://digitalscholar.org","REPOSITORY_URL":"https://repo.zotero.org/repo/","BASE_URI":"http://zotero.org/","WWW_BASE_URL":"https://www.zotero.org/","PROXY_AUTH_URL":"https://zoteroproxycheck.s3.amazonaws.com/test","API_URL":"https://api.zotero.org/","STREAMING_URL":"wss://stream.zotero.org/","SERVICES_URL":"https://services.zotero.org/","API_VERSION":3,"CONNECTOR_MIN_VERSION":"5.0.39","PREF_BRANCH":"extensions.zotero.","BOOKMARKLET_ORIGIN":"https://www.zotero.org","BOOKMARKLET_URL":"https://www.zotero.org/bookmarklet/","START_URL":"https://www.zotero.org/start","QUICK_START_URL":"https://www.zotero.org/support/quick_start_guide","PDF_TOOLS_URL":"https://www.zotero.org/download/xpdf/","SUPPORT_URL":"https://www.zotero.org/support/","SYNC_INFO_URL":"https://www.zotero.org/support/sync","TROUBLESHOOTING_URL":"https://www.zotero.org/support/getting_help","FEEDBACK_URL":"https://forums.zotero.org/","CONNECTORS_URL":"https://www.zotero.org/download/connectors","CHANGELOG_URL":"https://www.zotero.org/support/changelog","CREDITS_URL":"https://www.zotero.org/support/credits_and_acknowledgments","LICENSING_URL":"https://www.zotero.org/support/licensing","GET_INVOLVED_URL":"https://www.zotero.org/getinvolved","DICTIONARIES_URL":"https://download.zotero.org/dictionaries/"}
@@ -1360,9 +1360,10 @@ ${input}`;
       if (bibtex.key)
         itemIDS[bibtex.key] = id;
       try {
-        const builder = new translation.ZoteroItem(translation, id, bibtex, bib.jabref, errors);
-        const item = builder.import(new Zotero.Item(builder.type));
-        if (item)
+        const item = new Zotero.Item("journalArticle");
+        item.itemID = id;
+        const builder = new translation.ZoteroItem(translation, item, bibtex, bib.jabref);
+        if (builder.import(errors))
           await item.complete();
       } catch (err) {
         Zotero.debug("bbt import error:", err);

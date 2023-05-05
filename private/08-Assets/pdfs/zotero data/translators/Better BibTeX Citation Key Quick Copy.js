@@ -13,9 +13,9 @@
 	},
 	"inRepository": false,
 	"configOptions": {
-		"hash": "3017980a03b729f6df8a06ed5bc7fa283277dec6939877193db24021452ab605"
+		"hash": "33a10315d24a32c4a3da1a71eafc94d1b35312268925cd25be1fe5758d8dfd77"
 	},
-	"lastUpdated": "2023-04-10"
+	"lastUpdated": "2023-05-02"
 }
 
 ZOTERO_CONFIG = {"GUID":"zotero@chnm.gmu.edu","ID":"zotero","CLIENT_NAME":"Zotero","DOMAIN_NAME":"zotero.org","PRODUCER":"Digital Scholar","PRODUCER_URL":"https://digitalscholar.org","REPOSITORY_URL":"https://repo.zotero.org/repo/","BASE_URI":"http://zotero.org/","WWW_BASE_URL":"https://www.zotero.org/","PROXY_AUTH_URL":"https://zoteroproxycheck.s3.amazonaws.com/test","API_URL":"https://api.zotero.org/","STREAMING_URL":"wss://stream.zotero.org/","SERVICES_URL":"https://services.zotero.org/","API_VERSION":3,"CONNECTOR_MIN_VERSION":"5.0.39","PREF_BRANCH":"extensions.zotero.","BOOKMARKLET_ORIGIN":"https://www.zotero.org","BOOKMARKLET_URL":"https://www.zotero.org/bookmarklet/","START_URL":"https://www.zotero.org/start","QUICK_START_URL":"https://www.zotero.org/support/quick_start_guide","PDF_TOOLS_URL":"https://www.zotero.org/download/xpdf/","SUPPORT_URL":"https://www.zotero.org/support/","SYNC_INFO_URL":"https://www.zotero.org/support/sync","TROUBLESHOOTING_URL":"https://www.zotero.org/support/getting_help","FEEDBACK_URL":"https://forums.zotero.org/","CONNECTORS_URL":"https://www.zotero.org/download/connectors","CHANGELOG_URL":"https://www.zotero.org/support/changelog","CREDITS_URL":"https://www.zotero.org/support/credits_and_acknowledgments","LICENSING_URL":"https://www.zotero.org/support/licensing","GET_INVOLVED_URL":"https://www.zotero.org/getinvolved","DICTIONARIES_URL":"https://download.zotero.org/dictionaries/"}
@@ -354,17 +354,41 @@ var { doExport } = (() => {
       delete item.reporterVolume;
     }
     if (zotero) {
-      if (v = item.documentNumber || item.archiveID)
+      if (v = item.legislativeBody || item.court || item.issuingAuthority || item.organization)
+        item.authority = v;
+      if (scrub) {
+        delete item.legislativeBody;
+        delete item.court;
+        delete item.issuingAuthority;
+        delete item.organization;
+      }
+      if (item.format)
+        item.medium = item.format;
+      if (scrub) {
+        delete item.format;
+      }
+      if (v = item.identifier || item.documentNumber || item.archiveID)
         item.number = v;
       if (scrub) {
+        delete item.identifier;
         delete item.documentNumber;
         delete item.archiveID;
+      }
+      if (item.repositoryLocation)
+        item.place = item.repositoryLocation;
+      if (scrub) {
+        delete item.repositoryLocation;
       }
       if (v = item.repository || item.institution)
         item.publisher = v;
       if (scrub) {
         delete item.repository;
         delete item.institution;
+      }
+      if (item.legalStatus)
+        item.status = item.legalStatus;
+      if (scrub) {
+        delete item.legalStatus;
       }
     }
     if (jurism) {

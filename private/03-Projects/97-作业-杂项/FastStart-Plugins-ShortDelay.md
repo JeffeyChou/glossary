@@ -1,9 +1,7 @@
-obsidian-shellcommands
 obsidian-kanban
 obsidian-statusbar-pomo
 obsidian-icon-folder
 Enhanced-editing
-quickadd
 obsidian-wakatime
 quick-latex
 obsidian-admonition

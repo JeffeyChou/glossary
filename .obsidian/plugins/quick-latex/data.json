@@ -17,6 +17,8 @@
   "autoEncloseSup_toggle": true,
   "autoEncloseSub_toggle": true,
   "encloseSelection_toggle": true,
+  "autoGreekCommandMathMode_toggle": true,
   "customShorthand_toggle": true,
-  "customShorthand_parameter": "bi:\\binom{#cursor}{tab};\nsq:\\sqrt{};\nbb:\\mathbb{};\nbf:\\mathbf{};\nrm:\\mathrm{};\nte:\\text{};\nbs:\\boldsymbol{};\ninf:\\infty;\nti:\\times;\n`:\\cdot;\n>>:\\gg;\n<<:\\ll;\n>=:\\geqslant;\n<=:\\leqslant;\n=>:\\Rightarrow;\n==>:\\Longrightarrow;\n->:\\rightarrow;\n<-:\\leftarrow;\n<=:\\Leftarrow;\n<==:\\Longleftarrow;\n+-:\\pm;\n@a:\\alpha;\n@b:\\beta;\n@g:\\gamma;\n@G:\\Gamma;\n@d:\\delta;\n@D:\\Delta;\n@e:\\epsilon;\n@ve:\\varepsilon;\n@E:\\varepsilon;\n@z:\\zeta;\n@h:\\eta;\n@th:\\theta;\n@Th:\\Theta;\n@i:\\iota;\n@k:\\kappa;\n@l:\\lambda;\n@L:\\Lambda;\n@m:\\mu;\n@n:\\nu;\n@x:\\xi;\n@X:\\Xi;\npi:\\pi;\nPI:\\Pi;\n@r:\\rho;\n@s:\\sigma;\n@S:\\Sigma;\n@t:\\tau;\n@ups:\\upsilon;\n@Ups:\\Upsilon;\n@ph:\\phi;\n@vph:\\varphi;\n@Ph:\\Phi;\n@vPh:\\varPhi;\n@c:\\chi;\n@p:\\psi;\n@P:\\Psi;\n@o:\\omega;\n@O:\\Omega"
+  "useTabtoComplete_toggle": false,
+  "customShorthand_parameter": "bi:\\binom{#cursor}{tab};\nsq:\\sqrt{};\nbb:\\mathbb{};\nbf:\\mathbf{};\nrm:\\mathrm{};\nte:\\text{};\nbs:\\boldsymbol{};\ninf:\\infty;\nti:\\times;\n`:\\cdot;\n..:\\ldots;\n>>:\\gg;\n<<:\\ll;\n>=:\\geqslant;\n<=:\\leqslant;\n=>:\\Rightarrow;\n==>:\\Longrightarrow;\n->:\\rightarrow;\n<-:\\leftarrow;\n<=:\\Leftarrow;\n<==:\\Longleftarrow;\n+-:\\pm;\n@a:\\alpha;\n@b:\\beta;\n@g:\\gamma;\n@G:\\Gamma;\n@d:\\delta;\n@D:\\Delta;\n@e:\\epsilon;\n@ve:\\varepsilon;\n@E:\\varepsilon;\n@z:\\zeta;\n@h:\\eta;\n@th:\\theta;\n@Th:\\Theta;\n@i:\\iota;\n@k:\\kappa;\n@l:\\lambda;\n@L:\\Lambda;\n@m:\\mu;\n@n:\\nu;\n@x:\\xi;\n@X:\\Xi;\npi:\\pi;\nPI:\\Pi;\n@r:\\rho;\n@s:\\sigma;\n@S:\\Sigma;\n@t:\\tau;\n@ups:\\upsilon;\n@Ups:\\Upsilon;\n@ph:\\phi;\n@vph:\\varphi;\n@Ph:\\Phi;\n@vPh:\\varPhi;\n@c:\\chi;\n@p:\\psi;\n@P:\\Psi;\n@o:\\omega;\n@O:\\Omega"
 }

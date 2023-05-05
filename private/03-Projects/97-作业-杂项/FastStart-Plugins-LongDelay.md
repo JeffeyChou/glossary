@@ -20,3 +20,8 @@ obsidian-linter
 obsidian-pandoc-reference-list
 dataview
 obsidian-advanced-slides
+obsidian-git
+obsidian-style-settings
+quickadd
+obsidian-shellcommands
+obsidian-bartender
