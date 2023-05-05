@@ -16,7 +16,20 @@
                 "file": "private/01-Diary/本周事务/研讨一.md",
                 "mode": "source",
                 "backlinks": false,
-                "source": true
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6502b387ba9d9a94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "private/01-Diary/本周事务/tt.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
@@ -24,11 +37,11 @@
         "stacked": true
       },
       {
-        "id": "987b55dacdec5a11",
+        "id": "d315c7fbc91d36bf",
         "type": "tabs",
         "children": [
           {
-            "id": "927a411300fb32e5",
+            "id": "03a0f2503af618c0",
             "type": "leaf",
             "state": {
               "type": "reveal-preview-view",
@@ -101,7 +114,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "1779bd3879ef68a9",
@@ -249,19 +263,14 @@
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": true,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": true,
-      "obsidian-statusbar-pomo:Start pomodoro": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-gallery:Gallery": false,
-      "remotely-save:Remotely Save": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "templater-obsidian:Templater": true
     }
   },
-  "active": "e4d452c6215790be",
+  "active": "03a0f2503af618c0",
   "lastOpenFiles": [
     "private/08-Assets/研讨一/plugin/chalkboard/img/whiteboard.png",
-    "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-yellow.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/sponge.png",
+    "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-yellow.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-white.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-red.png",
     "private/08-Assets/研讨一/plugin/chalkboard/img/chalk-purple.png",
@@ -273,23 +282,24 @@
     "private/08-Assets/研讨一/plugin/chalkboard/_style.css",
     "private/08-Assets/研讨一/plugin/chalkboard/style.css",
     "private/08-Assets/研讨一/plugin/chalkboard/README.md",
-    "private/08-Assets/研讨一/plugin/chalkboard/plugin.js",
     "private/08-Assets/研讨一/plugin/chalkboard/plugin (copy).js",
+    "private/08-Assets/研讨一/plugin/chalkboard/plugin.js",
     "private/08-Assets/研讨一/plugin/chalkboard/img",
     "private/08-Assets/研讨一/plugin/chalkboard",
-    "private/08-Assets/研讨一/plugin/chart/README.md",
     "private/08-Assets/研讨一/plugin/chart/plugin.js",
+    "private/08-Assets/研讨一/plugin/chart/README.md",
     "private/08-Assets/研讨一/plugin/chart/chart.min.js",
     "private/08-Assets/研讨一/plugin/chart",
-    "private/08-Assets/研讨一/plugin/customcontrols/style.css",
     "private/08-Assets/研讨一/plugin/customcontrols/README.md",
+    "private/08-Assets/研讨一/plugin/customcontrols/style.css",
+    "private/08-Assets/研讨一/plugin/menu/CONTRIBUTING.md",
+    "private/08-Assets/研讨一/plugin/menu/README.md",
+    "private/01-Diary/本周事务/tt.md",
+    "private/01-Diary/本周事务/研讨一.md",
     "private/01-Diary/本周事务/slider test.md",
     "private/09-Templates/tpl-con-2-1-box.md",
     "private/09-Templates/tpl-footer.md",
     "private/01-Diary/本周事务/Minal-slides.md",
-    "private/01-Diary/本周事务/研讨一.md",
-    "private/08-Assets/研讨一/plugin/menu/README.md",
-    "private/08-Assets/研讨一/plugin/menu/CONTRIBUTING.md",
     "private/01-Diary/日志存档/2022-04-02.md",
     "private/01-Diary/本周事务/测试.md",
     "private/09-Templates/思维导图模板.md",
@@ -304,7 +314,6 @@
     "private/09-Templates/论文草稿模板.md",
     "private/09-Templates/论文大纲模板.md",
     "private/02-Reading/mdnotes/@martin2022belief.md",
-    "private/08-Assets/Scripts/Mdnotes Default Template.md",
     "未命名.canvas"
   ]
 }

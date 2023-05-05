@@ -5,6 +5,10 @@
       "path": "private/01-Diary/本周事务/研讨一.md"
     },
     {
+      "basename": "tt",
+      "path": "private/01-Diary/本周事务/tt.md"
+    },
+    {
       "basename": "slider test",
       "path": "private/01-Diary/本周事务/slider test.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "信息论基础-习题1-1",
       "path": "private/01-Diary/本周事务/信息论基础-习题1-1.md"
-    },
-    {
-      "basename": "2023-05-04",
-      "path": "private/01-Diary/日志存档/2023-05-04.md"
     }
   ],
   "omittedPaths": [],
