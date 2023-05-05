@@ -4,18 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "17967f04a654e87b",
+        "id": "182a62f66ca539e8",
         "type": "tabs",
         "children": [
           {
-            "id": "7097c56272bc1c68",
+            "id": "386f617bda2c02d2",
             "type": "leaf",
             "state": {
               "type": "empty",
               "state": {}
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -146,7 +147,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       },
       {
         "id": "9848e6b55bd4c5bb",
@@ -204,34 +205,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-gallery:Gallery": false,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "command-palette:打开命令面板": true,
-      "obsidian-statusbar-pomo:Start pomodoro": false,
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": true,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "templater-obsidian:Templater": true,
-      "remotely-save:Remotely Save": true
+      "templater-obsidian:Templater": true
     }
   },
-  "active": "178a68b71b530d93",
+  "active": "386f617bda2c02d2",
   "lastOpenFiles": [
+    "private/00-MOC/试剂库存管理.md",
+    "private/00-MOC/任务看板.md",
+    "private/00-MOC/愿望清单.md",
     "private/00-MOC/TO-DO list.md",
     "private/00-MOC/Today's TODO.md",
     "private/08-Assets/Excalidraw/Drawing 2023-05-04 20.20.15.excalidraw.md",
-    "private/00-MOC/任务看板.md",
     "private/08-Assets/Pasted image 20230416185814.png",
     "private/08-Assets/2_1.md",
     "private/08-Assets/1 1.png",
     "private/08-Assets/MindMap/MindMap-发.md",
     "private/00-MOC/阅读清单.md",
-    "private/00-MOC/愿望清单.md",
-    "private/00-MOC/试剂库存管理.md",
     "private/00-MOC/本周事务表.md",
     "private/06-Cards/202112201648.md",
     "private/00-MOC/AuthorRanking.md",

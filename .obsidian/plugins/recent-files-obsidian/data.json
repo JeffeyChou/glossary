@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "试剂库存管理",
+      "path": "private/00-MOC/试剂库存管理.md"
+    },
+    {
+      "basename": "任务看板",
+      "path": "private/00-MOC/任务看板.md"
+    },
+    {
+      "basename": "愿望清单",
+      "path": "private/00-MOC/愿望清单.md"
+    },
+    {
       "basename": "TO-DO list",
       "path": "private/00-MOC/TO-DO list.md"
     },
@@ -11,10 +23,6 @@
     {
       "basename": "Drawing 2023-05-04 20.20.15.excalidraw",
       "path": "private/08-Assets/Excalidraw/Drawing 2023-05-04 20.20.15.excalidraw.md"
-    },
-    {
-      "basename": "任务看板",
-      "path": "private/00-MOC/任务看板.md"
     },
     {
       "basename": "Pasted image 20230416185814",
@@ -31,14 +39,6 @@
     {
       "basename": "阅读清单",
       "path": "private/00-MOC/阅读清单.md"
-    },
-    {
-      "basename": "愿望清单",
-      "path": "private/00-MOC/愿望清单.md"
-    },
-    {
-      "basename": "试剂库存管理",
-      "path": "private/00-MOC/试剂库存管理.md"
     },
     {
       "basename": "本周事务表",
