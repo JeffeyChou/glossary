@@ -14,10 +14,12 @@
     "S - Kanban",
     "【日记】Time",
     "【自定义】mytools 样式",
-    "【图标】iconfont"
+    "【图标】iconfont",
+    "custom-admonitions.c9c6cb"
   ],
   "baseFontSizeAction": true,
   "monospaceFontFamily": "RobotoMono Nerd Font Mono,Microsoft YaHei",
   "textFontFamily": "Microsoft YaHei UI",
-  "accentColor": ""
+  "accentColor": "#774dea",
+  "showViewHeader": false
 }

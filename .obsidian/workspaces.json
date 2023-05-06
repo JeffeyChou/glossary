@@ -155,39 +155,24 @@
       },
       "active": "0d255cdd69daa9bf"
     },
-    "日志草稿": {
+    "draft": {
       "main": {
         "id": "9a0780749afe3857",
         "type": "split",
         "children": [
           {
-            "id": "bb3efc9cc32deb4b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "leaf": "bb3efc9cc32deb4b",
-                  "group": null,
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"scroll\":7.355281220627748}"
-                },
-                {
-                  "leaf": "bb3efc9cc32deb4b",
-                  "group": null,
-                  "state": "{\"type\":\"empty\",\"state\":{}}",
-                  "eState": "{}"
+            "id": "d695f62e8979c557",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "076fe84e64997bcf",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {}
                 }
-              ]
-            }
+              }
+            ]
           }
         ],
         "direction": "vertical"
@@ -205,49 +190,48 @@
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
-                  "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
                 }
               },
               {
-                "id": "d4cc5673d41093ba",
+                "id": "c42e994501266a20",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              },
+              {
+                "id": "fffbf7b1713c1e68",
                 "type": "leaf",
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:obsidian读文献",
-                    "matchingCase": true,
-                    "explainSearch": true,
-                    "collapseAll": true,
+                    "query": "button",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical"
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
-                }
-              },
-              {
-                "id": "af328bc8c7dd1264",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               }
             ]
-          },
+          }
+        ],
+        "direction": "horizontal",
+        "width": 207
+      },
+      "right": {
+        "id": "6e7011190a6a4416",
+        "type": "split",
+        "children": [
           {
-            "id": "a2d3d1f4b6a566ca",
+            "id": "2c47daab7a7f6b09",
             "type": "tabs",
+            "dimension": 40.609137055837564,
             "children": [
               {
                 "id": "ec1d354533e6cbd2",
@@ -258,50 +242,14 @@
                     "sortOrder": "frequency",
                     "useHierarchy": true
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
-              {
-                "id": "60ed30d1cc6d4c8d",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
-                }
-              }
-            ],
-            "currentTab": 1
-          }
-        ],
-        "direction": "horizontal",
-        "width": 215
-      },
-      "right": {
-        "id": "6e7011190a6a4416",
-        "type": "split",
-        "children": [
-          {
-            "id": "2c47daab7a7f6b09",
-            "type": "tabs",
-            "dimension": 38.66498740554156,
-            "children": [
               {
                 "id": "0d92b31ac7bc3511",
                 "type": "leaf",
                 "state": {
                   "type": "calendar",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -310,18 +258,15 @@
                 "state": {
                   "type": "advanced-tables-toolbar",
                   "state": {}
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               }
-            ]
+            ],
+            "currentTab": 2
           },
           {
             "id": "4f101d806a54a17c",
             "type": "tabs",
-            "dimension": 61.33501259445844,
+            "dimension": 59.390862944162436,
             "children": [
               {
                 "id": "450ad81cf27a4dff",
@@ -329,12 +274,8 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "README.md"
+                    "file": "private/00-MOC/任务看板.md"
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
@@ -343,7 +284,7 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "README.md",
+                    "file": "private/00-MOC/任务看板.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -352,158 +293,64 @@
                     "backlinkCollapsed": false,
                     "unlinkedCollapsed": true
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": []
                 }
               },
               {
-                "id": "b925b1fa789215ee",
+                "id": "60ed30d1cc6d4c8d",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "2076342018046708",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "08-Assets/Scripts/常用工具.md",
+                    "file": "private/08-Assets/Scripts/常用工具.md",
                     "mode": "preview",
                     "source": false
                   }
-                },
-                "pane-relief:history-v1": {
-                  "pos": 0,
-                  "stack": [
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"08-Assets/Scripts/常用工具.md\",\"mode\":\"preview\",\"source\":false}}",
-                      "eState": "{\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/3-obsidian做课题/完整导出项目.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"scroll\":2.8999999364217124}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/99-黑曜石玩家指南.md\",\"mode\":\"preview\",\"source\":false}}",
-                      "eState": "{\"scroll\":20.293750127156574}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":9,\"ch\":34},\"to\":{\"line\":9,\"ch\":34}},\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/4-obsidian附录/python代码说明与调试方法.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":14,\"ch\":38},\"to\":{\"line\":14,\"ch\":38}},\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/98-test/test3.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/99-黑曜石玩家指南.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"scroll\":18.732307267665504}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/1-obsidian入门/zotero-obsidian联动配置.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"scroll\":68.7634}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/99-黑曜石玩家指南.md\",\"mode\":\"preview\",\"source\":true}}",
-                      "eState": "{}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"09-Templates/文件夹目录模板.md\",\"mode\":\"source\",\"source\":true}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":3},\"to\":{\"line\":10,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/99-黑曜石玩家指南.md\",\"mode\":\"preview\",\"source\":false}}",
-                      "eState": "{\"scroll\":0}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"09-Templates/文件夹目录模板.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":16,\"ch\":0},\"to\":{\"line\":16,\"ch\":0}}}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/4-obsidian附录/结束语.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/4-obsidian附录/更新日志.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":6},\"to\":{\"line\":8,\"ch\":40}}}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/99-黑曜石玩家指南.md\",\"mode\":\"preview\",\"source\":false}}",
-                      "eState": "{\"scroll\":20.40625}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/4-obsidian附录/结束语.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":56,\"ch\":9},\"to\":{\"line\":56,\"ch\":9}},\"scroll\":42.99166742960612}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/99-黑曜石玩家指南.md\",\"mode\":\"preview\",\"source\":false}}",
-                      "eState": "{\"scroll\":12.71181089546424}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"03-Projects/99-黑曜石玩家指南/4-obsidian附录/结束语.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":35.91041644414266}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"README.md\",\"mode\":\"source\",\"source\":false}}",
-                      "eState": "{\"scroll\":54.09114496875558}"
-                    },
-                    {
-                      "leaf": "b925b1fa789215ee",
-                      "group": null,
-                      "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"00-MOC/本周事务表.md\",\"mode\":\"preview\",\"source\":false}}",
-                      "eState": "{\"scroll\":0}"
-                    }
-                  ]
+                }
+              },
+              {
+                "id": "769c3efb64d7f376",
+                "type": "leaf",
+                "state": {
+                  "type": "kanban",
+                  "state": {
+                    "file": "private/00-MOC/任务看板.md"
+                  }
                 }
               }
             ],
-            "currentTab": 2
+            "currentTab": 4
           }
         ],
         "direction": "horizontal",
-        "width": 229
+        "width": 245
       },
-      "active": "bb3efc9cc32deb4b"
+      "left-ribbon": {
+        "hiddenItems": {
+          "templater-obsidian:Templater": true,
+          "table-editor-obsidian:Advanced Tables Toolbar": true,
+          "graph:查看关系图谱": false,
+          "daily-notes:打开/创建今天的日记": false,
+          "command-palette:打开命令面板": true,
+          "zk-prefixer:创建时间戳笔记": false,
+          "audio-recorder:开始/结束录音": false,
+          "workspaces:管理工作区布局": false,
+          "obsidian-statusbar-pomo:Start pomodoro": true,
+          "obsidian-advanced-slides:Show Slide Preview": false,
+          "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+          "obsidian-gallery:Gallery": false,
+          "remotely-save:Remotely Save": false
+        }
+      },
+      "active": "769c3efb64d7f376"
     }
   },
-  "active": "日志草稿"
+  "active": "draft"
 }

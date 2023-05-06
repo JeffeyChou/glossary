@@ -33,5 +33,6 @@
   "spellcheckDictionary": [
     "Shannon entropy"
   ],
-  "communityThemeSortOrder": "download"
+  "communityThemeSortOrder": "download",
+  "showInlineTitle": false
 }
