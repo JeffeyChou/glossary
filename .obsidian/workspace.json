@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9e3ad2738ce50841",
+        "id": "88b1113384b7c126",
         "type": "tabs",
         "children": [
           {
-            "id": "1f7b928a3387f6d1",
+            "id": "f5c78981266ed6fe",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -16,12 +16,12 @@
             }
           },
           {
-            "id": "191e91e148857f0d",
+            "id": "fd6e798f3f8be215",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论第二次作业-1-2.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-插值.md",
                 "mode": "source",
                 "source": false
               }
@@ -131,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论第二次作业-1-2.md"
+                "file": "private/01-Diary/本周事务/数值分析作业-插值.md"
               }
             }
           },
@@ -141,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论第二次作业-1-2.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-插值.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +187,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 267.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,10 +207,11 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "191e91e148857f0d",
+  "active": "fd6e798f3f8be215",
   "lastOpenFiles": [
-    "private/00-MOC/任务看板.md",
+    "private/01-Diary/本周事务/数值分析作业-插值.md",
     "private/01-Diary/本周事务/信息论第二次作业-1-2.md",
+    "private/00-MOC/任务看板.md",
     "private/01-Diary/本周事务/Zotero多设备同步解决方案.md",
     "private/08-Assets/pdfs/zotero data/tmp/translator.json",
     "private/08-Assets/pdfs/zotero data/tmp",
@@ -238,7 +240,6 @@
     "private/01-Diary/日志存档/2022-04-02.md",
     "private/01-Diary/本周事务/未命名 2.md",
     "private/01-Diary/本周事务/未命名 1.md",
-    "term/in-memory format.md",
     "images/etlt-extract-tweak-load-transform.png"
   ]
 }

@@ -70,8 +70,8 @@
     "Homework": {
       "Homework": {
         "frontMatter": {
-          "count": 7,
-          "lastUpdated": 1683362123304
+          "count": 8,
+          "lastUpdated": 1683375876373
         }
       }
     },
@@ -214,8 +214,16 @@
     "作业": {
       "作业": {
         "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1683362116619
+          "count": 3,
+          "lastUpdated": 1683375882013
+        }
+      }
+    },
+    "Probability_and_Statistics": {
+      "Probability_and_Statistics": {
+        "frontMatter": {
+          "count": 2,
+          "lastUpdated": 1683375890697
         }
       }
     }
