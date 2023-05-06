@@ -11,6 +11,7 @@ tags:
 - Zotero
 title: "Zotero多设备同步解决方案"
 share: false
+updated: 2023-05-06 16:19:53
 ---
 
 # 如何解决多设备下Zotero的同步问题?
@@ -128,4 +129,18 @@ share: false
 4. 在Win设备、Mac、平板上查看并批注：
     - Win设备：登录自己的Zotero和Onedrive账号，**注意文献库最好也建立在个本地，登录账号后会自动同步条目信息**。打开条目的PDF文件会自动打开链接的条目，也就是对应的Onedrive文件。
     - Mac设备、平板：同win设备类似。
-    - iPhone, Android设备：下载zotero软件（Android可以用zoo for Zotero)，以及PDF批注软件（Onedrive也有PDFP批注功能）。登录zotero查看自己要看的文献的名称，到Onedrive对应的目录查找
+    - iPhone, Android设备：下载zotero软件（Android可以用zoo for Zotero)，以及PDF批注软件（Onedrive也有PDFP批注功能）。登录zotero查看自己要看的文献的名称，到Onedrive对应的目录查找打开即可进行批注。
+
+## 使用坚果云、TeraCloud等WebDAV网盘
+
+原理类似，只不过不需要使用Zotfile移动到另一个地方，只需要回到前面
+[Zotfile设置](private/01-Diary/本周事务/Zotero多设备同步解决方案.md#Zotfile设置) 选择 *Attach copy of stored of file(s)* ，[Zotero设置](private/01-Diary/本周事务/Zotero多设备同步解决方案.md#Zotero设置)勾选*文件同步*并且设置好自己的网盘即可。Zotero会自动将附件通过WebDAV同步到网盘。
+
+### 工作流
+1. 保持文献到自己的文献库
+2. Zotero后台会自动上传文件到网盘
+3. 在新设备中登录自己的Zotero，直接即可打开对应条目的PDF文件
+
+### 缺点
+
+极大受限于自己网盘的能力，且没有版本管理，有时自己修改后没有及时同步到网盘，在另一个设备打开就没有看到笔记。且每次打开文件都会通过WebDAV比对文件信息。没有Onedrive集成到Win设备那么方便。不过好处是那怕网页端Zotero也可以查看自己的文献。

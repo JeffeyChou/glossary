@@ -155,17 +155,17 @@
       },
       "active": "0d255cdd69daa9bf"
     },
-    "draft": {
+    "Draft": {
       "main": {
         "id": "9a0780749afe3857",
         "type": "split",
         "children": [
           {
-            "id": "d695f62e8979c557",
+            "id": "9e3ad2738ce50841",
             "type": "tabs",
             "children": [
               {
-                "id": "076fe84e64997bcf",
+                "id": "1f7b928a3387f6d1",
                 "type": "leaf",
                 "state": {
                   "type": "empty",
@@ -222,7 +222,8 @@
           }
         ],
         "direction": "horizontal",
-        "width": 207
+        "width": 207,
+        "collapsed": true
       },
       "right": {
         "id": "6e7011190a6a4416",
@@ -273,9 +274,7 @@
                 "type": "leaf",
                 "state": {
                   "type": "outline",
-                  "state": {
-                    "file": "private/00-MOC/任务看板.md"
-                  }
+                  "state": {}
                 }
               },
               {
@@ -284,7 +283,6 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "private/00-MOC/任务看板.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -349,8 +347,8 @@
           "remotely-save:Remotely Save": false
         }
       },
-      "active": "769c3efb64d7f376"
+      "active": "1f7b928a3387f6d1"
     }
   },
-  "active": "draft"
+  "active": "Draft"
 }

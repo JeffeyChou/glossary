@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "信息论第二次作业-1-2",
+      "path": "private/01-Diary/本周事务/信息论第二次作业-1-2.md"
+    },
+    {
+      "basename": "任务看板",
+      "path": "private/00-MOC/任务看板.md"
+    },
+    {
       "basename": "Zotero多设备同步解决方案",
       "path": "private/01-Diary/本周事务/Zotero多设备同步解决方案.md"
     },
@@ -35,10 +43,6 @@
     {
       "basename": "常用工具",
       "path": "private/08-Assets/Scripts/常用工具.md"
-    },
-    {
-      "basename": "任务看板",
-      "path": "private/00-MOC/任务看板.md"
     },
     {
       "basename": "Buttons",
@@ -195,10 +199,6 @@
     {
       "basename": "草稿模板",
       "path": "private/09-Templates/草稿模板.md"
-    },
-    {
-      "basename": "2023-03-11",
-      "path": "private/01-Diary/日志存档/2023-03-11.md"
     }
   ],
   "omittedPaths": [],
