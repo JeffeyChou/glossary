@@ -118,7 +118,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "4f101d806a54a17c",
@@ -187,7 +187,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 243.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -206,7 +207,7 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "0d92b31ac7bc3511",
+  "active": "191e91e148857f0d",
   "lastOpenFiles": [
     "private/00-MOC/任务看板.md",
     "private/01-Diary/本周事务/信息论第二次作业-1-2.md",
