@@ -212,6 +212,11 @@
   },
   "active": "0d36ac78e333fd93",
   "lastOpenFiles": [
+    "private/08-Assets/pdfs/zotero data/tmp/translator.json",
+    "private/08-Assets/pdfs/zotero data/tmp",
+    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite-journal",
+    "private/08-Assets/pdfs/zotero data/better-bibtex-search.sqlite-journal",
+    "private/08-Assets/pdfs/zotero data/zotero.sqlite-journal",
     "private/01-Diary/本周事务/概率论与数理统计-第四章作业.md",
     "private/01-Diary/本周事务/Zotero多设备同步解决方案.md",
     "private/01-Diary/本周事务/商业计划书.md",
@@ -237,7 +242,6 @@
     "private/01-Diary/本周事务/未命名 2.md",
     "private/01-Diary/本周事务/未命名 1.md",
     "term/in-memory format.md",
-    "term/etlt.md",
     "images/etlt-extract-tweak-load-transform.png"
   ]
 }

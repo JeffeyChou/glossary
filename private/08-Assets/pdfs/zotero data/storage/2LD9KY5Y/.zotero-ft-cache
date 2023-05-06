@@ -1,0 +1,330 @@
+ 
+Krebs on Security 
+Skip to content 
+ 
+    Home 
+    About the Author 
+    Advertising/Speaking 
+ 
+Google Suspends Chinese E-Commerce App Pinduoduo Over Malware 
+March 22, 2023 
+24 Comments 
+ 
+Google says it has suspended the app for the Chinese e-commerce giant Pinduoduo after malware was found in versions of the software. The move comes just weeks after Chinese security researchers published an analysis suggesting the popular e-commerce app sought to seize total control over affected devices by exploiting multiple security vulnerabilities in a variety of Android-based smartphones. 
+ 
+In November 2022, researchers at Google’s Project Zero warned about active attacks on Samsung mobile phones which chained together three security vulnerabilities that Samsung patched in March 2021, and which would have allowed an app to add or read any files on the device. 
+ 
+Google said it believes the exploit chain for Samsung devices belonged to a “commercial surveillance vendor,” without elaborating further. The highly technical writeup also did not name the malicious app in question. 
+ 
+On Feb. 28, 2023, researchers at the Chinese security firm DarkNavy published a blog post purporting to show evidence that a major Chinese ecommerce company’s app was using this same three-exploit chain to read user data stored by other apps on the affected device, and to make its app nearly impossible to remove. 
+ 
+DarkNavy likewise did not name the app they said was responsible for the attacks. In fact, the researchers took care to redact the name of the app from multiple code screenshots published in their writeup. DarkNavy did not respond to requests for clarification. 
+ 
+“At present, a large number of end users have complained on multiple social platforms,” reads a translated version of the DarkNavy blog post. “The app has problems such as inexplicable installation, privacy leakage, and inability to uninstall.” 
+ 
+Update, March 27, 1:24 p.m. ET: Dan Goodin over at Ars Technica has an important update on this story that indicates the Pinduoduo code was exploiting a zero-day vulnerability in Android — not Samsung. From that piece: 
+ 
+    “A preliminary analysis by Lookout found that at least two off-Play versions of Pinduoduo for Android exploited CVE-2023-20963, the tracking number for an Android vulnerability Google patched in updates that became available to end users two weeks ago . This privilege-escalation flaw, which was exploited prior to Google’s disclosure, allowed the app to perform operations with elevated privileges. The app used these privileges to download code from a developer-designated site and run it within a privileged environment. 
+ 
+    “The malicious apps represent “a very sophisticated attack for an app-based malware,” Christoph Hebeisen, one of three Lookout researchers who analyzed the file, wrote in an email. “In recent years, exploits have not usually been seen in the context of mass-distributed apps. Given the extremely intrusive nature of such sophisticated app-based malware, this is an important threat mobile users need to protect against.” 
+ 
+On March 3, 2023, a denizen of the now-defunct cybercrime community BreachForums posted a thread which noted that a unique component of the malicious app code highlighted by DarkNavy also was found in the ecommerce application whose name was apparently redacted from the DarkNavy analysis: Pinduoduo. 
+ 
+A Mar. 3, 2023 post on BreachForums, comparing the redacted code from the DarkNavy analysis with the same function in the Pinduoduo app available for download at the time. 
+ 
+On March 4, 2023, e-commerce expert Liu Huafang posted on the Chinese social media network Weibo that Pinduoduo’s app was using security vulnerabilities to gain market share by stealing user data from its competitors. That Weibo post has since been deleted. 
+ 
+On March 7, the newly created Github account Davinci1010 published a technical analysis claiming that until recently Pinduoduo’s source code included a “backdoor,” a hacking term used to describe code that allows an adversary to remotely and secretly connect to a compromised system at will. 
+ 
+That analysis includes links to archived versions of Pinduoduo’s app released before March 5 (version 6.50 and lower), which is when Davinci1010 says a new version of the app removed the malicious code. 
+ 
+Pinduoduo has not yet responded to requests for comment. Pinduoduo parent company PDD Holdings told Reuters Google has not shared details about why it suspended the app. 
+ 
+The company told CNN that it strongly rejects “the speculation and accusation that Pinduoduo app is malicious just from a generic and non-conclusive response from Google,” and said there were “several apps that have been suspended from Google Play at the same time.” 
+ 
+Pinduoduo is among China’s most popular e-commerce platforms, boasting approximately 900 million monthly active users. 
+ 
+Most of the news coverage of Google’s move against Pinduoduo emphasizes that the malware was found in versions of the Pinduoduo app available outside of Google’s app store — Google Play . 
+ 
+“Off-Play versions of this app that have been found to contain malware have been enforced on via Google Play Protect,” a Google spokesperson said in a statement to Reuters , adding that the Play version of the app has been suspended for security concerns. 
+ 
+However, Google Play is not available to consumers in China. As a result, the app will still be available via other mobile app stores catering to the Chinese market — including those operated by Huawei , Oppo , Tencent and VIVO . 
+ 
+Google said its ban did not affect the PDD Holdings app Temu , which is an online shopping platform in the United States. According to The Washington Post , four of the Apple App Store’s 10 most-downloaded free apps are owned by Chinese companies, including Temu and the social media network TikTok . 
+ 
+The Pinduoduo suspension comes as lawmakers in Congress this week are gearing up to grill the CEO of TikTok over national security concerns. TikTok, which is owned by Beijing-based ByteDance , said last month that it now has roughly 150 million monthly active users in the United States. 
+ 
+A new cybersecurity strategy released earlier this month by the Biden administration singled out China as the greatest cyber threat to the U.S. and Western interests. The strategy says China now presents the “broadest, most active, and most persistent threat to both government and private sector networks,” and says China is “the only country with both the intent to reshape the international order and, increasingly, the economic, diplomatic, military, and technological power to do so.” 
+ 
+This entry was posted on Wednesday 22nd of March 2023 07:11 PM 
+A Little Sunshine Data Breaches Latest Warnings Web Fraud 2.0 
+BreachForums ByteDance DarkNavy google Liu Huafang PDD Holdings Pinduoduo Project Zero Temu Tiktok Weibo 
+ 
+Post navigation 
+← Why You Should Opt Out of Sharing Data With Your Mobile Provider UK Sets Up Fake Booter Sites To Muddy DDoS Market → 
+24 thoughts on “ Google Suspends Chinese E-Commerce App Pinduoduo Over Malware ” 
+ 
+    KGIII March 22, 2023 
+ 
+    “TikTok, which is owned by Beijing-based ByteDance, said last month that it now has roughly 150 million monthly active users in the United States.” 
+ 
+    This figure makes me curious… That can’t be unique users, can it? Does something approximating 50% of the US population use TikTok? Are those ‘users’ or ‘unique users’? 
+ 
+    Note: I have never used said application. I am aware of its existence. I do not live under a rock, after all. 
+        Ed March 23, 2023 
+ 
+        Well if course it’s not unique users. Just today I was helping a poor chap out who was sold another phone with a new contract that he didn’t need. Instead of getting a dual SIM model to allow him to use two networks, he simply bought a new phone and set up a new Gmail account for it. Same user 
+            KGIII March 23, 2023 
+ 
+            It’d be amazing if it was unique users. I ask ’cause I have no idea how popular it is. That many unique users would be like Google/Facebook territory, or at least somewhere near the top of the traffic pyramid. 
+ 
+            Your comment about the dude just getting a second phone, I wonder how many are ‘alts’ and ‘bots’? I don’t suppose we’ll ever know the real numbers. 
+        Concerned March 23, 2023 
+ 
+        And since tiktok is basically a Chinese psy-op tool at heart – directing users to items that express hatred of their countries, governments, other peoples, love of China or the Chinese government or their philosophies, and other decision-clouding information – that “150 million” number is troubling. 
+    The Sunshine State March 23, 2023 
+ 
+    i wouldn’t trust the Chinese in just about anything. Remember they infected the world and didn’t take any responsibility for it. 
+        Bob Hope March 23, 2023 
+ 
+        Listen here sunshine, don’t forget that was funded by uncle Sam’s big dollars, no one is clean here 
+            Bob Larsen March 24, 2023 
+ 
+            That whataboutism doesn’t absolve them. 
+    Andy M March 23, 2023 
+ 
+    What’s the point in issuing a warning about an App (in Nov 22) but not naming it? What is anyone supposed to do with the information? 
+        Concerned March 23, 2023 
+ 
+        Stop using apps. Get rid of these self-immolating, narcissist-enabling tracking devices and go back to using regular telephones. Of course that will never happen, so you get to deal with the problems. 
+        timeless March 23, 2023 
+ 
+        The point was to encourage users to either upgrade or replace their phones. 
+ 
+        If there’s an exploit available for a device, it doesn’t matter who is *currently* exploiting the device, but the fact that *anyone* _could_ exploit the device. 
+        mc March 29, 2023 
+ 
+        The name of the app is pinduoduo, it’s a popular Chinese online retailer. 
+    an_n March 23, 2023 
+ 
+    Authoritarian kleptocratic regimes deserve no place in open markets. 
+    China based companies should be blocked entirely in all app stores. 
+    Kick them out for good, let them divest internationally if they want in. 
+    This is exactly what they already do to outsiders in their markets. 
+    Howard March 23, 2023 
+ 
+    I agree with some of the comments. What good is warning people about an app but refusing to name it? Had I installed this app and read the warning I wouldn’t be doing anything to remove it. May as well issue no warning at all. 
+ 
+    The company responsible should be barred from releasing apps ever again, and in a perfect world, people arrested. The ladder won’t happen because it’s China after all. Not to say many countries (including the U.S.) wouldn’t participate in the same garbage. 
+    Mike March 24, 2023 
+ 
+    It’d be amazing if it was unique users. The Chinese are getting a lot of power on the USA, this is a risk and an attack for sure. Feeding worthless dopamine hits on other big potencies of the world. The new war. 
+    Aleks March 24, 2023 
+ 
+    If you want to read something alarming, take a look at TikTok’s ToS and Privacy Policy.. 
+    P.D. March 26, 2023 
+ 
+    Big US Corporations sold out the American Citizen to the Chinese decades ago in the “race to the bottom” to make their products cheaper and cheaper. 
+ 
+    The bottom has been hit, the Chinese have most of our technology, and we are dependent on their supply chain. 
+ 
+    Nice going! O, the patriotism of an American CEO! 
+ 
+    The horse was out of the barn a long time ago, guys. 
+ 
+    But, hey, we have our cheap Chinese toys, so what’s all the hollering about? /S 
+        an_n March 26, 2023 
+ 
+        Sure, but this is worse, and also simpler: LIVE data on millions of unwitting individuals (incl children) walking around with high tech sensors they aren’t even aware of, lest of all aware of them being actively accessed in aggregate by not just huge multinational corporations (which is plenty bad enough) but entirely controlled in realtime by the Communist Party of China. The premier fascist power in the world, the largest and most technologically repressive expansionist authoritarian regime in the modern era if not ever. 
+ 
+        All of this possible only because of a so-owned video sharing platform for kids that is easily replicable in other forms? We don’t need to allow them to sell that dubious “service” here. Replace it domestically and nobody will miss “tiktok the brand owned by the Communist Party of China.” It’s not special or unique, “you” are the content. We can easily replicate that social sharing capability without allowing full weaponization of a trojan-like app that sits beyond the reach of international law, privacy freedoms and basic human rights norms we all take for granted in the comparably free world. 
+    RO March 27, 2023 
+ 
+    So what happens if the U.S. does ban TikTok? Then the people who want to collect the information they’re currently getting through TikTok just buy it from a “legitimate” U.S.-based data reseller after it’s been gathered for sale by the likes of Facebook, Twitter, etc. Oh, you can’t buy from a U.S. company because of where you’re located? Just set up a shell company based in the U.S. No one’s going to look too closely if it means profits for the data reseller. 
+    Regarding the proliferation of false information, I honestly don’t see that limited to just TikTok either. 
+    It’s not about one specific app. It’s about the entire data economy. And it’s “too big to fail” from the perspective of far too many U.S. based companies. 
+        an_n March 27, 2023 
+ 
+        Of course. Nobody is saying Tiktok is the “sole” bad actor or privacy threat, 
+        or that this would be the ultimate final regulatory act and the rest is peachy. 
+        But the scope and scale of opaque collection tied to a hostile government 
+        that facilitates theft and attacks on our economic infrastructure routinely, 
+        it’s a big step beyond FB in terms of privacy or domestic security concerns. 
+        FB-like companies certainly require further regulation also. It’s not either/or. 
+        I tend to think if Bytedance is forced to agree to concessions of scrutiny 
+        that only puts more pressure to apply similar scrutiny to other big actors. 
+        If forced to divest internationally and abide by a wider range of laws/norms, 
+        that precedent could be applied in the future. This won’t be the last time. 
+ 
+        “No one’s going to look too closely” – At least it would be possible to do so, 
+        should they get it together and start taking this emerging threat seriously. 
+        Just like a flashlight app shouldn’t have access to contacts or emails etc, 
+        any socmedia platform should abide rules beyond mere corporate policies. 
+        You can’t enforce that if they have a direct pipe to end user sensors, don’t 
+        fall under auspices of domestic laws by being based in a hermit kingdom. 
+        When fully owned and operated by a deliberate adversarial power known 
+        for constant attacks on global infrastructure and security generally, this is 
+        beyond a mere privacy concern individually and is a national security issue. 
+        But I fully agree about the need to regulate the PII economy front to back, 
+        and that this won’t be solved by banning one or a few apps or companies. 
+    anon March 27, 2023 
+ 
+    Ban TikTok! Only US companies can spy on and propagandize US citizens. 
+        P.D. March 28, 2023 
+ 
+        Thanks for the comment, Lo Pan… 
+        an_n March 28, 2023 
+ 
+        Sure, trust the CCCP with your PII. Ask any Uighur. 
+ 
+        Of course, you can’t – the CCCP restricts who their phones 
+        connect to, AI listens for a massive list of “illegal” words. 
+        Mentioning the mass detention genocide in Xinjiang for a 
+        single example can quickly result in entire families being 
+        detained indefinitely in similar genocidal prison camps as 
+        they aren’t allowed to speak their own language or mention 
+        their culture in any context. China says that’s criminal, as 
+        is any criticism of the communist party, policies, any of it. 
+ 
+        So maybe one solution to the problem of our Tiktok-addicted 
+        kids baring entire souls to CCCP data farms would be to 
+        have them actually live under CCCP laws for a few months. 
+        No doubt they’d learn some quick discretion in the process. 
+        These pithy sarcastic comparisons would drop off quickly: 
+        CCCP doesn’t allow Tiktok at all in their prison camps. 
+ 
+        In fact, they don’t allow unrestricted expression anywhere. 
+        It could certainly help naive kids think before they speak – 
+        those allowed to are unlikely to forget the consequences. 
+    Anna March 27, 2023 
+ 
+    Yeah, this app must violate the policy and rules, always chinese owner using fake method. 
+    john April 4, 2023 
+ 
+    https://edition.cnn.com/2023/04/02/tech/china-pinduoduo-malware-cybersecurity-analysis-intl-hnk/index.html 
+    >>> 
+    “It was in 2020, according to a current Pinduoduo employee, that the company set up a team of about 100 engineers and product managers to dig for vulnerabilities in Android phones, develop ways to exploit them — and turn that into profit.” 
+    <<< 
+    what do you think of this new information? 
+ 
+Comments are closed. 
+ 
+ 
+Mailing List 
+Subscribe here 
+ 
+Search KrebsOnSecurity 
+Search for: 
+ 
+Recent Posts 
+ 
+    Many Public Salesforce Sites are Leaking Private Data 
+    3CX Breach Was a Double Supply Chain Compromise 
+    Giving a Face to the Malware Proxy Service ‘Faceless’ 
+    Why is ‘Juice Jacking’ Suddenly Back in the News? 
+    Microsoft (& Apple) Patch Tuesday, April 2023 Edition 
+ 
+Spam Nation 
+Spam Nation 
+ 
+A New York Times Bestseller! 
+ 
+Thinking of a Cybersecurity Career? 
+Thinking of a Cybersecurity Career? 
+ 
+Read this. 
+ 
+All About Skimmers 
+All About Skimmers 
+ 
+Click image for my skimmer series. 
+ 
+Story Categories 
+ 
+    A Little Sunshine 
+    All About Skimmers 
+    Ashley Madison breach 
+    Breadcrumbs 
+    Data Breaches 
+    DDoS-for-Hire 
+    Employment Fraud 
+    How to Break Into Security 
+    Latest Warnings 
+    Ne'er-Do-Well News 
+    Other 
+    Pharma Wars 
+    Ransomware 
+    Russia's War on Ukraine 
+    Security Tools 
+    SIM Swapping 
+    Spam Nation 
+    Target: Small Businesses 
+    Tax Refund Fraud 
+    The Coming Storm 
+    Time to Patch 
+    Web Fraud 2.0 
+ 
+The Value of a Hacked PC 
+valuehackedpc 
+ 
+Badguy uses for your PC 
+ 
+Badguy Uses for Your Email 
+Badguy Uses for Your Email 
+ 
+Your email account may be worth far more than you imagine. 
+Donate to Krebs On Security 
+ 
+Most Popular Posts 
+ 
+    Sextortion Scam Uses Recipient's Hacked Passwords (1076) 
+    Online Cheating Site AshleyMadison Hacked (798) 
+    Sources: Target Investigating Data Breach (620) 
+    Trump Fires Security Chief Christopher Krebs (534) 
+    Why Paper Receipts are Money at the Drive-Thru (530) 
+    Cards Stolen in Target Breach Flood Underground Markets (445) 
+    Reports: Liberty Reserve Founder Arrested, Site Shuttered (416) 
+    Was the Ashley Madison Database Leaked? (376) 
+    DDoS-Guard To Forfeit Internet Space Occupied by Parler (374) 
+    True Goodbye: 'Using TrueCrypt Is Not Secure' (363) 
+ 
+Why So Many Top Hackers Hail from Russia 
+ 
+Category: Web Fraud 2.0 
+Criminnovations 
+ 
+Innovations from the Underground 
+ 
+ID Protection Services Examined 
+ 
+Is Antivirus Dead? 
+Is Antivirus Dead? 
+ 
+The reasons for its decline 
+ 
+The Growing Tax Fraud Menace 
+The Growing Tax Fraud Menace 
+ 
+File 'em Before the Bad Guys Can 
+ 
+Inside a Carding Shop 
+Inside a Carding Shop 
+ 
+A crash course in carding. 
+ 
+Beware Social Security Fraud 
+Beware Social Security Fraud 
+ 
+Sign up, or Be Signed Up! 
+ 
+How Was Your Card Stolen? 
+How Was Your Card Stolen? 
+ 
+Finding out is not so easy. 
+ 
+Krebs’s 3 Rules… 
+Krebs’s 3 Rules… 
+ 
+...For Online Safety. 
+© Krebs on Security - Mastodon 
+logo icon 
