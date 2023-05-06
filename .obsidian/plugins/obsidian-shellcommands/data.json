@@ -1,5 +1,5 @@
 {
-  "settings_version": "0.18.0",
+  "settings_version": "0.15.0",
   "debug": false,
   "obsidian_command_palette_prefix": "Execute: ",
   "preview_variables_in_command_palette": true,
@@ -9,7 +9,6 @@
   "environment_variable_path_augmentations": {},
   "error_message_duration": 20,
   "notification_message_duration": 10,
-  "execution_notification_mode": "disabled",
   "output_channel_clipboard_also_outputs_to_notification": true,
   "enable_events": true,
   "approve_modals_by_pressing_enter_key": true,
@@ -35,15 +34,7 @@
       "id": "0",
       "icon": null,
       "preactions": [],
-      "variable_default_values": {},
-      "input_contents": {
-        "stdin": null
-      },
-      "output_wrappers": {
-        "stdout": null,
-        "stderr": null
-      },
-      "output_handling_mode": "buffered"
+      "variable_default_values": {}
     },
     {
       "platform_specific_commands": {
@@ -63,15 +54,7 @@
       "id": "1",
       "icon": null,
       "preactions": [],
-      "variable_default_values": {},
-      "input_contents": {
-        "stdin": null
-      },
-      "output_wrappers": {
-        "stdout": null,
-        "stderr": null
-      },
-      "output_handling_mode": "buffered"
+      "variable_default_values": {}
     },
     {
       "platform_specific_commands": {
@@ -91,15 +74,7 @@
       "id": "2",
       "icon": null,
       "preactions": [],
-      "variable_default_values": {},
-      "input_contents": {
-        "stdin": null
-      },
-      "output_wrappers": {
-        "stdout": null,
-        "stderr": null
-      },
-      "output_handling_mode": "buffered"
+      "variable_default_values": {}
     },
     {
       "platform_specific_commands": {
@@ -119,15 +94,7 @@
       "id": "3",
       "icon": null,
       "preactions": [],
-      "variable_default_values": {},
-      "input_contents": {
-        "stdin": null
-      },
-      "output_wrappers": {
-        "stdout": null,
-        "stderr": null
-      },
-      "output_handling_mode": "buffered"
+      "variable_default_values": {}
     },
     {
       "platform_specific_commands": {
@@ -147,19 +114,9 @@
       "id": "4",
       "icon": null,
       "preactions": [],
-      "variable_default_values": {},
-      "input_contents": {
-        "stdin": null
-      },
-      "output_wrappers": {
-        "stdout": null,
-        "stderr": null
-      },
-      "output_handling_mode": "buffered"
+      "variable_default_values": {}
     }
   ],
   "prompts": [],
-  "builtin_variables": {},
-  "custom_variables": [],
-  "output_wrappers": []
+  "custom_variables": []
 }

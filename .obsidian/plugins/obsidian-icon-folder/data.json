@@ -6,7 +6,7 @@
     "enableFontawesomeLine": false,
     "enableFontawesomeBrands": false,
     "fontSize": 16,
-    "iconColor": "#c37979",
+    "iconColor": null,
     "extraPadding": {
       "top": 2,
       "right": 2,
@@ -14,11 +14,7 @@
       "left": 2
     },
     "recentlyUsedIcons": [
-      "FabCreativeCommonsNd",
-      "📆",
-      "🫢",
-      "📁",
-      "Fab42Group"
+      "RiToolsLine"
     ],
     "recentlyUsedIconsSize": 5,
     "migrated": true,
@@ -29,15 +25,6 @@
       "right": 2,
       "bottom": 2,
       "left": 2
-    },
-    "emojiStyle": "native",
-    "iconInTabsEnabled": false
-  },
-  "private/02-Reading/3-people/审稿人.md": "Fab42Group",
-  "private/00-MOC/愿望清单.md": {
-    "iconName": null,
-    "inheritanceIcon": "FabAmazon"
-  },
-  "private/00-MOC/TO-DO list.md": "📆",
-  "private/00-MOC/Today's TODO.md": "FabCreativeCommonsNd"
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
 	"translatorID": "5b731187-04a7-4256-83b4-3f042fa3eaa4",
 	"label": "Ncpssd",
-	"creator": "018<lyb018@gmail.com>,l0o0<linxzh1989@gmail.com>",
+	"creator": "018<lyb018@gmail.com>",
 	"target": "^https?://([^/]+\\.)?ncpssd\\.org/Literature/",
 	"minVersion": "3.0",
 	"maxVersion": "",
@@ -9,7 +9,7 @@
 	"inRepository": true,
 	"translatorType": 4,
 	"browserSupport": "gcsibv",
-	"lastUpdated": "2023-03-31 08:57:36"
+	"lastUpdated": "2020-08-08 23:03:26"
 }
 
 /*
@@ -34,95 +34,32 @@
 
 	***** END LICENSE BLOCK *****
 */
-var typeMap = {
-	journalArticle: "中文期刊文章",
-	eJournalArticle: "外文期刊文章",
-	Ancient: "古籍"
-};
 
-var itemTypeMatch = {
-	journalArticle: "journalArticle",
-	eJournalArticle: "journalArticle",
-	Ancient: "book"
-};
-
-var fieldMap = {
-	mediac: "publicationTitle",
-	vol: "volume",
-	publishdate: 'date',
-	num: "issue",
-	issn: 'ISSN',
-	showorgan: "AuthorAddress",
-	titlec: "title",
-	remarkc: "abstractNote",
-	language: "language",
-	section: "edition",
-	isbn: "callNumber"
-}
-
-function getIDFromURL(url) {
-	if (!url) return false;
-	let useB64 = false;
-	var type = url.match(/[?&]type=([^&#]*)/i);
-	var id = url.match(/[?&]id=([^&#]*)/i);
-	var typename = url.match(/[?&]typename=([^&#]*)/i);
-	var barcodenum = url.match(/[?&]barcodenum=([^&#]*)/i);
-	if (!type || !type[1] || !id || !id[1] || !typename || !typename[1]) return false;
-	useB64 = !(type[1] in typeMap);
-	if (!useB64) {
-		return {
-			type: type[1],
-			id: id[1],
-			typename: decodeURI(typename[1]),
-			barcodenum: (barcodenum && barcodenum[1] ? barcodenum[1] : '')
-		};
-	} else {
-		return {
-			type: atob(type[1]),
-			id: atob(id[1]),
-			typename: atob(typename[1]),
-			barcodenum: (barcodenum && barcodenum[1] ? atob(barcodenum[1]) : '')
-		};
+// eslint-disable-next-line
+function opt(val) {
+	if (val && val.length > 0) {
+		return val;
 	}
-}
-
-function addCreators(names) {
-	return names.replace(/\[\d+\]/g, "").split(";").reduce((a, b) => {
-		if (b.includes(",")) {
-			a.push({ firstName: b.split(",")[0].trim(), lastName: b.split(",")[1].trim(), creatorType: "author" });
-		} else {
-			a.push({ lastName: b, creatorType: "author", fieldMode: 1 });
-		}
-		return a;
-	}, [])
-}
-
-function addTags(tags) {
-	return tags.split(";").reduce((a, b) => { a.push({ tag: b }); return a }, []);
-}
-
-function addPages(data) {
-	if ('beginpage' in data) {
-		return data.endpage ? `${data.beginpage}-${data.endpage}` : data.beginpage;
+	else {
+		return '';
 	}
-	return "";
 }
 
 function detectWeb(doc, url) {
-	let id = getIDFromURL(url);
-	// Z.debug(id);
-	if (id.type) {
-		return itemTypeMatch[id.type];
+	var dType = detectType(doc, url);
+	if (dType) {
+		return dType;
 	} else if (getSearchResults(doc, true)) {
 		return "multiple";
 	}
 	return false;
 }
 
-function getSearchResults(doc, url, checkOnly) {
+function getSearchResults(doc, checkOnly) {
 	var items = {};
 	var found = false;
 	var rows = doc.querySelectorAll('#ul_articlelist li');
+	// Z.debug(rows.length);
 	for (let row of rows) {
 		let a = row.querySelector('.julei-list a');
 		if (!a) {
@@ -130,228 +67,341 @@ function getSearchResults(doc, url, checkOnly) {
 		}
 
 		if (checkOnly) return true;
-		let url = getUrl(a);
+		
+		var id = a.getAttribute("data-id");
+		var type = a.getAttribute("data-name");
+		var barcodenum = a.getAttribute("data-barcodenum");
+		
+		let url = getUrl(id, type, barcodenum);
 
 		// Z.debug(url);
-		let title = row.querySelector('div.julei-list').innerText.split("\n")[0];
+		let title = ZU.trimInternal(a.textContent);
+		let downloads = row.querySelector('.number strong').textContent;
+		let views = row.querySelector('.number strong+strong').textContent;
+		
 		found = true;
-		items[url] = title;
+		items[url] = '[' + downloads + '/' + views + '] ' + title;
 	}
 	return found ? items : false;
 }
 
-async function doWeb(doc, url) {
+function doWeb(doc, url) {
 	if (detectWeb(doc, url) == "multiple") {
-		let selectItems = await Zotero.selectItems(getSearchResults(doc, false));
-		for (var url in selectItems) {
-			await scrape(url, getIDFromURL(url));
-		}
+		Zotero.selectItems(getSearchResults(doc, false), function (items) {
+			// Z.debug(items);
+			for (var url in items) {
+				// Z.debug('url:' + url);
+				scrape(doc, url);
+			}
+		});
 	}
 	else {
-		await scrape(url, getIDFromURL(url));
+		scrape(doc, url);
 	}
 }
 
-async function scrape(url, id) {
-	// Note this code contains Chinese character and symbol, （）；：
-	let postData = { type: typeMap[id.type] };
-	let postUrl = 'getjournalarticletable';
-	if (id.type == 'Ancient') {
-		postData.barcodenum = id.barcodenum;
-		postUrl = 'getancientbooktable';
-	} else {
-		postData.lngid = id.id;
+function scrapeAndParse(method, data, callback) {
+	// Z.debug({ url })
+	var baseUrl = 'http://www.ncpssd.org';
+	var risRequest = baseUrl + '/ajax/articleinfoHandler.ashx?method=' + method;
+
+	Zotero.Utilities.HTTP.doPost(risRequest, data, function (json) {
+		if (callback && json) {
+			callback(JSON.parse(json));
+		}
+	});
+}
+
+function getUrl(id, type, barcodenum) {
+	var typename = "";
+	var barcodenum1 = barcodenum;
+	if (type == "journalArticle") {
+		typename = "5Lit5paH5pyf5YiK5paH56ug";
 	}
-	postData = JSON.stringify(postData);
-	let headers = {
-		'Content-Type': 'application/json',
-		Referer: url
+	if (type == "eJournalArticle") {
+		typename = "5aSW5paH5pyf5YiK5paH56ug";
+	}
+	if (type == "Ancient") {
+		typename = "5Y+k57GN";
+	}
+	if (type == "Book") {
+		barcodenum1 = id;
+		typename = "5aSW5paH5Zu+5Lmm";
+	}
+	if (type == "LocalRecords") {
+		typename = "5pa55b+X";
+	}
+	if (type == "Conference") {
+		typename = "5Lya6K6u6K665paH";
+	}
+	if (type == "Degree") {
+		typename = "5a2m5L2N6K665paH";
+	}
+	
+	/* eslint-disable no-undef */
+	return 'http://www.ncpssd.org/Literature/articleinfo.aspx?id=' + btoa(id) + "&type=" + btoa(type) + "&typename=" + typename + "&datatype=" + btoa(type) + "&nav=0&barcodenum=" + (barcodenum1 ? btoa(barcodenum1) : '');
+}
+
+function getPdfUrl(pdfurl, type) {
+	var pdftype = 0;
+	if (type == "journalArticle") {
+		pdftype = 1;
+	}
+	if (type == "eJournalArticle") {
+		pdftype = 2;
+	}
+	if (type == "Ancient") {
+		pdftype = 3;
+	}
+	if (type == "Book") {
+		pdftype = 4;
+	}
+	
+	return pdfurl + '&type=' + pdftype;
+}
+
+// 中文期刊文章
+function scrapeJournalArticle(url) {
+	var info = getFromURL(url);
+	// Z.debug(info);
+	if (info) {
+		scrapeAndParse('getjournalarticletable', '{\'lngid\':\'' + info.id + '\'}', function (ret) {
+			var json = ret[0];
+			// Z.debug(json);
+			// https://aurimasv.github.io/z2csl/typeMap.xml#map-journalArticle
+			var type = 'journalArticle';
+			var item = new Zotero.Item(type);
+		
+			item.url = url;
+		
+			item.title = json.title_c;
+			
+			item.date = (json.years ? (json.years + '年') : '');
+			item.volume = opt(json.vol);
+			item.issue = opt(json.num);
+			item.pages = json.pagecount + (json.beginpage > 0 ? ('(' + json.beginpage + (json.endpage ? ('-' + json.endpage + '页)') : ')')) : '');
+
+			switch (json.language) {
+				case 1:
+					item.language = 'zh-CN';
+					item.publicationTitle = '《' + json.media_c + '》' + (json.media_e && json.media_e.length > 0 ? ('(' + json.media_e + ')') : '');
+					item.abstractNote = json.remark_c;
+		
+					// Z.debug(item);
+					// 标签
+					var keywordcs = json.keyword_c;
+					if (keywordcs && keywordcs.length > 0) {
+						for (var kc of keywordcs.split(';')) {
+							item.tags.push(kc);
+						}
+					}
+					keywordes = json.keyword_e;
+					if (keywordes && keywordes.length > 0) {
+						for (var ke of keywordes.split(';')) {
+							item.tags.push(ke);
+						}
+					}
+				
+					// 作者
+					var creators1 = json.showwriter;
+					for (var c1 of creators1.split(';')) {
+						item.creators.push({
+							lastName: c1.replace(/\[.*]/g, ''),
+							creatorType: 'author',
+							fieldMode: 1
+						});
+					}
+		
+					if (json.pdfurl) {
+						item.attachments.push({
+							title: 'Full Text PDF',
+							mimeType: 'application/pdf',
+							url: getPdfUrl(json.pdfurl, type)
+						});
+					}
+					break;
+				case 2:
+					item.language = 'en';
+					item.publicationTitle = '《' + json.media_e + '》';
+					item.abstractNote = json.remark_c;
+		
+					// Z.debug(item);
+					// 标签
+					var keywordes = json.keyword_e;
+					if (keywordes && keywordes.length > 0) {
+						for (var k of keywordes.split(';')) {
+							item.tags.push(k);
+						}
+					}
+				
+					// 作者
+					var creators2 = json.showwriter;
+					for (var c2 of creators2.split(',')) {
+						item.creators.push({
+							lastName: c2.replace(/\[.*]/g, ''),
+							creatorType: 'author',
+							fieldMode: 1
+						});
+					}
+					break;
+				default:
+					break;
+			}
+			var showorgan = json.showorgan;
+			if (showorgan && showorgan.length > 0) {
+				for (var s of showorgan.split(';')) {
+					if (!s || s.trim().length <= 0) continue;
+					item.creators.push({
+						lastName: s,
+						creatorType: 'author',
+						fieldMode: 1
+					});
+				}
+			}
+			
+			item.complete();
+		});
+	}
+}
+
+// 外文期刊文章
+function scrapeEJournalArticle(url) {
+	scrapeJournalArticle(url);
+}
+
+// 古籍
+function scrapeAncientBook(url) {
+	var info = getFromURL(url);
+	// Z.debug(info);
+	// Z.debug(info.barcodenum);
+	if (info && info.barcodenum) {
+		scrapeAndParse('getancientbooktable', '{\'barcodenum\':' + info.barcodenum + '}', function (ret) {
+			var json = ret[0];
+			// Z.debug(json);
+			// https://aurimasv.github.io/z2csl/typeMap.xml#map-book
+			var type = 'book';
+			var item = new Zotero.Item(type);
+		
+			item.url = url;
+		
+			item.title = json.title_c;
+			item.ISBN = opt(json.isbn);
+			item.publisher = opt(json.press);
+			item.date = opt(json.pubdatenote);
+			item.volume = opt(json.vol);
+			item.issue = opt(json.num);
+
+			item.language = 'zh-CN';
+			item.publicationTitle = json.media_c ? ('《' + json.media_c + '》') : '';
+			item.abstractNote = json.remark_c;
+
+			// Z.debug(item);
+			// 标签
+			var keywordcs = json.keyword_c;
+			if (keywordcs && keywordcs.length > 0) {
+				for (var kc of keywordcs.split(';')) {
+					item.tags.push(kc);
+				}
+			}
+		
+			// 作者
+			var creators = json.showwriter;
+			for (var c of creators.split(';')) {
+				item.creators.push({
+					lastName: c.replace(/\[.*]/g, ''),
+					creatorType: 'author',
+					fieldMode: 1
+				});
+			}
+
+			var showorgan = json.showorgan;
+			if (showorgan && showorgan.length > 0) {
+				for (var s of showorgan.split(';')) {
+					if (!s || s.trim().length <= 0) continue;
+					item.creators.push({
+						lastName: s,
+						creatorType: 'author',
+						fieldMode: 1
+					});
+				}
+			}
+		
+			if (json.pdfurl) {
+				item.attachments.push({
+					title: 'Full Text PDF',
+					mimeType: 'application/pdf',
+					url: getPdfUrl(json.pdfurl, type)
+				});
+			}
+			
+			item.complete();
+		});
+	}
+}
+
+function scrape(doc, url) {
+	var info = getFromURL(url);
+	if (info) {
+		var type = info.type;
+		switch (type) {
+			case 'journalArticle':
+				scrapeJournalArticle(url);
+				break;
+			case 'eJournalArticle':
+				scrapeEJournalArticle(url);
+				break;
+			case 'Ancient':
+				scrapeAncientBook(url);
+				break;
+		
+			default:
+				break;
+		}
+	}
+}
+
+function detectType(doc, url) {
+	var TYPE = {
+		journalArticle: "journalArticle",
+		eJournalArticle: "journalArticle",
+		Ancient: "book",
+		// Book: "book",
+		// Conference: "thesis",
+		// Degree: "thesis",
+		// LocalRecords: "thesis"
 	};
-	// Z.debug(postData);
-	let json = await requestJSON("https://www.ncpssd.org/articleinfoHandler/" + postUrl, { method: "POST", body: postData, headers: headers });
-	let data = json.data;
-	// Clean data
-	data.vol = data.vol ? data.vol.match(/(\d+)/)[0] : null;
-	if (data.vol == '000') data.vol = null;
-	data.language = data.language == 2 ? "en" : "zh-CN";
-	data.mediac = data.mediac || data.mediae;
-	data.showwriter = data.showwriter || data.authorc;
-	// Z.debug(json);
-	var item = new Zotero.Item(itemTypeMatch[id.type] || id.type);
-	item.url = url;
-	if (item.itemType == 'book') {
-		item.extra = "Type: classic";
-		item.extra = item.extra + (data.pubdatenote ? '\nOriginal Date:' + data.pubdatenote : '');
-		item.extra = item.extra + (data.classname ? '\n分类:' + data.classname : '');
-		let juan = data.titlec.match(/([一二三四五六七八九十]+卷)$/g);
-		data.vol = (juan ? juan[0] : "") + data.num;
-		data.num = null;
-		data.showwriter = data.showwriter.replace(/（.*?）/, '').replace(/撰$/, '');
-		data.section = data.section.replace(/^.*?）/, '');
+	var info = getFromURL(url);
+	// Z.debug(info);
+	if (info) {
+		return TYPE[info.type];
 	}
-	for (let k in data) {
-		if (k in fieldMap && data[k]) item[fieldMap[k]] = data[k];
-	}
-	if ("showwriter" in data && data.showwriter) item.creators = addCreators(data.showwriter);
-	if ("keywordc" in data && data.keywordc) item.tags = item.tags.concat(addTags(data.keywordc));
-	if ("keyworde" in data && data.keyworde) item.tags = item.tags.concat(addTags(data.keyworde));
-	item.pages = addPages(data);
-	let pdfurl = await getPDFUrl(id);
-	if (pdfurl) item.attachments.push({
-		url: pdfurl,
-		mimeType: "application/pdf",
-		title: "Full Text PDF",
-		referer: "https://www.ncpssd.org/"
-	})
-	item.complete();
+
+	return undefined;
 }
 
-async function getPDFUrl(id) {
-	let pdfurl;
-	if (id.type == 'Ancient') {
-		pdfurl = 'https://ft.ncpssd.org/pdf/getn/' + `ancient/pdf/${id.barcodenum}.pdf`;
-	} else {
-		let geturl = `https://www.ncpssd.org/Literature/readurl?id=${id.type == 'eJournalArticle' ? id.id.match(/(\d+)$/g)[0] : id.id}&type=${id.type == 'eJournalArticle' ? 2 : 1}`;
-		// Z.debug(geturl);
-		let resp = await requestJSON(geturl, { method: "GET", "Content-Type": "application/json" });
-		// Z.debug(resp);
-		if (resp) pdfurl = resp.url;
-	}
-	return pdfurl;
+function getFromURL(url) {
+	if (!url) return false;
+	
+	var type = url.match(/[?&]type=([^&#]*)/i);
+	var id = url.match(/[?&]id=([^&#]*)/i);
+	var typename = url.match(/[?&]typename=([^&#]*)/i);
+	var barcodenum = url.match(/[?&]barcodenum=([^&#]*)/i);
+	if (!type || !type[1] || !id || !id[1] || !typename || !typename[1]) return false;
+	
+	/* eslint-disable no-undef */
+	return {
+		type: atob(type[1]),
+		id: atob(id[1]),
+		typename: atob(typename[1]),
+		barcodenum: (barcodenum && barcodenum[1] ? atob(barcodenum[1]) : '')
+	};
 }
 
-function getUrl(node, searchUrl) {
-	var id = node.getAttribute("data-id");
-	var type = node.getAttribute("data-name");
-	var datatype = node.getAttribute("data-type");
-	var typename = node.getAttribute("data-type");
-	var barcodenum = "";
-	if (datatype == "中文期刊文章") {
-		datatype = "journalArticle";
-	}
-	if (datatype == "外文期刊文章") {
-		datatype = "eJournalArticle";
-	}
-	if (datatype == "古籍") {
-		barcodenum = node.getAttribute("data-barcodenum");
-		datatype = "Ancient";
-	}
-	if (datatype == "外文图书") {
-		barcodenum = node.getAttribute("data-id");
-		datatype = "Book";
-	}
-	if (datatype == "方志") {
-		datatype = "LocalRecords";
-	}
-	if (datatype == "会议论文") {
-		datatype = "Conference";
-	}
-	if (datatype == "学位论文") {
-		datatype = "Degree";
-	}
-	return encodeURI("https://www.ncpssd.org/Literature/articleinfo?id=" + id + "&type=" + datatype + "&datatype=" + type + "&typename=" + typename + "&nav=0" + "&barcodenum=" + barcodenum);
-}/** BEGIN TEST CASES **/
+/** BEGIN TEST CASES **/
 var testCases = [
 	{
 		"type": "web",
-		"url": "http://www.ncpssd.org/Literature/articlelist.aspx?search=KElLVEU9IumVv+aXtuiusOW/hiIgT1IgSUtTVD0i6ZW/5pe26K6w5b+GIiBPUiBJS0VUPSLplb/ml7borrDlv4YiIE9SIElLU0U9IumVv+aXtuiusOW/hiIp&searchname=6aKY5ZCNL+WFs+mUruivjT0i6ZW/5pe26K6w5b+GIg==&nav=0",
-		"items": "multiple"
-	},
-	{
-		"type": "web",
-		"url": "https://www.ncpssd.org/Literature/articleinfo?id=GJ10001&type=Ancient&barcodenum=70041420&nav=5&typename=%E5%8F%A4%E7%B1%8D",
-		"items": [
-			{
-				"itemType": "book",
-				"title": "古今韻攷四卷",
-				"creators": [
-					{
-						"lastName": "李因篤",
-						"creatorType": "author",
-						"fieldMode": 1
-					}
-				],
-				"abstractNote": "音韻",
-				"callNumber": "經930/4060",
-				"edition": "天壤閣合刻本",
-				"extra": "Type: classic",
-				"language": "zh-CN",
-				"libraryCatalog": "Ncpssd",
-				"volume": "四卷第一册",
-				"attachments": [],
-				"tags": [],
-				"notes": [],
-				"seeAlso": []
-			}
-		]
-	},
-	{
-		"type": "web",
-		"url": "https://www.ncpssd.org/Literature/articleinfo?id=CASS265584219&type=eJournalArticle&typename=%E5%A4%96%E6%96%87%E6%9C%9F%E5%88%8A%E6%96%87%E7%AB%A0&nav=1&langType=2&pageUrl=https%253A%252F%252Fwww.ncpssd.org%252Fjournal%252Fdetails%253Fgch%253D185079%2526nav%253D1%2526langType%253D2",
-		"items": [
-			{
-				"itemType": "journalArticle",
-				"title": "Developing a Prediction Model for Author Collaboration in Bioinformatics Research Using Graph Mining Techniques and Big Data Applications",
-				"creators": [
-					{
-						"lastName": "Fezzeh Ebrahimi",
-						"creatorType": "author",
-						"fieldMode": 1
-					},
-					{
-						"lastName": "Asefeh Asemi",
-						"creatorType": "author",
-						"fieldMode": 1
-					},
-					{
-						"lastName": "Ahmad Shabani",
-						"creatorType": "author",
-						"fieldMode": 1
-					},
-					{
-						"lastName": "Amin Nezarat",
-						"creatorType": "author",
-						"fieldMode": 1
-					}
-				],
-				"ISSN": "2008-8302",
-				"abstractNote": "Nowadays, scientific collaboration has dramatically increased due to web-based technologies, advanced communication systems, and information and scientific databases. The present study aims to provide a predictive model for author collaborations in bioinformatics research output using graph mining techniques and big data applications. The study is applied-developmental research adopting a mixed-method approach, i.e., a mix of quantitative and qualitative measures. The research population consisted of all bioinformatics research documents indexed in PubMed (n=699160). The correlations of bioinformatics articles were examined in terms of weight and strength based on article sections including title, abstract, keywords, journal title, and author affiliation using graph mining techniques and big data applications. Eventually, the prediction model of author collaboration in bioinformatics research was developed using the abovementioned tools and expert-assigned weights. The calculations and data analysis were carried out using Expert Choice, Excel, Spark, and Scala, and Python programming languages in a big data server. Accordingly, the research was conducted in three phases: 1) identifying and weighting the factors contributing to authors’ similarity measurement; 2) implementing co-authorship prediction model; and 3) integrating the first and second phases (i.e., integrating the weights obtained in the previous phases). The results showed that journal title, citation, article title, author affiliation, keywords, and abstract scored 0.374, 0.374, 0.091, 0.075, 0.055, and 0.031. Moreover, the journal title achieved the highest score in the model for the co-author recommender system. As the data in bibliometric information networks is static, it was proved remarkably effective to use content-based features for similarity measures. So that the recommender system can offer the most suitable collaboration suggestions. It is expected that the model works efficiently in other databases and provides suitable recommendations for author collaborations in other subject areas. By integrating expert opinion and systemic weights, the model can help alleviate the current information overload and facilitate collaborator lookup by authors.",
-				"issue": "2",
-				"language": "en",
-				"libraryCatalog": "Ncpssd",
-				"pages": "1-18",
-				"publicationTitle": "International Journal of Information Science and Management (IJISM)",
-				"url": "https://www.ncpssd.org/Literature/articleinfo?id=CASS265584219&type=eJournalArticle&typename=%E5%A4%96%E6%96%87%E6%9C%9F%E5%88%8A%E6%96%87%E7%AB%A0&nav=1&langType=2&pageUrl=https%253A%252F%252Fwww.ncpssd.org%252Fjournal%252Fdetails%253Fgch%253D185079%2526nav%253D1%2526langType%253D2",
-				"volume": "19",
-				"attachments": [],
-				"tags": [
-					{
-						"tag": "Bibliographic Networks"
-					},
-					{
-						"tag": "Co-author"
-					},
-					{
-						"tag": "Graph Theory"
-					},
-					{
-						"tag": "Network Analysis"
-					},
-					{
-						"tag": "Recommender System"
-					},
-					{
-						"tag": "Research collaboration"
-					}
-				],
-				"notes": [],
-				"seeAlso": []
-			}
-		]
-	},
-	{
-		"type": "web",
-		"url": "https://www.ncpssd.org/Literature/articleinfo.aspx?id=NzAwMTg3ODc4Mw==&type=am91cm5hbEFydGljbGU=&datatype=am91cm5hbEFydGljbGU=&typename=5Lit5paH5pyf5YiK5paH56ug&nav=0&barcodenum=",
+		"url": "http://www.ncpssd.org/Literature/articleinfo.aspx?id=NzAwMTg3ODc4Mw==&type=am91cm5hbEFydGljbGU=&datatype=am91cm5hbEFydGljbGU=&typename=5Lit5paH5pyf5YiK5paH56ug&nav=0&barcodenum=",
 		"items": [
 			{
 				"itemType": "journalArticle",
@@ -371,32 +421,30 @@ var testCases = [
 						"lastName": "徐方雯",
 						"creatorType": "author",
 						"fieldMode": 1
+					},
+					{
+						"lastName": "[1]上饶师范学院外国语学院,江西上饶334001",
+						"creatorType": "author",
+						"fieldMode": 1
+					},
+					{
+						"lastName": "[2]上饶师范学院教务处,江西上饶334001",
+						"creatorType": "author",
+						"fieldMode": 1
 					}
 				],
-				"date": "2019-04-01",
-				"ISSN": "1004-2237",
 				"abstractNote": "需要学习者在母语与目的语之间找到发音相同或相近的词汇,在两个词汇之间构建语音连接,并以心理意象的形式记忆,利用言语和表象的双重编码过程促进记忆。这种词汇信息处理方式与常见的语义语境法不同,两种词汇学习方法值得进一步比较,为大学英语词汇教学提供启示。采用关键词法和语义语境法进行组间对比研究,可以发现在接受性和产出性两项测验中,前者的成绩皆明显优于后者,说明采取关键词法更能促进英语词汇的短时记忆、长时记忆和理解。",
-				"issue": "2",
-				"language": "zh-CN",
-				"libraryCatalog": "Ncpssd",
+				"libraryCatalog": "ncpssd",
 				"pages": "112-118",
-				"publicationTitle": "上饶师范学院学报",
-				"url": "https://www.ncpssd.org/Literature/articleinfo.aspx?id=NzAwMTg3ODc4Mw==&type=am91cm5hbEFydGljbGU=&datatype=am91cm5hbEFydGljbGU=&typename=5Lit5paH5pyf5YiK5paH56ug&nav=0&barcodenum=",
-				"volume": "39",
-				"attachments": [],
+				"publicationTitle": "《上饶师范学院学报》(上饶师范学院学报)",
+				"url": "http://www.ncpssd.org/Literature/articleinfo.aspx?id=NzAwMTg3ODc4Mw==&type=am91cm5hbEFydGljbGU=&datatype=am91cm5hbEFydGljbGU=&typename=5Lit5paH5pyf5YiK5paH56ug&nav=0&barcodenum=",
+				"attachments": [
+					{
+						"title": "Full Text PDF",
+						"mimeType": "application/pdf"
+					}
+				],
 				"tags": [
-					{
-						"tag": "Keyword Method"
-					},
-					{
-						"tag": "Semantic Context Method"
-					},
-					{
-						"tag": "long-term retention"
-					},
-					{
-						"tag": "short-termretention"
-					},
 					{
 						"tag": "关键词法"
 					},
@@ -417,25 +465,35 @@ var testCases = [
 	},
 	{
 		"type": "web",
-		"url": "https://www.ncpssd.org/Literature/articleinfo.aspx?id=Q0FTUzQyODE2Mjc2&type=ZUpvdXJuYWxBcnRpY2xl&typename=5aSW5paH5pyf5YiK5paH56ug&nav=1&langType=2",
+		"url": "http://www.ncpssd.org/Literature/articlelist.aspx?search=KElLVEU9IumVv+aXtuiusOW/hiIgT1IgSUtTVD0i6ZW/5pe26K6w5b+GIiBPUiBJS0VUPSLplb/ml7borrDlv4YiIE9SIElLU0U9IumVv+aXtuiusOW/hiIp&searchname=6aKY5ZCNL+WFs+mUruivjT0i6ZW/5pe26K6w5b+GIg==&nav=0",
+		"items": "multiple"
+	},
+	{
+		"type": "web",
+		"url": "http://www.ncpssd.org/Literature/articleinfo.aspx?id=Q0FTUzQyODE2Mjc2&type=ZUpvdXJuYWxBcnRpY2xl&typename=5aSW5paH5pyf5YiK5paH56ug&nav=1&langType=2",
 		"items": [
 			{
 				"itemType": "journalArticle",
 				"title": "Patriot",
 				"creators": [
 					{
-						"firstName": "Ross",
-						"lastName": "Rick",
-						"creatorType": "author"
+						"lastName": "Ross, Rick",
+						"creatorType": "author",
+						"fieldMode": 1
 					}
 				],
-				"ISSN": "0274-7405",
+				"issue": "2531958",
 				"language": "en",
-				"libraryCatalog": "Ncpssd",
-				"publicationTitle": "Wings of Gold",
-				"url": "https://www.ncpssd.org/Literature/articleinfo.aspx?id=Q0FTUzQyODE2Mjc2&type=ZUpvdXJuYWxBcnRpY2xl&typename=5aSW5paH5pyf5YiK5paH56ug&nav=1&langType=2",
-				"volume": "2005",
-				"attachments": [],
+				"libraryCatalog": "ncpssd",
+				"pages": "null",
+				"publicationTitle": "《》(Wings of Gold)",
+				"url": "http://www.ncpssd.org/Literature/articleinfo.aspx?id=Q0FTUzQyODE2Mjc2&type=ZUpvdXJuYWxBcnRpY2xl&typename=5aSW5paH5pyf5YiK5paH56ug&nav=1&langType=2",
+				"attachments": [
+					{
+						"title": "Full Text PDF",
+						"mimeType": "application/pdf"
+					}
+				],
 				"tags": [],
 				"notes": [],
 				"seeAlso": []

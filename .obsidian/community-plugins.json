@@ -10,9 +10,12 @@
   "obsidian-view-mode-by-frontmatter",
   "buttons",
   "obsidian-bartender",
+  "dataview",
   "templater-obsidian",
   "obsidian-shellcommands",
   "obsidian-collapse-all-plugin",
   "table-editor-obsidian",
+  "obsidian-pandoc-reference-list",
+  "obsidian-advanced-slides",
   "obsidian-git"
 ]

@@ -17,11 +17,3 @@ workspaces-plus
 obsidian-auto-link-title
 obsidian-languagetool-plugin
 obsidian-linter
-obsidian-pandoc-reference-list
-dataview
-obsidian-advanced-slides
-obsidian-git
-obsidian-style-settings
-quickadd
-obsidian-shellcommands
-obsidian-bartender

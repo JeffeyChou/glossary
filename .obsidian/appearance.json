@@ -1,5 +1,5 @@
 {
-  "baseFontSize": 17,
+  "baseFontSize": 18,
   "translucency": true,
   "theme": "obsidian",
   "cssTheme": "Blue Topaz",
@@ -14,13 +14,10 @@
     "S - Kanban",
     "【日记】Time",
     "【自定义】mytools 样式",
-    "【图标】iconfont",
-    "openweather",
-    "custom-admonitions.c9c6cb"
+    "【图标】iconfont"
   ],
   "baseFontSizeAction": true,
   "monospaceFontFamily": "RobotoMono Nerd Font Mono,Microsoft YaHei",
   "textFontFamily": "Microsoft YaHei UI",
-  "accentColor": "#6b57d1",
-  "nativeMenus": false
+  "accentColor": ""
 }

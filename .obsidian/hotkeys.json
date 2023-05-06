@@ -157,7 +157,15 @@
       "key": "Tab"
     }
   ],
-  "obsidian-tabs:toggle-horizontal-splits": [],
+  "obsidian-tabs:toggle-horizontal-splits": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "Tab"
+    }
+  ],
   "various-complements:reload-custom-dictionaries": [],
   "obsidian-dictionary-plugin:dictionary-open-view": [
     {
@@ -196,49 +204,5 @@
       ],
       "key": "Z"
     }
-  ],
-  "editor:swap-line-up": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "ArrowUp"
-    }
-  ],
-  "editor:swap-line-down": [
-    {
-      "modifiers": [
-        "Alt"
-      ],
-      "key": "ArrowDown"
-    }
-  ],
-  "Enhanced-editing:add-twoSpace": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "]"
-    }
-  ],
-  "app:delete-file": [],
-  "Enhanced-editing:add-line2": [
-    {
-      "modifiers": [
-        "Shift"
-      ],
-      "key": "Enter"
-    }
-  ],
-  "workspace:next-tab": [],
-  "workspace:previous-tab": [],
-  "workspace:goto-tab-6": [],
-  "Enhanced-editing:biaoti6-text": [],
-  "workspace:goto-tab-1": [],
-  "workspace:goto-tab-2": [],
-  "workspace:goto-tab-3": [],
-  "workspace:goto-tab-4": [],
-  "workspace:goto-tab-5": [],
-  "Enhanced-editing:add-Line0": [],
-  "editor:toggle-checklist-status": []
+  ]
 }
