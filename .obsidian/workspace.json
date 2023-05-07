@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论第二次作业-1-2.md",
+                "file": "private/01-Diary/本周事务/Chapter5-.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207,
-    "collapsed": true
+    "width": 207
   },
   "right": {
     "id": "6e7011190a6a4416",
@@ -107,14 +106,6 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "6a14fa7d20bcf1aa",
-            "type": "leaf",
-            "state": {
-              "type": "ReferenceListView",
-              "state": {}
-            }
           }
         ],
         "currentTab": 2
@@ -130,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论第二次作业-1-2.md"
+                "file": "private/01-Diary/本周事务/Chapter5-.md"
               }
             }
           },
@@ -140,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论第二次作业-1-2.md",
+                "file": "private/01-Diary/本周事务/Chapter5-.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +177,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 245,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,14 +190,24 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-statusbar-pomo:Start pomodoro": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-gallery:Gallery": false,
+      "remotely-save:Remotely Save": false
     }
   },
   "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
+    "private/01-Diary/本周事务/商业计划书.md",
+    "private/01-Diary/本周事务/slider test.md",
+    "private/08-Assets/Pasted image 20230507213856.png",
+    "private/08-Assets/Pasted image 20230507213855.png",
+    "private/08-Assets/Pasted image 20230507213854.png",
+    "private/08-Assets/Pasted image 20230507213851.png",
+    "private/01-Diary/本周事务/信息论第二次作业-1-2.md",
     "private/00-MOC/任务看板.md",
     "private/01-Diary/本周事务/能见度工创PPT.md",
-    "private/01-Diary/本周事务/商业计划书.md",
     "private/01-Diary/本周事务/概率论与数理统计-第四章作业.md",
     "private/01-Diary/本周事务/数值分析作业-插值.md",
     "private/08-Assets/pdfs/zotero data/better-bibtex/cache.Better CSL YAML.json",
@@ -214,7 +216,6 @@
     "private/08-Assets/pdfs/zotero data/better-bibtex/cache.Better BibLaTeX.json",
     "private/08-Assets/pdfs/zotero data/better-bibtex/cache.itemToExportFormat.json",
     "private/08-Assets/pdfs/zotero data/better-bibtex/cache.json",
-    "private/01-Diary/本周事务/信息论第二次作业-1-2.md",
     "private/01-Diary/本周事务/Zotero多设备同步解决方案.md",
     "private/08-Assets/pdfs/zotero data/tmp/translator.json",
     "private/08-Assets/pdfs/zotero data/tmp",
@@ -222,7 +223,6 @@
     "private/08-Assets/pdfs/zotero data/better-bibtex-search.sqlite-journal",
     "private/01-Diary/本周事务/研讨一.md",
     "private/01-Diary/本周事务/slide.md",
-    "private/01-Diary/本周事务/slider test.md",
     "private/01-Diary/本周事务/tt.md",
     "private/01-Diary/本周事务/teste.md",
     "private/01-Diary/本周事务/Minal-slides.md",

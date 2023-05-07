@@ -35,10 +35,6 @@
       "CALL conda.bat activate base && python ./private/08-Assets/Scripts/archived_task_gantt.py <% tp.file.path() %>"
     ],
     [
-      "weathernow",
-      "curl \"https://wttr.in/新鸿社区?TmF0\""
-    ],
-    [
       "",
       ""
     ]
