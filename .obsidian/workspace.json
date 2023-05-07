@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9e3ad2738ce50841",
+        "id": "c953c57345bb19f1",
         "type": "tabs",
         "children": [
           {
-            "id": "1f7b928a3387f6d1",
+            "id": "2cdcf8ad0183fc00",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -197,10 +197,13 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "1f7b928a3387f6d1",
+  "active": "2cdcf8ad0183fc00",
   "lastOpenFiles": [
-    "private/01-Diary/本周事务/商业计划书.md",
+    "private/08-Assets/Pasted image 20230507223709.png",
     "private/01-Diary/本周事务/slider test.md",
+    "private/01-Diary/本周事务/().md",
+    "private/01-Diary/本周事务/Chapter5-.md",
+    "private/01-Diary/本周事务/商业计划书.md",
     "private/08-Assets/Pasted image 20230507213856.png",
     "private/08-Assets/Pasted image 20230507213855.png",
     "private/08-Assets/Pasted image 20230507213854.png",
@@ -236,8 +239,6 @@
     "private/00-MOC/TO-DO list.md",
     "private/08-Assets/Scripts/Buttons.md",
     "private/01-Diary/日志存档/2023-05-06.md",
-    "private/01-Diary/日志存档/2022-04-02.md",
-    "private/01-Diary/本周事务/未命名 2.md",
     "images/etlt-extract-tweak-load-transform.png"
   ]
 }

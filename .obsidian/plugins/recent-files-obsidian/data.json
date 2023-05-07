@@ -5,12 +5,16 @@
       "path": "private/01-Diary/本周事务/Chapter5-.md"
     },
     {
-      "basename": "商业计划书",
-      "path": "private/01-Diary/本周事务/商业计划书.md"
-    },
-    {
       "basename": "slider test",
       "path": "private/01-Diary/本周事务/slider test.md"
+    },
+    {
+      "basename": "()",
+      "path": "private/01-Diary/本周事务/().md"
+    },
+    {
+      "basename": "商业计划书",
+      "path": "private/01-Diary/本周事务/商业计划书.md"
     },
     {
       "basename": "信息论第二次作业-1-2",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-03-28",
       "path": "private/01-Diary/日志存档/2023-03-28.md"
-    },
-    {
-      "basename": "202303272048",
-      "path": "private/06-Cards/202303272048.md"
     }
   ],
   "omittedPaths": [],
