@@ -3,11 +3,11 @@
   "trashOption": "system",
   "promptDelete": false,
   "pdfExportSettings": {
-    "includeName": true,
+    "includeName": false,
     "pageSize": "A4",
     "landscape": false,
     "margin": "2",
-    "downscalePercent": 83
+    "downscalePercent": 79
   },
   "alwaysUpdateLinks": true,
   "foldIndent": true,
