@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "任务看板",
+      "path": "private/00-MOC/任务看板.md"
+    },
+    {
       "basename": "能见度工创PPT",
       "path": "private/01-Diary/本周事务/能见度工创PPT.md"
     },
@@ -19,10 +23,6 @@
     {
       "basename": "信息论第二次作业-1-2",
       "path": "private/01-Diary/本周事务/信息论第二次作业-1-2.md"
-    },
-    {
-      "basename": "任务看板",
-      "path": "private/00-MOC/任务看板.md"
     },
     {
       "basename": "Zotero多设备同步解决方案",

@@ -1,5 +1,5 @@
 {
-  "baseFontSize": 16,
+  "baseFontSize": 19,
   "translucency": true,
   "theme": "obsidian",
   "cssTheme": "Blue Topaz",
@@ -19,7 +19,8 @@
   ],
   "baseFontSizeAction": true,
   "monospaceFontFamily": "RobotoMono Nerd Font Mono,Microsoft YaHei",
-  "textFontFamily": "Wingdings 3,Microsoft YaHei UI",
-  "accentColor": "#f0a8ac",
-  "showViewHeader": false
+  "textFontFamily": "LXGW WenKai GB Screen,Microsoft YaHei UI",
+  "accentColor": "#6776c1",
+  "showViewHeader": false,
+  "interfaceFontFamily": "PingFang SC,Microsoft YaHei UI"
 }

@@ -35,5 +35,7 @@
     "Shannon entropy"
   ],
   "communityThemeSortOrder": "download",
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "focusNewTab": false,
+  "showFrontmatter": true
 }
