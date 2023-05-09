@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/商业计划书.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-插值.md",
                 "mode": "source",
                 "source": false
               }
@@ -122,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/商业计划书.md"
+                "file": "private/01-Diary/本周事务/数值分析作业-插值.md"
               }
             }
           },
@@ -132,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/商业计划书.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-插值.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
