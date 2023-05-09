@@ -40,7 +40,7 @@
       "73781782889103362323969276"
     ]
   },
-  "autoHide": false,
+  "autoHide": true,
   "autoHideDelay": 500,
   "dragDelay": 200
 }

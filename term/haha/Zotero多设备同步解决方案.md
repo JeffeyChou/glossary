@@ -159,7 +159,7 @@ Mac我还没有, 暂时不清楚如何设置. 对于一个能使用浏览器的�
 ## 使用坚果云、TeraCloud等WebDAV网盘
 
 原理类似，只不过不需要使用Zotfile移动到另一个地方，只需要回到前面
-[Zotfile设置](private/01-Diary/本周事务/Zotero多设备同步解决方案.md#Zotfile设置) 选择 *Attach copy of stored of file(s)* ，[Zotero设置](private/01-Diary/本周事务/Zotero多设备同步解决方案.md#Zotero设置)勾选*文件同步*并且设置好自己的网盘即可。Zotero会自动将附件通过WebDAV同步到网盘。
+[Zotfile设置](term/haha/Zotero多设备同步解决方案.md#Zotfile设置) 选择 *Attach copy of stored of file(s)* ，[Zotero设置](term/haha/Zotero多设备同步解决方案.md#Zotero设置)勾选*文件同步*并且设置好自己的网盘即可。Zotero会自动将附件通过WebDAV同步到网盘。
 
 ### 工作流
 1. 保存文献到自己的文献库
