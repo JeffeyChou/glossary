@@ -106,6 +106,14 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "cddcaf49276bc44e",
+            "type": "leaf",
+            "state": {
+              "type": "ReferenceListView",
+              "state": {}
+            }
           }
         ],
         "currentTab": 2
@@ -189,11 +197,7 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-statusbar-pomo:Start pomodoro": true,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-gallery:Gallery": false,
-      "remotely-save:Remotely Save": false
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
   "active": "833d43e93bf2dcf1",
