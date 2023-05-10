@@ -121,7 +121,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "private/01-Diary/本周事务/商业计划书.md"
+              }
             }
           },
           {
@@ -130,6 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "private/01-Diary/本周事务/商业计划书.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,8 +198,9 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "3090910a3bbb4bfa",
+  "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
+    "private/08-Assets/Pasted image 20230510115520.png",
     "private/01-Diary/本周事务/商业计划书.md",
     "term/Homework/概率论与数理统计-第四章作业.md",
     "term/Homework/信息论第二次作业-1-2.md",
