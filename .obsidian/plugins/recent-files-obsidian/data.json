@@ -5,16 +5,64 @@
       "path": "private/01-Diary/本周事务/数学建模作业-减速带.md"
     },
     {
+      "basename": "每月总结",
+      "path": "private/09-Templates/每月总结.md"
+    },
+    {
+      "basename": "每周文献小结",
+      "path": "private/09-Templates/每周文献小结.md"
+    },
+    {
+      "basename": "词条模板",
+      "path": "private/09-Templates/词条模板.md"
+    },
+    {
+      "basename": "大牛页面模板",
+      "path": "private/09-Templates/大牛页面模板.md"
+    },
+    {
+      "basename": "代码整理模板",
+      "path": "private/09-Templates/代码整理模板.md"
+    },
+    {
+      "basename": "概括文章骨架",
+      "path": "private/09-Templates/概括文章骨架.md"
+    },
+    {
+      "basename": "卡片模板",
+      "path": "private/09-Templates/卡片模板.md"
+    },
+    {
+      "basename": "论文草稿模板",
+      "path": "private/09-Templates/论文草稿模板.md"
+    },
+    {
+      "basename": "论文大纲模板",
+      "path": "private/09-Templates/论文大纲模板.md"
+    },
+    {
+      "basename": "日志模板",
+      "path": "private/09-Templates/日志模板.md"
+    },
+    {
+      "basename": "草稿模板",
+      "path": "private/09-Templates/草稿模板.md"
+    },
+    {
+      "basename": "任务看板",
+      "path": "private/00-MOC/任务看板.md"
+    },
+    {
+      "basename": "常用工具",
+      "path": "private/08-Assets/Scripts/常用工具.md"
+    },
+    {
       "basename": "商业计划书",
       "path": "private/01-Diary/本周事务/商业计划书.md"
     },
     {
       "basename": "FastStart-Plugins-LongDelay",
       "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md"
-    },
-    {
-      "basename": "任务看板",
-      "path": "private/00-MOC/任务看板.md"
     },
     {
       "basename": "FastStart-Plugins-ShortDelay",
@@ -71,10 +119,6 @@
     {
       "basename": "Halo-Master-Chief-Collection 通关后",
       "path": "private/01-Diary/本周事务/Halo-Master-Chief-Collection 通关后.md"
-    },
-    {
-      "basename": "常用工具",
-      "path": "private/08-Assets/Scripts/常用工具.md"
     },
     {
       "basename": "Buttons",
@@ -155,50 +199,6 @@
     {
       "basename": "2023-04-05",
       "path": "private/01-Diary/日志存档/2023-04-05.md"
-    },
-    {
-      "basename": "数学建模第二次作业",
-      "path": "term/Homework/数学建模第二次作业.md"
-    },
-    {
-      "basename": "概率论与数理统计-第一次小组作业",
-      "path": "term/Homework/概率论与数理统计-第一次小组作业.md"
-    },
-    {
-      "basename": "概率统计第一章作业",
-      "path": "term/Homework/概率统计第一章作业.md"
-    },
-    {
-      "basename": "Today's TODO",
-      "path": "private/00-MOC/Today's TODO.md"
-    },
-    {
-      "basename": "2023-04-01",
-      "path": "private/01-Diary/日志存档/2023-04-01.md"
-    },
-    {
-      "basename": "2023-03-27",
-      "path": "private/01-Diary/日志存档/2023-03-27.md"
-    },
-    {
-      "basename": "日志模板",
-      "path": "private/09-Templates/日志模板.md"
-    },
-    {
-      "basename": "2023-03-30",
-      "path": "private/01-Diary/日志存档/2023-03-30.md"
-    },
-    {
-      "basename": "2023-03-29",
-      "path": "private/01-Diary/日志存档/2023-03-29.md"
-    },
-    {
-      "basename": "FastStart-StartupScript",
-      "path": "private/09-Templates/FastStart-StartupScript.md"
-    },
-    {
-      "basename": "FastStart-GenerateListOfInstalledPlugins",
-      "path": "private/09-Templates/FastStart-GenerateListOfInstalledPlugins.md"
     }
   ],
   "omittedPaths": [],

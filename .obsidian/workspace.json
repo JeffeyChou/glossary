@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9e3ad2738ce50841",
+        "id": "4e567aa24b6651f3",
         "type": "tabs",
         "children": [
           {
-            "id": "1f7b928a3387f6d1",
+            "id": "614387421cd7e6de",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,7 +19,8 @@
               }
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -69,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207
+    "width": 207,
+    "collapsed": true
   },
   "right": {
     "id": "6e7011190a6a4416",
@@ -104,14 +106,6 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          },
-          {
-            "id": "df6f9f9d3b9ee712",
-            "type": "leaf",
-            "state": {
-              "type": "ReferenceListView",
               "state": {}
             }
           }
@@ -185,7 +179,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 245,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,15 +192,31 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-statusbar-pomo:Start pomodoro": true,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-gallery:Gallery": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "1f7b928a3387f6d1",
+  "active": "614387421cd7e6de",
   "lastOpenFiles": [
+    "private/09-Templates/每月总结.md",
+    "private/09-Templates/每周文献小结.md",
     "private/01-Diary/本周事务/数学建模作业-减速带.md",
+    "private/09-Templates/词条模板.md",
+    "private/09-Templates/大牛页面模板.md",
+    "private/09-Templates/代码整理模板.md",
+    "private/09-Templates/概括文章骨架.md",
+    "private/09-Templates/卡片模板.md",
+    "private/09-Templates/论文草稿模板.md",
+    "private/09-Templates/论文大纲模板.md",
+    "private/09-Templates/日志模板.md",
+    "private/09-Templates/草稿模板.md",
+    "private/00-MOC/任务看板.md",
+    "private/08-Assets/Scripts/常用工具.md",
     "private/01-Diary/本周事务/商业计划书.md",
     "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md",
-    "private/00-MOC/任务看板.md",
     "private/03-Projects/97-作业-杂项/FastStart-Plugins-ShortDelay.md",
     "private/08-Assets/cedict_1_0_ts_utf-8_mdbg.zip",
     "private/08-Assets/pdfs/zotero data/tmp/translator.json",
@@ -230,20 +241,8 @@
     "private/08-Assets/Pasted image 20230507213855.png",
     "private/08-Assets/Pasted image 20230507213854.png",
     "private/08-Assets/Pasted image 20230507213851.png",
-    "private/01-Diary/本周事务/能见度工创PPT.md",
     "private/08-Assets/pdfs/zotero data/better-bibtex/cache.Better CSL YAML.json",
     "private/08-Assets/pdfs/zotero data/better-bibtex/cache.Better CSL JSON.json",
-    "private/01-Diary/本周事务/研讨一.md",
-    "private/01-Diary/本周事务/slide.md",
-    "private/01-Diary/本周事务/tt.md",
-    "private/01-Diary/本周事务/teste.md",
-    "private/03-Projects/09-Slides/Minal-slides.md",
-    "term/ref/Gram-Schmidt.md",
-    "private/01-Diary/本周事务/Halo-Master-Chief-Collection 通关后.md",
-    "private/01-Diary/本周事务/商业计划&创业路演.md",
-    "private/01-Diary/本周事务/工创PPT文档记录.md",
-    "private/01-Diary/本周事务/工创意见.md",
-    "private/08-Assets/Scripts/常用工具.md",
     "images/etlt-extract-tweak-load-transform.png"
   ]
 }
