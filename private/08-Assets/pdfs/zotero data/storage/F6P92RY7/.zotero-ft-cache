@@ -1,0 +1,1549 @@
+Information Sciences xxx (xxxx) xxx Contents lists available at ScienceDirect
+Information Sciences
+journal homepage: www.elsevier.com/locate/ins
+
+A numerical comparative study of uncertainty measures in the Dempster–Shafer evidence theory
+Michele Urbani ∗, Gaia Gasparini, Matteo Brunelli
+Department of Industrial Engineering, University of Trento, via Sommarive 9, Trento, 38123, Italy
+
+ARTICLE INFO
+Keywords: Evidence theory Uncertainty measure Entropy Similarity
+
+A B S T R A C T
+We consider a wide range of measures of uncertainty that have been proposed within the Dempster–Shafer evidence theory. All these measures aim to quantify the uncertainty associated with a given basic probability assignment. As a preliminary step, we oﬀer a study of the literature, which shows a recent resurgence of interest in the quantiﬁcation of uncertainty in the evidence theory. Then, we compare a number of uncertainty measures by means of numerical simulations and analyze their similarities and diﬀerences using rank correlation coeﬃcients, hierarchical clustering, and centrality analysis. The results show that uncertainty measures with similar formulations do not necessarily have similar numerical properties, and some original results are obtained. In particular, we demonstrate that numerical studies on uncertainty measures are necessary to obtain more insight and to enhance the interpretability of the values returned by the measures.
+
+1. Introduction
+
+Any expression of probability is a claim to a knowledge of the underlying issue which, by the nature of the problem, the speaker cannot have. In these circumstances, it may often make sense to describe the degree of uncertainty in non-probabilistic ways.
+[John Kay and Mervyn King]
+
+According to some widely accepted taxonomies [1, p. 53], uncertain phenomena can either be classiﬁed as aleatoric or epistemic, depending on the nature of the underlying uncertain event. Aleatoric uncertainty refers to events with inherent randomness, while epistemic uncertainty refers to events for which there is a lack of knowledge. An example of epistemic uncertainty is in the exact time at which you ﬁrst saw this paper: there is no randomness, but only a lack of knowledge of the exact timing of the event. Whereas probability has been the main paradigm for dealing with aleatoric uncertainty, other theories have been proposed to represent uncertain phenomena of the epistemic type. Among these theories one can ﬁnd fuzzy sets theory—and its interpretation in terms of possibility theory [2]—and evidence theory, also called Dempster–Shafer theory, proposed by Dempster [3] as a formalization of lower and upper probabilities and then developed by Shafer [4]. In fact, evidence theory can be seen as a generalization of both probability and possibility theories [1] and great eﬀort has been made to make it operational and applicable in decision analysis.
+
+* Corresponding author.
+E-mail addresses: michele.urbani@unitn.it (M. Urbani), gaia.gasparini@unitn.it (G. Gasparini), matteo.brunelli@unitn.it (M. Brunelli).
+https://doi.org/10.1016/j.ins.2023.119027 Received 11 October 2022; Received in revised form 17 April 2023; Accepted 24 April 2023
+Available online 28 April 2023 0020-0255/© 2023 Elsevier Inc. All rights reserved.
+
+Please cite this article as: Michele Urbani et al., Information Sciences, https://doi.org/10.1016/j.ins.2023.119027
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+If we turn our attention to the special case of probability theory, the uncertainty of probability distributions has generated an important stream of literature connected with the relationship between uncertainty and information. Clearly, the more uncertain a probability distribution is, the more information one can gain by learning the realization of the event. This insight is the basis for the interpretation of Shannon entropy [5], which is still the most widely known measure of uncertainty/information.
+If we consider the more general framework of evidence theory, the last 40 years—and especially the last 5—have witnessed the proposal of a wide number of uncertainty measures. However, it remains diﬃcult to pin down a single measure that can be considered superior to all the others and, therefore, most of the proposed measures are still competitive when it comes to choosing among them in real-world applications. While some studies have attempted to ﬁnd an outstanding measure that satisﬁes a number of desirable theoretical properties, they have been inconclusive and therefore, at present, none of the proposed measures should be considered superior. Other studies have compared measures with respect to speciﬁc case studies, so that some of their properties, such as monotonicity, can be veriﬁed empirically. However, such studies cannot oﬀer a broad overview of the similarities and diﬀerences between uncertainty measures.
+Let us note that the matter of the fair quantiﬁcation of uncertainty within evidence theory is far from being a mere theoretical exercise, as the choice of uncertainty measure can have repercussions for real-world applications. Furthermore, the use of uncertainty measures has gone beyond the mere quantiﬁcation of uncertainty, as shown by, for instance, their recent application in the evaluation of approximations of conjoint belief distributions [6].
+The scope of this paper is to oﬀer a presentation of uncertainty measures, in conjunction with a recap of their mathematical properties and a brief historical perspective of their development. However, since studies of the properties of such measures have already been presented in the literature, the main goal of this paper is to present the results of a numerical study that highlights possible similarities, diﬀerences, and mutual support between uncertainty measures in the evidence theory. So far, numerical comparative studies have been performed in some speciﬁc instances to show that some proposed measures, unlike some old ones, do satisfy some desirable properties.
+For example, Wen et al. [7] considered only 9 representative mass assignments to compare 4 uncertainty measures and Pan et al. [8] veriﬁed the satisfaction of the property of monotonicity by applying 5 uncertainty measures to a family of 14 mass assignments for which, ceteris paribus, the cardinality of an element of the frame of discernment is increasing. A similar analysis of the monotonicity of 9 measures was oﬀered by Wang et al. [9].
+We conclude that the scope of these analyses remains limited and they cannot be considered full-ﬂedged comparative studies of uncertainty measures. Hopefully, in addition to the existing literature, a more comprehensive numerical study will help choose among the many uncertainty measures.
+The paper is organized as follows. Section 2 presents the basics of evidence theory and a brief introduction to the concept of entropy in probability theory. Section 3 is an exposition of a number of uncertainty measures that can be used in the evidence theory, with an eye on their formal properties and their historical development. Section 4 presents the methodological tools used in the analysis, and the results. Finally, in Section 5 we draw some conclusions.
+
+2. Evidence theory and uncertainty
+
+Let 𝑋 = {𝑥1, 𝑥2, … , 𝑥𝑛} be a non-empty set containing 𝑛 exhaustive and mutually exclusive elements; this set is called the frame of discernment (FOD). The power set of 𝑋 is denoted as 2𝑋 . A basic probability assignment (BPA), or mass assignment, is a function
+
+𝑚 ∶ 2𝑋 → [0, 1]
+
+(1)
+
+that satisﬁes
+
+∑
+
+𝑚(𝐴) = 1 and 𝑚(∅) = 0,
+
+(2)
+
+𝐴∈2𝑋
+
+where 𝐴 ⊆ 𝑋 is called a focal element if 𝑚(𝐴) > 0. The set of all the focal elements is denoted as  = {𝐴 ⊆ 𝑋|𝑚(𝐴) > 0}. The set of focal elements together with their masses is called the body of evidence (BOE). Indeed, the BPA can be seen as a generalization of the common assignments of probabilities on singletons, which is now done on all the elements of 2𝑋 . In fact, the BPA assigns a value between 0 and 1 to every element of the power set, so that 𝑚(𝐴) can be interpreted as the normalized amount of evidence that a given event belongs to 𝐴.
+Two relevant measures can be associated with a BPA. First, given a BPA, the belief of 𝐴 is deﬁned as the sum of all the masses of the subsets of 𝐴 (and of 𝐴 itself),
+
+∑
+
+Bel(𝐴) = 𝑚(𝐵), ∀𝐴 ∈ 2𝑋 ,
+
+(3)
+
+𝐵⊆𝐴
+
+and is a superadditive measure. This measure can be interpreted as the quantiﬁcation of the level of conﬁdence in knowing that the event is within 𝐴: through the sum of the masses, the belief measures the strength of the evidence in favor of the presence of the element in 𝐴 or in a subset thereof. Second, the plausibility of 𝐴 is the sum of the masses of all the subsets that intersect 𝐴,
+
+∑
+
+Pl(𝐴) =
+
+𝑚(𝐵),
+
+∀𝐴 ∈ 2𝑋 .
+
+(4)
+
+𝐵∩𝐴≠∅
+
+2
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Unlike belief, plausibility is a subadditive measure of the strength of the evidence that does not contradict the presence of the event in 𝐴.
+The two measures Bel(𝐴) and Pl(𝐴) represent, respectively, the lower and the upper bounds of the probability of 𝐴, that is, ∃ Pr such that
+
+Bel(𝐴) ≤ Pr(𝐴) ≤ Pl(𝐴), ∀𝐴 ⊆ 𝑋.
+
+(5)
+
+The set of probability functions compatible with Eq. (5) is a credal set, that is, a convex set of probability distributions. Hereafter, we denote by (𝑚) the credal set induced by 𝑚 by means of the condition in Eq. (5). Note that (i) this also highlights the connection between evidence theory and the theory of imprecise probabilities and (ii) when the mass assignment involves only {𝑥𝑖}, we have Bel(𝐴) = Pr(𝐴) = Pl(𝐴), ∀𝐴 ⊆ 𝑋, which casts probability as a special case of the evidence theory.
+Another important concept is Shannon entropy. Within the framework of probability theory, Shannon [5] introduced the concept of entropy as a measure of the amount of information associated with knowing the outcome of an uncertain event. Formally, Shannon entropy is deﬁned as
+
+∑𝑛
+
+𝖧𝑠(𝑝) = − 𝑝(𝑥𝑖) log2 𝑝(𝑥𝑖),
+
+(6)
+
+𝑖=1
+
+where 𝑝(𝑥𝑖) is the probability of 𝑥𝑖 ∈ 𝑋. Indeed, it attains its maximum when the probability is uniform and the uncertainty is maximum. Similarly, in set theory, set uncertainty depends on the cardinality of the set and is usually measured by means of the Hartley entropy, according to which the uncertainty of a set 𝐴 is log2 |𝐴|.
+According to Ayyub and Klir [1, Ch. 4], a suﬃciently general mathematical representation of uncertainty, as the evidence theory, should be able to accommodate two types of uncertainty: conﬂict and non-speciﬁcity. In fact, in the evidence theory, diﬀerent types of uncertainties coexist within the BPA and therefore it is now accepted that, when we want to measure the (total) uncertainty of the assignment 𝑚, we ought to consider both facets of uncertainty.
+The situation is made even more complex by the fact that conﬂict and non-speciﬁcity have multiple interpretations. For example, non-speciﬁcity, which should measure the divergence of a BPA from being Bayesian (i.e., from having all the evidence assigned to singletons), has at least three interpretations [10]: (i) one in light of Hartley entropy, (ii) one related to the width of the socalled belief intervals [Bel(𝐴), Pl(𝐴)], and (iii) one connected to the information volume of the credal set (𝑚). Further complexities emerge when one considers conﬂict. In fact, axiomatic studies such as the one by Bronevich and Lepskiy [11] explain that there are multiple ways to quantify the conﬂict in 𝑚 that “do not coincide with the Shannon entropy on probability measures.” This richness of interpretations has provided fertile ground for the development of uncertainty measures.
+
+3. Uncertainty measures in evidence theory
+
+Several measures of uncertainty for basic probability assignments have been proposed in the evidence theory. Those studied in this paper are listed and commented on here, using the names of their proponents. Unless otherwise stated, in the following deﬁnitions, we will assume 𝐴 and 𝐵 to be subsets of the FOD, that is, 𝐴, 𝐵 ⊆ 𝑋, and we use |𝐴| to denote the cardinality of set 𝐴. In addition, for simplicity, functions of singletons are written without curly brackets, for example, Pl({𝑥1}) = Pl(𝑥1). We shall see that the oldest measures of uncertainty are, at times, simplistic and cannot fully capture all facets of uncertainty.
+
+Höhle According to Klir and Ramer [12], the investigation of entropy in the evidence theory started in the 1980s, with the ﬁrst measure,
+proposed by Höhle [13], deﬁned as
+
+∑
+
+𝖧𝑂(𝑚) = − 𝑚(𝐴) log2 Bel(𝐴).
+
+(7)
+
+𝐴∈
+
+This attains its minimum if and only if the BPA is deterministic, that is, there exists 𝐴 ⊆ 𝑋 such that 𝑚(𝐴) = 1. In the literature, this measure is often called confusion.
+
+Yager Similarly to Höhle, Yager [14] proposed a measure of uncertainty starting again from the deﬁnition of Shannon entropy. Like the
+preceding one, this one by Yager,
+
+∑
+
+𝖧𝑦(𝑚) = − 𝑚(𝐴) log2 Pl(𝐴),
+
+(8)
+
+𝐴∈
+
+aimed at capturing conﬂict. In the literature, this measure is often called dissonance.
+
+Smets Smets [15] proposed a conﬂict measure with the use of the commonality function. The entropy, in this case, measures the
+information content of a BOE, and its formulation is
+3
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+∑
+
+𝖧𝑡(𝑚) = − 𝑐(𝐴) log2 𝑄(𝐴),
+
+(9)
+
+𝐴∈
+
+∑ where 𝑄(𝐴) = 𝐵|𝐴⊆𝐵 𝑚(𝐵) is the so-called commonality function already deﬁned by Shafer [4]. Furthermore, we set 𝑐(𝐴) = 1, which
+
+is, according to Smets [15, p. 37], the “most natural choice.”
+
+Nguyen The measure proposed by Nguyen [16], deﬁned as
+
+∑
+
+𝖧𝑛(𝑚) = − 𝑚(𝐴) log2 𝑚(𝐴),
+
+(10)
+
+𝐴∈
+
+is the most straightforward extension of Shannon entropy.
+
+Dubois and Prade It can be observed that all the previously recalled uncertainty measures do not consider the cardinality of sets 𝐴. To give a
+concrete example, if there is 𝐴 ⊆ 𝑋 with 𝑚(𝐴) = 1, they all reach their minimum, regardless of whether 𝐴 is a singleton or the FOD 𝑋 itself. Nonetheless, it is intuitive to consider the former case as less “uncertain” than the latter. Dubois and Prade [17] introduced the ﬁrst measure of non-speciﬁcity, deﬁned as a weighted average of Hartley entropies with respect to each focal element 𝐴 ∈  ,
+
+∑
+
+𝖧𝑑 (𝑚) = 𝑚(𝐴) log2 (|𝐴|) .
+
+(11)
+
+𝐴∈
+
+Klir and Ramer
+
+The measure presented by Klir and Ramer [12] was introduced to improve the measures 𝖧𝑂 and 𝖧𝑦, and is deﬁned as
+
+(
+
+)
+
+∑ 𝖧𝑘(𝑚) = − 𝑚(𝐴) log2
+𝐴∈
+
+∑
+𝐵∈
+
+𝑚(𝐵)
+
+|𝐴 ∩ 𝐵| |𝐵|
+
+.
+
+(12)
+
+Klir and Parviz
+
+An improvement of the previous measure was studied by Klir and Parviz [18]. They proposed the formulation
+
+(
+
+)
+
+∑ 𝖧𝑝(𝑚) = − 𝑚(𝐴) log2
+𝐴∈
+
+∑
+𝐵∈
+
+𝑚(𝐵)
+
+|𝐴 ∩ 𝐵| |𝐴|
+
+.
+
+(13)
+
+Let us note that Klir and Ramer [12] and Klir and Parviz [18] also deﬁned two measures of total uncertainty that are not usually cited in the literature.
+
+Lamata and Moral The uncertainty measures considered until now have the shortcoming of considering only some facets of uncertainty. Lamata
+and Moral [19] paved the way for more complex approaches when they deﬁned a global measure to account for the two aspects of uncertainty. In a nutshell, Lamata and Moral [19] proposed summing the uncertainty measures of Yager [14] and Dubois and Prade [17]:
+
+𝖧𝑦(𝑚)+𝖧𝑑 (𝑚)
+
+𝖧𝑙(𝑚) = ⏞−⏞𝐴⏞∑ ⏞∈⏞⏞⏞⏞⏞⏞𝑚⏞⏞⏞(⏞𝐴⏞⏞⏞)⏞⏞ log2⏞⏞⏞(⏞⏞⏞⏞P⏞⏞|l⏞𝐴⏞(⏞𝐴⏞|⏞⏞)⏞⏞⏞) .
+
+(14)
+
+Pal et al. Pal et al. [20] deﬁned a new measure of total uncertainty,
+
+𝖧𝑏(𝑚) = ⏞−⏞𝐴⏞∑ ⏞∈⏞⏞⏞⏞⏞⏞𝑚⏞⏞𝖧⏞(⏞𝑑𝐴⏞⏞(⏞𝑚⏞)⏞ )l+o𝖧g⏞𝑛2⏞(⏞(𝑚⏞⏞⏞)⏞𝑚⏞⏞|⏞𝐴⏞(⏞𝐴⏞⏞|⏞)⏞⏞⏞) .
+
+(15)
+
+Even in this case, the measure can be decomposed into two separate measures of conﬂict and non-speciﬁcity.
+
+Harmanec and Klir
+
+Harmanec and Klir [21] considered the credal set (𝑚) and suggested taking the probability distribution 𝑝 ∈ (𝑚) that maximizes
+
+Shannon entropy. Namely, they solved the following optimization problem:
+
+{ ∑𝑛
+
+}
+
+𝖠𝖴(𝑚) = max
+𝑝∈ (𝑚)
+
+− 𝑝(𝑥𝑖) log2 𝑝(𝑥𝑖)
+𝑖=1
+
+,
+
+(16)
+
+4
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+where 𝖠𝖴 is the aggregate uncertainty. While being a potentially diﬃcult optimization problem, some algorithmic procedures have been proposed to eﬃciently solve it and we adopted the one proposed by Huynh and Nakamori [22].
+
+George and Pal
+
+George and Pal [23] deﬁned discord as the average of the conﬂict between each pair of pieces of evidence:
+
+𝖳𝖢(𝑚)
+
+=
+
+∑
+
+𝑚(𝐴)
+
+∑
+
+( 𝑚(𝐵) 1 −
+
+) |𝐴 ∩ 𝐵| .
+
+(17)
+
+𝐴∈
+
+𝐵∈
+
+|𝐴 ∪ 𝐵|
+
+Jousselme et al. Jousselme et al. [24] considered a set of reasonable properties and proposed another measure,
+
+∑𝑛
+
+𝖠𝖬(𝑚) = − Bet(𝑥𝑖) log2 Bet(𝑥𝑖),
+
+(18)
+
+𝑖=1
+
+where 𝖠𝖬 is the ambiguity measure, and Bet(𝑥𝑖) is the pignistic transformation,
+
+Bet(𝑥𝑖)
+
+=
+
+∑
+𝐴|𝑥𝑖 ∈𝐴
+
+𝑚(𝐴) |𝐴|
+
+∀𝑖 = 1, … , 𝑛,
+
+whose goal is to uniformly distribute the mass function of every focal element 𝐴 to its elements 𝑥𝑖 ∈ 𝐴.
+
+Yang and Han Yang and Han [25] considered the belief interval, [Bel(𝐴), Pl(𝐴)], as representative of the uncertainty, and took into consideration
+the distance between the belief interval of a focal element and the most uncertain case [0, 1]. Their uncertainty measure is
+
+𝖳𝖴𝐼
+
+(𝑚)
+
+=
+
+1
+
+−
+
+1 𝑛
+
+√ 3
+
+∑𝑛
+𝑖=1
+
+𝑑𝐼 ([Bel(𝑥𝑖),
+
+Pl(𝑥𝑖)], [0,
+
+1]),
+
+(19)
+
+√
+
+where 3 is the normalization factor and
+
+𝑑𝐼
+
+(
+
+)
+
+[Bel(𝑥𝑖), Pl(𝑥𝑖)], [0, 1]
+
+=
+
+√[ Bel(𝑥𝑖) + 2
+
+Pl(𝑥𝑖)
+
+−
+
+0
+
++ 2
+
+1 ]2
+
++
+
+1 3
+
+[ Pl(𝑥𝑖)
+
+− Bel(𝑥𝑖) 2
+
+−
+
+1
+
+− 2
+
+0 ]2.
+
+Deng and Wang
+
+In an attempt to improve 𝖳𝖴𝐼 , Deng and Wang [26] used the Hellinger distance to measure the distance between intervals and
+
+proposed a new measure, which eventually collapses into
+
+∑𝑛 ( √(√
+
+)2 ( √
+
+)2)
+
+𝖣𝖴(𝑚) = 1 −
+
+Bel(𝑥𝑖) − 0 + 1 − Pl(𝑥𝑖) .
+
+(20)
+
+𝑖=1
+
+Li et al.
+
+Li et al. [27] used the Euclidean distance between intervals, and deﬁned
+
+([
+
+]
+
+)√
+
+𝑑𝐸 Bel(𝑥𝑖), Pl(𝑥𝑖) , [0, 1] = [Bel(𝑥𝑖) − 0]2 + [Pl(𝑥𝑖) − 1]2.
+
+Then, a transformation of this distance was considered and summed with respect to all the elements of the FOD so that it can be
+
+interpreted as a measure of uncertainty,
+
+𝖳𝖴(𝑚)
+
+=
+
+∑𝑛
+𝑖=1
+
+(
+
+1
+
+2 + 𝑑𝐸
+
+) −1 .
+
+(21)
+
+Deng et al. [28] also employed the Euclidean distance to propose a similar uncertainty measure.
+
+Wang and Song Wang and Song [29] considered the relationship between all central values,
+
+Bel(𝑥𝑖) + Pl(𝑥𝑖) , 2
+
+as a measure of conﬂict, and Pl(𝑥𝑖) − Bel(𝑥𝑖) as a measure of non-speciﬁcity. The authors used the Shannon entropy to deﬁne conﬂict and included the non-speciﬁcity term in the deﬁnition,
+
+𝖲𝖴(𝑚)
+
+=
+
+∑𝑛
+
+[ −
+
+Bel(𝑥𝑖
+
+)
+
++
+
+𝑖=1
+
+2
+
+Pl(𝑥𝑖)
+
+log2
+
+Bel(𝑥𝑖) + 2
+
+Pl(𝑥𝑖)
+
++
+
+Pl(𝑥𝑖)
+
+− Bel(𝑥𝑖) ] . 2
+
+(22)
+
+5
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Deng
+
+Deng [30] considered the measure proposed by Pal et al. [20] and modiﬁed it to give more importance to the relation between
+
+|𝐴| and the increase of non-speciﬁcity [31]:
+
+𝖧𝑔
+
+(𝑚)
+
+=
+
+−
+
+∑
+𝐴∈
+
+𝑚(𝐴)
+
+log2
+
+(
+
+𝑚(𝐴) 2|𝐴| − 1
+
+)
+
+.
+
+(23)
+
+Formal properties of this measure have been critically inspected by Abellán [31], Moral-García and Abellán [32].
+
+Pan and Deng
+
+Pan and Deng [33] also used the central values of belief intervals proposed by Wang and Song [29], mixing this approach with the scaling factor proposed by Deng [30]. The resulting measure of uncertainty is1
+
+𝖧𝑏𝑒𝑙 (𝑚)
+
+=
+
+∑ −
+𝐴∈
+
+Bel(𝐴) + 2
+
+Pl(𝐴)
+
+log2
+
+Bel(𝐴) + Pl(𝐴) 2(2|𝐴| − 1)
+
+.
+
+(24)
+
+Jiroušek and Shenoy
+
+Jiroušek and Shenoy [6] proposed the measure
+
+()
+
+𝖧𝑗
+
+(𝑚)
+
+=
+
+𝖧𝑠 PlT
+⏞𝑥∑ 𝑖∈⏞⏞⏞𝑋⏞⏞⏞P⏞⏞l⏞⏞T⏞⏞(⏞⏞𝑥⏞⏞𝑖⏞)⏞⏞⏞ log2⏞⏞(⏞⏞⏞⏞P⏞⏞l⏞⏞T⏞1⏞(⏞𝑥⏞⏞⏞𝑖⏞)⏞⏞⏞)
+
++
+
+⏞∑⏞⏞⏞⏞⏞⏞⏞⏞⏞⏞𝖧⏞ 𝑑 (𝑚)⏞⏞⏞⏞⏞⏞⏞⏞⏞⏞⏞ 𝑚(𝐴) log2(|𝐴|)
+𝐴∈
+
+.
+
+(25)
+
+It may appear similar to the Jousselme et al. [24] ambiguity measure but, as argued by Jiroušek and Shenoy [6], the pignistic transformation used by Jousselme et al. [24] cannot satisfy one of the deﬁned requirements. The plausibility transformation
+
+PlT(𝑥𝑖) = ∑𝑛𝑗P=1l(P𝑥l𝑖()𝑥𝑗 ) ∀𝑥𝑖 ∈ 𝑋
+
+is another method to transform a belief function model into a corresponding probability function model.
+
+Zhou et al.
+
+Zhou et al. [34] deﬁned entropy including, for the ﬁrst time, the cardinality of the FOD. Compared to Deng entropy, in this
+
+measure,
+
+𝖤𝑀
+
+𝑑
+
+(𝑚)
+
+=
+
+−
+
+∑
+𝐴⊆𝑋
+
+𝑚(𝐴)
+
+log2
+
+(
+
+𝑚(𝐴) 2|𝐴| − 1
+
+𝑒
+
+|𝐴|−1 |𝑋|
+
+)
+
+,
+
+(26)
+
+there
+
+is
+
+an
+
+additional
+
+term:
+
+the
+
+factor
+
+|𝐴|−1 |𝑋|
+
+normalizes
+
+the
+
+cardinality
+
+of
+
+every
+
+focal
+
+element
+
+to
+
+the
+
+FOD.
+
+Cui et al. Other authors have started by including |𝑋| in their deﬁnition and also introduced the element of intersection between focal
+elements. Cui et al. [35] deﬁned a novel uncertainty measure as follows:
+
+⎛
+
+⎛
+
+⎞⎞
+
+𝖤(𝑚)
+
+=
+
+−
+
+∑
+𝐴⊆𝑋
+
+𝑚(𝐴)
+
+log2
+
+⎜ ⎜ ⎜⎝
+
+𝑚(𝐴) 2|𝐴| − 1
+
+exp
+
+⎜∑ ⎜ ⎜⎝𝐵𝐵∈≠𝐴
+
+|𝐴 ∩ 𝐵| 2|𝑋| − 1
+
+⎟⎟ ⎟⎟ ⎟⎠⎟⎠
+
+.
+
+(27)
+
+If there are no intersections, the equation reduces to Deng [30] entropy.
+
+Yan and Deng
+
+Yan and Deng [36] modiﬁed the deﬁnition of Zhou et al. [34] by combining it with the belief measure and by considering, instead
+
+of |𝑋|, the number of singletons with Pl > 0 indicated with |𝑆|:
+
+𝖧𝑀
+
+𝑑
+
+(𝑚)
+
+=
+
+−
+
+∑
+𝐴⊆𝑋
+
+𝑚(𝐴)
+
+log2
+
+(
+
+𝑚(𝐴) + Bel(𝐴) 2(2|𝐴| − 1)
+
+𝑒
+
+|𝐴|−1 |𝑆|
+
+)
+
+.
+
+(28)
+
+Qin et al. Other authors have also had the idea of taking into account the cardinality |𝑋| of the FOD. Qin et al. [37] proposed a total
+uncertainty measure
+
+1 Let us note that, in the original formulation by Pan and Deng, this measure was deﬁned as a sum over all 𝐴 ⊆ 𝑋, but in the same paper the illustrative examples considered the sum over all 𝐴 ∈  . We consider this latter formulation, which ﬁts the numerical examples presented in the original paper [33].
+6
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+𝖧𝑞 (𝑚)
+
+=
+
+∑
+𝐴∈
+
+|𝐴| |𝑋|
+
+𝑚(𝐴)
+
+log2
+
+(|𝐴|)
+
++
+
+∑
+𝐴∈
+
+𝑚(𝐴) log2
+
+()
+
+1 𝑚(𝐴)
+
+,
+
+Information Sciences xxx (xxxx) xxx
+(29)
+
+where the entropy of Nguyen is used to measure the conﬂict and the entropy of Dubois and Prade measures non-speciﬁcity. The latter is scaled by the relative weight |𝐴|∕|𝑋|.
+
+Li and Pan Unlike the preceding authors, Li and Pan [38] modiﬁed the non-speciﬁcity term, which is the uncertainty measure by Dubois and
+Prade [17] multiplied by |𝑋|,
+
+𝖧𝐵&𝐹 (𝑚)
+
+=
+
+∑
+𝐴∈
+
+𝑚(𝐴) log2
+
+|𝐴||𝑋| . 𝑚(𝐴)
+
+(30)
+
+Zhou and Deng Zhou and Deng [39] proposed a measure of entropy based on a probability transformation that takes inspiration from the theory
+of fractals. More speciﬁcally, the fractal-based (𝐹 𝐵) entropy measure is
+
+∑ 𝖤𝐹 𝐵 = − 𝑚𝐹 (𝐴) log2 𝑚𝐹 (𝐴)
+𝐴∈
+
+(31)
+
+where 𝑚𝐹 is deﬁned as follows:
+
+𝑚𝐹
+
+(𝐴)
+
+=
+
+∑
+𝐵|𝐴⊆𝐵
+
+𝑚(𝐵) 2|𝐵| − 1
+
+.
+
+Other measures While the description of uncertainty measures has been, so far, quite extensive, we remark that some measures have not been
+analyzed in detail. For example, the formulations of the measures proposed by Wen et al. [7] and Zhao et al. [40] are extremely technical, while the two measures proposed by Zhang et al. [41] and Wang et al. [9] are parametric, and any comparison of them with other measures would be limited by having to ﬁx a value for the parameters.
+
+3.1. Mathematical properties of uncertainty measures
+
+Although the focus of this paper is more on their numerical aspects, we consider it useful to present a brief summary of formal aspects of uncertainty measures. Over the years, a wide range of studies have analyzed the formal properties—in the form of desirable properties or axioms—of uncertainty measures. Recounting all of them would be beyond the scope of this paper, but it is safe to say that the following ﬁve have gained prominence:
+
+1. Probabilistic consistency: If 𝑚 takes the form of a probability distribution function, meaning that all focal elements are singletons, then the measure must be equal to the Shannon entropy.
+2. Set consistency: When 𝑚 focuses on a single set 𝐴 (meaning that 𝑚(𝐴) = 1 for one particular set 𝐴), then the measure of uncertainty must collapse into the Hartley entropy.
+3. Subadditivity: When 𝑚 is a joint BPA on the Cartesian product 𝑋 × 𝑌 and 𝑚𝑋 and 𝑚𝑌 are the respective associated marginal BPAs, then an uncertainty measure 𝖧 is subadditive if and only if
+𝖧(𝑚) ≤ 𝖧(𝑚𝑋 ) + 𝖧(𝑚𝑌 ).
+4. Additivity: When 𝑚 is a joint BPA on 𝑋 × 𝑌 and 𝑚𝑋 and 𝑚𝑌 are the respective associated marginal BPAs, then if these marginal BPAs are non-interactive, an uncertainty measure 𝖧 is additive if and only if
+𝖧(𝑚) = 𝖧(𝑚𝑋 ) + 𝖧(𝑚𝑌 ).
+5. Monotonicity: Consider any two BPAs 𝑚1 and 𝑚2 deﬁned on the FOD 𝑋 such that Bel2(𝐴) ≤ Bel1(𝐴) ∀𝐴 ⊆ 𝑋, then 𝖧 is monotone if and only if
+𝖧(𝑚1) ≤ 𝖧(𝑚2).
+Other properties, for instance, consistency with Dempster–Shafer semantics, range, non-negativity, and maximum entropy, were discussed by Jiroušek and Shenoy [6]. Table 1 presents a summary of the uncertainty measures reported in this section and whether they satisfy the above ﬁve properties. We also attempt a classiﬁcation according to the type of uncertainty that is captured by each measure and the paradigm on which the measure is based.
+As recently conﬁrmed by Moral-García and Abellán [46], the uncertainty measure of Harmanec and Klir is the only one proposed in the literature that satisﬁes all the above-mentioned properties. However, it is quite complex to implement in practice. It can be seen from Table 1 that a full analysis has not been carried out for the most recent measures of uncertainty. In some cases, the satisfaction of some properties has been veriﬁed using examples and therefore more work is needed toward a formal proof. The
+
+7
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Table 1 Measures of uncertainty and their properties: a review of the literature. Y: the property has been formally established, N: the property is not satisﬁed, ?: the property was not studied or evidence seems inconclusive. The column “Source” lists the publications in which the satisfaction of the properties is discussed. In the column “Content,” measures are labeled according to the category they belong to: total uncertainty (TU), discord (D), or non-speciﬁcity (NS). The last column indicates whether the measure is based on the entropy formulation (EB) and/or uncertainty intervals (IB).
+
+Eq. Proponent(s)
+
+P. cons. S. cons. Add. Subadd. Monot. Source Type Content
+
+(7) Höhle
+
+Y
+
+(8) Yager
+
+Y
+
+(9) Smets
+
+N
+
+(10) Nguyen
+
+Y
+
+(11) Dubois and Prade
+
+N
+
+(12) Klir and Ramer
+
+Y
+
+(13) Klir and Parviz
+
+Y
+
+(14) Lamata and Moral
+
+Y
+
+(15) Pal et al.
+
+Y
+
+(16) Harmanec and Klir
+
+Y
+
+(17) George and Pal
+
+Y
+
+(18) Jousselme et al.
+
+Y
+
+(19) Yang and Han
+
+N
+
+(20) Deng and Wang
+
+N
+
+(21) Li et al.
+
+N
+
+(22) Wang and Song
+
+Y
+
+(23) Deng
+
+Y
+
+(24) Pan and Deng
+
+Y
+
+(25) Jiroušek and Shenoy Y
+
+(26) Zhou et al.
+
+N
+
+(27) Cui et al.
+
+N
+
+(28) Yan and Deng
+
+Y
+
+(29) Qin et al.
+
+Y
+
+(30) Li and Pan
+
+Y
+
+(31) Zhou and Deng
+
+Y
+
+N
+
+Y
+
+N
+
+N
+
+Y
+
+N
+
+N
+
+Y
+
+N
+
+N
+
+Y
+
+N
+
+Y
+
+Y
+
+Y
+
+Y
+
+Y
+
+N
+
+Y
+
+Y
+
+N
+
+Y
+
+Y
+
+N
+
+Y
+
+Y
+
+N
+
+Y
+
+Y
+
+Y
+
+Y
+
+Y
+
+N
+
+Y
+
+Y
+
+N
+
+N
+
+N
+
+N
+
+N
+
+?
+
+?
+
+N
+
+N
+
+N
+
+Y
+
+?
+
+?
+
+N
+
+N
+
+N
+
+?
+
+N
+
+N
+
+N
+
+Y
+
+N
+
+N
+
+N
+
+N
+
+N
+
+N
+
+N
+
+Y
+
+N
+
+N
+
+N
+
+N
+
+?
+
+?
+
+N
+
+N
+
+N
+
+Y
+
+Y
+
+N
+
+[8,37] D
+
+EB
+
+N
+
+[8,37] D
+
+EB
+
+N
+
+[8]
+
+D
+
+EB
+
+N
+
+[8,37] D
+
+EB
+
+Y
+
+[8,37] NS
+
+EB
+
+Y
+
+[8,37] TU
+
+EB
+
+Y
+
+[8,37] TU
+
+EB
+
+Y
+
+[6]
+
+TU
+
+EB
+
+Y
+
+[8]
+
+TU
+
+EB
+
+Y
+
+[8,31] TU
+
+EB
+
+N
+
+[42,8] TU
+
+Y
+
+[8,43] TU
+
+EB
+
+N
+
+[44,45] TU
+
+IB
+
+Y
+
+[26]
+
+TU
+
+IB
+
+?
+
+[27]
+
+TU
+
+IB
+
+N
+
+[29,44] TU
+
+EB, IB
+
+N
+
+[31]
+
+TU
+
+EB
+
+Y
+
+[33,8] TU
+
+EB
+
+Y
+
+[6,37] TU
+
+EB
+
+N
+
+[32]
+
+TU
+
+EB
+
+N
+
+[32]
+
+TU
+
+EB
+
+?
+
+[36]
+
+TU
+
+EB
+
+?
+
+[37]
+
+TU
+
+EB
+
+?
+
+[38]
+
+TU
+
+EB
+
+?
+
+[39]
+
+TU
+
+EB
+
+relative importance of these properties is, however, still subject to debate. For example, Deng [44] stated that “monotonicity is one of the most important properties.” Meanwhile, Yang and Han [25] have argued that properties like additivity and subadditivity are “meaningless” for their uncertainty measure, since it is not a direct extension of probability theory but an ad hoc proposal for evidence theory. Deng and Wang [26] stated that the “evidence theory framework is diﬀerent from the probability theory framework and the classical set theory,” meaning that substantially diﬀerent properties should be required. They also argued that additivity and subadditivity are relevant only if the uncertainty measure is applied to the Cartesian product 𝑋 × 𝑌 and irrelevant otherwise. For this reason, some alternative axiomatic frameworks have been promoted, for example in [44].
+In addition to the above-mentioned formal properties, some desiderata have been proposed. In contrast to formal properties, they are often subjective and their fulﬁllment is a matter of degree. Moral-García and Abellán [46] proposed the following four desiderata:
+• The calculation of the uncertainty measure should not be excessively complex. • It should be possible to decompose the uncertainty measure into its conﬂict and non-speciﬁcity parts. • The measure should be sensitive to changes in 𝑚. • The measure should be applicable to frameworks more general than evidence theory.
+For an updated inquiry into mathematical properties and desiderata of uncertainty measures, one can refer to Moral-García and Abellán [46], in which a deeper analysis is presented that makes a distinction between BPA- and interval-based uncertainty measures.
+3.2. A brief historical perspective
+Fig. 1 oﬀers a snapshot of the development of uncertainty measures over time and, quite remarkably, seems to divide the last 40 years into four distinct periods. The ﬁrst period (1982–1987) saw the inception of the most basic measures, capable of capturing only some facets of the total uncertainty. In the second period (1988–1995), starting with the measure proposed by Lamata and Moral [19], eﬀorts were redirected toward (i) the formulation of more holistic measures that can capture the total uncertainty of mass assignment and (ii) their formal analysis. The third period (1996–2015) is the longest and saw few new proposals. In the fourth and current period (2016–today) we are witnessing a strong resurgence of uncertainty measures. In particular, new measures are often inspired by existing ones and justiﬁed by showing better performance with respect to some speciﬁc examples. Moreover, in recent years, as noted with some concern by Dezert and Tchamova [47], a weaker emphasis has been placed on the analysis of formal properties of these measures, possibly in light of the impossibility of ﬁnding a measure that can satisfy all properties and desiderata.
+8
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Fig. 1. Timeline of the seminal papers for various uncertainty measures.
+4. Methodology and results
+As already speciﬁed, we are interested in studying the relations between diﬀerent uncertainty measures by means of simulations. The approach proposed in this study is based on an a priori deﬁnition of the cardinality 𝑛 of 𝑋. Then, the set of focal elements  is constructed by randomly sampling subsets of the FOD 𝑋 until the union of the sampled subsets is a cover of 𝑋, that is, until each element of 𝑋 appears in at least one of the selected subsets. A BPA 𝑚 over the elements of  is assigned using the Dirichlet function with parameter vector 𝟏||. It is important to note that the choice of the Dirichlet function parameterized with 𝟏|| determines that the sampling of the values of 𝑚 over  occurs uniformly and that the sum of their values is one. In other words, once a set of focal elements  covering 𝑋 is sampled, then the positive values assigned to the | | focal elements are uniformly sampled from the | |-dimensional unit simplex.
+This procedure for sampling BOEs is the same as that proposed by Burger and Destercke [48], in which the stopping condition is that the union of the elements in the FOD covers the set 𝑋. The simulation consists of ﬁxing 𝑛 and then repeating the procedure 𝑠 = 10, 000 times so that, for each repetition, the uncertainty of the BPA is measured by means of the uncertainty measures presented in Section 3. The simulation procedure is summarized in Algorithm 1 and the simulation code is available online.2
+Let us note that some of the methods used here to analyze uncertainty measures have already been adopted within evidence theory to study some other aspects of belief functions. See, for example, the contribution by Jousselme and Maupin [49], in which scatter plots and dendrograms were used to compare distances between belief functions.
+4.1. Similarity analysis
+First, we analyze the similarities between uncertainty measures by checking their comonotonicity. We assume that the similarity between two uncertainty measures depends on their tendency to order BPAs in a similar way from the most to the least uncertain. That is, given 𝑠 BPAs, two uncertainty measures are similar if they agree on how to order the 𝑠 BPAs from the most to the least uncertain. Given the possible existence of non-linear relations between values obtained from diﬀerent uncertainty measures, we prefer to use a comonotonicity measure that is agnostic to the nature of the comonotonicity. For this reason, for example, we excluded Pearson’s linear correlation, which assumes any comonotonicity to be linear. For a similar reason, we ruled out polynomial and parametric regressions. Considering these requirements, we used the Spearman rank correlation coeﬃcient 𝜌, which, given two numerical lists 𝐚, 𝐛 ∈ ℝ𝑠, returns a value in [−1, 1].
+2 https://gitlab.com/or-group-dii-unitn-public/evidence-theory.
+9
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Algorithm 1 The simulation procedure to compare the selected uncertainty measures.
+
+𝑋 ← {𝑥1, … , 𝑥𝑛} 𝑁 ←𝑠
+
+𝑄 ← {𝑞1, … , 𝑞𝑚}  ←∅
+
+𝑖←1
+
+while 𝑖 ≤ 𝑁 do
+
+𝑅←∅ while
+
+⋃
+𝐴∈𝑅
+
+𝐴
+
+⊊
+
+𝑋
+
+do
+
+𝐴 ← 𝑠𝑎𝑚𝑝𝑙𝑒(2𝑋 ⧵ 𝑅)
+
+𝑅←𝑅∪𝐴
+
+end while
+
+ ←∅
+
+𝐵 ← 𝐷𝑖𝑟𝑖𝑐ℎ𝑙𝑒𝑡(|𝑅|)
+
+for 𝑏 ∈ 𝐵 do
+
+ ←  ∪ {⟨𝐴, 𝑏⟩}
+
+end for
+
+ ←  ∪ {⟨𝑞1( ), … , 𝑞𝑚( )⟩} 𝑖←𝑖+1
+
+end while
+
+⊳ Deﬁne the frame of discernment ⊳ Initialize 𝑁
+⊳ Deﬁne a list of entropy measures ⊳ Create an empty dataset
+
+⊳ Sample a set 𝐴 ⊆ 2𝑋 ⧵ 𝑅
+
+⊳
+
+Sample
+
+|𝑅|
+
+values
+
+using
+
+Dirichlet
+
+so
+
+that
+
+∑
+𝑏∈𝐵
+
+𝑏
+
+=
+
+1
+
+⊳ Compute a new array of entropy measures
+
+The Spearman coeﬃcient assumes a preprocessing phase in which raw values 𝑎𝑖, 𝑏𝑖 are transformed into ranks 𝑅(𝑎𝑖), 𝑅(𝑏𝑖) so that 𝑅(𝐚) and 𝑅(𝐛) are the vectors containing the ordinal rankings of the components of 𝐚 and 𝐛, respectively. Then,
+
+𝜌(𝐚, 𝐛) =
+
+cov(𝑅(𝐚), 𝑅(𝐛)) , 𝜎𝑅(𝐚) 𝜎𝑅(𝐛)
+
+where cov gives the covariance of the two ranking vectors and 𝜎 is the standard deviation. More precisely, the value 𝜌(𝐚, 𝐛) = 1 denotes perfect positive comonotonicity between the two lists, 𝜌(𝐚, 𝐛) = −1 denotes perfect negative comonotonicity, and 𝜌(𝐚, 𝐛) = 0 no comonotonicity.
+Fixing 𝑛 = 4, Fig. 2 shows scatter plots for all pairs of the considered uncertainty measures, together with their Spearman coefﬁcients. Note that we exclude the measures deﬁned by Eqs. (7)–(13) and (17) from the analysis to save space and because these measures can only partially capture uncertainty or have been superseded by more reﬁned ones. Consequently, all the measures in Fig. 2 are measures of total uncertainty. A closer analysis of a selection of these scatter plots can shed more light on the similarities and dissimilarities between uncertainty measures and help quantify the extent of their possible drawbacks.
+Fig. 3a compares the uncertainty measure proposed by Jiroušek and Shenoy with that of Wang and Song. With 𝜌 ≈ 0.99, this is a representative example of two extremely similar uncertainty measures that, however, have signiﬁcantly diﬀerent formulations, which may not have led one to suspect their similarity. This may suggest that, for practical purposes, the two measures are almost interchangeable. It is also worth noting that, as shown in Table 1, in spite of their similarity, the two measures have remarkably diﬀerent mathematical properties.
+Fig. 3b shows an example of two uncertainty measures that are negatively correlated (𝜌 ≈ −0.204), even if their polarity should be the same. The scatter plot shows a cloud of points with a barely perceivable (negative) comonotonicity. In this case, it is not only diﬃcult to accept the conclusion that the two measures capture the same phenomenon for which they were proposed, but according to the Spearman coeﬃcients, they appear more likely to produce opposite results. Indeed, if applied to real-world problems, these two measures are likely to give contrasting assessments. However, given the complex formulation of both uncertainty measures it is, once again, diﬃcult to ﬁnd an explanation for this behavior.
+The uncertainty measure 𝖠𝖴 proposed by Harmanec and Klir satisﬁes a number of desirable properties, but has been criticized in the literature for its insensitivity to changes in the mass assignment. In particular, changes in 𝑚 often do not lead to changes in the estimated uncertainty. In fact, anytime the mass assignment 𝑚 is compatible with a uniform probability distribution on the singletons, this latter is considered and the value of the uncertainty measure saturates and reaches its maximum. However, this insensitivity of the measure by Harmanec and Klir has not been suﬃciently studied and its extent and consequences are presently unknown. Fig. 3c compares the uncertainty measure proposed by Harmanec and Klir with that of Li et al. One can see that the uncertainty measure of Harmanec and Klir seems to have a maximum value that attracts closer values: this corresponds to the long vertical alignment of points on the right-hand side of the plot. In fact, there is a signiﬁcant gap between its maximum value and the second largest value. In this way, diﬀerent mass assignments which, according to the uncertainty measure of Li et al., have greatly diﬀerent levels of uncertainty may be associated with the maximum value, even if they are very much distinct in terms of total uncertainty. The comparative behavior of the uncertainty measure by Harmanec and Klir with other measures suggests that this undesirable behavior, already discussed in the literature, is a non-negligible phenomenon impairing the discriminating power of the measure 𝖠𝖴.
+At present, it may be hard to interpret values returned by diﬀerent uncertainty measures. For instance, if we consider the measure 𝖠𝖬 proposed by Jousselme et al., which, for 𝑛 = 4, lies in the interval [0, 2], should we consider a value of, say, 1.25 representative of a high or low total uncertainty? While one may be tempted to lean toward the former, it could be more appropriate to prefer the latter, in light of the left-skewed distribution of values on the corresponding diagonal entry in Fig. 2 and detailed in Fig. 4a.
+Note that the value 1.25 belongs to the decile containing the least uncertain mass assignments and for this reason, it cannot be considered representative of a high level of uncertainty. Conversely, a value of 1.25 for the uncertainty measure proposed by Lamata and Moral [19] represents a higher level of uncertainty, as can be seen in Fig. 4b. Note that both measures are expressed
+
+10
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Fig. 2. Pairwise scatter plots for pairs of uncertainty measures and their Spearman rank correlation coeﬃcients for 𝑛 = 4. To enhance readability, the scatter plots are based on 𝑠 = 300 simulations whereas, for greater stability, the values in the upper triangular part were obtained with 𝑠 = 10, 000.
+Fig. 3. Three representative scatter plots with 𝑠 = 1000. 11
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Fig. 4. Two representative bar charts with 𝑛 = 4 and 𝑠 = 10, 000.
+
+on the same scale [0, log2 𝑛] and are therefore comparable. Analyzing the bar charts on the diagonal of Fig. 2, one can observe diﬀerent patterns. Such patterns are not a mere matter of curiosity, but cast serious doubt on the possibility of interpreting values of uncertainty measures without knowing their distributions. A formal way to compare two uncertainty measures is to approximate their distributions to the normal distribution—using, for example, a power transform such as the Box–Cox transformation—or any other distribution, and then to use the transformed values for comparison. We conclude that knowing the range of uncertainty measures is not suﬃcient to interpret the levels of uncertainty of diﬀerent mass assignments.
+The results of this numerical study might also be useful when looking for support for a choice of uncertainty measure. In fact, one could argue against choosing a single measure and instead relying on the conjoint use of a range of measures to increase the robustness of the uncertainty analysis. Two measures with low similarity—here quantiﬁed by the Spearman rank correlation—are more likely to provide separate evidence and, possibly, stronger conﬁrmation of whether a BOE is too uncertain. Conversely, considering a second extremely similar measure would add redundancy to the analysis. The more two measures are regarded as dissimilar but in fact produce similar uncertainty values, the more we may think that there is agreement on the measured phenomenon, and distinct evidence backing up the ﬁrst measurement.
+
+4.2. Hierarchical clustering
+
+We consider the Spearman coeﬃcient as the basis for estimating the dissimilarities between uncertainty measures. In particular, if
+we denote by 𝜌𝖧𝑖,𝖧𝑗 the value of the Spearman coeﬃcient calculated for two measures of uncertainty 𝖧𝑖 and 𝖧𝑗 , then we can consider 𝑑𝑖𝑗 = |1 − 𝜌𝖧𝑖,𝖧𝑗 | < 2 a measure of their dissimilarity. We can use hierarchical clustering to analyze the values of 𝑑𝑖𝑗 . Hierarchical clustering is a non-parametric technique that, however, depends on the choice of the heuristic that determines when two clusters,
+say 𝑋 and 𝑌 , are merged. Initially, each element is a cluster of its own, and then they are progressively merged according to one of
+the following heuristics:
+
+• Single linkage: The value at which the two clusters 𝑋 and 𝑌 are merged corresponds to the minimum distance between an element
+
+of 𝑋 and one of 𝑌 , that is, min{𝑑𝑖𝑗 |𝑖 ∈ 𝑋, 𝑗 ∈ 𝑌 }. • Complete linkage: The value at which the two clusters 𝑋 and 𝑌 are merged corresponds to the maximum distance between an
+
+element of 𝑋 and one of 𝑌 , that is, max{𝑑𝑖𝑗 |𝑖 ∈ 𝑋, 𝑗 ∈ 𝑌 }. • Average linkage: The value at which the two clusters 𝑋 and 𝑌 are merged corresponds to the average distance between elements
+
+belonging to the two clusters, that is,
+
+1 |𝑋||𝑌
+
+|
+
+∑
+𝑖∈𝑋
+
+∑
+𝑗∈𝑌
+
+𝑑𝑖𝑗
+
+.
+
+• Ward linkage: The value at which two clusters 𝑋 and 𝑌 are merged corresponds to the cluster distance. The distance between
+
+two clusters 𝑋 and 𝑌 is
+
+√
+
+𝑑(𝑋, 𝑌 ) =
+
+|𝑌
+
+|
+
++ 𝑇
+
+|𝑍|
+
+𝑑(𝑌
+
+, 𝑍)2
+
++
+
+|𝑌
+
+|
+
++ |𝑊 𝑇
+
+|
+
+𝑑(𝑌
+
+,𝑊
+
+)2
+
+−
+
+|𝑌 𝑇
+
+|
+
+𝑑 (𝑍 ,
+
+𝑊
+
+)2,
+
+where 𝑋 is the newly joined cluster consisting of 𝑍 and 𝑊 , 𝑌 is the cluster to be merged with, and 𝑇 = |𝑌 | + |𝑍| + |𝑊 |. When
+two clusters each contain a single element, 𝑑(𝑋, 𝑌 ) = 𝑑𝑋𝑌 . The Ward variance minimization algorithm [50] is used to perform clustering3
+
+3 https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html. 12
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Fig. 5. A comparison of dendrograms obtained using diﬀerent clustering heuristics. The values on the 𝑦-axis correspond to the distance between clusters according to the chosen heuristic. Along with the name of each measure, the EB/IB classiﬁcation is reported as in Table 1; all measures express total uncertainty.
+The application of these four heuristics to the values in Fig. 2 is reported in the dendrograms in Fig. 5, from which some conclusions can be drawn. Approaches based on distances between intervals do not belong to a separate cluster and are instead mixed with the others in a cluster of extremely similar measures—on the left-hand side in the dendrogram for the single linkage heuristic. In general, there is not a sharp separation of measures according to their formulations. Thus, it may be deceiving to judge the diﬀerences between methods based on their mathematical formulations. For instance, the three measures proposed by Pal et al. (Eq. (15)), Qin et al. (Eq. (29)), and Li and Pan (Eq. (30)) are based on similar formulations but only the former two are numerically similar. Interestingly, the separation into clusters seems to follow the years of inception of diﬀerent measures: with few exceptions, all the most recent measures are part of a large cluster of similar measures. This issue will be further investigated in the next subsection.
+4.3. Centrality analysis
+The Spearman coeﬃcients in Fig. 2, which are always in the range [−1, 1], can be interpreted as degrees of closeness between methods. By doing so, we can consider the matrix of Spearman coeﬃcients underlying Fig. 2 as an adjacency matrix.
+Adjacency matrices are well-known mathematical structures used in network analysis and therefore it is natural to employ tools developed in network analysis, for example in the study of social networks. In particular, centrality measures, as the name suggests, are used in network analysis to measure the extent to which nodes can be considered “central” in the context of the graph of which they are elements.
+If we consider weighted graphs in which the adjacency degree of two nodes can be interpreted as the degree of mutual support, a centrality measure shows the degree of support that each node receives from the others. The Spearman coeﬃcient can be seen as a measure of the mutual support between two uncertainty measures when it comes to ranking BOEs from the least to the most uncertain: the higher the value, the more the results of one uncertainty measure support those of the other. Among the various measures of centrality, the eigenvector centrality, which corresponds to the eigenvector associated with the Perron–Frobenius eigenvalue of a
+13
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Fig. 6. A bar chart representing the values of normalized eigenvector centrality of each uncertainty measure.
+Fig. 7. The measure of non-speciﬁcity proposed by Dubois and Prade [17] compared with four measures of conﬂict. The respective Spearman coeﬃcients are −0.488, −0.933, −0.705, and −0.525.
+weighted adjacency matrix, has assumed a prominent role thanks to its capacity to account for indirect relations, its good axiomatic properties, and the fact that it is ﬂexible enough to be used with signed graphs too. In practice, given a weighted adjacency matrix 𝐀, in our case stemming from Fig. 2, the centrality values of the uncertainty measures correspond to the components of the vector 𝐰 solving the eigensystem 𝐀𝐰 = 𝜆max𝐰, where 𝜆max is the Perron–Frobenius eigenvalue of 𝐀. Note that 𝐰 is unique up to multiplication by a positive scalar.
+Fig. 6 reports the normalized eigenvector centrality for the uncertainty measures considered in this study, including the older ones. The more central an uncertainty measure is, the more support it receives from the other measures. Therefore, a high value of centrality can be seen as an indication that a measure is holistic, as it can, to some extent, also represent the points of view oﬀered by alternative measures. In this sense, in absence of decisive results, high centrality values should be seen favorably. On the other hand, it is also true that low centrality values are symptomatic of original approaches providing separate evidence. The results in Fig. 6 show a wide range of behaviors. A number of measures have negative centrality values, which is indicative of a negative comonotonicity with other measures. Remarkably, all the uncertainty measures with negative centrality are measures of conﬂict. Hence, it seems that when a term is added to a measure of conﬂict to account for the non-speciﬁcity, this does not only alter the measurement, but it does it in a very speciﬁc (and opposite) direction: the lower the non-speciﬁcity, the higher the conﬂict, and vice versa. This is illustrated in Fig. 7 and seems to further corroborate the need to account for both facets of uncertainty to avoid underor overestimations. To understand the relevance of this observation, one may, for instance, consider evidence-based fusion systems in which one is interested in assessing the uncertainty level before choosing whether to fuse or not.
+Furthermore, it is possible to see that, with a few exceptions, the most recent measures have high centrality values and the old ones have negative values. This could be symptomatic of a recent convergence of research toward a shared deﬁnition of uncertainty measure. Among the exceptions to this phenomenon, the measure of Dubois and Prade is remarkable: in spite of its extreme simplicity
+14
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Fig. 8. Sensitivity analysis for randomly selected similarity values between uncertainty measures. Each line represents the similarity of a diﬀerent pair of uncertainty measures and how it changes with respect to the cardinality of the FOD.
+and the fact that it can capture only some aspects of uncertainty, it seems to be supported by other measures. One reason for this could be the fact that the formulation of this uncertainty measure is embedded in many of the most recent ones.
+A cautionary note may be necessary. As the centrality values depend on the measures considered in the analysis, the values presented in Fig. 6 can vary according to the included measures. On the other hand, it is also sensible to assume that such variations would not be so signiﬁcant as to invalidate the conclusions drawn from our results.
+So far, the results have been presented for 𝑛 = 4, which is a recurring size of the FOD in most of the illustrative examples presented in the literature. To explore the generalizability of the results, we explored the cases with 𝑛 = 3, … , 8. Fig. 8 shows a graphical sensitivity analysis for 30 Spearman rank correlation coeﬃcients for randomly chosen pairs of uncertainty measures.
+Considering Fig. 8, the values for 𝑛 = 4 correspond to 30 random values from Fig. 2. Then, for the same pairs of measures, the simulations were repeated for other values of 𝑛 and the new similarities were collected and compared. While the results in Fig. 8 are qualitative, they certainly show some changes in the similarities but, with a few exceptions (low levels tend to become lower when 𝑛 increases), it is diﬃcult to spot clear patterns. In particular, high levels of similarity remain high regardless of the value of 𝑛. For reasons of space, a full comparative analysis with respect to the parameter 𝑛 is not presented here, but the interested reader can refer to some supplementary material online.4
+5. Conclusions
+First, we outlined the most prominent uncertainty measures in the evidence theory, hoping that this could help other researchers navigate this mare magnum. Next, the results of Monte Carlo simulations were presented, in which the behavior of diﬀerent uncertainty measures were compared pairwise, allowing us to analyze their similarities and diﬀerences. The formal tools employed in the analysis include rank correlation, hierarchical clustering, and eigenvector centrality.
+Besides the results, already analyzed in the previous section, we want to stress the necessity of numerical studies to interpret values returned by diﬀerent uncertainty measures, which could otherwise be interpreted only in an ordinal sense. That is, given an uncertainty measure 𝖧 and two mass assignments 𝑚1 and 𝑚2 on the same FOD, 𝖧(𝑚1) ≥ 𝖧(𝑚2) implies that, according to 𝖧, 𝑚1 is more uncertain than 𝑚2, but it is presently hard to draw more conclusions on the uncertainty levels of both 𝑚1 and 𝑚2. Maybe 𝑚1 and 𝑚2 are both too uncertain to be suﬃciently speciﬁc. Or maybe they are not. In fact, in some applications, it may be reasonable to disregard mass assignments when they are too uncertain to yield suﬃcient information. This problem is similar to the quantiﬁcation of the inconsistency of preferences in decision analysis, as happens in the analytic hierarchy process, in which preferences that are too inconsistent may be rejected and sent for re-evaluation, seeking a greater level of consistency. This may also trigger some research on some acceptability thresholds, which could be estimated as quantiles of the empirical distributions or with methods such as AUC (area under the curve) of the ROC (receiver operating characteristic).
+Given the existing literature on uncertainty measures and the results presented in this manuscript, it is reasonable to expect that future proposals of new measures should compare the newly introduced measure with the existing ones (i) numerically, to detect possible similarities/dissimilarities, and (ii) formally, to show a clear advantage with respect to the existing literature.
+CRediT authorship contribution statement
+Michele Urbani: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Software, Validation, Visualization, Writing – original draft. Gaia Gasparini: Data curation, Investigation, Visualization, Writing – original draft. Matteo Brunelli: Conceptualization, Formal analysis, Funding acquisition, Methodology, Project administration, Supervision, Validation, Visualization, Writing – original draft, Writing – review & editing.
+4 https://gitlab.com/or-group-dii-unitn-public/evidence-theory.
+15
+
+M. Urbani, G. Gasparini and M. Brunelli
+
+Information Sciences xxx (xxxx) xxx
+
+Declaration of competing interest
+
+The authors declare that they have no known competing ﬁnancial interests or personal relationships that could have appeared to inﬂuence the work reported in this paper.
+
+Data availability
+
+Data will be made available on request.
+
+Acknowledgements
+
+We appreciated the suggestions of three anonymous reviewers and the Editor, which helped us improve the quality of the manuscript. The research of Gaia Gasparini is supported by Autostrada del Brennero S.p.A., Italy.
+
+References
+
+[1] B.M. Ayyub, G.J. Klir, Uncertainty Modeling and Analysis in Engineering and the Sciences, Chapman and Hall/CRC, 2006. [2] D. Dubois, H. Prade, Possibility Theory: An Approach to Computerized Processing of Uncertainty, Springer Science & Business Media, 1988. [3] A.P. Dempster, Upper and lower probabilities induced by a multivalued mapping, Ann. Math. Stat. 38 (1967) 325–339. [4] G. Shafer, A Mathematical Theory of Evidence, Princeton University Press, 1976. [5] C.E. Shannon, A mathematical theory of communication, Bell Syst. Tech. J. 27 (1948) 379–423. [6] R. Jiroušek, P.P. Shenoy, A new deﬁnition of entropy of belief functions in the Dempster–Shafer theory, Int. J. Approx. Reason. 92 (2018) 49–65. [7] K. Wen, Y. Song, C. Wu, T. Li, A novel measure of uncertainty in the Dempster-Shafer theory, IEEE Access 8 (2020) 51550–51559. [8] Q. Pan, D. Zhou, Y. Tang, X. Li, J. Huang, A novel belief entropy for measuring uncertainty in Dempster-Shafer evidence theory framework based on plausibility
+transformation and weighted Hartley entropy, Entropy 21 (2019) 163. [9] D. Wang, J. Gao, D. Wei, A new belief entropy based on Deng entropy, Entropy 21 (2019) 987. [10] Q. Zhou, É. Bossé, Y. Deng, Modeling belief propensity degree: measures of evenness and diversity of belief functions, IEEE Trans. Syst. Man Cybern. Syst.
+(2022). [11] A.G. Bronevich, A.E. Lepskiy, Measures of conﬂict, basic axioms and their application to the clusterization of a body of evidence, Fuzzy Sets Syst. 446 (2022)
+277–300. [12] G.J. Klir, A. Ramer, Uncertainty in the Dempster-Shafer theory: a critical re-examination, Int. J. Gen. Syst. 18 (1990) 155–166. [13] U. Höhle, Entropy with respect to plausibility measures, in: Proc. of 12th IEEE Int. Symp. on Multiple Valued Logic, Paris, 1982, 1982, pp. 167–169. [14] R.R. Yager, Entropy and speciﬁcity in a mathematical theory of evidence, Int. J. Gen. Syst. 9 (1983) 249–260. [15] P. Smets, Information content of an evidence, Int. J. Man-Mach. Stud. 19 (1983) 33–43. [16] H.T. Nguyen, On entropy of random sets and possibility distributions, in: The Analysis of Fuzzy Information, vol. 1, 1987, pp. 145–156. [17] D. Dubois, H. Prade, Properties of measures of information in evidence and possibility theories, Fuzzy Sets Syst. 24 (1987) 161–182. [18] G.J. Klir, B. Parviz, A note on the measure of discord, in: D. Dubois, M.P. Wellman, B. D’Ambrosio, P. Smets (Eds.), Uncertainty in Artiﬁcial Intelligence, Morgan
+Kaufmann, 1992, pp. 138–141. [19] M.T. Lamata, S. Moral, Measures of entropy in theory of evidence, Int. J. Gen. Syst. 14 (1988) 297–305. [20] N.R. Pal, J.C. Bezdek, R. Hemasinha, Uncertainty measures for evidential reasoning II: a new measure of total uncertainty, Int. J. Approx. Reason. 8 (1993) 1–16. [21] D. Harmanec, G. Klir, Measuring total uncertainty in Dempster-Shafer theory: a novel approach, Int. J. Gen. Syst. 22 (1994) 405–419. [22] V.-N. Huynh, Y. Nakamori, Notes on “reducing algorithm complexity for computing an aggregate uncertainty measure”, IEEE Trans. Syst. Man Cybern., Part A,
+Syst. Hum. 40 (2009) 205–209. [23] T. George, N.R. Pal, Quantiﬁcation of conﬂict in Dempster-Shafer framework: a new approach, Int. J. Gen. Syst. 24 (1996) 407–423. [24] A.-L. Jousselme, C. Liu, D. Grenier, E. Bossé, Measuring ambiguity in the evidence theory, IEEE Trans. Syst. Man Cybern., Part A, Syst. Hum. 36 (2006) 890–903. [25] Y. Yang, D. Han, A new distance-based total uncertainty measure in the theory of belief functions, Knowl.-Based Syst. 94 (2016) 114–123. [26] Z. Deng, J. Wang, Measuring total uncertainty in evidence theory, Int. J. Intell. Syst. 36 (2021) 1721–1745. [27] R. Li, Z. Chen, H. Li, et al., A new distance-based total uncertainty measure in Dempster-Shafer evidence theory, Appl. Intell. 52 (2022) 1209–1237. [28] X. Deng, F. Xiao, Y. Deng, An improved distance-based total uncertainty measure in belief function theory, Appl. Intell. 46 (2017) 898–915. [29] X. Wang, Y. Song, Uncertainty measure in evidence theory with its applications, Appl. Intell. 48 (2017) 1672–1688. [30] Y. Deng, Deng entropy, Chaos Solitons Fractals 91 (2016) 549–553. [31] J. Abellán, Analyzing properties of Deng entropy in the theory of evidence, Chaos Solitons Fractals 95 (2017) 195–199. [32] S. Moral-García, J. Abellán, Critique of modiﬁed Deng entropies under the evidence theory, Chaos Solitons Fractals 140 (2020) 110112. [33] L. Pan, Y. Deng, A new belief entropy to measure uncertainty of basic probability assignments based on belief function and plausibility function, Entropy 20
+(2018). [34] D. Zhou, Y. Tang, W. Jiang, A modiﬁed belief entropy in Dempster-Shafer framework, PLoS ONE 12 (2017). [35] H. Cui, Q. Liu, J. Zhang, B. Kang, An improved Deng entropy and its application in pattern recognition, IEEE Access 7 (2019) 18284–18292. [36] H. Yan, Y. Deng, An improved belief entropy in evidence theory, IEEE Access 8 (2020) 57505–57516. [37] M. Qin, Y. Tang, J. Wen, An improved total uncertainty measure in the evidence theory and its application in decision making, Entropy 22 (2020) 487. [38] J. Li, Q. Pan, A new belief entropy in Dempster–Shafer theory based on basic probability assignment and the frame of discernment, Entropy 22 (2020) 691. [39] Q. Zhou, Y. Deng, Fractal-based belief entropy, Inf. Sci. 587 (2022) 265–282. [40] Y. Zhao, D. Ji, X. Yang, L. Fei, C. Zhai, An improved belief entropy to measure uncertainty of basic probability assignments based on Deng entropy and belief
+interval, Entropy 21 (2019). [41] Y. Zhang, F. Huang, X. Deng, W. Jiang, A new total uncertainty measure from a perspective of maximum entropy requirement, Entropy 23 (2021). [42] Y. Deng, Uncertainty measure in evidence theory, Sci. China Inf. Sci. 63 (2020) 1–19. [43] G.J. Klir, H.W. Lewis, Remarks on “measuring ambiguity in the evidence theory”, IEEE Trans. Syst. Man Cybern., Part A, Syst. Hum. 38 (2008) 995–999. [44] X. Deng, Analyzing the monotonicity of belief interval based uncertainty measures in belief function theory, Int. J. Intell. Syst. 33 (2018) 1869–1879. [45] J. Abellán, É. Bossé, Critique of recent uncertainty measures developed under the evidence theory and belief intervals, IEEE Trans. Syst. Man Cybern. Syst. 50
+(2017) 1186–1192. [46] S. Moral-García, J. Abellán, Required mathematical properties and behaviors of uncertainty measures on belief intervals, Int. J. Intell. Syst. 36 (2021). [47] J. Dezert, A. Tchamova, On the eﬀectiveness of measures of uncertainty of basic belief assignments, Inf. Secur. 52 (2022) 9–36. [48] T. Burger, S. Destercke, How to randomly generate mass functions, Int. J. Uncertain. Fuzziness Knowl.-Based Syst. 21 (2013) 645–673. [49] A.-L. Jousselme, P. Maupin, Distances in evidence theory: comprehensive survey and generalizations, Int. J. Approx. Reason. 53 (2012) 118–145. [50] J.H. Ward Jr, Hierarchical grouping to optimize an objective function, J. Am. Stat. Assoc. 58 (1963) 236–244.
+
+16
+
