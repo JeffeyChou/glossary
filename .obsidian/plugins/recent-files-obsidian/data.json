@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "FastStart-Plugins-LongDelay",
+      "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md"
+    },
+    {
+      "basename": "数学建模作业-减速带",
+      "path": "private/01-Diary/本周事务/数学建模作业-减速带.md"
+    },
+    {
+      "basename": "FastStart-Plugins-ShortDelay",
+      "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-ShortDelay.md"
+    },
+    {
+      "basename": "任务看板",
+      "path": "private/00-MOC/任务看板.md"
+    },
+    {
       "basename": "商业计划书",
       "path": "private/01-Diary/本周事务/商业计划书.md"
     },
@@ -39,10 +55,6 @@
     {
       "basename": "()",
       "path": "private/01-Diary/本周事务/().md"
-    },
-    {
-      "basename": "任务看板",
-      "path": "private/00-MOC/任务看板.md"
     },
     {
       "basename": "能见度工创PPT",
@@ -181,24 +193,12 @@
       "path": "private/01-Diary/日志存档/2023-03-29.md"
     },
     {
-      "basename": "FastStart-Plugins-LongDelay",
-      "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md"
-    },
-    {
-      "basename": "FastStart-Plugins-ShortDelay",
-      "path": "private/03-Projects/97-作业-杂项/FastStart-Plugins-ShortDelay.md"
-    },
-    {
       "basename": "FastStart-StartupScript",
       "path": "private/09-Templates/FastStart-StartupScript.md"
     },
     {
       "basename": "FastStart-GenerateListOfInstalledPlugins",
       "path": "private/09-Templates/FastStart-GenerateListOfInstalledPlugins.md"
-    },
-    {
-      "basename": "2023-03-28",
-      "path": "private/01-Diary/日志存档/2023-03-28.md"
     }
   ],
   "omittedPaths": [],

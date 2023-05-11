@@ -1,6 +1,10 @@
 {
   "strategy": "default",
+  "cedictPath": "./cedict_ts.u8",
   "matchStrategy": "prefix",
+  "fuzzyMatch": true,
+  "matchingWithoutEmoji": true,
+  "treatAccentDiacriticsAsAlphabeticCharacters": false,
   "maxNumberOfSuggestions": 5,
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 0,
@@ -10,6 +14,11 @@
   "disableSuggestionsDuringImeOn": false,
   "insertAfterCompletion": true,
   "firstCharactersDisableSuggestions": ":/^",
+  "useCommonPrefixCompletionOfSuggestion": false,
+  "patternsToSuppressTrigger": [
+    "^~~~.*",
+    "^```.*"
+  ],
   "showMatchStrategy": true,
   "showComplementAutomatically": true,
   "showIndexingStatus": true,
@@ -38,194 +47,22 @@
   "enableInternalLinkComplement": true,
   "suggestInternalLinkWithAlias": false,
   "excludeInternalLinkPathPrefixPatterns": "",
+  "updateInternalLinksOnSave": true,
+  "insertAliasTransformedFromDisplayedInternalLink": {
+    "enabled": false,
+    "beforeRegExp": "",
+    "after": ""
+  },
+  "frontMatterKeyForExclusionInternalLink": "",
   "enableFrontMatterComplement": true,
   "frontMatterComplementMatchStrategy": "inherit",
   "insertCommaAfterFrontMatterCompletion": false,
+  "intelligentSuggestionPrioritization": {
+    "historyFilePath": "",
+    "maxDaysToKeepHistory": 30,
+    "maxNumberOfHistoryToKeep": 0
+  },
+  "disableOnMobile": false,
   "showLogAboutPerformanceInConsole": false,
-  "selectionHistoryTree": {
-    "Numerical_Analysis": {
-      "Numerical_Analysis": {
-        "frontMatter": {
-          "count": 10,
-          "lastUpdated": 1681736030931
-        }
-      }
-    },
-    "factorization": {
-      "factorization": {
-        "currentFile": {
-          "count": 5,
-          "lastUpdated": 1681090733983
-        }
-      }
-    },
-    "概率论作业-第二章": {
-      "概率论作业-第二章": {
-        "internalLink": {
-          "count": 3,
-          "lastUpdated": 1681194720212
-        }
-      }
-    },
-    "Homework": {
-      "Homework": {
-        "frontMatter": {
-          "count": 8,
-          "lastUpdated": 1683375876373
-        }
-      }
-    },
-    "Jacobi": {
-      "Jacobi": {
-        "currentFile": {
-          "count": 2,
-          "lastUpdated": 1681008366941
-        }
-      }
-    },
-    "matrices": {
-      "matrices": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1681089633799
-        }
-      }
-    },
-    "matrix": {
-      "matrix": {
-        "currentFile": {
-          "count": 2,
-          "lastUpdated": 1681695777975
-        }
-      }
-    },
-    "symmetric": {
-      "symmetric": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1681089831669
-        }
-      }
-    },
-    "positive-definite": {
-      "positive-definite": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1681089863812
-        }
-      }
-    },
-    "reverse": {
-      "reverse": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1681090946365
-        }
-      }
-    },
-    "Chapter3-多维随机变量": {
-      "Chapter3-多维随机变量": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1681194801846
-        }
-      }
-    },
-    "数值分析作业-第四次作业": {
-      "数值分析作业-第四次作业": {
-        "internalLink": {
-          "count": 2,
-          "lastUpdated": 1681694490030
-        }
-      }
-    },
-    "algorithm": {
-      "algorithm": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1681695597199
-        }
-      }
-    },
-    "eigenvalues": {
-      "eigenvalues": {
-        "currentFile": {
-          "count": 2,
-          "lastUpdated": 1681695659109
-        }
-      }
-    },
-    "excerpt": {
-      "excerpt": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1681695723481
-        }
-      }
-    },
-    "\\begin{pmatrix}0": {
-      "\\begin{pmatrix}0": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1681789879565
-        }
-      }
-    },
-    "haha": {
-      "haha": {
-        "frontMatter": {
-          "count": 2,
-          "lastUpdated": 1683355739405
-        }
-      }
-    },
-    "Zotero": {
-      "Zotero": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1683355880796
-        }
-      }
-    },
-    "使用Onedrive": {
-      "使用Onedrive": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1683359113063
-        }
-      }
-    },
-    "Sherman-Morison公式": {
-      "Sherman-Morison公式": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1683359212001
-        }
-      }
-    },
-    "信息论基础": {
-      "信息论基础": {
-        "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1683362111770
-        }
-      }
-    },
-    "作业": {
-      "作业": {
-        "frontMatter": {
-          "count": 3,
-          "lastUpdated": 1683375882013
-        }
-      }
-    },
-    "Probability_and_Statistics": {
-      "Probability_and_Statistics": {
-        "frontMatter": {
-          "count": 2,
-          "lastUpdated": 1683375890697
-        }
-      }
-    }
-  }
+  "selectionHistoryTree": {}
 }

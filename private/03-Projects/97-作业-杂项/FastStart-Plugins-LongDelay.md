@@ -7,8 +7,7 @@ obsidian-excalidraw-plugin
 obsidian-gallery
 obsidian-mind-map
 obsidian-pandoc
-obsidian-tabs
-obsidian-zotero-desktop-connector
+obsidian-zotero-plugin
 remotely-save
 tag-word-cloud
 tag-wrangler
