@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3ca2674ff1a413b2",
+        "id": "9e3ad2738ce50841",
         "type": "tabs",
         "children": [
           {
-            "id": "60fa5df6cb6d7e87",
+            "id": "1f7b928a3387f6d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,63 +19,7 @@
               }
             }
           }
-        ],
-        "stacked": true
-      },
-      {
-        "id": "49ccf558f67e5633",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "07a6ff40bf491385",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "private/01-Diary/本周事务/商业计划书.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "stacked": true
-      },
-      {
-        "id": "8271e731d382c9ab",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "cb958e9e5e879728",
-            "type": "leaf",
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "private/00-MOC/任务看板.md"
-              }
-            }
-          }
-        ],
-        "stacked": true
-      },
-      {
-        "id": "91440e8ef764ff94",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ecbece4a8304f6aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "stacked": true
+        ]
       }
     ],
     "direction": "vertical"
@@ -112,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "faststart",
+                "query": "button",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -121,8 +65,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -163,6 +106,14 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "df6f9f9d3b9ee712",
+            "type": "leaf",
+            "state": {
+              "type": "ReferenceListView",
+              "state": {}
+            }
           }
         ],
         "currentTab": 2
@@ -178,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md"
+                "file": "private/01-Diary/本周事务/数学建模作业-减速带.md"
               }
             }
           },
@@ -188,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md",
+                "file": "private/01-Diary/本周事务/数学建模作业-减速带.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -246,23 +197,19 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-statusbar-pomo:Start pomodoro": true,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-gallery:Gallery": false,
-      "remotely-save:Remotely Save": false
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "ecbece4a8304f6aa",
+  "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
     "private/01-Diary/本周事务/数学建模作业-减速带.md",
+    "private/01-Diary/本周事务/商业计划书.md",
     "private/03-Projects/97-作业-杂项/FastStart-Plugins-LongDelay.md",
+    "private/00-MOC/任务看板.md",
     "private/03-Projects/97-作业-杂项/FastStart-Plugins-ShortDelay.md",
     "private/08-Assets/cedict_1_0_ts_utf-8_mdbg.zip",
-    "private/00-MOC/任务看板.md",
     "private/08-Assets/pdfs/zotero data/tmp/translator.json",
     "private/08-Assets/pdfs/zotero data/tmp",
-    "private/01-Diary/本周事务/商业计划书.md",
     "private/08-Assets/Pasted image 20230510115520.png",
     "term/Homework/概率论与数理统计-第四章作业.md",
     "term/Homework/信息论第二次作业-1-2.md",

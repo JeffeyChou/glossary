@@ -21,6 +21,7 @@
   "monospaceFontFamily": "RobotoMono Nerd Font Mono,Microsoft YaHei",
   "textFontFamily": "LXGW WenKai GB Screen,Microsoft YaHei UI",
   "accentColor": "#6776c1",
-  "showViewHeader": false,
-  "interfaceFontFamily": "PingFang SC,Microsoft YaHei UI"
+  "showViewHeader": true,
+  "interfaceFontFamily": "PingFang SC,Microsoft YaHei UI",
+  "nativeMenus": true
 }
