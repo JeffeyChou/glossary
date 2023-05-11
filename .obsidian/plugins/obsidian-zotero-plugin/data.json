@@ -1,0 +1,42 @@
+{
+  "literatureNoteFolder": "LiteratureNotes",
+  "zoteroDataDir": "E:\\VSCODE\\Markdown\\glossary\\content\\private\\08-Assets\\pdfs\\zotero data",
+  "citationLibrary": 1,
+  "autoRefresh": true,
+  "symlinkImgExcerpt": false,
+  "imgExcerptPath": "ZtImgExcerpt",
+  "level": "INFO",
+  "template": {
+    "ejected": false,
+    "folder": "ZtTemplates",
+    "templates": {
+      "filename": "<%= it.citekey ?? it.DOI ?? it.title ?? it.key ?? it.citekey %>.md",
+      "citation": "[@<%= it.citekey %>]",
+      "altCitation": "@<%= it.citekey %>"
+    }
+  },
+  "fmFieldsMode": "whitelist",
+  "fmFieldsMapping": {
+    "title": true,
+    "citekey": true
+  },
+  "fmTagPrefix": "",
+  "autoPairEta": false,
+  "updateAnnotBlock": false,
+  "updateOverwrite": false,
+  "citationEditorSuggester": true,
+  "showCitekeyInSuggester": false,
+  "noteFields": {
+    "highlights": {
+      "keyword": "",
+      "template": ""
+    },
+    "questions": {
+      "keyword": "",
+      "template": ""
+    }
+  },
+  "noteFieldsSuggester": false,
+  "enableServer": false,
+  "serverPort": 9091
+}

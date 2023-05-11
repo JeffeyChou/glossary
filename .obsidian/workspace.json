@@ -1,0 +1,241 @@
+{
+  "main": {
+    "id": "9a0780749afe3857",
+    "type": "split",
+    "children": [
+      {
+        "id": "9e3ad2738ce50841",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f7b928a3387f6d1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "169762c0897285b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "66a927cf4be47876",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3090910a3bbb4bfa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c42e994501266a20",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "fffbf7b1713c1e68",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "button",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 207
+  },
+  "right": {
+    "id": "6e7011190a6a4416",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c47daab7a7f6b09",
+        "type": "tabs",
+        "dimension": 40.609137055837564,
+        "children": [
+          {
+            "id": "ec1d354533e6cbd2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0d92b31ac7bc3511",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "b4bbb6d3769d62dc",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "4a002a3a2945396c",
+            "type": "leaf",
+            "state": {
+              "type": "ReferenceListView",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "4f101d806a54a17c",
+        "type": "tabs",
+        "dimension": 59.390862944162436,
+        "children": [
+          {
+            "id": "450ad81cf27a4dff",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "227681cc38450669",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "60ed30d1cc6d4c8d",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "2076342018046708",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "private/08-Assets/Scripts/常用工具.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "769c3efb64d7f376",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "private/00-MOC/任务看板.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 245
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "templater-obsidian:Templater": true,
+      "table-editor-obsidian:Advanced Tables Toolbar": true,
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": true,
+      "zk-prefixer:创建时间戳笔记": false,
+      "audio-recorder:开始/结束录音": false,
+      "workspaces:管理工作区布局": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
+    }
+  },
+  "active": "1f7b928a3387f6d1",
+  "lastOpenFiles": [
+    "private/08-Assets/pdfs/zotero data/tmp/translator.json",
+    "private/08-Assets/pdfs/zotero data/tmp",
+    "private/01-Diary/本周事务/商业计划书.md",
+    "private/08-Assets/Pasted image 20230510115520.png",
+    "term/Homework/概率论与数理统计-第四章作业.md",
+    "term/Homework/信息论第二次作业-1-2.md",
+    "private/03-Projects/09-Slides",
+    "term/Homework/数值分析作业-第五次作业 1.md",
+    "term/Homework/数值分析作业-第四次作业 1.md",
+    "term/Homework/数值分析作业-插值.md",
+    "term/haha/Zotero多设备同步解决方案.md",
+    "private/08-Assets/pdfs/zotero data/zotero.sqlite.tmp",
+    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite.tmp",
+    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite-journal",
+    "private/08-Assets/pdfs/zotero data/zotero.sqlite-journal",
+    "private/01-Diary/本周事务/Chapter5-.md",
+    "private/08-Assets/Pasted image 20230507223709.png",
+    "private/03-Projects/09-Slides/slider test.md",
+    "private/01-Diary/本周事务/().md",
+    "private/08-Assets/Pasted image 20230507213856.png",
+    "private/08-Assets/Pasted image 20230507213855.png",
+    "private/08-Assets/Pasted image 20230507213854.png",
+    "private/08-Assets/Pasted image 20230507213851.png",
+    "private/00-MOC/任务看板.md",
+    "private/01-Diary/本周事务/能见度工创PPT.md",
+    "private/08-Assets/pdfs/zotero data/better-bibtex/cache.Better CSL YAML.json",
+    "private/08-Assets/pdfs/zotero data/better-bibtex/cache.Better CSL JSON.json",
+    "private/08-Assets/pdfs/zotero data/better-bibtex/cache.Better BibTeX.json",
+    "private/01-Diary/本周事务/研讨一.md",
+    "private/01-Diary/本周事务/slide.md",
+    "private/01-Diary/本周事务/tt.md",
+    "private/01-Diary/本周事务/teste.md",
+    "private/03-Projects/09-Slides/Minal-slides.md",
+    "term/ref/Gram-Schmidt.md",
+    "private/01-Diary/本周事务/Halo-Master-Chief-Collection 通关后.md",
+    "private/01-Diary/本周事务/商业计划&创业路演.md",
+    "private/01-Diary/本周事务/工创PPT文档记录.md",
+    "private/01-Diary/本周事务/工创意见.md",
+    "private/08-Assets/Scripts/常用工具.md",
+    "private/01-Diary/本周事务/测试.md",
+    "private/00-MOC/TO-DO list.md",
+    "images/etlt-extract-tweak-load-transform.png"
+  ]
+}
