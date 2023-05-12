@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "数学建模作业-减速带",
-      "path": "private/01-Diary/本周事务/数学建模作业-减速带.md"
+      "basename": "概率论作业-第四章+第五章",
+      "path": "private/01-Diary/本周事务/概率论作业-第四章+第五章.md"
+    },
+    {
+      "basename": "Drawing 2023-05-12 21.50.07.excalidraw",
+      "path": "private/08-Assets/Excalidraw/Drawing 2023-05-12 21.50.07.excalidraw.md"
+    },
+    {
+      "basename": "任务看板",
+      "path": "private/00-MOC/任务看板.md"
     },
     {
       "basename": "每月总结",
@@ -47,10 +55,6 @@
     {
       "basename": "草稿模板",
       "path": "private/09-Templates/草稿模板.md"
-    },
-    {
-      "basename": "任务看板",
-      "path": "private/00-MOC/任务看板.md"
     },
     {
       "basename": "常用工具",
@@ -195,10 +199,6 @@
     {
       "basename": "2023-04-07",
       "path": "private/01-Diary/日志存档/2023-04-07.md"
-    },
-    {
-      "basename": "2023-04-05",
-      "path": "private/01-Diary/日志存档/2023-04-05.md"
     }
   ],
   "omittedPaths": [],
