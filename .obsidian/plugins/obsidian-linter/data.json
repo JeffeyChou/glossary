@@ -78,11 +78,11 @@
     },
     "Emphasis Style": {
       "Makes sure the emphasis style is consistent.": true,
-      "Style": "consistent"
+      "Style": "asterisk"
     },
     "Strong Style": {
       "Makes sure the strong style is consistent.": false,
-      "Style": "consistent"
+      "Style": "asterisk"
     },
     "No Bare URLs": {
       "Encloses bare URLs with angle brackets except when enclosed in back ticks, square braces, or single or double quotes.": false
@@ -112,7 +112,7 @@
       "Inner New Lines": false
     },
     "Consecutive blank lines": {
-      "There should be at most one consecutive blank line.": false
+      "There should be at most one consecutive blank line.": true
     },
     "Convert Spaces to Tabs": {
       "Converts leading spaces to tabs.": false,
