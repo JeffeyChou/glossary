@@ -1,5 +1,5 @@
 {
-  "moveIntoMath_toggle": false,
+  "moveIntoMath_toggle": true,
   "autoCloseMath_toggle": false,
   "autoCloseRound_toggle": true,
   "autoCloseSquare_toggle": true,
@@ -16,7 +16,9 @@
   "autoSumLimit_toggle": true,
   "autoEncloseSup_toggle": true,
   "autoEncloseSub_toggle": true,
-  "encloseSelection_toggle": true,
+  "encloseSelection_toggle": false,
+  "autoGreekCommandMathMode_toggle": false,
   "customShorthand_toggle": true,
-  "customShorthand_parameter": "bi:\\binom{#cursor}{tab};\nsq:\\sqrt{};\nbb:\\mathbb{};\nbf:\\mathbf{};\nrm:\\mathrm{};\nte:\\text{};\nbs:\\boldsymbol{};\ninf:\\infty;\nti:\\times;\n`:\\cdot;\n>>:\\gg;\n<<:\\ll;\n>=:\\geqslant;\n<=:\\leqslant;\n=>:\\Rightarrow;\n==>:\\Longrightarrow;\n->:\\rightarrow;\n<-:\\leftarrow;\n<=:\\Leftarrow;\n<==:\\Longleftarrow;\n+-:\\pm;\n@a:\\alpha;\n@b:\\beta;\n@g:\\gamma;\n@G:\\Gamma;\n@d:\\delta;\n@D:\\Delta;\n@e:\\epsilon;\n@ve:\\varepsilon;\n@E:\\varepsilon;\n@z:\\zeta;\n@h:\\eta;\n@th:\\theta;\n@Th:\\Theta;\n@i:\\iota;\n@k:\\kappa;\n@l:\\lambda;\n@L:\\Lambda;\n@m:\\mu;\n@n:\\nu;\n@x:\\xi;\n@X:\\Xi;\npi:\\pi;\nPI:\\Pi;\n@r:\\rho;\n@s:\\sigma;\n@S:\\Sigma;\n@t:\\tau;\n@ups:\\upsilon;\n@Ups:\\Upsilon;\n@ph:\\phi;\n@vph:\\varphi;\n@Ph:\\Phi;\n@vPh:\\varPhi;\n@c:\\chi;\n@p:\\psi;\n@P:\\Psi;\n@o:\\omega;\n@O:\\Omega"
+  "useTabtoComplete_toggle": false,
+  "customShorthand_parameter": "bi:::\\binom{#cursor}{#tab};\nsq:::\\sqrt{};\nbb:::\\mathbb{};\nbf:::\\mathbf{};\nrm:::\\mathrm{};\nbs:::\\boldsymbol{};\nte:::\\text{};\ninf:::\\infty;\ncd:::\\cdot;\nqu:::\\quad;\nti:::\\times;\nal:::\\alpha;\nbe:::\\beta;\nga:::\\gamma;\nGa:::\\Gamma;\nde:::\\delta;\nDe:::\\Delta;\nep:::\\epsilon;\nze:::\\zeta;\net:::\\eta;\nth:::\\theta;\nTh:::\\Theta;\nio:::\\iota;\nka:::\\kappa;\nla:::\\lambda;\nLa:::\\Lambda;\nmu:::\\mu;\nnu:::\\nu;\nxi:::\\xi;\nXi:::\\Xi;\npi:::\\pi;\nPi:::\\Pi;\nrh:::\\rho;\nsi:::\\sigma;\nSi:::\\Sigma;\nta:::\\tau;\nup:::\\upsilon;\nUp:::\\Upsilon;\nph:::\\phi;\nPh:::\\Phi;\nch:::\\chi;\nps:::\\psi;\nPs:::\\Psi;\nom:::\\omega;\nOm:::\\Omega;\n>>:::\\gg;\n<<:::\\ll;\n>=:::\\geqslant;\n<=:::\\leqslant;\n=>:::\\Rightarrow;\n==>:::\\Longrightarrow;\n->:::\\rightarrow;\n<-:::\\leftarrow;\n<=:::\\Leftarrow;\n<==:::\\Longleftarrow;\n+-:::\\pm;\n"
 }

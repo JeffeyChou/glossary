@@ -15,7 +15,7 @@
   "AutoCapitalMode": "typing",
   "PunctuationSpaceMode": "typing",
   "InlineCodeSpaceMode": 1,
-  "InlineFormulaSpaceMode": 1,
+  "InlineFormulaSpaceMode": 2,
   "InlineLinkSpaceMode": 1,
   "InlineLinkSmartSpace": true,
   "UserDefinedRegSwitch": true,
