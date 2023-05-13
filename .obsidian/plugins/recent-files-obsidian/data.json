@@ -5,12 +5,20 @@
       "path": "private/01-Diary/本周事务/概率论作业-第四章+第五章.md"
     },
     {
-      "basename": "任务看板",
-      "path": "private/00-MOC/任务看板.md"
-    },
-    {
       "basename": "Drawing 2023-05-12 21.50.07.excalidraw",
       "path": "private/08-Assets/Excalidraw/Drawing 2023-05-12 21.50.07.excalidraw.md"
+    },
+    {
+      "basename": "Drawing 2023-05-04 20.20.15.excalidraw",
+      "path": "private/08-Assets/Excalidraw/Drawing 2023-05-04 20.20.15.excalidraw.md"
+    },
+    {
+      "basename": "test",
+      "path": "private/01-Diary/本周事务/test.md"
+    },
+    {
+      "basename": "任务看板",
+      "path": "private/00-MOC/任务看板.md"
     },
     {
       "basename": "每月总结",
@@ -105,10 +113,6 @@
       "path": "private/03-Projects/09-Slides/slider test.md"
     },
     {
-      "basename": "()",
-      "path": "private/01-Diary/本周事务/().md"
-    },
-    {
       "basename": "能见度工创PPT",
       "path": "private/01-Diary/本周事务/能见度工创PPT.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2023-04-10",
       "path": "private/01-Diary/日志存档/2023-04-10.md"
-    },
-    {
-      "basename": "2023-04-07",
-      "path": "private/01-Diary/日志存档/2023-04-07.md"
     }
   ],
   "omittedPaths": [],
