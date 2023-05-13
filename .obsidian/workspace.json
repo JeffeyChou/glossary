@@ -20,22 +20,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "1955100435c3f4a5",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "99417759652d77db",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "private/08-Assets/Excalidraw/Drawing 2023-05-12 21.50.07.excalidraw.md"
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
