@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "数值分析作业-数值微分",
+      "path": "private/01-Diary/本周事务/数值分析作业-数值微分.md"
+    },
+    {
       "basename": "数值分析作业-拟合和最小二乘法",
       "path": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "01-凸集与凸函数",
       "path": "term/optimized algorithm/01-凸集与凸函数.md"
-    },
-    {
-      "basename": "审稿人",
-      "path": "private/02-Reading/3-people/审稿人.md"
     }
   ],
   "omittedPaths": [],

@@ -77,7 +77,7 @@
       "Replaces three consecutive dots with an ellipsis.": false
     },
     "Emphasis Style": {
-      "Makes sure the emphasis style is consistent.": true,
+      "Makes sure the emphasis style is consistent.": false,
       "Style": "asterisk"
     },
     "Strong Style": {
