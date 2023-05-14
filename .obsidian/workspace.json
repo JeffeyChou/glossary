@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207
+    "width": 207,
+    "collapsed": true
   },
   "right": {
     "id": "6e7011190a6a4416",
@@ -121,7 +122,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "private/01-Diary/本周事务/概率论作业-第四章+第五章.md"
+              }
             }
           },
           {
@@ -130,6 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "private/01-Diary/本周事务/概率论作业-第四章+第五章.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +179,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 245,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,8 +199,10 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "60ed30d1cc6d4c8d",
+  "active": "e1dd708212fd47b1",
   "lastOpenFiles": [
+    "private/08-Assets/pdfs/zotero data/zotero.sqlite.tmp",
+    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite.tmp",
     "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite-journal",
     "private/08-Assets/pdfs/zotero data/zotero.sqlite-journal",
     "private/01-Diary/日志存档/2023-04-16.md",
@@ -229,8 +236,6 @@
     "private/08-Assets/pdfs/zotero data/tmp",
     "private/08-Assets/Pasted image 20230510115520.png",
     "private/03-Projects/09-Slides",
-    "private/08-Assets/pdfs/zotero data/zotero.sqlite.tmp",
-    "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite.tmp",
     "private/08-Assets/Pasted image 20230507223709.png",
     "private/08-Assets/Pasted image 20230507213856.png",
     "private/08-Assets/Pasted image 20230507213855.png",
