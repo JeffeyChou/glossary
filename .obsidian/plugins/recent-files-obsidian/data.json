@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "常用工具",
+      "path": "private/08-Assets/Scripts/常用工具.md"
+    },
+    {
       "basename": "任务看板",
       "path": "private/00-MOC/任务看板.md"
     },
@@ -83,10 +87,6 @@
     {
       "basename": "草稿模板",
       "path": "private/09-Templates/草稿模板.md"
-    },
-    {
-      "basename": "常用工具",
-      "path": "private/08-Assets/Scripts/常用工具.md"
     },
     {
       "basename": "商业计划书",

@@ -11,8 +11,12 @@
             "id": "fcefcb4f85a2b424",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "private/00-MOC/本周事务表.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -117,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/00-MOC/任务看板.md"
+                "file": "private/08-Assets/Scripts/常用工具.md"
               }
             }
           },
@@ -127,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/00-MOC/任务看板.md",
+                "file": "private/08-Assets/Scripts/常用工具.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,11 +173,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 789.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,8 +196,9 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "769c3efb64d7f376",
+  "active": "3090910a3bbb4bfa",
   "lastOpenFiles": [
+    "private/00-MOC/任务看板.md",
     "private/08-Assets/pdfs/zotero data/storage/DI5EI8PC",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ/Zhou 等 - 2022 - Marginalization in random permutation set theory .pdf",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ",
@@ -214,7 +219,6 @@
     "private/01-Diary/本周事务/test.md",
     "private/01-Diary/本周事务/未命名 1.md",
     "private/01-Diary/本周事务/未命名.md",
-    "private/00-MOC/任务看板.md",
     "private/08-Assets/Excalidraw/Drawing 2023-05-12 21.50.07.excalidraw.png",
     "private/01-Diary/本周事务/数学建模作业-减速带.md",
     "private/09-Templates/每月总结.md",
@@ -230,7 +234,6 @@
     "private/09-Templates/草稿模板.md",
     "private/08-Assets/cedict_1_0_ts_utf-8_mdbg.zip",
     "private/08-Assets/pdfs/zotero data/tmp/translator.json",
-    "private/08-Assets/pdfs/zotero data/tmp",
     "private/08-Assets/Pasted image 20230510115520.png",
     "private/08-Assets/Pasted image 20230507223709.png",
     "private/08-Assets/Pasted image 20230507213856.png",
