@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "2023-04-16",
+      "path": "private/01-Diary/日志存档/2023-04-16.md"
+    },
+    {
+      "basename": "本周事务表",
+      "path": "private/00-MOC/本周事务表.md"
+    },
+    {
+      "basename": "TO-DO list",
+      "path": "private/00-MOC/TO-DO list.md"
+    },
+    {
       "basename": "数值分析作业-数值微分",
       "path": "private/01-Diary/本周事务/数值分析作业-数值微分.md"
     },
@@ -157,10 +169,6 @@
       "path": "private/01-Diary/日志存档/2023-04-17.md"
     },
     {
-      "basename": "2023-04-16",
-      "path": "private/01-Diary/日志存档/2023-04-16.md"
-    },
-    {
       "basename": "Chapter12-Eigenvalues and singular values",
       "path": "private/01-Diary/本周事务/Chapter12-Eigenvalues and singular values.md"
     },
@@ -171,10 +179,6 @@
     {
       "basename": "试剂库存管理",
       "path": "private/00-MOC/试剂库存管理.md"
-    },
-    {
-      "basename": "本周事务表",
-      "path": "private/00-MOC/本周事务表.md"
     },
     {
       "basename": "AuthorRanking",
@@ -195,10 +199,6 @@
     {
       "basename": "03-无约束优化",
       "path": "term/optimized algorithm/03-无约束优化.md"
-    },
-    {
-      "basename": "01-凸集与凸函数",
-      "path": "term/optimized algorithm/01-凸集与凸函数.md"
     }
   ],
   "omittedPaths": [],
