@@ -1,0 +1,1691 @@
+Nonlinear Dyn https://doi.org/10.1007/s11071-023-08506-7
+ORIGINAL PAPER
+Marginalization in random permutation set theory: from the cooperative game perspective
+Qianli Zhou · Ye Cui · Zhen Li · Yong Deng
+
+Received: 14 November 2022 / Accepted: 7 April 2023 © The Author(s), under exclusive licence to Springer Nature B.V. 2023
+
+Abstract Random permutation set theory (RPST), as an uncertainty modeling approach considering underlying ordered information, is proposed based on permutation set recently. Different from Dempster–Shafer Theory (DST), RPST extends the event space from power sets to permutation sets and thus can distinguish weights between ordered sets of the same cardinality. In this paper, we use an n-player cooperative game to interpret RPST and propose an OWA operator-based method to calculate the marginalizations of Permutation Mass Function (PerMF). In addition to reﬂecting the ordered information of the permutation events, the proposed method also relates the Probability Mass Function (ProbMF), the Basic Probability Assignment
+Q. Zhou · Y. Deng Institute of Fundamental and Frontier Science, University of Electronic Science and Technology of China, Chengdu 611731, China e-mail: zhou_qianli@hotmail.com
+Y. Cui Department of Electrical and Computer Engineering, University of Alberta, Edmonton, AB T6G 1H9, Canada e-mail: ycui7@ualberta.ca
+Z. Li China Mobile Information Technology Center, Beijing 100029, China e-mail: zhen.li@pku.edu.cn
+Y. Deng (B)
+School of Medicine, Vanderbilt University, Nashville, TN 37240, USA e-mail: dengentropy@uestc.edu.cn
+
+(BPA) and the PerMF from the perspective of random sets.
+Keywords Random permutation set · Evidence theory · Marginalization · Shapley value · OWA operator
+1 Introduction
+Quantiﬁed representation of uncertain information is a signiﬁcant premise of development of explainable artiﬁcial intelligence. The probabilistic framework is developed based on the Kolmogorov theorem, which states that probability is additive. Probability Mass Function (ProbMF) cannot adequately model nonadditive measures. Dempster [1] proposes a multivalue mapping based on the upper and lower probabilities, and Shafer [2] extends it to propose the evidence theory, also called Dempster–Shafer Theory (DST). Basic Probability Assignment (BPA), as a basic information unit in DST, distributes the beliefs on the power set of the Frame of Discernment (FoD). With independent and reliable sources, Dempster proposes an evidence combination rule based on the cross product. Hence, DST is widely used in information aggregation [3,4], reliability analysis [5–7] and expert system decision-making [8–10]. Smets and Kennes introduce the ignorance into DST and proposes the Transferable Belief Model (TBM) [11], which uses two layers to handle epistemic uncertainty. Based on the TBM,
+123
+
+some machine learning methods [12,13] under uncertain environments are proposed, which has closer actual engineering scenario than probabilistic model. A reasonable interpretation of the meaning of the set-value of focal sets is the basis for studying Dempster–Shafer structure. In addition to subjective ignorance in TBM, Dempster–Shafer structure can also be interpreted from the perspective of Random Finite Set (RFS) [14]. For probabilistic models, the randomness of information is reﬂected in different observable results, which is due to the weights of different events (elements randomness) based on the probabilistic knowledge. By means of frequency counting, element randomness can be represented as a ProbMF. Hence, the ProbMF only reﬂects the randomness of events. As a generalization of ProbMF, RFS extends the events space to the power set. ProbMF is extended to RFS when the observed outcome is a collection of events. In addition the randomness of events, the cardinality of the event (also called focal set) in RFS is also random. Hence, from the perspective of RFS, there are both element randomness and cardinality randomness that act together to determine the mass function. Therefore, the Dempster–Shafer structure is more capable of modeling uncertainty than the probabilistic structure.
+Since DST is proposed based on the extension of the real-valued probability measures, it cannot not represent other types of uncertain information such as uncertainty with higher orders. Therefore, by combining other uncertainty theories, some generalized models of DST are proposed. In terms of dealing with conﬂicts, Dezert and Smarandache [15] introduce super power sets to handle conﬂict beliefs. In terms of interference effect prediction [16], the complex-valued evidence theory [17,18] is proposed, which utilizes the phase to model unobservable information. Remove the assumption of exclusive assumption among elements, D numbers theory [19] has better performance in decisionmaking. The uniﬁed framework of fuzzy uncertainty and evidential uncertainty has also been recently revisited [20]. In addition, from the perspective of RFS, Deng [21,22] extends power sets to permutation sets and proposes Random Permutation Set (RPS). Compared with randomness of events and cardinalities, the RPS adds the order of elements as a new random variable. Different from other generalizations, the extension idea of RPS does not rely on combining with existing uncertainty theory. After assigning beliefs to
+123
+
+Q. Zhou et al.
+the permutation set space, RPS is still a mathematical model; the interpretation of the order should be decided based on the speciﬁc applications. The original proposed paper of RPS, however, only offers a toy numerical example [23]. Hence, in this paper, we will discuss the interpretations of RPS from the TBM and RFS, respectively.
+In practical applications, only information with randomness can be directly counted. Under the interpretation of imprecision, DST and RPST, as generalizations of probability theory, are always modeled from epistemic uncertainty. Therefore, establishing the links between the PorbMF and its generalizations (such as BPA and PerMF) is the premise to use them to solve engineering problems. In DST, there exist two kind of transformations to link ProbMF and mass function. On the one hand, from the perspective of combinational consistency, Cobb and Sheony [24] propose a transformation based on the normalized contour functions since it cannot satisfy the probabilistic consistency, i.e., the result of transformation cannot locate in the probability interval. On the other hand, assigning the beliefs of focal sets to singletons can satisfy the probabilistic consistency [25], where Pignisitc Probability Transformation (PPT) [26] is the most famous method. PPT cannot only satisfy the maximum entropy principle to assign the beliefs evenly to singletons, but is the only method to satisfy the linearity property of Shapley value as well. In RPST, we will establishing the relationships among PerMF, ProbMF, and BPA from the above two perspectives. This paper deﬁnes marginalization as the transformation of higherorder information distributions into lower-order information distributions. Similar with marginal probability, marginalization in RPST is the PerMF when some variables (such as element, cardinality, order) are ﬁxed.
+Compared with the Dempster–Shafer structure, how to reﬂect ordered information in marginalization of RPST is the key step to establish the relationships among probabilistic information, evidential information and RPS. Ordered focus set, as a qualitative information, cannot be directly applied in numerical intelligence calculation. Therefore, we introduce the OWA operator to reﬂect its ordered information [27]. Among the many probability transformation methods [28], we chose PPT for extension because it can be interpreted in a practical physical problem, the cooperative game model [26]. In this paper, we extend the cooperation
+
+Marginalization in random permutation set theory
+model to the ordered cooperative game model based on the OWA operator and propose the corresponding Shapley values. The method is also applied to RPST, and the marginalizations in RPST and their speciﬁc interpretation in two application scenarios are discussed.
+The structure of the paper is organized as follows: Sect. 2 introduces the basic notions of DST, RPST. In Sect. 3, relationships among ProbT, BPA and PerMF are discussed, and order is introduced in cooperative model. Section 4 is the core of the paper; we propose the marginalizations of Permutation Mass Function (PerMF) based on the OWA operator. In Sect. 5, we summarize the whole paper and discuss the potential future works.
+2 Dempster–Shafer Theory and random permutation set theory
+RPS as a new concept is not yet widely known, so we will start with DST and extend it to RPS.
+2.1 Dempster–Shafer theory
+For a Frame of Discernment (FoD) with n elements, DST assigns the weights to its power set m : 2 → [0, 1], which satisﬁes F⊆ m(F) = 1. When m(F) > 0, F is a focal set. As a basic information unit, m is called Basic Probability Assignment (BPA) or mass function [2]. A Body of Evidence (BoE) is denoted as m, , F , where F is the set of focal sets. Some special mass functions are denoted for the convenient representations. If m(∅) = 0, it is a normalized mass function, which can be interpreted as a credal set [29]. If there is only one focal set, m corresponds to vacuous mass function if it is /Omega, and to categorical mass function if it is some other non-empty subset of . When the focal sets are singletons, m is Bayesian mass function, which is equivalent to a ProbMF Pr ob. When there are only two focal sets and one is , m is a simple mass function, which can be seen as a testimony with quantiﬁed reliability [30].
+Belief functions, proposed in [2], also are common information expressions in DST. For a BoE m, , F , its belief (Bel) function, plausibility (Pl) function, and commonality (Q) function are written as
+
+Bel(F) =
+
+m(G); m(F)
+
+∅=G⊆F
+
+= (−1)|F|−|G| Bel(G);
+G⊆F
+
+Pl(F) =
+
+m(G); Q(F) = m(H ). (1)
+
+G∩F =∅
+
+F ⊆G
+
+Belief functions have different meanings under the dif-
+
+ferent interpretations, and they have same information content with mass functions.1 Since mass functions
+
+cannot represent uncertainty intuitively, the belief inter-
+
+val [Bel, Pl] is often used to model its uncertainty [31],
+
+and the belief interval of singletons can be seen as a
+
+credal set Pr ob = {ω ∈ | Bel(ω) ≤ Pr ob(ω) ≤
+
+Pl(ω)}. For the Pl function of singletons, it is called
+
+the contour function pl.
+
+BPAs are usually generated from sensors and experts’
+
+linguistic information, and for the reliable and indepen-
+
+dent sources, Dempster’s Rule of Combination (DRC)
+
+is the most common fusion method. For two BoEs
+
+m1, , F1 and m2, , F2 , their fused result m1⊕2 is deﬁned as [1]
+
+m1⊕2(F) =
+
+m1∩2(F)/(1 − K ) F = ∅
+
+0
+
+F =∅
+
+=
+
+G∩H=F m1(G)m2(H )/(1 − K ) F = ∅
+
+(,2)
+
+0
+
+G∩H =∅
+
+where K = G∩H=∅ m1(G)m2(H ) and m1 ∩ m2, as the unnormalized DRC, is called unreliable and depen-
+dent; evidence combination methods are extended
+based on CCR [32,33].
+Marginalization in DST is proposed based on the marginal probability [34]. Suppose a BoE m, , F is determined under the FoD . When the FoD
+changes from to , its marginal BoE degenerates to m ↓ , , F ↓ , and m ↓ (G) = F↓ =G m(F), where F↓ is the projection from F to . When
+⊆ , according to Eq. (2), marginalization also can be seen as fusing m and a categorical mass function mc( ) = 1 by CCR. Since the marginalization is caused by the change of the FoD, we denote
+it as the frame marginalization in this paper. Continuing the above deﬁnition, the Pr ob ↓ (ωi ) = Pr ob(ωi )/ ω j ∈ Pr ob(ω j ), which is same with the frame marginalization of Bayesian mass function.
+As the generalization of ProbT, how to transform a
+BPA into a ProbMF is a signiﬁcant issue in decision-
+making. Many probability transformations have been
+
+1 They can transform to each other by invertible matrices.
+
+123
+
+proposed [28]. Among them, Pignisitc Probability
+
+Transformation (PPT) [26] and Plausibility Transformation Method (PTM) [24] are two most useful meth-
+
+ods. PPT is derived under the requirement of linearly
+
+property, which maintains the most degree of uncertainty when assigning beliefs of focal sets. For a BoE m, , F , after PPT, its Bet P is written as
+
+Bet P(ωi )
+
+=
+
+1
+
+1 − m(∅)
+
+ωi ∈F
+
+m(F), |F|
+
+(3)
+
+which is mathematically identical with marginal con-
+
+tribution rates in Shapley value. PTM is the normalized
+
+contour function, and the Pl_P is
+
+Pl_P(ωi ) = Pl(ωi )/ Pl(ω j ).
+
+(4)
+
+ωj∈
+
+Different from the linearly property of PPT, PTM satisﬁes the combination consistency, which means the order of DCR and PTM does not affect the result. From the perspective of two variables focal set (events) and cardinality in RFS, PPT can be seen as an operation which drops the variable of cardinality, i.e., generates a BPA with a certain cardinality |F| = 1. Hence, in this paper, we denote it as singleton marginalization, which means assigning beliefs of focal sets to the singletons. However, PTM does not exist the process of assigning beliefs, and it just normalizes the contour function. According to Eq. (1), Pl function and Q function of an element both collect the beliefs of all events which contain it. Hence, the element’s Pl function and Q function or contour function are denoted as element marginalization, and Pl_P is the probabilistic form of element marginalization. Element marginalization reﬂects the potential beliefs in the BPA, and frame marginalization reﬂects the projection of the BPA under a smaller FoD, so the element marginalization of ωi is different from the frame marginalization of m ↓ .
+
+2.2 Random permutation set theory
+In DST, the power set is the all potential combination states of elements in FoD. In the practical information expression, the combinational state of elements cannot represent the information with different orders. Deng [21] extends the power set to the permutation set to propose the RPS. For an n-element FoD , its permutation event space is
+P E S( ) = {∅, {ω1}, . . . , {ωn}, (ω1ω2), (ω2ω1),
+123
+
+Q. Zhou et al.
+
+. . . , (ω1 · · · ωn), . . . , (ωn · · · ω1)},
+
+(5)
+
+whose number of potential states is
+
+n i =0
+
+P (n ,
+
+i ),
+
+where P(n, i) = n!/(n − i)!. Compared with {·} of
+
+combination events in 2 , (·) is used in permutation
+
+events to represent an ordered set. The BoE in RPST is
+
+written as R P S = Per m, , Per m , where Per m is
+
+the Permutation Mass Function (PerMF) and satisﬁes
+
+P
+
+er
+
+m
+
+(
+
+F
+
+i j
+
+)
+
+∈
+
+[0,
+
+1],
+
+P
+
+er
+
+m(
+
+F
+
+i j
+
+)
+
+=
+
+1.
+
+(6)
+
+F
+
+i j
+
+∈
+
+P
+
+E
+
+S(
+
+)
+
+When
+
+P
+
+er
+
+m(
+
+F
+
+i j
+
+)
+
+>
+
+0,
+
+F
+
+i j
+
+is
+
+the
+
+ordered
+
+focal
+
+set.
+
+For
+
+a more distinct representation, we use superscript num-
+
+bers to indicate potential combination states and sub-
+
+script numbers to indicate the order in the current state.
+
+Thus, for a PES under an n-element FoD, 2n super-
+
+script numbers and n! subscript numbers can represent
+
+all of the potential ordered focal sets; especially, the
+
+superscript numbers’ encoding is same with the binary
+
+encodes. In addition, Per m is the set of the ordered
+
+focal sets.
+
+Example 1 For a 3 element FoD = {ω1, ω2, ω3}, its potential ordered focal sets and their expressions are shown in Table 1.
+
+Combination rules in RPST called Orthogonal Sum
+
+are an important operation. Similar with DRC, for two
+
+reliable and independent secures, the fusion of Per m1
+
+and Per m2, can be written as
+
+⎧
+
+⎪⎪⎨ Fmi → or ←Fnj =Fok
+
+Per m →
+1⊕ or
+
+←
+⊕2
+
+=
+
+⎪⎪⎩
+
+Per m1(Fmi )Per m2(Fnj ) (1−K )
+
+0
+
+Fok = ∅
+
+(7)
+
+Fmi → or ← Fnj = ∅
+
+→
+
+←
+
+where K is same with DRC in Eq. (2). and are
+
+intersection operations of ordered focal sets, which are
+
+deﬁned as
+
+Fmi → Fnj = Fnj \
+
+{ω},
+
+Fmi ω∈/ Fnj
+
+Fmi ← Fnj = Fmi \
+
+{ω},
+
+(8)
+
+Fnj ω∈/ Fmi
+
+and called Right Intersection and Left Intersection, respectively. Hence, the corresponding combination rules are Right Orthogonal Sum (ROS) and Left Orthogonal Sum (LOS). In the combination rules of RPST, “right” and “left” only determine the order of elements after fusion, and do not affect the weights of focal sets.
+
+Marginalization in random permutation set theory
+
+Table 1 Potential ordered focal sets and their expressions in Example 1
+
+{∅} F10 {ω1} F11
+
+{ω2} F12 (ω1ω2) F13
+
+(ω2ω1) F23 {ω3} F14
+
+(ω1ω3) F15 (ω3ω1) F25
+
+(ω2ω3) F16 (ω3ω2) F26
+
+(ω1ω2ω3) F17 (ω1ω3ω2) F27
+
+(ω2ω1ω3) F37 (ω2ω3ω1) F47
+
+(ω3ω1ω2) F57 (ω3ω2ω1) F67
+
+Fig. 1 Relationship of Pr ob, m and Per m from the robot catching ball perspective
+
+In this section, we introduce two models of uncertain information processing and interpret their relationship from the perspective of RFS; especially, we give a more detailed description to marginalization in DST. As a generalization of DST, we will discuss the marginalization in RPST from the same perspective in following sections.
+3 Modeling ordered cooperative game under RPST
+We will discuss the relationship of ProbMF, BPA and PerMF ﬁrst, which can illustrate the motivation of the ordered cooperative game model more clear.
+3.1 ProbMF, BPA and PerMF
+From the perspectives of the RFS and TBM, we will use a robot catching ball model and an epistemic uncertainty model to discuss their relationships, respectively.
+3.1.1 Robot catching ball model
+As an extension of RFS, RPST introduces a new random variable order. In this case, m(F) denotes the case where all elements ω ∈ F are target elements at the same time. We will use a robot catching ball model
+
+to interpret their relationships intuitively. As shown in Fig. 1, suppose there exists a robot that performs an operation of catching ball with put-back from a box, which contains n different balls. When the robot is limited to catch only one ball at a time, the proportion of each ball that appears after N (N n) times catching can be viewed as a ProbMF, which can reﬂect the catching preference of the robot. When the robot is allowed to catch multiple balls at a time, the randomness of the robot consists of two aspects: randomness with respect to the types of balls caught and randomness with respect to the number of balls caught. Under this situation, ProbM can no longer adequately model the robot’s preferences because it does not reﬂect the number of balls caught each time. Therefore, a more general information distribution should be introduced. The type and number of balls caught are counted separately for each catch as the focal sets. After N catches, the normalized statistic results are a BPA, which can be regarded as a joint Bernoulli distribution, where the focal set F represents the probability of catching ωi ∈ F balls at same time. Continue to add conditions assuming that each ball must be counted one by one when observing the result of each operation, and the order of counting is also determined by the preference of the robot, i.e., even if it catches the same number and types balls, they may have difference in orders.
+123
+
+In order to represent the preference of the robot ade-
+
+quately, BPA is extended to PerMF. After operating the
+
+same statistical methods with the above, a PerMF can
+
+model the preference of robot. The ordered focal set Fij means that catch the F j balls with the ith order.
+Based on the above, PT, DST and RPST have their
+
+own suitable scenarios of application and can be trans-
+
+formed (or degenerated) to each other under certain
+
+conditions. For example, in case 2, when we only count
+
+the types of balls, a ProbMF is generated, which is same
+
+as the normalized contour function, i.e., Pl_P of the
+
+corresponding BPA. In case 3, if we count both the
+
+types and number of balls, the generated BPA can be
+
+seen as a PerMF which adds all permutation events
+
+with same types and numbers. From the perspective of
+
+probability axioms, for a box of n balls with different
+
+types, the case 2 and the case 3 also can be modeled
+
+using a 2n-dimensional ProbMF and a
+
+n i =0
+
+P(n, i)
+
+-
+
+dimensional ProbMF. According to canonical decom-
+
+position in [35], BPA can be observed when catching
+
+ω1 and catching ω2 are dependent.
+
+3.1.2 Epistemic uncertainty model
+
+DST can also be interpreted under an information expression with epistemic uncertainty. This interpretation is inspired by the original purpose for which DST was proposed. The Bel function is a non-additive probability measure that can be used to model probabilistic information when the available information cannot be described as a ProbMF. m(F) under this interpretation represents the degree of support for the target element in F and cannot give a more reﬁned assignments. In the deﬁnition of subjective possibility, a ProbMF given by an agent is determined by his underlying belief function. Under this interpretation, the beliefs corresponding to the multi-element focal sets are caused by empirical ignorance. In spite of the fact that modeling ignorance on the power set is a better way to describe the process of beliefs transfer, the ﬁnal decision is still based on transforming the BPA into a ProbMF. This is because it is assumed that there is only one target element, just like a coin it cannot be on both heads and tails at the same time when it hits the ground. How to assign the beliefs of the multi-element focal sets is the key to generate reasonable ProbMF. In Smets [26], the beliefs are distributed equally among the elements based on the maximum entropy principle. Based on the relationship between ProbMF and BPA in the above interpre-
+
+123
+
+Q. Zhou et al.
+
+tation, RPST can be seen as a more reﬁned imprecise
+information model. When an agent assigns ignorance on {ω1, ω2}, he also knows that ω1 is more likely to be the target element than ω2, yet is unsure of the exact allocation ratio. In this case, BPA cannot reﬂect that ω1 is more likely to be the target element than ω2, and ProbMF cannot reﬂect the ignorance in {ω1, ω2}. In RPST, (ω1, ω2) is interpreted as ω1 is more likely to be the target element than ω2, which means the permutation set utilizes the order of the elements to describe
+qualitative information.
+
+3.2 Motivation
+
+Based on the above two interpretations, the transforma-
+
+tion of high-dimensional probabilistic information into
+
+a ProbMF is a key step in model-based reasoning and
+
+decision-making. Consider the marginalization process
+
+as a system. In DST, the input of the system is the BPA
+
+vector m and the output takes the form of the ProbMF
+
+vector p. Since both m and p are normalized measures,
+
+to determine whether the system is a linear system, it
+
+is only necessary to prove whether the superposition
+
+principle is satisﬁed. For evidential information, both
+
+the
+
+arithmetic
+
+mean
+
+(
+
+m1
+
++m2 2
+
+)
+
+and
+
+the
+
+evidence
+
+com-
+
+bination rule in Eq. (2) can be regarded as methods
+
+of superposition. When variables are superimposed by
+
+arithmetic averaging, PPT satisﬁes the superposition
+
+principle, i.e., Bet P
+
+m1+m2 2
+
+=
+
+Bet P(m1)+Bet P(m2) 2
+
+[26]. When variables are superimposed by DRC, PTM
+
+satisﬁes the combination rule consistency [24], so it
+
+also satisﬁes the superposition principle. Therefore,
+
+these two commonly used methods can be regarded
+
+as linear. However, when extending these two meth-
+
+ods to RPS, the qualitative information in the ordered
+
+focal elements will not be reﬂected in the ProbMF when
+
+using PPT or PTM directly. Therefore, systems imple-
+
+menting transformations between PerMF and ProbMF
+
+need to introduce new constraints to reﬂect the ordered
+
+information. In this paper, we will implement marginal-
+
+ization in RPST by introducing ordered constraints to
+
+PPT and PTM. Different from the DST, both of them
+
+are nonlinear systems.
+
+3.3 Shapley value and cooperative game
+Shapley value [36], as a signiﬁcant method of calculating marginal contributions in the n-person cooperative
+
+Marginalization in random permutation set theory
+
+game model, is widely used in game theory [37,38]. Its
+
+calculation is based on a premise: the utility of coop-
+
+eration must be effective than the sum of utilities done
+
+separately, i.e., v(1, 2) ≥ v(1) + v(2). Since its model
+
+can be seen as a non-additive lower probability, Shapley
+
+value is widely applied into the uncertain information
+
+processing modeled on power sets. Yager [39,40] uti-
+
+lizes the Shapley value to represent fuzzy measures.
+
+Zhou et al. [41] utilize Shapley value to handle counter
+
+deception. Under the premise that the utility of coop-
+
+eration must be greater than the sum of the utilities of
+
+any sub-coalitions, Shapley value gives the marginal
+
+contributions of all cooperators fairly in the ideal state.
+
+= {ω1 · · · ωn} is the collection of members in coalition, and a characteristic function v: 2 → R is used to
+
+reﬂect the utilities of members in , where v(∅) = 0,
+
+and v(S)(S ⊆ ) means the utility of the sub-coalition
+
+S. According to the above assumptions, characteristic
+
+function satisﬁes v(S ∪ {ωi }) ≥ v(S) + v({ωi }), where ωi ∈/ S. Given a characteristic function under
+an n-person coalition , its Shapley value ψv(ωi ) is deﬁned as
+
+|S|!(n − |S| − 1)!
+
+ψv(ωi ) =
+
+n!
+
+(v(S ∪ {ωi }) − v(S))
+
+S⊆ \{ωi }
+
+=1 n
+
+n−1 |S|
+
+−1
+(v(S ∪ {ωi }) − v(S)).
+
+(9)
+
+S⊆N \{ωi }
+
+Example 2 When 3 persons = {ω1, ω2, ω3} work on a mathematical modeling task, its characteristic func-
+
+tion (workload) is
+
+v({ω1}) = 100, v({ω2}) = 125, v({ω1ω2}) = 270, v({ω3}) = 50, v({ω1ω3}) = 240, v({ω2ω3}) = 205, v({ω1ω2ω3}) = 500.
+
+According to Eq. (9), the calculation method of contributions of members is shown in Table 2, and its Shapley value is
+
+(100 + 100 + 145 + 295 + 190 + 295)/6 = 1125/6 = 187.5, (170 + 260 + 125 + 125 + 260 + 155)/6 = 1095/6 = 182.5, (230 + 140 + 230 + 80 + 50 + 50)/6 = 780/6 = 130.
+
+In addition, the Shapley value also can be calculated
+
+based on the unique function u,
+
+u(S) = (−1)|S|−|R|v(R), v(S) = u(R),(10)
+
+R⊆S
+
+R⊆S
+
+Table 2 Marginal contributions in Example 2
+
+Weights
+
+Orders
+
+ω1
+
+1/6 1/6 1/6 1/6 1/6 1/6
+Weights
+
+(ω1ω2ω3) (ω1ω3ω2) (ω2ω1ω3) (ω2ω3ω1) (ω3ω1ω2) (ω3ω2ω1)
+Orders
+
+v({ω1}) v({ω1}) v({ω1ω2}) − v({ω2}) v({ω1ω2ω3}) − v({ω2ω3}) v({ω1ω3}) − v({ω3}) v({ω1ω2ω3}) − v({ω2ω3})
+ω2
+
+1/6 1/6 1/6 1/6 1/6 1/6
+Weights
+
+(ω1ω2ω3) (ω1ω3ω2) (ω2ω1ω3) (ω2ω3ω1) (ω3ω1ω2) (ω3ω2ω1)
+Orders
+
+v({ω1ω2}) − v({ω1}) v({ω1ω2ω3}) − v({ω1ω3}) v({ω2}) v({ω2}) v({ω1ω2ω3}) − v({ω1ω3}) v({ω2ω3}) − v({ω3})
+ω3
+
+1/6
+
+(ω1ω2ω3)
+
+v({ω1ω2ω3}) − v({ω1ω2})
+
+1/6
+
+(ω1ω3ω2)
+
+v({ω1ω3}) − v({ω1})
+
+1/6
+
+(ω2ω1ω3)
+
+v({ω1ω2ω3}) − v({ω1ω2})
+
+1/6
+
+(ω2ω3ω1)
+
+v({ω2ω3}) − v({ω2})
+
+1/6
+
+(ω3ω1ω2)
+
+v({ω3})
+
+1/6
+
+(ω3ω2ω1)
+
+v({ω3})
+
+which reﬂects the synergistic utilities of sub-coalitions.
+
+Hence, Shapley value also can be written as ψv(ωi ) =
+
+ωi ∈S
+
+u(S) |S|
+
+,
+
+which
+
+is
+
+equal
+
+to
+
+the
+
+unnormalized
+
+version
+
+of PPT [Eq. (3)]. Hence, a BPA under an n-element FoD
+
+can model the utilities of n-person cooperative game,
+
+and from the perspective of mathematical expressions, mass function m equals the unique function u,2 and
+
+belief function Bel equals the characteristic function
+
+v. In the TBM [11], PPT is the decision layer. When
+
+there is no more information to resolve the ignorance
+
+of existing knowledge, the PPT is used to assign the
+
+(partial) ignorance of focal sets evenly to their single-
+
+tons. In the n-person cooperative game model, Shapley
+
+value represents the marginal contributions of mem-
+
+bers in the coalition. It evenly assigns the synergistic
+
+utilities of sub-coalitions to their members. Although
+
+2 The mass function is all positive, while the unique function may be negative. However, this does not affect the mathematical results.
+123
+
+Q. Zhou et al.
+
+the mathematical expressions of the two approaches are the same, they represent different physical meanings.
+3.4 Ordered cooperative game and RPST
+Shapely value exists because when n-person forms a coalition to cooperate, different members have different working abilities, so assigning the total utility of whole coalition to members evenly is unfair. Shapley value can assign the contribution more rationally to the members by considering the utilities of sub-coalitions. When processing the synergistic utility generated by the sub-coalitions cooperation, it also assigns the synergistic contributions to the members evenly. When more information space is introduced, such as a more ﬁnegrained division of the task space. Suppose the task to be completed can be divided into k subtasks, and members specialize in different ﬁelds, so their roles in subtasks differ. In this case, the Shapley value will not reﬂect their roles among different subtasks, and valuable information is ignored, which in turn leads to unfair allocation. Continue to Example 2, the unique function is
+u({ω1}) = 100, u({ω2}) = 125, u({ω1ω2}) = 45, u({ω3}) = 50, u({ω1ω3}) = 90, u({ω2ω3}) = 30, u({ω1ω2ω3}) = 60.
+Assume that the task has 100 subtasks, and that when ω1 and ω2 work together, ω1 is more important than ω2 in 70 subtasks, and in others, ω2 plays a dominated role. The characteristic function of {ω1ω2} working together equals v({ω1ω2}) = u({ω1})+u({ω2})+u({ω1ω2}) = 270. Intuitively, we can split v({ω1ω2}) as 70% and 30% to reﬂect different roles. However, the level of importance in a subtask is relative and does not reﬂect the individual’s ability to do the job. Splitting directly would ignore the information reﬂected by v({ω1}) and v({ω2}). Hence, it is more appropriate to divide the additional beneﬁts, i.e., the unique function. Then, u({ω1ω2}) = 45 can be decomposed into u((ω1ω2)) = 45 × 0.7 = 31.5 and u((ω2ω1)) = 45 × 0.3 = 13.5. More general, if we have sufﬁcient information, the range of independent variable of unique function can be extended from power set to PES of . Compared with cooperative game model, the ordered cooperative game model introduces subtasks and describes the importance of members in subtasks with qualitative
+123
+
+information. When there is only one task, or when the importance of members in each subtask is equal, the ordered cooperative game model would degenerate to classical cooperative model.
+Since the unique function can be extended to PES, it is obvious that the ordered cooperative game can be adequately modeled by RPST. For convenience, we take the notation of Table 1 and treat ordered subcoalitions as ordered focal sets. Then, the characteristic function in Example 2 is extended under the ordered cooperative game model, whose corresponding unique function can be written as
+u(F11) = 100, u(F12) = 125, u(F13) = 31.5, u(F23) = 13.5,
+u(F14) = 50, u(F15) = 54, u(F25) = 36, u(F16) = 15,
+u(F26) = 15, u(F17) = 12, u(F27) = 15, u(F37) = 12,
+u(F47) = 5, u(F57) = 16, u(F67) = 0.
+Figure 2 shows the difference between the classical model and ordered model.
+In its unique function, u(F16) = 15, u(F26) = 15 means in the sub-coalition {ω2ω3}, their importance is same, so they have equal synergistic utilities, which is equivalent with u({ω2ω3}) = u(F6) = 30. u(F67) = 0 means that no subtask satisﬁes the order ω3 ω2 ω1.
+3.5 Discussion
+In this section, we discuss the relationships among ProbMF, BPA and PerMF from two perspectives and introduce the motivation of the paper. Then, we review the classical n-player cooperative game model and its marginal contribution calculation method - Shapley value. We introduce the concept of subtasks into the classical cooperative game model and consider that under different subtasks, members have different importance. Based on this, we propose the ordered cooperation game model, which represents the importance of members in subtasks in terms of qualitative ordered information. For visual demonstration, we used a numerical example to describe the difference between them in Fig. 2. Thus, the ordered cooperative game model is a more reﬁned extension of the cooperative game model. Since the mathematical expressions of
+
+Marginalization in random permutation set theory
+
+marginalization corresponds to the contour function in DST, normalized to PTM.
+
+4.1 Ordered weighted averaging operator
+
+Fig. 2 Relationship between classical cooperative model and ordered cooperative model
+PerMF and unique function are identical, we will ﬁrst give the ordered Shapley value and then extend it to the marginalization of RPST.
+4 Ordered Shapley value and marginalization in RPST
+In the previous section, we discussed the three marginalizations of DST and found that the cardinality marginalization (PPT) and the Shapley value of the n-player cooperative game have the same mathematical expression. In this section, we generalize the Shapley value to the ordered cooperative game model through the Ordered Weighted Averaging (OWA) operator [27] and discuss the singleton marginalization, element marginalization, order marginalization and frame marginalization in RPST. In particular, singleton marginalization corresponds to the PPT in DST and element
+
+OWA operator proposed by Yager has been widely used
+
+in the ﬁeld of probabilistic decision-making [42,43]
+
+and data fusion [44,45]. For an n-dimensional vector a, OWA operator is an n-dimensional mapping f : Rn →
+
+R, and it has an associated n-dimensional weights vec-
+
+tor t = (t1, . . . , tn)T , which satisﬁes
+
+n i =1
+
+ti
+
+=
+
+1
+
+and
+
+ti ≥ 0. For an n-dimensional vector a and correspond-
+
+ing weights t, OWA operator is
+
+n
+
+f (a1, . . . , an) = ti · bi ,
+
+(11)
+
+i =1
+
+where bi is the ith largest element in a. There are 3
+
+specialize weights vector of OWA operators:
+
+1. maximum aggregation operator: when t = (1, 0, . . . , 0)T , f (a1, . . . , an) is maximum aggregation operator, which is the most optimistic case in
+decision-making. 2. mean aggregation operator: when t = (1/n,
+. . . , 1/n)T , f (a1, . . . , an) is mean aggregation operator, which does not consider the information
+of elements’ order. 3. minimum aggregation operator: when t = (0,
+. . . , 0, 1)T , f (a1, . . . , an) is minimum aggregation operator, which is the most cautious case in
+decision-making.
+
+A characteristic measure, called or ness measure [27],
+
+is proposed to describe the performance of OWA oper-
+
+ator, which is denoted as
+
+Or n(t1
+
+··
+
+·
+
+tn )
+
+=
+
+n
+
+1 −
+
+1
+
+n
+(n − i)ti .
+
+(12)
+
+i =1
+
+When Or n(t) = 1, 0.5, 0, t are maximum aggregation
+
+operator, mean aggregation operator, and minimum
+
+aggregation operator, respectively. Based on the or ness
+
+measure, the Maximum Entropy OWA (MEOWA)
+
+operator is proposed [46,47], given an or ness measure,
+
+which can generate a weights vector with maximum
+
+information entropy. The speciﬁc calculation method
+
+can be divided as two steps:
+
+1. Substitute Or n into the following equation to ﬁnd
+
+the positive solution of h.
+
+n i =1
+
+n n
+
+− −
+
+i 1
+
+−
+
+Or
+
+n
+
+hn−i = 0
+
+123
+
+2. Calculate the weights vector t based on the h
+
+ti =
+
+hn−i
+
+n j =1
+
+hn−
+
+j
+
+.
+
+Since in the classical Shapley value, the unique function
+
+is uniformly assigned to each member, this is a max-
+
+imum entropy-based assignment due to lack of addi-
+
+tional information. Therefore, the maximum entropy
+
+constraint also should be extended to deal with sym-
+
+bolic sequences in OWA operators. The marginal contributions are still distributed as evenly as possible
+
+while reﬂecting the ordered information.
+
+4.2 Ordered Shapley value
+
+Under the same or ness measures, MEOWA operator gives the most uniform distribution, which requires that the differences between two adjacent elements in an ordered vector be equal. Hence, MEOWA operator is the most appropriate assignment method when the agent can only provide a qualitative order and no speciﬁc numerical weights are available. We introduce the MEOWA operator into the Shapley value to solve the marginal contribution problem under the ordered cooperative game we gave in the previous section.
+Since only the unique function u can adequately model the information of the ordered cooperative game model, the ordered Shapley value can only be given based on the unique function.
+
+Deﬁnition 1 (Ordered Shapley value) For an n-person
+
+coalition , if the utilities of sub-coalitions in per-
+
+mutation event set satisfy
+
+F j⊆Fk
+
+|F j |! i =1
+
+u(
+
+Fi j
+
+)
+
+≥
+
+F j ⊆{Fk \ω}
+
+|F j |! i =1
+
+u(Fij )
+
++
+
+u(ω),
+
+the
+
+marginal
+
+con-
+
+tributions are deﬁned as
+
+|F j |!
+
+ψu[Or n](ωk) =
+
+ωk ∈F j
+
+i =1
+
+t
+
+|F Fij
+
+j| (ωk
+
+[Or
+)
+
+n]
+
+·
+
+u(
+
+Fi j
+
+),(13)
+
+where t|F j |[O rn] is the |F j |-dimensional MEOWA weights vector under an parameter Or n, and Fij (ωk) is the position of ωk in Fij . Since we suppose that the workload (or importance) of a sub-coalition F j is
+ordered from high to low, hence the Or n should be chosen in the interval [0.5, 1]. When Or n = 0.5, i.e., the weights of mean aggregation operator, the ψu[Or n] degenerates to the classical Shapley value ψu. When Or n = 1, i.e., the weights of maximum aggregation
+
+123
+
+Q. Zhou et al.
+operator, ψu[Or n] means only the person with the most workload has contribution to sub-coalition.
+According to Eq. (13), the ordered Shapley value uses the idea of ordered weights in the OWA operator to generate the ﬁnal marginal contribution by adding up the synergistic utilities of each member under all subcoalitions and orders. Therefore, it does not involve the operation of weighted aggregation. MEOWA operator is chosen as the method for generating weights because the maximum entropy distribution of t under the restricted Or n is more even and can be suitable for more general situations. For speciﬁc models, the method of generating weight vectors should be analyzed speciﬁcally.
+Example 3 Continue to Example 2 and the ordered unique function in Sect. 3.4, when Or n = 0.7, the calculation process of marginal contributions of is
+1. generating the weights: since the | | = 3, the weight vectors are t2[0.7] = (0.7, 0.3)T and t3[0.7] = (0.554, 0.292, 0.154)T .
+2. assigning utilities: according to Eq. (13), splitting the synergistic utilities of sub-coalitions based on the t2[0.7] and t3[0.7]. ψu(ω1) = u(F11) + 0.7 · u(F13) + 0.3 ·u(F23) + 0.7 · u(F15) + 0.3 · u(F25) +0.554 · u(F17) + 0.554 · u(F27) + 0.292 · u(F37) + 0.292 · u(F47) + 0.154 · u(F57) + 0.154 · u(F67) = 198.6040 ψu(ω2) = u(F12) + 0.3 · u(F13) + 0.7 ·u(F23) + 0.7 · u(F16) + 0.3 · u(F26) +0.292 · u(F17) + 0.154 · u(F27) + 0.554 · u(F37) + 0.554 ·u(F47) + 0.154 · u(F57) + 0.292 · u(F67) = 176.5960 ψu(ω3) = u(F14) + 0.3 · u(F15) + 0.7 ·u(F25) + 0.3 · u(F16) + 0.7 · u(F26) +0.154 · u(F17) + 0.292 · u(F27)+0.154 · u(F37)+0.292 ·u(F47)+0.554 · u(F57)+0.554 · u(F67) = 124.8000
+Compared with Example 2, the unique functions of ordered sub-coalition with ω3 in the ﬁrst position
+
+Marginalization in random permutation set theory
+are smaller, and the marginal contribution of ω3 in ordered cooperative game is less. When we use a more reﬁned distribution to describe the cooperative cooperation model, it will generate more intuitive results. The role of the OWA operator in ordered Shapley value is to generate a speciﬁc numerical proportion based on the qualitative ordered description.
+
+4.3 Marginalization in RPST
+
+Combining the previous discussion of ordered Shapley value and marginalization in DST, we will show 4 kinds of marginalization in RPST and interpret their meanings under two interpretations (shown in Sect. 3.1).
+
+4.3.1 Singleton marginalization
+
+Singleton marginalization also can be seen as the ordered version of PPT. It can be generalized from ordered Shapely value directly.
+
+Deﬁnition 2 (Singleton marginalization) For a RPS Per m under an n-element FoD and a or ness measure Or n, its singleton marginalization, also called the ordered version of PPT, is deﬁned as
+
+M E P[Or n](ωi )
+
+|F j |!
+
+=
+ωk ∈F j
+
+i =1
+
+t F| Fi j
+
+j| (ωk
+
+[Or
+)
+
+n]
+
+·
+
+Per m(Fij ),
+
+(14)
+
+which is consistent with the ordered Shapley value in Eq. (13). When Or n = 0.5, M E P[0.5] will degenerate to Bet P.
+
+Compared with PPT in Eq. (3), MEOWA-based singleton marginalization considers the ordered information in Per m, which can reﬂect the ordered difference by assigning beliefs with an ordered proportion. Example 4 shows the performance of MEOWA-based singleton marginalization under different or ness measures.
+
+Example 4 For a 3-element FoD, there are 2 RPS Per m1 and Per m2 in Table 3.
+Using ROS and LOS [Eq. (7)] to fuse the Per m1 and Per m2, respectively, the results are shown in Table 4. The difference between LOS and ROS is the order of the elements in fused focal set. So choosing LOS or ROS does not affect the weights of the focal sets. When adding up ordered focal sets under the same focal set of
+
+Per m → and Per m ← , i.e., discard ordered informa-
+
+12
+
+12
+
+tion, they will degenerate to the same BPA. Therefore,
+
+they have the same Bet P after PPT. Table 5 shows
+
+their M E P under different or ness measures, which
+
+can intuitively prove that MEPT can make more rea-
+
+sonable use of the ordered information in RPS.
+
+In robot catching ball model, after N counts, agent gets a PerMF. If the robot will only catch one ball next time, what color is that ball? The ProbMF can be used to estimate the likelihood of all possible outcomes since the next caught must be a singleton. At this time, the agent can subjectively assign an or ness measure, which represents the robot’s preference for catching multiple balls. When the Or n is closer to 1, the robot prefers the ball in the earlier orders; when the Or n is closer to 0, the robot prefers the ball in the latter orders. Hence, compared with classical PPT (when Or n = 0.5), its ordered version can reﬂect more variations about orders in the singleton marginalization (or probability transformation). In this paper, we just discuss the rationality of MEOWA operator in processing ordered information, and how to determine the or ness is a further topic. In epistemic uncertainty model, after using the available information, if the agent’s knowledge is still a PerMF, he will transform the PerMF to ProbMF to make a decision. Similar with the former model, the Or n being closer to 1 means the target elements are more likely in the elements with earlier orders; the Or n being closer to 0 means the target elements are more likely in the elements with latter orders. In practical application, the or ness measure should be determined in the PerMF generation step, which can keep the operation consistency.
+
+4.3.2 Element marginalization
+
+Element marginalization in RPST can be seen as the ordered version of contour function (Pl function of singletons) in BPA. It represents the possibilities of the target elements. Similar to ordered version of PPT, compared with classical contour function, element marginalization in RPST also should reﬂect the ordered information, i.e., for the ordered focal set (ωi ω j ), The contributions of Per m(ωi ω j ) to the elemental marginalization of ωi and ω j are different.
+Deﬁnition 3 (Element marginalization) For a RPS Per m under an n-element FoD and a or ness measure Or n, its element marginalization, also called the
+
+123
+
+Table 3 RPSs in Example 4
+
+Events
+
+F10
+
+Per m1
+
+0
+
+m1
+
+0
+
+Per m2
+
+0
+
+m2
+
+0
+
+Events
+
+F16
+
+Per m1 m1 Per m2 m2
+
+0.093 0.145 0.048 0.193
+
+F11 0.015 0.015 0.107 0.107 F26
+0.052
+0.145
+
+F12
+0.096 0.096 0.014 0.014 F17
+0.074 0.374 0.005 0.392
+
+Table 4 Fusing Per m1 and Per m2 by LOS and ROS
+
+Events
+
+F10
+
+F11
+
+F12
+
+Per m →
+
+0
+
+1⊕2
+
+Per m ←
+
+0
+
+1⊕2
+
+m 1⊕2
+
+0
+
+Events
+
+F16
+
+0.1119 0.1119 0.1119 F26
+
+0.1098 0.1098 0.1098 F17
+
+Per m →
+1⊕2
+Per m ←
+1⊕2
+m 1⊕2
+
+0.0880 0.0556 0.1717
+
+0.0837 0.1161
+
+0.0317 0.0020 0.1603
+
+F13 0.108 0.115 0.042 0.049 F27 0.086
+0.067
+F13 0.0644 0.0467 0.0755 F27 0.0369 0.0274
+
+F23 0.007 0.007 F37 0.043 0.058
+F23 0.0111 0.0288
+F37 0.0184 0.0237
+
+F14 0.180 0.180 0.014 0.014 F47 0.018
+0.116
+F14 0.2250 0.2250 0.2250 F47 0.0077 0.0475
+
+Q. Zhou et al.
+
+F15 0.072 0.075 0.125 0.231 F57
+0.070
+0.121
+
+F25 0.003 0.106
+F67 0.083 0.025
+
+F15 0.1004 0.0721 0.1457 F57
+0.0300 0.0495
+
+F25 0.0453 0.0736
+F67 0.0356 0.0102
+
+MEOWA-based contour function, is deﬁned as
+
+|F j |!
+
+M E_Pl[Or n](ωk)
+
+=
+
+ωk ∈F j
+
+i =1
+
+P
+
+os
+
+s
+
+t
+
+|F Fij
+
+j| (ωk
+
+)
+
+[
+
+O
+
+r
+
+n
+
+]
+
+·Per m(Fij ),
+
+(15)
+
+where P osst|F j |[O rn] is the possibility-probability transformation [48] of t|F j |[O rn]. It is denoted as
+
+Posst|F j |[Or n](i ) =
+
+m=i,...,|F j |
+min(t |F j |[Or n](m), t |F j | [Or n](i)) ∀i = 1 . . . |F j |,
+
+(16)
+
+where i and m are positions of ith and mth largest element in t|F j |[ O r n].
+
+The weights vector of MEOWA is a normalized distribution; it also can be seen as a ProbMF about choos-
+
+123
+
+ing element from ordered focal set. After transformed to possibility distribution, it can be interpreted as the membership degree of the element. According to Eq. (15), the idea of element marginalization is proposed based on the contour function in Random Epistemic Fuzzy Set (ERFS). In addition, when Or n = 0.5, the ordered version of contour function will degenerate to classical contour function. Under a 3-element FoD, the calculation process of element marginalization is shown in Fig. 3.
+In the catching ball model, the contour function can be seen as a possibility distribution of balls being caught. When all balls are caught each time (i.e., m( ) = 1 in Case 2), the corresponding contour function for all balls is 1. Extending to RPST, for an ordered catching, it corresponds to a possibility distribution that represents the possibilities of balls being counted. In the epistemic uncertainty model, M E_Pl[Or n](ωk) represents the possibilities of ωk being the target ele-
+
+Marginalization in random permutation set theory
+
+Table 5 M E P of
+
+Per m → and Per m ←
+
+12
+
+12
+
+under different or ness
+
+measures
+
+Orn
+
+M E PPerm → (ω1) 1⊕2
+
+0
+
+0.3200
+
+0.1
+
+0.2238
+
+0.2
+
+0.2365
+
+0.3
+
+0.2495
+
+0.4
+
+0.2626
+
+0.5
+
+0.2759
+
+0.6
+
+0.2894
+
+0.7
+
+0.3030
+
+0.8
+
+0.3168
+
+0.9
+
+0.3308
+
+1
+
+0.3453
+
+Orn
+
+M E PPerm ← (ω1) 1⊕2
+
+0
+
+0.2719
+
+0.1
+
+0.2751
+
+0.2
+
+0.2766
+
+0.3
+
+0.2770
+
+0.4
+
+0.2768
+
+0.5
+
+0.2759
+
+0.6
+
+0.2744
+
+0.7
+
+0.2723
+
+0.8
+
+0.2695
+
+0.9
+
+0.2657
+
+1
+
+0.2602
+
+M E PPerm → (ω2) 1⊕2
+0.2758 0.3190 0.3119 0.3040 0.2957 0.2869 0.2777 0.2681 0.2580 0.2471 0.2351
+M E PPerm ← (ω2) 1⊕2
+0.3496 0.3321 0.3181 0.3063 0.2960 0.2869 0.2792 0.2726 0.2677 0.2647 0.22654
+
+M E PPerm → (ω3) 1⊕2
+0.4042 0.4572 0.4516 0.4465 0.4417 0.4372 0.4329 0.4289 0.4252 0.4696 0.4196
+M E PPerm ← (ω3) 1⊕2
+0.3785 0.3928 0.4053 0.4167 0.4272 0.4372 0.4464 0.4550 0.4628 0.4221 0.4744
+
+Fig. 3 Element marginalization process under a 3-element FoD
+
+123
+
+Q. Zhou et al.
+
+ment. The normalized distribution of M E_Pl[Or n] is the result of PTM, which can reﬂect the discord degree of the PerMF. Compared with ERFS, the orders in RPST cannot be replaced by numerical distribution until the decision-making step. It is because that the symbolic capacities as the qualitative have more reasonable results when information processing only with maximum and minimum operators.
+
+4.3.3 Frame marginalization
+
+Since the total utility does not have limitation, frame marginalization has no meanings in cooperative game method. In epistemic uncertainty model, frame marginalization is used when a focal set F j is negated, which be equivalent with fusing a BPA m( \ F j ) = 1. Similarly, in RPST, the frame marginalization also can be realized based on its combination rules.
+
+Deﬁnition 4 (Frame marginalization) For a RPS Per m under an n-element FoD , when its FOD degenerates to , its frame marginalization is deﬁned as
+
+Per m ↓
+
+= Per m
+
+→
+⊕ Per m0 ,
+
+(17)
+
+where Per m0 (Fij ) =
+
+1/|Fij | when F j =
+
+0
+
+others
+
+.
+
+Since the weights of Per m0 are equally distributed among all orders of , Perm is equivalent to the cat-
+
+egorical mass function m( ) = 1. Since the order
+
+after fusion depends on Per m , the frame marginal-
+
+ization preserves the original ordered information. Due
+
+to the properties of LOS, as long as the weights
+
+of Per m0 are concentrated in the focal set , the result of fusion can be seen as the frame marginal-
+
+ization of Per m . Continue to Example 4, when
+
+the FoD degenerates to = {ω1ω2}, the Per m0
+
+will be Per m0 ((ω1ω2)) = Per m0 ((ω2ω1)) =
+
+P21 .erHmenc↓e,
+
+P er (ω2)
+
+m↓ =
+
+is Per m ↓ (ω1) = 0.1089, 0.2939, Per m ↓ ((ω1ω2)) =
+
+0.4122, Per m ↓ (ω2ω1) = 0.1814. In the catching
+
+ball model, frame marginalization can be seen as the
+
+RPS in Case 3 without counting the ball {ω3}. In epis-
+
+temic uncertainty model, frame marginalization is same
+
+with DST, which means elements in F j are negated. As
+
+a mathematical model, frame marginalization appears
+
+in this paper as a reasonable extension of DST to RPST,
+
+not as having an actual meaning in the cooperative
+
+game model.
+
+4.3.4 Order marginalization
+
+Different from other kinds of marginalization, the order marginalization is an unique operation in RPST. Before proposing the order marginalization, deﬁne the orders in RPST necessary.
+
+Deﬁnition 5 (Order) For a RPS Per m under an n-
+
+element
+
+FoD,
+
+it
+
+has
+
+n!
+
+types
+
+of
+
+order,
+
+and
+
+Or
+
+d
+
+(
+
+F
+
+2n j
+
+−1)
+
+represents the isﬁes Fki → F
+
+jth order. If
+
+2n −1 j
+
+=
+
+Fki ,
+
+an ordered focal set Fik satthe type of order of Fik is
+
+O
+
+r
+
+d
+
+(
+
+F
+
+2n j
+
+−1
+
+)
+
+and
+
+denote
+
+as
+
+Fik
+
+∈
+
+O
+
+r
+
+d
+
+(
+
+F
+
+2n j
+
+−1).
+
+Though when sum the Per m which has same focal set, the RPS will degenerate to BPA; it does not reﬂect the ordered characteristic. i.e., the weight of a focal set is composed by some weights of ordered focal sets with different orders. In this paper, we propose a transformation from Per m to m with a ﬁxed order.
+
+Deﬁnition 6 (Order marginalization) For a RPS Per m under an n-element FoD, its order marginalization has n! B P A, which are deﬁned as
+
+m
+
+P
+
+er
+
+m
+
+[
+
+Or
+
+d
+
+(
+
+F
+
+2n j
+
+−1
+
+)](G
+
+)
+
+⎧
+
+⎪⎪⎨Per m(Fki )
+
+=
+
+1 ⎪⎪⎩0
+
+−
+
+Fki
+
+∈Or
+
+d
+
+(F
+
+2n j
+
+−1
+
+)
+
+Per m(Fki )
+
+ifG
+
+=
+
+Fi andFki
+
+∈
+
+O
+
+r
+
+d
+
+(
+
+F
+
+2n j
+
+−1
+
+)
+
+if G = ∅
+
+(18).
+
+Others
+
+According to Eq. (18), assigning weights that are not of the ﬁxed order into the empty set ∅ ensures the probabilistic properties of the mass function. If under the ER rule [49], they also can be assigned into the set P( ) to be the weights of mass function. Continue to Example 4, the order marginalizations of Per m1 is shown in Table 6.
+Order marginalization offers a new perspective to transform PerMF to BPA. Though it has no clear meanings in 2 models, in speciﬁc application, it can offer a new perspective to represent the information of PerMF.
+
+4.4 Discussion
+In this section, we summarize the 4 kinds of marginalization in RPST. Compared with DST, singleton marginalization and element marginalization introduce the MEOWA operator to handle the beliefs on focal sets. As the core advantages of RPST, proposed methods can reﬂect the difference of orders in PerMF. Frame
+
+123
+
+Marginalization in random permutation set theory
+
+Table 6 Order marginalizations of Per m1 in Example 4
+
+Focal set
+
+F0
+
+F1
+
+F2
+
+m Perm [Or d((ω1ω2ω3))] m Perm [Or d((ω1ω3ω2))] m Perm [Or d((ω2ω1ω3))] m Perm [Or d((ω2ω3ω1))] m Perm [Or d((ω3ω1ω2))] m Perm [Or d((ω3ω2ω1))]
+
+0.362 0.391 0.494 0.588 0.476 0.564
+
+0.015 0.015 0.015 0.015 0.015 0.015
+
+0.096 0.096 0.096 0.096 0.096 0.096
+
+F3
+0.108 0.108 0.007 0.007 0.108 0.007
+
+F4
+0.180 0.180 0.180 0.180 0.180 0.180
+
+F5
+0.072 0.072 0.072 0.003 0.003 0.003
+
+F6
+0.093 0.052 0.093 0.093 0.052 0.052
+
+F7
+0.074 0.086 0.043 0.018 0.070 0.083
+
+marginalization is a direct extension of DST, which is a specialty of combination rules. PerMF’s order marginalization provides a new perspective for RPSTbased intelligent computing. As described above, proposed methods are a decision layer in 2 interpretations, as well as corresponding interpretations in ordered cooperative games.
+5 Conclusions
+Degenerating the generalized representation of ProbMF into singletons is an important topic in the ﬁeld of uncertain information processing. This paper proposes 4 kinds of marginalizations to RPST in the context of cooperative game models and discusses them under 2 interpretations. The main innovation points of this paper can be summarized as follows. Firstly, we introduce the concept of subtasks into the cooperative game model, pointing out that when the members of each subtask in the cooperation have different importance, the ﬁnal marginal contributions should also be different. Secondly we introduce the OWA operator to solve the contribution allocation problem in the ordered cooperative game model and extend the method to the marginalization of RPST. This is the ﬁrst time to discuss the marginalization method for the distribution with ordered focal set. Finally, we demonstrate the effectiveness of the proposed method through numerical experiments, which lays the theoretical foundation for further proposing the RPS-based inference decision method.
+Although our proposed methods can adequately respond to the marginalization difference due to the difference in order, the degree of gap is determined by the parameter Or n. In practical applications, it is necessary to identify methods that generate the parameter Or n in a reasonable way, for example, introduc-
+
+ing contextual knowledge and dependency analysis. In future work, we will continue to investigate RPST by exploiting the interesting properties of OWA operators, especially for uncertain information measurement and processing, and propose a general model of artiﬁcial intelligence with a wide range of applicability in combination with the speciﬁcity of RPST. Besides, we will explore the implications and applications of the proposed method under the epistemic uncertainty model.
+Acknowledgements The authors are grateful for the guidance of master’s candidate, Jixiang Deng, and PhD candidate, Lipeng Pan, in the Information Fusion and Intelligent Systems Laboratory.
+Author contributions Qianli Zhou took part in conceptualization, methodology, formal analysis, investigation, writing— original draft, writing—review & editing. Ye Cui involved in data experiment, formal analysis, writing—review & editing. Zhen Li took part in validation, writing—review & editing. Yong Deng involved in validation, resources, supervision, funding acquisition.
+Funding The work was partially supported by National Natural Science Foundation of China (Grant No. 61973332).
+Code availability The code of the current study is available from the corresponding author on reasonable request.
+Declarations
+Conﬂict of interest All the authors certify that there is no conﬂict of interest with any individual or organization for this work.
+Ethical approval This article does not contain any studies with human participants or animals performed by any of the authors.
+Consent to participate Informed consent was obtained from all individual participants included in the study.
+Consent for publication The participant has consented to the submission of the case report to the journal.
+123
+
+References
+1. Dempster, A.P.: Upper and lower probabilities induced by a multivalued mapping. In: Classic Works of the Dempster– Shafer Theory of Belief Functions, pp. 57– 72. Springer, Berlin ( 2008)
+2. Shafer, G.: A Mathematical Theory of Evidence. Princeton University Press, Princeton (1976). https://doi.org/10.1515/ 9780691214696
+3. Liu, Z.-G., Liu, Y., Dezert, J., Cuzzolin, F.: Evidence combination based on credal belief redistribution for pattern classiﬁcation. IEEE Trans. Fuzzy Syst. 28(4), 618–631 (2020)
+4. Huang, L., Liu, Z., Pan, Q., Dezert, J.: Evidential combination of augmented multi-source of information based on domain adaptation. Sci. China Inf. Sci. 63(11), 210203–114 (2020)
+5. Fei, L., Wang, Y.: An optimization model for rescuer assignments under an uncertain environment by using Dempster– Shafer theory. Knowl.-Based Syst. 10-10162022109680 (2022)
+6. Wen, T., Gao, Q., Chen, Y.-w., Cheong, K.H.: Exploring the vulnerability of transportation networks by entropy: a case study of Asia–Europe maritime transportation network. Reliab. Eng. Syst. Saf. 108578 (2022)
+7. Zhao, J., Cheong, K.H.: Obfuscating community structure in complex network with evolutionary divide-and-conquer strategy. IEEE Trans. Evolut. Comput. (2023). https://doi. org/10.1109/TEVC.2023.3242051
+8. Tao, R., Liu, Z., Cai, R., Cheong, K.H.: A dynamic group MCDM model with intuitionistic fuzzy set: perspective of alternative queuing method. Inf. Sci. 555, 85–103 (2021)
+9. Lai, J.W., Cheong, K.H.: A comprehensive framework for preference aggregation Parrondo’s paradox. Chaos: Interdiscipl. J. Nonlinear Sci. 32(10), 103107 (2022)
+10. Liang, Y., Ju, Y., Qin, J., Pedrycz, W.: Multi-granular linguistic distribution evidential reasoning method for renewable energy project risk assessment. Inf. Fus. 65, 147–164 (2021)
+11. Smets, P., Kennes, R.: The transferable belief model. Artif. intell. 66(2), 191–234 (1994)
+12. Liu, Z., Pan, Q., Dezert, J., Han, J.-W., He, Y.: Classiﬁer fusion with contextual reliability evaluation. IEEE Trans. Cybern. 48(5), 1605–1618 (2017)
+13. Huang, L.-Q., Liu, Z.-G., Dezert, J.: Cross-domain pattern classiﬁcation with distribution adaptation based on evidence theory. IEEE Trans. Cybern. (2021). https://doi.org/ 10.1109/TCYB.2021.3133890
+14. Nguyen, H.T.: On random sets and belief functions. In: Classic Works of the Dempster–Shafer Theory of Belief Functions, pp. 105– 116. Springer, Berlin (2008)
+15. Smarandache, F., Dezert, J.: Advances and applications of DSMT for information fusion (collected works) 2 (2006)
+16. Xiao, F.: CEQD: a complex mass function to predict interference effects. IEEE Trans. Cybern. 10-110920203040770 (2021)
+17. Xiao, F., Pedrycz, W.: Negation of the quantum mass function for multisource quantum information fusion with its application to pattern classiﬁcation. IEEE Trans. Pattern Anal. Mach. Intell. 10-110920223167045 (2022)
+
+Q. Zhou et al.
+18. Pan, L., Deng, Y.: A new complex evidence theory. Inf. Sci. 608, 251–261 (2022)
+19. Deng, X., Jiang, W.: A framework for the fusion of nonexclusive and incomplete information on the basis of D number theory. Appl. Intell. 1010071048902203960 (2022)
+20. Barhoumi, S., Kallel, I.K., Bouhamed, S.A., Bossé, E., Solaiman, B.: Generation of fuzzy evidence numbers for the evaluation of uncertainty measures. In: 2020 5th International Conference on Advanced Technologies for Signal and Image Processing (ATSIP), pp. 1– 6 ( 2020). IEEE
+21. Deng, Y.: Random permutation set. Int. J. Comput. Commun. Control 17(1), 4542 (2022). https://doi.org/10.15837/ ijccc.2022.1.4542
+22. Deng, J., Deng, Y.: Maximum entropy of random permutation set. Soft. Comput. 26(21), 11265–11275 (2022)
+23. Chen, L., Deng, Y., Cheong, K.H.: The distance of random permutation set. Inf. Sci. 628, 226–239 (2023)
+24. Cobb, B.R., Shenoy, P.P.: On the plausibility transformation method for translating belief function models to probability models. Int. J. Approx. Reason. 41(3), 314–330 (2006)
+25. Zhou, Q., Huang, Y., Deng, Y.: Belief evolution networkbased probability transformation and fusion. Comput. Ind. Eng. 108750 (2022)
+26. Smets, P.: Decision making in the TBM: the necessity of the pignistic transformation. Int. J. Approx. Reason. 38(2), 133–147 (2005)
+27. Yager, R.R.: On ordered weighted averaging aggregation operators in multicriteria decision making. IEEE Trans. Syst. Man Cybern. 18(1), 183–190 (1988)
+28. Han, D., Dezert, J., Duan, Z.: Evaluation of probability transformations of belief functions for decision making. IEEE Trans. Syst., Man, Cybern.: Syst. 46(1), 93–108 (2015)
+29. Abellán, J., Klir, G.J.: Additivity of uncertainty measures on credal sets. Int. J. Gen. Syst. 34(6), 691–713 (2005)
+30. Pichon, F., Dubois, D., Denoeux, T.: Relevance and truthfulness in information correction and fusion. Int. J. Approx. Reason. 53(2), 159–175 (2012)
+31. Yang, Y., Han, D.: A new distance-based total uncertainty measure in the theory of belief functions. Knowl.-Based Syst. 94, 114–123 (2016)
+32. Deng, X., Jiang, W.: A framework for the fusion of nonexclusive and incomplete information on the basis of d number theory. Appl. Intell. 1–24 (2022)
+33. Deng, X., Xue, S., Jiang, W.: A novel quantum model of mass function for uncertain information fusion. Inf. Fus. 89, 619–631 (2023)
+34. Yaghlane, B.B., Smets, P., Mellouli, K.: Belief function independence: I. The marginal case. Int. J. Approx. Reason. 29(1), 47–70 (2002)
+35. Pichon, F.: Canonical decomposition of belief functions based on Teugels’ representation of the multivariate Bernoulli distribution. Inf. Sci. 428, 76–104 (2018)
+36. Shapley, L.: Quota solutions op n-person games1. Edited by Emil Artin and Marston Morse, 343 (1953)
+37. Koh, J.M., Cheong, K.H.: New doubly-anomalous Parrondo’s games suggest emergent sustainability and inequality. Nonlinear Dyn. 96(1), 257–266 (2019)
+38. Cheong, K.H., Wen, T., Benler, S., Koh, J.M., Koonin, E.V.: Alternating lysis and lysogeny is a winning strategy in bacteriophages due to Parrondo’s paradox. Proc. Natl. Acad.
+
+123
+
+Marginalization in random permutation set theory
+
+Sci. 119(13), 2115145119 (2022). https://doi.org/10.1073/ pnas.2115145119 39. Yager, R.R.: On the entropy of fuzzy measures. IEEE Trans. Fuzzy Syst. 8(4), 453–461 (2000) 40. Yager, R.R.: On using the Shapley value to approximate the Choquet integral in cases of uncertain arguments. IEEE Trans. Fuzzy Syst. 26(3), 1303–1310 (2017) 41. Zhou, L., Cui, H., Huang, C., Kang, B., Zhang, J.: Counter deception in belief functions using Shapley value methodology. Int. J. Fuzzy Syst. 24(1), 340–354 (2022) 42. Fujita, H., Gaeta, A., Loia, V., Orciuoli, F.: Hypotheses analysis and assessment in counterterrorism activities: a method based on OWA and fuzzy probabilistic rough sets. IEEE Trans. Fuzzy Syst. 28(5), 831–845 (2019) 43. Wu, X., Liao, H., Pedrycz, W.: Probabilistic linguistic term set with interval uncertainty. IEEE Trans. Fuzzy Syst. 29(11), 3532–3545 (2020) 44. Mi, X., Lv, T., Tian, Y., Kang, B.: Multi-sensor data fusion based on soft likelihood functions and OWA aggregation and its application in target recognition system. ISA Trans. 112, 137–149 (2021) 45. Torra, V.: Andness directedness for operators of the OWA and WOWA families. Fuzzy Sets Syst. 414, 28–37 (2021)
+
+46. O’Hagan, M.: Aggregating template or rule antecedents in real-time expert systems with fuzzy set logic. In: 22nd Asilomar Conference on Signals, Systems and Computers, vol. 2, pp. 681– 689 (1988). IEEE
+47. Filev, D., Yager, R.R.: Analytic properties of maximum entropy OWA operators. Inf. Sci. 85(1–3), 11–27 (1995)
+48. Dubois, D., Prade, H., Sandri, S.: On possibility/probability transformations. In: Fuzzy Logic, pp. 103– 112. Springer, Berlin ( 1993)
+49. Yang, J.-B., Xu, D.-L.: Evidential reasoning rule for evidence combination. Artif. Intell. 205, 1–29 (2013)
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional afﬁliations.
+Springer Nature or its licensor (e.g. a society or other partner) holds exclusive rights to this article under a publishing agreement with the author(s) or other rightsholder(s); author self-archiving of the accepted manuscript version of this article is solely governed by the terms of such publishing agreement and applicable law.
+
+123
+

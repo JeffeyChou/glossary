@@ -25,7 +25,7 @@
   "updateAnnotBlock": false,
   "updateOverwrite": false,
   "citationEditorSuggester": true,
-  "showCitekeyInSuggester": false,
+  "showCitekeyInSuggester": true,
   "noteFields": {
     "highlights": {
       "keyword": "",
@@ -37,6 +37,6 @@
     }
   },
   "noteFieldsSuggester": false,
-  "enableServer": false,
+  "enableServer": true,
   "serverPort": 9091
 }
