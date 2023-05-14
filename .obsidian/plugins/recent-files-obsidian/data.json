@@ -9,20 +9,8 @@
       "path": "private/00-MOC/任务看板.md"
     },
     {
-      "basename": "概率论作业-第四章+第五章",
-      "path": "private/01-Diary/本周事务/概率论作业-第四章+第五章.md"
-    },
-    {
-      "basename": "2023-04-16",
-      "path": "private/01-Diary/日志存档/2023-04-16.md"
-    },
-    {
       "basename": "本周事务表",
       "path": "private/00-MOC/本周事务表.md"
-    },
-    {
-      "basename": "TO-DO list",
-      "path": "private/00-MOC/TO-DO list.md"
     },
     {
       "basename": "数值分析作业-数值微分",
@@ -31,6 +19,26 @@
     {
       "basename": "数值分析作业-拟合和最小二乘法",
       "path": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md"
+    },
+    {
+      "basename": "商业计划书",
+      "path": "private/01-Diary/本周事务/商业计划书.md"
+    },
+    {
+      "basename": "草稿模板",
+      "path": "private/09-Templates/草稿模板.md"
+    },
+    {
+      "basename": "概率论作业-第四章+第五章",
+      "path": "private/01-Diary/本周事务/概率论作业-第四章+第五章.md"
+    },
+    {
+      "basename": "2023-04-16",
+      "path": "private/01-Diary/日志存档/2023-04-16.md"
+    },
+    {
+      "basename": "TO-DO list",
+      "path": "private/00-MOC/TO-DO list.md"
     },
     {
       "basename": "Drawing 2023-05-12 21.50.07.excalidraw",
@@ -83,14 +91,6 @@
     {
       "basename": "日志模板",
       "path": "private/09-Templates/日志模板.md"
-    },
-    {
-      "basename": "草稿模板",
-      "path": "private/09-Templates/草稿模板.md"
-    },
-    {
-      "basename": "商业计划书",
-      "path": "private/01-Diary/本周事务/商业计划书.md"
     },
     {
       "basename": "FastStart-Plugins-LongDelay",

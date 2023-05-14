@@ -4,7 +4,7 @@
       "Remove Hashtags from tags in the YAML frontmatter, as they make the tags there invalid.": false
     },
     "Insert YAML attributes": {
-      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": false,
+      "Inserts the given YAML attributes into the YAML frontmatter. Put each attribute on a single line.": true,
       "Text to insert": "draft: false"
     },
     "YAML Timestamp": {
