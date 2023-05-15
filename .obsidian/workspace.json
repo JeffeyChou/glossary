@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/02-Reading/3-people/Zhensong.Chen.md",
+                "file": "private/01-Diary/本周事务/商业计划书.md",
                 "mode": "source",
                 "source": false
               }
@@ -107,14 +107,6 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "0688474b55d3e225",
-            "type": "leaf",
-            "state": {
-              "type": "ReferenceListView",
-              "state": {}
-            }
           }
         ],
         "currentTab": 2
@@ -130,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/02-Reading/3-people/Zhensong.Chen.md"
+                "file": "private/01-Diary/本周事务/商业计划书.md"
               }
             }
           },
@@ -140,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/02-Reading/3-people/Zhensong.Chen.md",
+                "file": "private/01-Diary/本周事务/商业计划书.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +178,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 245,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,13 +191,18 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-statusbar-pomo:Start pomodoro": true,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-gallery:Gallery": false,
+      "remotely-save:Remotely Save": false
     }
   },
   "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
-    "private/02-Reading/3-people/Humberto Bustince.md",
+    "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
     "private/02-Reading/3-people/Zhensong.Chen.md",
+    "private/02-Reading/3-people/Humberto Bustince.md",
     "private/02-Reading/summary/2022-04-02_文献阅读小结.md",
     "private/02-Reading/summary/2022-05-24_文献阅读小结.md",
     "private/09-Templates/大牛页面模板.md",
@@ -213,7 +211,6 @@
     "private/00-MOC/任务看板.md",
     "private/00-MOC/本周事务表.md",
     "private/01-Diary/本周事务/数值分析作业-数值微分.md",
-    "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
     "private/01-Diary/本周事务/商业计划书.md",
     "private/09-Templates/草稿模板.md",
     "private/01-Diary/本周事务/概率论作业-第四章+第五章.md",
