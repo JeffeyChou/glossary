@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "病理学",
+      "path": "private/01-Diary/本周事务/病理学.md"
+    },
+    {
+      "basename": "虎斑心",
+      "path": "private/01-Diary/本周事务/虎斑心.md"
+    },
+    {
+      "basename": "()",
+      "path": "private/01-Diary/本周事务/().md"
+    },
+    {
       "basename": "商业计划书",
       "path": "private/01-Diary/本周事务/商业计划书.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "2023-04-17",
       "path": "private/01-Diary/日志存档/2023-04-17.md"
-    },
-    {
-      "basename": "Chapter12-Eigenvalues and singular values",
-      "path": "private/01-Diary/本周事务/Chapter12-Eigenvalues and singular values.md"
-    },
-    {
-      "basename": "愿望清单",
-      "path": "private/00-MOC/愿望清单.md"
-    },
-    {
-      "basename": "试剂库存管理",
-      "path": "private/00-MOC/试剂库存管理.md"
     }
   ],
   "omittedPaths": [],
