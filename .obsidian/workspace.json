@@ -4,22 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "2057d715a26d2ba9",
+        "id": "9e3ad2738ce50841",
         "type": "tabs",
         "children": [
           {
-            "id": "fcefcb4f85a2b424",
+            "id": "1f7b928a3387f6d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/00-MOC/本周事务表.md",
-                "mode": "preview",
+                "file": "private/02-Reading/3-people/Humberto Bustince.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -106,14 +107,6 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "db53fce10c20c19a",
-            "type": "leaf",
-            "state": {
-              "type": "ReferenceListView",
-              "state": {}
-            }
           }
         ],
         "currentTab": 2
@@ -129,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/08-Assets/Scripts/常用工具.md"
+                "file": "private/02-Reading/3-people/Humberto Bustince.md"
               }
             }
           },
@@ -139,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/08-Assets/Scripts/常用工具.md",
+                "file": "private/02-Reading/3-people/Humberto Bustince.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,11 +174,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 245
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,13 +190,22 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-statusbar-pomo:Start pomodoro": true,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-gallery:Gallery": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "2076342018046708",
+  "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
-    "private/00-MOC/任务看板.md",
+    "private/02-Reading/summary/2022-04-02_文献阅读小结.md",
+    "private/02-Reading/3-people/Humberto Bustince.md",
+    "private/02-Reading/summary/2022-05-24_文献阅读小结.md",
+    "private/09-Templates/大牛页面模板.md",
+    "private/02-Reading/3-people/Luis Martínez.md",
     "private/08-Assets/Scripts/常用工具.md",
+    "private/00-MOC/任务看板.md",
     "private/00-MOC/本周事务表.md",
     "private/01-Diary/本周事务/数值分析作业-数值微分.md",
     "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
@@ -231,12 +233,7 @@
     "private/09-Templates/每月总结.md",
     "private/09-Templates/每周文献小结.md",
     "private/09-Templates/词条模板.md",
-    "private/09-Templates/大牛页面模板.md",
     "private/09-Templates/代码整理模板.md",
-    "private/09-Templates/概括文章骨架.md",
-    "private/09-Templates/卡片模板.md",
-    "private/09-Templates/论文草稿模板.md",
-    "private/09-Templates/论文大纲模板.md",
     "private/08-Assets/cedict_1_0_ts_utf-8_mdbg.zip",
     "private/08-Assets/pdfs/zotero data/tmp/translator.json",
     "private/08-Assets/Pasted image 20230510115520.png",
