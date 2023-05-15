@@ -26,3 +26,4 @@ Citation index:: 24373
 
 [Correlation of interval-valued intuitionistic fuzzy sets](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9SI4W2kAAAAJ&citation_for_view=9SI4W2kAAAAJ:YFjsv_pBGBYC)
 
+[A position and perspective analysis of hesitant fuzzy sets on information fusion in decision making. Towards high quality progress](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=9SI4W2kAAAAJ&citation_for_view=9SI4W2kAAAAJ:5MTHONV0fEkC)

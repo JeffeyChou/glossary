@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Zhensong.Chen",
+      "path": "private/02-Reading/3-people/Zhensong.Chen.md"
+    },
+    {
       "basename": "Humberto Bustince",
       "path": "private/02-Reading/3-people/Humberto Bustince.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "试剂库存管理",
       "path": "private/00-MOC/试剂库存管理.md"
-    },
-    {
-      "basename": "AuthorRanking",
-      "path": "private/00-MOC/AuthorRanking.md"
     }
   ],
   "omittedPaths": [],
