@@ -9,18 +9,28 @@ ptype: article
 ---
 
 {{title}}
-{{author}}
-{{tags}}
-{{url}}
-{{DOI}}
-{{collections}}
-{{related}}
-{{localLibrary}}
 
-{{abstractNote}}
+- Metadata
+  {{itemType}}
+  {{author}}
+  {{date}}
+  {{tags}}
+  {{collections}}
+  {{related}}
+
+- Links
+  {{DOI}}
+  {{localLibrary}}
+  {{pdfAttachments}}
+
+# Notes
+
+{{abstractNote}}    
+
+{{notes}}
 
 ---
 
-### 初读印象
+## 初读印象
 
 comment::

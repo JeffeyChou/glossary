@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "064cc9b90d004fa9",
+        "id": "228d99fb86073a22",
         "type": "tabs",
         "children": [
           {
-            "id": "40314efa0deaa537",
+            "id": "9aeb9266b1f95bfe",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "private/01-Diary/本周事务/病理学.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ],
@@ -70,8 +66,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207,
-    "collapsed": true
+    "width": 207
   },
   "right": {
     "id": "6e7011190a6a4416",
@@ -108,6 +103,14 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "bfcdb54f9ed83fe3",
+            "type": "leaf",
+            "state": {
+              "type": "ReferenceListView",
+              "state": {}
+            }
           }
         ],
         "currentTab": 2
@@ -122,9 +125,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "private/01-Diary/本周事务/病理学.md"
-              }
+              "state": {}
             }
           },
           {
@@ -133,7 +134,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/病理学.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,17 +192,13 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-statusbar-pomo:Start pomodoro": true,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-gallery:Gallery": false,
-      "remotely-save:Remotely Save": false
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "40314efa0deaa537",
+  "active": "9aeb9266b1f95bfe",
   "lastOpenFiles": [
-    "term/Homework/数值分析作业-插值.md",
     "private/01-Diary/本周事务/病理学.md",
+    "term/Homework/数值分析作业-插值.md",
     "private/01-Diary/本周事务/商业计划书.md",
     "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
     "private/01-Diary/本周事务/虎斑心.md",
