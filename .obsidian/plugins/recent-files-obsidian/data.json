@@ -5,6 +5,14 @@
       "path": "private/01-Diary/本周事务/信息论作业-2-1.md"
     },
     {
+      "basename": "信息论基础-习题1-1",
+      "path": "term/Homework/信息论基础-习题1-1.md"
+    },
+    {
+      "basename": "信息论第二次作业-1-2",
+      "path": "term/Homework/信息论第二次作业-1-2.md"
+    },
+    {
       "basename": "@deng2022random",
       "path": "private/02-Reading/mdnotes/@deng2022random.md"
     },
@@ -165,10 +173,6 @@
       "path": "term/Homework/概率论与数理统计-第四章作业.md"
     },
     {
-      "basename": "信息论第二次作业-1-2",
-      "path": "term/Homework/信息论第二次作业-1-2.md"
-    },
-    {
       "basename": "数值分析作业-第五次作业 1",
       "path": "term/Homework/数值分析作业-第五次作业 1.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Minal-slides",
       "path": "private/03-Projects/09-Slides/Minal-slides.md"
-    },
-    {
-      "basename": "Gram-Schmidt",
-      "path": "term/ref/Gram-Schmidt.md"
     }
   ],
   "omittedPaths": [],
