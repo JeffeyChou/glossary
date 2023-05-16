@@ -5,7 +5,7 @@ tags:
 - evidence_conflict
 - evidence_combination
 - Evidence_theory
-- 邓勇入门文献
+- beginner_papers
 rating: ⭐
 share: false
 ptype: article

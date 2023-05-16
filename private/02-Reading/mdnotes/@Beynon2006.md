@@ -4,7 +4,7 @@ tags:
 - Evidence_theory
 - Distance_of_BPA
 - DS-theory
-- 邓勇入门文献
+- beginner_papers
 rating: ⭐
 share: false
 ptype: article

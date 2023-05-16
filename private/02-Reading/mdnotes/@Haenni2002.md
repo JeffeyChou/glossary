@@ -4,7 +4,7 @@ tags:
 - comment
 - 辩证思考
 - Evidence_theory
-- 邓勇入门文献
+- beginner_papers
 rating: ⭐
 share: false
 ptype: article

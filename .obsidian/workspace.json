@@ -57,7 +57,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "button",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,12 +66,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 207,
-    "collapsed": true
+    "width": 207
   },
   "right": {
     "id": "6e7011190a6a4416",
@@ -108,9 +108,16 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "1394122d8957c38c",
+            "type": "leaf",
+            "state": {
+              "type": "ReferenceListView",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "4f101d806a54a17c",
@@ -175,12 +182,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 245,
-    "collapsed": true
+    "width": 245
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,14 +198,10 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-statusbar-pomo:Start pomodoro": true,
-      "obsidian-advanced-slides:Show Slide Preview": false,
-      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
-      "obsidian-gallery:Gallery": false,
-      "remotely-save:Remotely Save": false
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "e8624e4842c42ac1",
+  "active": "227681cc38450669",
   "lastOpenFiles": [
     "private/01-Diary/本周事务/信息论作业-2-1.md",
     "private/02-Reading/mdnotes/@deng2022random.md",
