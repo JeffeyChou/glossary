@@ -1,6 +1,6 @@
 ---
 alias: zhou2022marginalization
-date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
+date: 2023-05-16 11:34:05
 obsidianUIMode: preview
 tags: unread
 rating: ⭐

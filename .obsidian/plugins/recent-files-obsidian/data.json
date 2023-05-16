@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "信息论作业-2-1",
+      "path": "private/01-Diary/本周事务/信息论作业-2-1.md"
+    },
+    {
+      "basename": "@deng2022random",
+      "path": "private/02-Reading/mdnotes/@deng2022random.md"
+    },
+    {
+      "basename": "@chen2023permutation",
+      "path": "private/02-Reading/mdnotes/@chen2023permutation.md"
+    },
+    {
+      "basename": "@chen2023distance",
+      "path": "private/02-Reading/mdnotes/@chen2023distance.md"
+    },
+    {
+      "basename": "@zhou2022marginalization",
+      "path": "private/02-Reading/mdnotes/@zhou2022marginalization.md"
+    },
+    {
+      "basename": "@chen2023entropy",
+      "path": "private/02-Reading/mdnotes/@chen2023entropy.md"
+    },
+    {
+      "basename": "阅读清单",
+      "path": "private/00-MOC/阅读清单.md"
+    },
+    {
+      "basename": "Yong Deng",
+      "path": "private/02-Reading/3-people/Yong Deng.md"
+    },
+    {
       "basename": "病理学",
       "path": "private/01-Diary/本周事务/病理学.md"
     },
@@ -15,14 +47,6 @@
     {
       "basename": "数值分析作业-拟合和最小二乘法",
       "path": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md"
-    },
-    {
-      "basename": "虎斑心",
-      "path": "private/01-Diary/本周事务/虎斑心.md"
-    },
-    {
-      "basename": "()",
-      "path": "private/01-Diary/本周事务/().md"
     },
     {
       "basename": "Zhensong.Chen",
@@ -175,30 +199,6 @@
     {
       "basename": "Gram-Schmidt",
       "path": "term/ref/Gram-Schmidt.md"
-    },
-    {
-      "basename": "Halo-Master-Chief-Collection 通关后",
-      "path": "private/01-Diary/本周事务/Halo-Master-Chief-Collection 通关后.md"
-    },
-    {
-      "basename": "Buttons",
-      "path": "private/08-Assets/Scripts/Buttons.md"
-    },
-    {
-      "basename": "2023-05-06",
-      "path": "private/01-Diary/日志存档/2023-05-06.md"
-    },
-    {
-      "basename": "2022-04-02",
-      "path": "private/01-Diary/日志存档/2022-04-02.md"
-    },
-    {
-      "basename": "Chapter 3 -System of Equation",
-      "path": "private/01-Diary/本周事务/Chapter 3 -System of Equation.md"
-    },
-    {
-      "basename": "2023-04-17",
-      "path": "private/01-Diary/日志存档/2023-04-17.md"
     }
   ],
   "omittedPaths": [],

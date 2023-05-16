@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "228d99fb86073a22",
+        "id": "d51a22aac005e799",
         "type": "tabs",
         "children": [
           {
-            "id": "9aeb9266b1f95bfe",
+            "id": "e8624e4842c42ac1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "private/01-Diary/本周事务/信息论作业-2-1.md",
+                "mode": "preview",
+                "source": true
+              }
             }
           }
         ],
@@ -66,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207
+    "width": 207,
+    "collapsed": true
   },
   "right": {
     "id": "6e7011190a6a4416",
@@ -103,14 +108,6 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "bfcdb54f9ed83fe3",
-            "type": "leaf",
-            "state": {
-              "type": "ReferenceListView",
-              "state": {}
-            }
           }
         ],
         "currentTab": 2
@@ -125,7 +122,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "private/01-Diary/本周事务/信息论作业-2-1.md"
+              }
             }
           },
           {
@@ -134,6 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "private/01-Diary/本周事务/信息论作业-2-1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,11 +192,23 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-statusbar-pomo:Start pomodoro": true,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-gallery:Gallery": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "9aeb9266b1f95bfe",
+  "active": "e8624e4842c42ac1",
   "lastOpenFiles": [
+    "private/01-Diary/本周事务/信息论作业-2-1.md",
+    "private/02-Reading/mdnotes/@deng2022random.md",
+    "private/02-Reading/mdnotes/@chen2023permutation.md",
+    "private/02-Reading/mdnotes/@chen2023distance.md",
+    "private/02-Reading/mdnotes/@zhou2022marginalization.md",
+    "private/02-Reading/mdnotes/@chen2023entropy.md",
+    "private/00-MOC/阅读清单.md",
+    "private/02-Reading/3-people/Yong Deng.md",
     "private/01-Diary/本周事务/病理学.md",
     "term/Homework/数值分析作业-插值.md",
     "private/01-Diary/本周事务/商业计划书.md",
@@ -218,20 +230,12 @@
     "private/08-Assets/pdfs/zotero data/storage/DI5EI8PC",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ/Zhou 等 - 2022 - Marginalization in random permutation set theory .pdf",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ",
-    "LiteratureNotes/deng2022random.md",
     "LiteratureNotes",
     "private/08-Assets/pdfs/zotero data/zotero.sqlite.tmp",
     "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite.tmp",
     "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite-journal",
     "private/08-Assets/pdfs/zotero data/zotero.sqlite-journal",
-    "private/01-Diary/日志存档/2023-04-16.md",
-    "private/00-MOC/TO-DO list.md",
-    "private/08-Assets/Excalidraw/Drawing 2023-05-12 21.50.07.excalidraw.md",
-    "private/08-Assets/Excalidraw/Drawing 2023-05-04 20.20.15.excalidraw.md",
-    "private/01-Diary/本周事务/test.md",
-    "private/01-Diary/本周事务/未命名 1.md",
     "private/08-Assets/Excalidraw/Drawing 2023-05-12 21.50.07.excalidraw.png",
-    "private/01-Diary/本周事务/数学建模作业-减速带.md",
     "private/08-Assets/cedict_1_0_ts_utf-8_mdbg.zip",
     "private/08-Assets/pdfs/zotero data/tmp/translator.json",
     "private/08-Assets/Pasted image 20230510115520.png",

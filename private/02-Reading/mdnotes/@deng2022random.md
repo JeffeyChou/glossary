@@ -1,6 +1,6 @@
 ---
 alias: deng2022random
-date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
+date: 2023-05-16 11:34:21
 obsidianUIMode: preview
 tags: unread
 rating: ⭐

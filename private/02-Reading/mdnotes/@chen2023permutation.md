@@ -1,6 +1,6 @@
 ---
 alias: chen2023permutation
-date: <% tp.date.now("YYYY-MM-DD HH:mm:ss") %>
+date: 2023-05-16 11:28:51
 obsidianUIMode: preview
 tags: unread
 rating: ⭐
