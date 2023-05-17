@@ -6,8 +6,8 @@
     "includeName": false,
     "pageSize": "A4",
     "landscape": false,
-    "margin": "2",
-    "downscalePercent": 80
+    "margin": "1",
+    "downscalePercent": 87
   },
   "alwaysUpdateLinks": true,
   "foldIndent": true,
