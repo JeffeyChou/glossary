@@ -4,19 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9245ba5185ec4fd0",
+        "id": "98661dc6ecbe2531",
         "type": "tabs",
         "children": [
           {
-            "id": "c26bc84e7801491e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "44ef579c5274039a",
+            "id": "6303ce936ad7bf3c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -28,7 +20,6 @@
             }
           }
         ],
-        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -117,14 +108,6 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "6bc3c02889cb320f",
-            "type": "leaf",
-            "state": {
-              "type": "ReferenceListView",
-              "state": {}
-            }
           }
         ],
         "currentTab": 2
@@ -209,10 +192,14 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-statusbar-pomo:Start pomodoro": true,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-gallery:Gallery": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "44ef579c5274039a",
+  "active": "6303ce936ad7bf3c",
   "lastOpenFiles": [
     "private/01-Diary/本周事务/概率论作业-第六章.md",
     "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
