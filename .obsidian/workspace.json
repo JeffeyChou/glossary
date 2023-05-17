@@ -4,16 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "9e3ad2738ce50841",
+        "id": "510a15b197117078",
         "type": "tabs",
         "children": [
           {
-            "id": "1f7b928a3387f6d1",
+            "id": "44d3810de06d149d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论作业-2-1.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      },
+      {
+        "id": "938999f8dd46b2c5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2fc692364ff09ca7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "term/Homework/数值分析作业-插值.md",
                 "mode": "source",
                 "source": false
               }
@@ -57,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#作业",
+                "query": "button",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,8 +85,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -109,16 +127,9 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "3f31bfe4dc8b03ca",
-            "type": "leaf",
-            "state": {
-              "type": "ReferenceListView",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "4f101d806a54a17c",
@@ -131,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论作业-2-1.md"
+                "file": "term/Homework/数值分析作业-插值.md"
               }
             }
           },
@@ -141,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/信息论作业-2-1.md",
+                "file": "term/Homework/数值分析作业-插值.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -200,14 +211,19 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-statusbar-pomo:Start pomodoro": true,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-gallery:Gallery": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "1f7b928a3387f6d1",
+  "active": "2fc692364ff09ca7",
   "lastOpenFiles": [
+    "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
+    "private/01-Diary/本周事务/信息论作业-2-1.md",
     "term/Homework/信息论基础-习题1-1.md",
     "term/Homework/信息论第二次作业-1-2.md",
-    "private/01-Diary/本周事务/信息论作业-2-1.md",
     "private/02-Reading/mdnotes/@deng2022random.md",
     "private/02-Reading/mdnotes/@chen2023permutation.md",
     "private/02-Reading/mdnotes/@chen2023distance.md",
@@ -218,7 +234,6 @@
     "private/01-Diary/本周事务/病理学.md",
     "term/Homework/数值分析作业-插值.md",
     "private/01-Diary/本周事务/商业计划书.md",
-    "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
     "private/01-Diary/本周事务/虎斑心.md",
     "private/01-Diary/本周事务/().md",
     "private/02-Reading/3-people/Zhensong.Chen.md",
