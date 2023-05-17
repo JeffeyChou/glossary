@@ -1,0 +1,566 @@
+IEEE websites place cookies on your device to give you the best user experience. By using our websites, you agree to the placement of these cookies. To learn more, read our Privacy Policy.
+Accept & Close
+Skip to Main Content
+
+    IEEE.org
+    IEEE Xplore
+    IEEE SA
+    IEEE Spectrum
+    More Sites 
+
+Subscribe
+
+        Cart 
+        Create Account
+        Personal Sign In 
+
+IEEE Xplore logo - Link to home
+
+    Browse
+    My Settings
+    Help
+
+Institutional Sign In
+IEEE logo - Link to IEEE main site homepage
+ADVANCED SEARCH
+Journals & Magazines > IEEE Access > Volume: 7
+An Improved Deng Entropy and Its Application in Pattern Recognition
+IF 3.476 Q2 B3 EI
+Publisher: IEEE
+Cite This
+PDF
+Huizi Cui ; Qing Liu ; Jianfeng Zhang ; Bingyi Kang
+All Authors
+81
+Paper
+Citations
+1541
+Full
+Text Views
+Open Access
+Comment(s)
+
+    Alerts
+
+Abstract
+Document Sections
+
+    I.
+    Introduction
+    II.
+    Preliminaries
+    III.
+    Proposed Belief Entropy
+    IV.
+    Application
+    V.
+    Conclusion
+
+Show Full Outline
+Authors
+Figures
+References
+Citations
+Keywords
+Metrics
+Abstract:
+How to manage the uncertainty of the basic probability assignment accurately and efficiently is of significance and also an open issue. Plenty of functions have been established to cover the issue, especially Deng entropy recently. Deng entropy can deal with the more complex situation of the focal elements (propositions). However, Deng entropy has some limitations when the propositions are of the intersection. In this paper, a modified function is proposed by considering the scale of the frame of discernment and the influence of the intersection between statements on uncertainty. The proposed belief entropy provides a promising way to measure the uncertain information. Some numerical examples and an application in pattern recognition are used to show the efficiency and accuracy of the proposed belief entropy.
+Published in: IEEE Access ( Volume: 7 )
+Page(s): 18284 - 18292
+Date of Publication: 31 January 2019
+Electronic ISSN: 2169-3536
+INSPEC Accession Number: 18468203
+DOI: 10.1109/ACCESS.2019.2896286
+Publisher: IEEE
+Funding Agency:
+The new belief entropy is applied in the pattern recognition based on information fusion, which is used to measure the quality of the information and to improve the recog... View more
+Hide Full Abstract
+SECTION I.
+Introduction
+
+The theory of evidence, which is also referred to as evidence theory or Dempster-Shafer theory (DST) has a wide range of applications in information fusion and decision-making. It has been used in uncertainty seasoning and is capable of taking all kinds of the information and data of the subjective world as the condition, then analyze and summarize the basic probability of the system, and thus make an accurate decision [1] , [2] .
+
+Uncertainty measure (UM) can be represented as the quality of the information, which has been applied in feature selection [3] , probability density estimation [4] , machine learning [5] , complex network [6] , [7] , quantum entanglement [8] , complexity evaluation [9] . How to manage the uncertainty of the basic probability assignment (BPA) accurately and efficiently is of significance and also an open issue in DST. Plenty of functions have been developed for uncertainty modeling, they also took use of extended theories and hybrid methods to present for uncertainty measures. Some use the number of focal element, such as Dubois &Prade’s weighted Hartley entropy [10] , Klir&Ramer’s discord measure [11] , Klir&Parviz’s strife measure [12] , George & Pal’s conflict measure [13] . Some use the belief function and plausibility function, such as Hohle’s confusion measure [14] , Yager’s dissonance measure [15] , distance-based measure [16] –​ [18] , interval-value based measure [19] , [20] . Especially, Deng entropy [21] which is proposed by Prof. Deng recently is an efficient function to manage the uncertain information and it is an extension of Shannon entropy. Deng entropy considered the more complex situation of the focal element (proposition). After investigation of Deng entropy carefully, we found that Deng entropy didn’t consider the influence of the intersection between statements on uncertainty.
+
+In this paper, we consider and analyze the influence of the intersection between statements on uncertainty in BPA in the frame of Deng entropy, so that we find out a much more efficient way to solve the problems. We propose the new belief entropy by combining the fixed frame of discernment and Deng entropy’s idea, which can make up for the previous shortcomings and could be wider applications in the future. Thus, it is very feasible to define an uncertainty event. Some numerical examples and an application in pattern recognition are used to illustrate the effectiveness of the proposed entropy.
+
+The paper is organized as follows. The preliminaries briefly introduce some concepts about Dempster-Shafer evidence theory, Shannon entropy, Deng theory and some uncertainty measures in Dempster-Shafer framework in Section 2 . In Section 3 , the new belief entropy is proposed and some examples will be given to test the capacity. In Section 4 , an application is given with the proposed Entropy. The conclusions and ongoing or future work are given in the Section 6 .
+SECTION II.
+Preliminaries
+
+In this section, some preliminaries are briefly introduced, including Dempster-Shafer evidence theory, Shannon entropy, Deng entropy and several typical uncertainty measures based on Dempster-Shafer framework.
+A. Dempster-Shafer Theory of Evidence
+
+The Dempster-Shafer theory (DST) of evidence, which was first proposed by Dempster [22] and then developed by Shafer [23] , is regarded as a generalization of the Bayesian theory of probability. Due to its ability to handle uncertainty or imprecision embedded in the evidence, the DST has increasingly been applied in fault diagnosis [24] –​ [26] , risk analysis [27] –​ [29] , reliability analysis [30] –​ [32] , conflict information fusion [33] –​ [35] , dependent information fusion [36] –​ [39] , medical decision making [40] –​ [44] , temporal information fusion [45] , multimodal information integration [46] , complex electromechanical systems [47] –​ [49] , etc.
+
+The introduction of DST are briefly summarized as following: (1)
+
+    “Frame of discernment” [23] :
+
+    Let $\Theta = \{ H_{1},H_{2}, \ldots,H_{N} \} $ be a finite set of ${n}$ elements, and $P(\Theta)$ denote the power set composed of $2^{N} $ elements of $\Theta $ . \begin{align*}&\hspace {-0.8pc}P(\Theta) = \{ \emptyset,\{ {H_{1}}\},\{ {H_{2}}\}, \ldots,\{ {H_{N}}\}, \\&\qquad \qquad ~~\quad \{ {H_{1}} \cup {H_{2}}\},\{ {H_{1}} \cup {H_{3}}\}, \ldots,\Theta \}\tag{1}\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*}&\hspace {-0.8pc}P(\Theta) = \{ \emptyset,\{ {H_{1}}\},\{ {H_{2}}\}, \ldots,\{ {H_{N}}\}, \\&\qquad \qquad ~~\quad \{ {H_{1}} \cup {H_{2}}\},\{ {H_{1}} \cup {H_{3}}\}, \ldots,\Theta \}\tag{1}\end{align*}
+
+    “Basic probability assignment (BPA)” [23] :
+
+    The BPA function is defined as a mapping of the power set $P(\Theta)$ to a number between 0 and 1. \begin{equation*} m:P(\Theta) \to [{0,1}]\tag{2}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} m:P(\Theta) \to [{0,1}]\tag{2}\end{equation*} and which satisfies the following conditions: \begin{equation*} m({\emptyset ~}) = 0, ~\sum \limits _{A \subseteq P (\Theta)} {m(A) = 1}\tag{3}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} m({\emptyset ~}) = 0, ~\sum \limits _{A \subseteq P (\Theta)} {m(A) = 1}\tag{3}\end{equation*} The mass $m(A)$ represents how strongly the evidence supports ${A}$ .
+
+    “Belief and plausibility functions” [23] :
+
+    The belief function Bel is defined as \begin{equation*} Bel:P(\Theta) \to [{0,1}] \quad and~ Bel(A) = \sum \limits _{B \subseteq A} {m(B)}\tag{4}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} Bel:P(\Theta) \to [{0,1}] \quad and~ Bel(A) = \sum \limits _{B \subseteq A} {m(B)}\tag{4}\end{equation*} and the plausibility function Pl is defined as \begin{align*} Pl:P(\Theta)\to&[{0,1}] \\ Pl(A)=&1 - Bel(\bar A) = \sum \limits _{B \cap A \ne \emptyset } {m(B)}\tag{5}\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} Pl:P(\Theta)\to&[{0,1}] \\ Pl(A)=&1 - Bel(\bar A) = \sum \limits _{B \cap A \ne \emptyset } {m(B)}\tag{5}\end{align*} Bel(A) and Pl(A) are the lower limit and the upper limit, respectively, of the belief level of hypothesis ${A}$ which is illustrated in Figure 1 . Both imprecision and uncertainty can be represented by them.
+
+    “Dempster’s combination rule”:
+
+    Two bodies of evidence ${X}$ and ${Y}$ regarding $\Theta $ can be used to calculate the belief level for some new hypothesis ${C}$ as follows:
+
+    The measure of conflict ${K}$ is given as
+
+    \begin{equation*} K = \sum \limits _{X \cap Y = ,\forall X,Y \subseteq \Theta } {m_{i} (X) \times m_{i'} (Y)}\tag{6}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} K = \sum \limits _{X \cap Y = ,\forall X,Y \subseteq \Theta } {m_{i} (X) \times m_{i'} (Y)}\tag{6}\end{equation*} and the mass function after combination is \begin{align*} m(C)=&m_{i} (X) \oplus m_{i'} (Y) \\=&\begin{cases} {0,} \quad {if~X \cap Y = ,} \\ \dfrac {{\sum \limits _{X \cap Y = C,\forall X,Y \subseteq \Theta } {m_{i} (X) \times m_{i'} (Y)} }}{1 - K}, \\ \qquad {if~X \cap Y \ne .} \end{cases}\tag{7}\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} m(C)=&m_{i} (X) \oplus m_{i'} (Y) \\=&\begin{cases} {0,} \quad {if~X \cap Y = ,} \\ \dfrac {{\sum \limits _{X \cap Y = C,\forall X,Y \subseteq \Theta } {m_{i} (X) \times m_{i'} (Y)} }}{1 - K}, \\ \qquad {if~X \cap Y \ne .} \end{cases}\tag{7}\end{align*}
+
+FIGURE 1. - The relation between Bel and Pl.
+FIGURE 1.
+
+The relation between Bel and Pl.
+
+Show All
+
+B. Discounting of BPA
+
+A discounting coefficient $\alpha \in [{0,1}]$ represents the weight (reliability) of the evidence, then the discounted evidence $m^{\alpha }$ can be defined as follows [23] : \begin{align*} {m^\alpha }\left ({\Theta }\right)=&\alpha m\left ({\Theta }\right) + \left ({{1 - \alpha } }\right) \tag{8}\\ {m^\alpha }\left ({A }\right)=&\alpha m\left ({A }\right)\quad \forall A \subset \Theta \quad and~A \ne \Theta\tag{9}\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} {m^\alpha }\left ({\Theta }\right)=&\alpha m\left ({\Theta }\right) + \left ({{1 - \alpha } }\right) \tag{8}\\ {m^\alpha }\left ({A }\right)=&\alpha m\left ({A }\right)\quad \forall A \subset \Theta \quad and~A \ne \Theta\tag{9}\end{align*}
+C. Pignistic Probability Transformation (PPT)
+
+Beliefs manifest themselves at two levels: the credal level (from credibility) where belief is entertained, and the pignistic level where beliefs are used to make decisions. The term “pignistic” was proposed by Smets [50] and originates from the word pignus, meaning ‘bet’ in Latin. Pignistic probability is used for decision making and uses Principle of Insufficient Reason to derive from BPA. It represents a point estimate in a belief interval and can be determined as \begin{equation*} bet\left ({{A_{i}} }\right) = \sum \limits _{A_{i} \subseteq {A_{k}}} {\frac {{m\left ({{A_{k}} }\right)}}{{\left |{ {A_{k}} }\right |}}}\tag{10}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} bet\left ({{A_{i}} }\right) = \sum \limits _{A_{i} \subseteq {A_{k}}} {\frac {{m\left ({{A_{k}} }\right)}}{{\left |{ {A_{k}} }\right |}}}\tag{10}\end{equation*} where $A_{k}$ is the focal element.
+D. Shannon Entropy
+
+Shannon entropy is an uncertain measure of information volume in a system which plays an important roles in information theory [51] . The Shannon entropy is H is denoted by: \begin{equation*} H = - \sum \limits _{i = 1}^{N} {p_{i}{\log }{p_{i}}}\tag{11}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} H = - \sum \limits _{i = 1}^{N} {p_{i}{\log }{p_{i}}}\tag{11}\end{equation*} where $N$ is the number of basic states in a system, and ${p_{i}}$ is the probability of state $i$ appears satisfying $\sum \nolimits _{i = 1}^{N} {p_{i} = } 1$ .
+
+There still some limitations in Shannon entropy for DST, thus, the concept of entropy in the framework of Dempster-Shafer evidence theory is an open issue. Plenty of researchers have extended many measured functions in the framework of it.
+E. Uncertainty Measures Based on Dempster-Shafer Framework
+
+Assume that $X$ is FOD, $A$ and $B$ are focal elements of the mass function, and $\left |{ A }\right |$ denotes the cardinality of $A$ . Then, definitions of some uncertain measures in DST framework are briefly introduced as follows.
+1) Hohle’S Confusion Measure
+
+Hohle’s confusion measure is one of earlier confusion measures for D-S theory was due to Hohle [14] . \begin{equation*} {C_{H}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right){\log _{2}}} Bel\left ({A }\right)\tag{12}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} {C_{H}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right){\log _{2}}} Bel\left ({A }\right)\tag{12}\end{equation*}
+2) Yager’S Dissonance Measure
+
+Dissonance measure of BPA was defined by Yager [15] as follow: \begin{equation*} {E_{Y}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right){\log _{2}}Pl\left ({A }\right)}\tag{13}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} {E_{Y}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right){\log _{2}}Pl\left ({A }\right)}\tag{13}\end{equation*}
+3) Dubois & Prade’S Weighted Hartley Entropy
+
+Dubois & Prade’s weighted Hartley entropy is shown as follow [10] : \begin{equation*} {E_{DP}}\left ({m }\right) = m\left ({A }\right){\log _{2}}\left |{ A }\right |\tag{14}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} {E_{DP}}\left ({m }\right) = m\left ({A }\right){\log _{2}}\left |{ A }\right |\tag{14}\end{equation*}
+4) Klir & Ramer’S Discord Measure
+
+Another discord measure of BPA was defined by Klir and Ramer [11] , as follow: \begin{equation*} {D_{KR}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right){\log _{2}}} \sum \limits _{B \subseteq X} {m\left ({B }\right)\frac {{\left |{ {A \cap B} }\right |}}{\left |{ A }\right |}}\tag{15}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} {D_{KR}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right){\log _{2}}} \sum \limits _{B \subseteq X} {m\left ({B }\right)\frac {{\left |{ {A \cap B} }\right |}}{\left |{ A }\right |}}\tag{15}\end{equation*}
+5) Klir & Parviz’S Strife Measure
+
+Klir & Parviz’s strife measure is denoted as follow [12] : \begin{equation*} {S_{KP}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right){\log _{2}}} \sum \limits _{B \subseteq X} {m\left ({B }\right)\frac {{\left |{ {A \cap B} }\right |}}{\left |{ B }\right |}}\tag{16}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} {S_{KP}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right){\log _{2}}} \sum \limits _{B \subseteq X} {m\left ({B }\right)\frac {{\left |{ {A \cap B} }\right |}}{\left |{ B }\right |}}\tag{16}\end{equation*}
+6) George & Pal’S Conflict Measure
+
+The total conflict measure prospered by George & Pal, denoted as ${H_{GP}}$ , is defined as follow [13] : \begin{equation*} {H_{GP}}(m) = \sum \limits _{A \subseteq X} {m\left ({A }\right)} \sum \limits _{B \subseteq X} {m\left ({B }\right)\left ({{1 - \frac {{\left |{ {A \cap B} }\right |}}{{\left |{ {A \cup B} }\right |}}} }\right)}\tag{17}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} {H_{GP}}(m) = \sum \limits _{A \subseteq X} {m\left ({A }\right)} \sum \limits _{B \subseteq X} {m\left ({B }\right)\left ({{1 - \frac {{\left |{ {A \cap B} }\right |}}{{\left |{ {A \cup B} }\right |}}} }\right)}\tag{17}\end{equation*}
+F. Deng Entropy
+
+Deng entropy is a generalization of Shannon entropy in Dempster-Shafer framework [21] . \begin{equation*} {E_{d}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right)} {\log _{2}}\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}\tag{18}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} {E_{d}}(m) = - \sum \limits _{A \subseteq X} {m\left ({A }\right)} {\log _{2}}\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}\tag{18}\end{equation*} where $A$ is a proposition in mass function $m$ , $\left |{ A }\right |$ denotes the cardinality of proposition $A$ , and $X$ is the FOD.As shown in the above definition, Deng entropy, specially, if the belief is only assigned to single elements, Deng entropy can be degenerated to the Shannon entropy. \begin{equation*} E_{d} = - \sum \limits _{i} {m(\theta _{i})\log \frac {m(\theta _{i})}{{2^{|\theta _{i}|} - 1}}} = - \sum \limits _{i} {m(\theta _{i})\log m(\theta _{i})}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} E_{d} = - \sum \limits _{i} {m(\theta _{i})\log \frac {m(\theta _{i})}{{2^{|\theta _{i}|} - 1}}} = - \sum \limits _{i} {m(\theta _{i})\log m(\theta _{i})}\end{equation*}
+
+Uncertainty plays a significant role in some fields since it is the foundation and prerequisite to quantitatively study the questions. There is no doubt that Deng entropy provides a promising way to measure uncertain degree and to handle more uncertain information. For more details about Deng entropy, please refer to [21] . Deng entropy has obtained lots of concerns from the theory perspective recently [52] –​ [54] , which has been applied in the ordered propositions fusion [55] , multi-sensor data fusion [56] . Related work of Deng entropy is also investigated in evidential reasoning [57] , pedestrian detection [58] , recognizing fatigue driving [59] , distributed object recognition [60] , combination rule of D-S theory [61] .
+
+Based on the frame of Deng entropy, other two uncertainty measure are presented as follows.
+1) Pan et al. s’ Entropy
+
+In DST, the probability interval [Bel(A), Pl(A)] can be obtained more information based on the basic probability assigned to each focal elements. Here formula use the probability interval to extend method of measuring uncertain as follow [62] : \begin{align*} {H_{Bel}}{\mathrm{(}}m{\mathrm{)}} = - \sum \limits _{{\mathrm{A}} \subseteq {2^\theta }} {\frac {Bel\left ({A }\right) + Pl\left ({A }\right)}{2}\log } \frac {Bel\left ({A }\right) + Pl\left ({A }\right)}{{2({2^{\left |{ A }\right |}} - 1)}} \\\tag{19}\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} {H_{Bel}}{\mathrm{(}}m{\mathrm{)}} = - \sum \limits _{{\mathrm{A}} \subseteq {2^\theta }} {\frac {Bel\left ({A }\right) + Pl\left ({A }\right)}{2}\log } \frac {Bel\left ({A }\right) + Pl\left ({A }\right)}{{2({2^{\left |{ A }\right |}} - 1)}} \\\tag{19}\end{align*}
+2) Zhou et al. s’ Entropy
+
+Another belief entropy in the framework of Dempster-Shafer is given by Zhou as follow, which considers the scale of FOD, i.e. $|X|$ [63] : \begin{equation*} {E_{Md}}\left ({m }\right) = - \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{\mathrm{m}}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {{\left |{ A }\right |{\mathrm{ - }}1}}{\left |{ X }\right |}}}} }\right)}\tag{20}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} {E_{Md}}\left ({m }\right) = - \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{\mathrm{m}}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {{\left |{ A }\right |{\mathrm{ - }}1}}{\left |{ X }\right |}}}} }\right)}\tag{20}\end{equation*}
+
+In [52] , some new properties of Deng entropy has been discussed. In this paper, we focus some limitations of Deng entropy to deal with the BPA with intersection of focal elements. Then we propose a new function of belief entropy in the frame of Deng entropy. We first give the proposed belief entropy and then apply two examples to illustrate the effectiveness of the proposed belief entropy.
+SECTION III.
+Proposed Belief Entropy
+
+Suppose there is a BPA denoted by $m$ , the proposed belief entropy is denoted as follow, \begin{equation*} E\left ({{m} }\right) = - \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \ \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \tag{21}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} E\left ({{m} }\right) = - \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \ \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \tag{21}\end{equation*} where $\left |{ A }\right |$ denotes the cardinality of proposition $A$ , and $| {A \cap B}|$ is the cardinality of the intersection of $A$ and $B$ .
+
+In addition, it is easy to verify that the proposed entropy is degenerated into Deng entropy when the focal elements are not in intersection. What is more, the proposed entropy is degenerated into Shannon entropy when the belief is only assigned to single elements.
+
+In the next section, we use two examples to present the effectiveness of the proposed entropy.
+A. Counter- Example 1
+Example 1:
+
+Now let us consider this example, there is a target identification, assume that two reliable sensors report the detection results on their own. Firstly, assume the FOD in this example is $X = \{a, b, c, d\}$ . The results are presented by BOEs listed as follows: \begin{align*}{m_{1:}}{m_{1}}\left ({{\left \{{ {a,b} }\right \}} }\right)=&0.4,{m_{1}}\left ({{\left \{{ {c,d} }\right \}} }\right) = 0.6\\ {m_{2:}}{m_{2}}\left ({{\left \{{ {a,c} }\right \}} }\right)=&0.4,{m_{2}}\left ({{\left \{{ {b,c} }\right \}} }\right) = 0.6\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*}{m_{1:}}{m_{1}}\left ({{\left \{{ {a,b} }\right \}} }\right)=&0.4,{m_{1}}\left ({{\left \{{ {c,d} }\right \}} }\right) = 0.6\\ {m_{2:}}{m_{2}}\left ({{\left \{{ {a,c} }\right \}} }\right)=&0.4,{m_{2}}\left ({{\left \{{ {b,c} }\right \}} }\right) = 0.6\end{align*}
+
+Intuitively, the uncertainty of $m_{1}$ is larger than that of $m_{2}$ for the focal elements of $m_{2}$ are of intersection. Next, we use the Deng entropy [21] and Zhou’s method [63] to investigate the uncertainty of $m_{1}$ and the uncertainty of $m_{2}$ .
+
+Solve the question using Deng entropy, the uncertainty measures are calculated as follows: \begin{align*} {E_{d}}({m_{1}})=&- \sum \limits _{A \subseteq X} {m_{1}\left ({A }\right){\log _{2}}\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}} \\=&0.4{\log _{2}}\frac {0.6}{2^{2} - 1} = 2.5559 \\ {E_{d}}({m_{2}})=&- \sum \limits _{A \subseteq X} {m_{2}\left ({A }\right){\log _{2}}\frac {m_{2}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}} \\=&0.4{\log _{2}}\frac {0.6}{2^{2} - 1} = 2.5559\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} {E_{d}}({m_{1}})=&- \sum \limits _{A \subseteq X} {m_{1}\left ({A }\right){\log _{2}}\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}} \\=&0.4{\log _{2}}\frac {0.6}{2^{2} - 1} = 2.5559 \\ {E_{d}}({m_{2}})=&- \sum \limits _{A \subseteq X} {m_{2}\left ({A }\right){\log _{2}}\frac {m_{2}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}} \\=&0.4{\log _{2}}\frac {0.6}{2^{2} - 1} = 2.5559\end{align*}
+
+Solve the question with Zhou’s belief entropy, the uncertainty measures are calculated as follows: \begin{align*}&\hspace {-1.2pc} {E_{Md}}\left ({{m_{1}} }\right) \\=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{1}}\left ({A }\right){\log _{2}}\left ({{\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {\left |{ A }\right |-1}{\left |{ X }\right |}}}} }\right)} \\=&- {\mathrm{0}}{\mathrm{.4lo}}{{\mathrm{g}}_{2}}\left ({{\frac {0.4}{2^{2} - 1}{e^{\frac {{{\mathrm{2 - }}1}}{4}}}} }\right) - {\mathrm{0}}{\mathrm{.6lo}}{{\mathrm{g}}_{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {{{\mathrm{2 - }}1}}{4}}}} }\right) \\=&2{\mathrm{.3155}} \\&\hspace {-1.2pc}{E_{Md}}\left ({{{{\mathrm{m}}_{2}}} }\right) \\=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{2}}\left ({A }\right){\log _{2}}\left ({{\frac {{{{\mathrm{m}}_{2}}\left ({A }\right)}}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {{\left |{ A }\right |{\mathrm{ - }}1}}{\left |{ X }\right |}}}} }\right)} \\=&- {\mathrm{0}}{\mathrm{.4lo}}{{\mathrm{g}}_{2}}\left ({{\frac {0.4}{2^{2} - 1}{e^{\frac {{{\mathrm{2 - }}1}}{4}}}} }\right) - {\mathrm{0}}{\mathrm{.6lo}}{{\mathrm{g}}_{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {{{\mathrm{2 - }}1}}{4}}}} }\right) \\=&2.3155\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*}&\hspace {-1.2pc} {E_{Md}}\left ({{m_{1}} }\right) \\=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{1}}\left ({A }\right){\log _{2}}\left ({{\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {\left |{ A }\right |-1}{\left |{ X }\right |}}}} }\right)} \\=&- {\mathrm{0}}{\mathrm{.4lo}}{{\mathrm{g}}_{2}}\left ({{\frac {0.4}{2^{2} - 1}{e^{\frac {{{\mathrm{2 - }}1}}{4}}}} }\right) - {\mathrm{0}}{\mathrm{.6lo}}{{\mathrm{g}}_{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {{{\mathrm{2 - }}1}}{4}}}} }\right) \\=&2{\mathrm{.3155}} \\&\hspace {-1.2pc}{E_{Md}}\left ({{{{\mathrm{m}}_{2}}} }\right) \\=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{2}}\left ({A }\right){\log _{2}}\left ({{\frac {{{{\mathrm{m}}_{2}}\left ({A }\right)}}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {{\left |{ A }\right |{\mathrm{ - }}1}}{\left |{ X }\right |}}}} }\right)} \\=&- {\mathrm{0}}{\mathrm{.4lo}}{{\mathrm{g}}_{2}}\left ({{\frac {0.4}{2^{2} - 1}{e^{\frac {{{\mathrm{2 - }}1}}{4}}}} }\right) - {\mathrm{0}}{\mathrm{.6lo}}{{\mathrm{g}}_{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {{{\mathrm{2 - }}1}}{4}}}} }\right) \\=&2.3155\end{align*}
+
+As shown to us, the results given by Deng entropy are the same. However, although the BOEs have the similar mass value assignment, but the number of the target isn’t same, the FOD of the first one has four candidate targets as $a$ , $b$ , $c$ and $d$ , but the FOD of the second one only has three targets as $a$ , $b$ and $c$ . On the basis of the logical thinking, it is expected that their results should be different, the first one have more uncertainty than the second one because of the larger information volume.
+
+Zhou et al. s’ method consider this problem, and his belief entropy addresses the issue to a certain degree. However, there is still some room for the improvement, because his measure doesn’t pay attention to the framework of discernment given firstly. In the example, recall the belief entropy, the length of the frame is 4 in the first one, but the length of the framework is 3 in the second one, it fails to consider the influence of the intersection between statements on uncertainty if the scale of FOD is given. We hope that a much more precise measure to refine the result should be taken,so based on the fixed framework of discernment $\theta {\mathrm{ = }}\left \{{ {a,b,c,d} }\right \}$ and Deng entropy, we get a new belief entropy.
+
+Then, we use the proposed belief entropy to investigate Example 1 , the new belief entropy for these two BOEs is calculated using Eq.(21) as follows: \begin{align*} E\left ({{m_{1}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{1}}\left ({A }\right){\log _{2}}\left ({{\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.4{\log _{2}}\left ({{\frac {0.4}{2^{2} - 1}{e^{0}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{0}}} }\right) \\=&2.5559 \\ E\left ({{m_{2}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{2}}\left ({A }\right){\log _{2}}\left ({{\frac {m_{2}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.4{\log _{2}}\left ({{\frac {0.4}{2^{2} - 1}{e^{\frac {1}{15}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {1}{15}}}} }\right) \\=&2.4597\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} E\left ({{m_{1}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{1}}\left ({A }\right){\log _{2}}\left ({{\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.4{\log _{2}}\left ({{\frac {0.4}{2^{2} - 1}{e^{0}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{0}}} }\right) \\=&2.5559 \\ E\left ({{m_{2}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{2}}\left ({A }\right){\log _{2}}\left ({{\frac {m_{2}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.4{\log _{2}}\left ({{\frac {0.4}{2^{2} - 1}{e^{\frac {1}{15}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {1}{15}}}} }\right) \\=&2.4597\end{align*}
+
+From the results, the effectiveness of the proposed entropy can be obtained comparing Deng’s entropy [21] and Zhou’ entropy [63] .
+
+The comparison results of different uncertainty measures are obtained shown in the Table 1 .
+TABLE 1 Uncertainties Using Different Entropy Measures
+Table 1- Uncertainties Using Different Entropy Measures
+
+It can be concluded that most of the entropies have the same shortage that couldn’t measure the differences of uncertain degree between two BOEs, their measures cannot give a much more accurate and reliable result except KR [11] , KP [12] , GP [13] . However, they can’t deal with the more complex situation of the focal elements (propositions), i.e. the simultaneity of the propositions. Hence, our focus lands in the frame of Deng entropy. In this paper, the proposed belief entropy can not only make use of more available information to measure the different uncertain degree effectively, but also consider the influence of the intersection between statements on uncertainty. Comparing the existing work, the proposed belief entropy is more reasonable comparing the previous uncertainty measures.
+B. Counter- Example 2
+
+In order to compare the capacity of the proposed belief entropy, recall the other example in as follows.
+Example 2:
+
+Think about another target identification, assume that three reliable sensors report the detection results on their own. Comparing with example 1 , the number of the element in this one isn’t same. The results are presented by BOEs listed as follows: \begin{align*} {m_{1}}:{m_{1}}\left ({{\left \{{ {a,b} }\right \}} }\right)=&0.2,{m_{1}}\left ({{\left \{{ {c,d} }\right \}} }\right) = 0.6,{m_{1}}\left ({{\left \{{ {e,f} }\right \}} }\right) = 0.2 \\ {m_{2}}: {m_{2}}\left ({{\left \{{ {a,b} }\right \}} }\right)=&0.2,{m_{2}}\left ({{\left \{{ {b,c} }\right \}} }\right) = 0.6,{m_{2}}\left ({{\left \{{ {c,f} }\right \}} }\right) = 0.2 \\ {m_{3}}: {m_{3}}\left ({{\left \{{ {a,b} }\right \}} }\right)=&0.2,{m_{3}}\left ({{\left \{{ {b,c} }\right \}} }\right) = 0.6,{m_{3}}\left ({{\left \{{ {e,f} }\right \}} }\right) = 0.2\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} {m_{1}}:{m_{1}}\left ({{\left \{{ {a,b} }\right \}} }\right)=&0.2,{m_{1}}\left ({{\left \{{ {c,d} }\right \}} }\right) = 0.6,{m_{1}}\left ({{\left \{{ {e,f} }\right \}} }\right) = 0.2 \\ {m_{2}}: {m_{2}}\left ({{\left \{{ {a,b} }\right \}} }\right)=&0.2,{m_{2}}\left ({{\left \{{ {b,c} }\right \}} }\right) = 0.6,{m_{2}}\left ({{\left \{{ {c,f} }\right \}} }\right) = 0.2 \\ {m_{3}}: {m_{3}}\left ({{\left \{{ {a,b} }\right \}} }\right)=&0.2,{m_{3}}\left ({{\left \{{ {b,c} }\right \}} }\right) = 0.6,{m_{3}}\left ({{\left \{{ {e,f} }\right \}} }\right) = 0.2\end{align*}
+
+Intuitively, the uncertainties of $m_{1}$ , $m_{2}$ , and $m_{3}$ are not the same. In addition, the uncertainty of $m_{3}$ should be largest, and the uncertainty of $m_{2}$ should be smallest.
+
+Solve the question using Deng entropy, the uncertainty measures are calculated as follows: \begin{align*}&\hspace {-1.2pc}{E_{d}}({m_{1}}) \\=&- \sum \limits _{A \subseteq X} {m_{1}\left ({A }\right)} {\log _{2}}\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}\\=&- 0.2{\log _{2}}\frac {0.2}{2^{2} - 1} - 0.6{\log _{2}}\frac {0.6}{2^{2} - 1} - 0.2{\log _{2}}\frac {0.2}{2^{2} - 1}\\=&2.9559 \\&\hspace {-1.2pc} {E_{d}}({m_{2}}) \\=&- \sum \limits _{A \subseteq X} {m_{2}\left ({A }\right)} {\log _{2}}\frac {m_{2}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}\\=&- 0.2{\log _{2}}\frac {0.2}{2^{2} - 1} - 0.6{\log _{2}}\frac {0.6}{2^{2} - 1} - 0.2{\log _{2}}\frac {0.2}{2^{2} - 1}\\=&2.9559 \\&\hspace {-1.2pc} {E_{d}}({m_{3}}) \\=&- \sum \limits _{A \subseteq X} {m_{3}\left ({A }\right)} {\log _{2}}\frac {m_{3}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}\\=&- 0.2{\log _{2}}\frac {0.2}{2^{2} - 1} - 0.6{\log _{2}}\frac {0.6}{2^{2} - 1} - 0.2{\log _{2}}\frac {0.2}{2^{2} - 1}\\=&2.9559\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*}&\hspace {-1.2pc}{E_{d}}({m_{1}}) \\=&- \sum \limits _{A \subseteq X} {m_{1}\left ({A }\right)} {\log _{2}}\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}\\=&- 0.2{\log _{2}}\frac {0.2}{2^{2} - 1} - 0.6{\log _{2}}\frac {0.6}{2^{2} - 1} - 0.2{\log _{2}}\frac {0.2}{2^{2} - 1}\\=&2.9559 \\&\hspace {-1.2pc} {E_{d}}({m_{2}}) \\=&- \sum \limits _{A \subseteq X} {m_{2}\left ({A }\right)} {\log _{2}}\frac {m_{2}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}\\=&- 0.2{\log _{2}}\frac {0.2}{2^{2} - 1} - 0.6{\log _{2}}\frac {0.6}{2^{2} - 1} - 0.2{\log _{2}}\frac {0.2}{2^{2} - 1}\\=&2.9559 \\&\hspace {-1.2pc} {E_{d}}({m_{3}}) \\=&- \sum \limits _{A \subseteq X} {m_{3}\left ({A }\right)} {\log _{2}}\frac {m_{3}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}\\=&- 0.2{\log _{2}}\frac {0.2}{2^{2} - 1} - 0.6{\log _{2}}\frac {0.6}{2^{2} - 1} - 0.2{\log _{2}}\frac {0.2}{2^{2} - 1}\\=&2.9559\end{align*}
+
+From the results above, Deng entropy cannot make a difference between $m_{1}$ and $m_{2}$ .
+
+Solve the question with Zhou et al. s’ entropy, the uncertainty measures are calculated as follows: \begin{align*} {E_{Md}}\left ({{m_{1}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{1}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {\left |{ A }\right | - 1}{\left |{ X }\right |}}}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right)\\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right)\\=&2.4750 \\ {E_{Md}}\left ({{m_{2}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{2}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {\left |{ A }\right | - 1}{\left |{ X }\right |}}}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right)\\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right)\\=&2.4750 \\ {E_{Md}}\left ({{m_{3}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{3}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {\left |{ A }\right | - 1}{\left |{ X }\right |}}}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) \\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) \\=&2.4750\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} {E_{Md}}\left ({{m_{1}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{1}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {\left |{ A }\right | - 1}{\left |{ X }\right |}}}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right)\\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right)\\=&2.4750 \\ {E_{Md}}\left ({{m_{2}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{2}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {\left |{ A }\right | - 1}{\left |{ X }\right |}}}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right)\\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right)\\=&2.4750 \\ {E_{Md}}\left ({{m_{3}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{3}\left ({A }\right){\log _{2}}\left ({{\frac {m\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\frac {\left |{ A }\right | - 1}{\left |{ X }\right |}}}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) \\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{6}}}} }\right) \\=&2.4750\end{align*}
+
+From the results above, Zhou et al. s’ entropy cannot make a difference between $m_{1}$ and $m_{2}$ as the same as Deng entropy.
+
+Using the proposed belief entropy, recall Example 2 , the new belief entropy for these two BOEs is calculated as follows: \begin{align*} E\left ({{m_{1}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{1}\left ({A }\right){\log _{2}}\left ({{\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right) \\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right) \\=&2.9559 \\ E\left ({{m_{2}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{2}\left ({A }\right){\log _{2}}\left ({{\frac {m_{2}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{63}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right)\\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{63}}}} }\right) \\=&2.9193 \\ E\left ({{m_{3}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{3}}\left ({A }\right){\log _{2}}\left ({{\frac {m_{3}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{63}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right)\\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right) \\=&2.9376\end{align*} View Source Right-click on figure for MathML and additional features. \begin{align*} E\left ({{m_{1}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{1}\left ({A }\right){\log _{2}}\left ({{\frac {m_{1}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right) \\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right) \\=&2.9559 \\ E\left ({{m_{2}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {m_{2}\left ({A }\right){\log _{2}}\left ({{\frac {m_{2}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{63}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right)\\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{63}}}} }\right) \\=&2.9193 \\ E\left ({{m_{3}} }\right)=&- \sum \limits _{{\mathrm{A}} \subseteq {\mathrm{X}}} {{{\mathrm{m}}_{3}}\left ({A }\right){\log _{2}}\left ({{\frac {m_{3}\left ({A }\right)}{{{2^{\left |{ A }\right |}} - 1}}{e^{\sum \limits _{\substack{\scriptstyle B \subseteq X \\ \scriptstyle B \ne A }} {\frac {{\left |{ {A \cap B} }\right |}}{{{2^{\left |{ X }\right |}} - 1}}} }}} }\right)} \\=&- 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {1}{63}}}} }\right) - 0.6{\log _{2}}\left ({{\frac {0.6}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right)\\&-\, 0.2{\log _{2}}\left ({{\frac {0.2}{2^{2} - 1}{e^{\frac {0}{63}}}} }\right) \\=&2.9376\end{align*}
+
+From results in the Example 2 , we can conclude that our proposed method improve the performance of Deng entropy, and Zhou et al. s’ method.
+
+The comparison results of different uncertainty measures are given in the Table 2 . It is very obvious that the proposed method overcome the shortcomings of the previous work.
+TABLE 2 Uncertainties Using Different Entropy Measures
+Table 2- Uncertainties Using Different Entropy Measures
+
+SECTION IV.
+Application
+
+In this section, an application in pattern recognition using Iris dataset [64] is investigated using the proposed entropy. The role of the proposed entropy is used to measure the quality of the evidence information, we assume that the larger entropy, the lower quality of the evidence information, the smaller entropy, the higher quality of the evidence information. Then the higher quality of the evidence information, we give them the lager weights in the process of combination, the lower quality of the evidence information, we give them the smaller weights in the process of combination.
+
+In order to realize patter recognition, the method of generating BPA should firstly be considered. Lots of methods have been discussed to deal with this issue [65] . In this paper, we applied the simplest model (interval model to obtain BPA) by Kang et al. [66] to discuss the role of the proposed entropy.
+A. Pattern Recognition Considering the Proposed Belief Entropy
+
+Firstly, we review the similarity of the interval numbers of generating BPA [66] .
+1) Similarity of Interval Numbers
+
+$A = \left [{ {a_{1},{a_{2}}} }\right]$ and $B = [{b_{1}},{b_{2}}]$ are two interval numbers then their similarity $S\left ({{A,B} }\right)$ is defined as follows: \begin{equation*} S\left ({{A,B} }\right) = \frac {1}{{1 + \alpha D\left ({{A,B} }\right)}} \tag{22}\end{equation*} View Source Right-click on figure for MathML and additional features. \begin{equation*} S\left ({{A,B} }\right) = \frac {1}{{1 + \alpha D\left ({{A,B} }\right)}} \tag{22}\end{equation*} Of which $\alpha > 0$ is coefficient of support, ${D\left ({{A,B} }\right)}$ is the distance of interval number A and interval number B, the function of $D$ refers to [67] .
+
+Secondly, we review the flow of obtaining BPA by interval model from [66] .
+2) Method of Generating BPA
+
+The main thought of generating BPA using interval number is conclude: First, use the collective samples contribute model of interval number. Then, obtain the distance of testing sample and model of interval number. Finally, get the reciprocal of this distance to generate degree of similarity which can be normalized in order to get BPA. The steps of generating BPA are listed as follows: (1)
+
+    Construct the model of interval number from the max-min value of collective samples.
+
+    Calculate the distance between unidentified sample property value and interval number.
+
+    Calculate the degree of similarity between unidentified sample property value and interval number using Eq. (22) .
+
+    Normalize the similarity and generate the BPA.
+
+After obtaining the BPA, we using the proposed belief to modify the BPA.
+B. Improved BPA Using the Proposed Entropy
+
+In this part, a discounting BPA is given based on results of BPA calculated by Kang’s method, the process is listed as follows: (1)
+
+    Calculate the proposed belief entropy value of each unidentified sample property value using Eq. (21) .
+
+    Use the Proposed value as significance of each unidentified sample property value in order to calculate the weight of each property by using the function ${\omega _{i}}\left ({x }\right) = \frac {{{e^{ - {x_{i}}}}}}{{\sum {{e^{ - {x_{i}}}}} }}$ .
+
+    Select the maximum of these entropy value as target. Get the new discounted weight by making each Entropy value divided by the maximum value.
+
+    Allocate the new discounted weight to previous BPA using Eq. (8) and Eq. (9) .
+
+C. Simulation Experiment
+
+The overall idea of the experimental design is: we use the Iris dataset as a verification database in order to introduce the application of the new generation method in classification recognition rate. The experiment is depicted as follows:
+
+    Select 120 samples from Iris Data Set randomly, of which select 40 samples for each kind of Iris. And then use sample of max-min value to generate model of interval number, as is shown in Table 3 .
+
+    Each kind of Iris is still has 10 samples in remaining 30 samples which is regarded as unknown test sample (Suppose the selected sample data is [6.3, 2.7, 4.9, 1.8, Iris virsicolor]).
+
+    Get the value of BPA by calculating the degree of similarity and proposed entropy. Then the each group of BPA is shown in Table 4 .
+
+    Because there are four properties, we can generate four pieces of evidence shown in Table 4 , then we calculate the belief entropy of each BPA using Eq. (21) . Then we use the process in Section IV-B to discount the previous BPAs. The discounted BPAs are shown in Table 5
+
+    Then obtain the fusion value by using the DS rule of composition using Eq. (7) .
+
+    The type of unknown sample is determined by Combined BPA. The maximum probability value of PPT using Eq. (10) for the combined BPA of property is final result.
+
+TABLE 3 The Sample Statistical Model of Interval Numbers
+Table 3- The Sample Statistical Model of Interval Numbers
+TABLE 4 Bpas Based on Kang’S Method And Final Fusion Result
+Table 4- Bpas Based on Kang’S Method And Final Fusion Result
+TABLE 5 The Modified Bpas Based on The Proposed Belief Entropy And Final Fusion Result
+Table 5- The Modified Bpas Based on The Proposed Belief Entropy And Final Fusion Result
+
+Form the final result of Table 4 and Table 5 , the proposed method can make a right recognition, i.e. the selected sample is ‘Iris versicolor’, but Kang’ s method cannot make the right decision.
+
+In consideration of scale of samples, we tested all 150 samples as the result. In order to understand the effect of this method in recognition of Iris Data Set, we make coefficient of support $\alpha = 5$ as Kang’s method [66] , under the condition of the sample statistical model of interval numbers in Table 3 . After testing statistics of all 150 samples, we get result that global recognition rate is 96.67% and the recognition rate of Setosa, Versicolor, Virginica is 100%, 96%, 94% respectively, but the result of previous method by Kang is that global recognition rate is 95.33% and the recognition rate of Setosa, Versicolor, Virginica is 100%, 98%, 90% respectively. The comparing result is shown in Table 6 . It is clearly shown that the recognition rate is improved using discounting method forced by the proposed belief entropy. At the same time, this new method also exert the excellent advantage in other similar area.
+TABLE 6 The Final Fusion Result (Recognition Rate)
+Table 6- The Final Fusion Result (Recognition Rate)
+
+SECTION V.
+Conclusion
+
+In this paper, a modified function is proposed by considering the scale of the frame of discernment (FOD) and the influence of the intersection between statements on uncertainty. Some numerical examples and an application in pattern recognition are used to show the efficiency and accuracy of the proposed belief entropy. Results show that the proposed belief entropy overcome the shortcomings of the previous work, the improved recognition rate enhanced effectiveness of the propose belief entropy. Further study of this work will be focused on the application prospect of the proposed measures and it provides a promising way to measure the uncertain degree in decision making, fault diagnosis pattern recognition, risk analysis and so on.
+Conflict of Interest
+
+The authors declare that they have no conflict of interest.
+
+Authors
+Figures
+References
+Citations
+Keywords
+Metrics
+More Like This
+Is entropy enough to evaluate the probability transformation approach of belief function?
+
+2010 13th International Conference on Information Fusion
+
+Published: 2010
+Improved intuitionistic fuzzy cross-entropy and its application to pattern recognitions
+
+2010 IEEE International Conference on Intelligent Systems and Knowledge Engineering
+
+Published: 2010
+Show More
+References
+1.
+J.-B. Yang and D.-L. Xu, "Evidential reasoning rule for evidence combination", Artif. Intell. , vol. 205, pp. 1-29, Dec. 2013.
+Show in Context CrossRef Google Scholar
+2.
+J.-B. Yang and D.-L. Xu, "On the evidential reasoning algorithm for multiple attribute decision analysis under uncertainty", IEEE Trans. Syst. Man Cybern. A Syst. Humans , vol. 32, pp. 289-304, May 2002.
+Show in Context View Article
+Google Scholar
+3.
+P. Mitra, C. A. Murthy and S. K. Pal, "Unsupervised feature selection using feature similarity", IEEE Trans. Pattern Anal. Mach. Intell. , vol. 24, no. 3, pp. 301-312, Mar. 2002.
+Show in Context View Article
+Google Scholar
+4.
+I. J. Myung and A. D. Bailey, "Maximum entropy aggregation of expert predictions", Manage. Sci. , vol. 42, no. 10, pp. 1420-1436, 1996.
+Show in Context CrossRef Google Scholar
+5.
+A. Ratnaparkhi, "Learning to parse natural language with maximum entropy models", Mach. Learn. , vol. 34, no. 1, pp. 151-175, 1999.
+Show in Context CrossRef Google Scholar
+6.
+L. Yin and Y. Deng, "Toward uncertainty of weighted networks: An entropy-based model", Phys. A Stat. Mech. Appl. , vol. 508, pp. 176-186, Oct. 2018.
+Show in Context CrossRef Google Scholar
+7.
+T. Bian and Y. Deng, "Identifying influential nodes in complex networks: A node information dimension approach", Chaos Interdiscipl. J. Nonlinear Sci. , vol. 28, no. 4, 2018.
+Show in Context CrossRef Google Scholar
+8.
+W. Deng and Y. Deng, "Entropic methodology for entanglement measures", Phys. A Stat. Mech. Appl. , vol. 512, pp. 693-697, Dec. 2018.
+Show in Context CrossRef Google Scholar
+9.
+Z. Cao and C.-T. Lin, "Inherent fuzzy entropy for the improvement of EEG complexity evaluation", IEEE Trans. Fuzzy Syst. , vol. 26, no. 2, pp. 1032-1035, Apr. 2018.
+Show in Context View Article
+Google Scholar
+10.
+D. Dubois and H. Prade, "A note on measures of specificity for fuzzy sets", Int. J. Gen. Syst. , vol. 10, no. 4, pp. 279-283, 1985.
+Show in Context CrossRef Google Scholar
+11.
+G. J. Klir and A. Ramer, "Uncertainty in the dempster-shafer theory: A critical re-examination", Int. J. Gen. Syst. , vol. 18, no. 2, pp. 155-166, 1990.
+Show in Context CrossRef Google Scholar
+12.
+N. R. Pal, J. C. Bezdek and R. Hemasinha, "Uncertainty measures for evidential reasoning I: A review", Int. J. Approx. Reasoning , vol. 7, no. 3, pp. 165-183, 1992.
+Show in Context CrossRef Google Scholar
+13.
+T. George and N. R. Pal, "Quantification of conflict in dempster-shafer framework: A new approach", Int. J. Gen. Syst. , vol. 24, no. 4, pp. 407-423, 1996.
+Show in Context CrossRef Google Scholar
+14.
+U. Hohle, "Entropy with respect to plausibility measures", Proc. IEEE 12th Int. Symp. Multiple Valued Logic , 1982.
+Show in Context Google Scholar
+15.
+R. R. Yager, "Entropy and specificity in a mathematical theory of evidence", Int. J. Gen. Syst. , vol. 9, no. 4, pp. 249-260, 1983.
+Show in Context CrossRef Google Scholar
+16.
+Y. Yang and D. Han, "A new distance-based total uncertainty measure in the theory of belief functions", Knowl.-Based Syst. , vol. 94, pp. 114-123, Feb. 2016.
+Show in Context CrossRef Google Scholar
+17.
+D. Han, J. Dezert and Y. Yang, "Belief interval-based distance measures in the theory of belief functions", IEEE Trans. Syst. Man Cybern. Syst. , vol. 48, no. 6, pp. 833-850, Jun. 2018.
+Show in Context View Article
+Google Scholar
+18.
+X. Deng, "Analyzing the monotonicity of belief interval based uncertainty measures in belief function theory", Int. J. Intell. Syst. , vol. 33, no. 9, pp. 1869-1879, 2018.
+Show in Context CrossRef Google Scholar
+19.
+Y. Song, X. Wang, L. Lei and S. Yue, "Uncertainty measure for interval-valued belief structures", Measurement , vol. 80, pp. 241-250, Feb. 2016.
+Show in Context CrossRef Google Scholar
+20.
+X. Wang and Y. Song, "Uncertainty measure in evidence theory with its applications", Appl. Intell. , vol. 48, no. 7, pp. 1672-1688, 2017.
+Show in Context CrossRef Google Scholar
+21.
+Y. Deng, "Deng entropy", Chaos Solitons Fractals , vol. 91, pp. 549-553, Oct. 2016.
+Show in Context CrossRef Google Scholar
+22.
+A. P. Dempster, "Upper and lower probabilities induced by a multivalued mapping", Ann. Math. Statist. , vol. 38, no. 2, pp. 325-339, 1967.
+Show in Context CrossRef Google Scholar
+23.
+G. Shafer, A Mathematical Theory of Evidence, Princeton, NJ, USA:Princeton Univ. Press, 1976.
+Show in Context Google Scholar
+24.
+H. Zhang and Y. Deng, "Engine fault diagnosis based on sensor data fusion considering information quality and evidence theory", Adv. Mech. Eng. , vol. 10, no. 11, pp. 1-11, 2018.
+Show in Context CrossRef Google Scholar
+25.
+X. Zhang, S. Mahadevan, N. Lau and M. B. Weinger, "Multi-source information fusion to assess control room operator performance", Rel. Eng. Syst. Saf. .
+Show in Context CrossRef Google Scholar
+26.
+L. Chen and Y. Deng, "A new failure mode and effects analysis model using Dempster–Shafer evidence theory and grey relational projection method", Eng. Appl. Artif. Intell. , vol. 76, pp. 13-20, Nov. 2018.
+Show in Context CrossRef Google Scholar
+27.
+Y. Han and Y. Deng, "An enhanced fuzzy evidential DEMATEL method with its application to identify critical success factors", Soft Comput. , vol. 22, no. 15, pp. 5073-5090, 2018.
+Show in Context CrossRef Google Scholar
+28.
+Y. Han and Y. Deng, "A hybrid intelligent model for assessment of critical success factors in high-risk emergency system", J. Ambient Intell. Hum. Comput. , vol. 9, no. 6, pp. 1933-1953, 2018.
+Show in Context CrossRef Google Scholar
+29.
+H. Seiti and A. Hafezalkotob, "Developing pessimistic–optimistic risk-based methods for multi-sensor fusion: An interval-valued evidence theory approach", Appl. Soft Comput. , vol. 72, pp. 609-623, Nov. 2018.
+Show in Context CrossRef Google Scholar
+30.
+X. Zhang, S. Mahadevan and X. Deng, "Reliability analysis with linguistic data: An evidential network approach", Rel. Eng. Syst. Saf. , vol. 162, pp. 111-121, Jun. 2017.
+Show in Context CrossRef Google Scholar
+31.
+H. Seiti, A. Hafezalkotob, S. E. Najafi and M. Khalaj, "A risk-based fuzzy evidential framework for FMEA analysis under uncertainty: An interval-valued DS approach", J. Intell. Fuzzy Syst. , vol. 35, no. 2, pp. 1419-1430, 2018.
+Show in Context CrossRef Google Scholar
+32.
+X. Zhang and S. Mahadevan, "Aircraft re-routing optimization and performance assessment under uncertainty", Decis. Support Syst. , vol. 96, pp. 67-82, Apr. 2017.
+Show in Context CrossRef Google Scholar
+33.
+Y. Wang, K. Zhang and Y. Deng, "Base belief function: An efficient method of conflict management", J. Ambient Intell. Humanized Comput. , 2018.
+Show in Context CrossRef Google Scholar
+34.
+F. Xiao, "An improved method for combining conflicting evidences based on the similarity measure and belief function entropy", Int. J. Fuzzy Syst. , vol. 20, no. 4, pp. 1256-1266, 2018.
+Show in Context CrossRef Google Scholar
+35.
+P. Dutta, "An uncertainty measure and fusion rule for conflict evidences of big data via Dempster–Shafer theory", Int. J. Image Data Fusion , vol. 9, no. 2, pp. 152-169, 2018.
+Show in Context CrossRef Google Scholar
+36.
+X. Su, L. Li, F. Shi and H. Qian, "Research on the fusion of dependent evidence based on mutual information", IEEE Access , vol. 6, pp. 71839-71845, 2018.
+Show in Context View Article
+Google Scholar
+37.
+Y. Gong, X. Su, H. Qian and N. Yang, "Research on fault diagnosis methods for the reactor coolant system of nuclear power plant based on D-S evidence theory", Ann. Nucl. Energy , vol. 112, pp. 395-399, Feb. 2018.
+Show in Context CrossRef Google Scholar
+38.
+W. Jiang, "A correlation coefficient for belief functions", Int. J. Approx. Reasoning , vol. 103, pp. 94-106, Dec. 2018.
+Show in Context CrossRef Google Scholar
+39.
+X. Deng and W. Jiang, "Dependence assessment in human reliability analysis using an evidential network approach extended by belief rules and uncertainty measures", Ann. Nucl. Energy , vol. 117, pp. 183-193, Jul. 2018.
+Show in Context CrossRef Google Scholar
+40.
+F. Xiao, "A hybrid fuzzy soft sets decision making method in medical diagnosis", IEEE Access , vol. 6, pp. 25300-25312, 2018.
+Show in Context View Article
+Google Scholar
+41.
+F. Xiao, "A novel multi-criteria decision making method for assessing health-care waste treatment technologies based on D numbers", Eng. Appl. Artif. Intell. , vol. 71, pp. 216-225, May 2018.
+Show in Context CrossRef Google Scholar
+42.
+L. Chen and X. Deng, "A modified method for evaluating sustainable transport solutions based on AHP and Dempster–Shafer evidence theory", Appl. Sci. , vol. 8, no. 4, 2018.
+Show in Context CrossRef Google Scholar
+43.
+Z. He and W. Jiang, "An evidential dynamical model to predict the interference effect of categorization on decision making results", Knowl.-Based Syst. , vol. 150, pp. 139-149, 2018.
+Show in Context CrossRef Google Scholar
+44.
+P. Dutta, "Modeling of variability and uncertainty in human health risk assessment", MethodsX , vol. 4, pp. 76-85, 2017.
+Show in Context CrossRef Google Scholar
+45.
+Y. Song, X. Wang, L. Lei and Y. Xing, "Credibility decay model in temporal evidence combination", Inf. Process. Lett. , vol. 115, no. 2, pp. 248-252, Feb. 2015.
+Show in Context CrossRef Google Scholar
+46.
+Y. Liu, N. R. Pal, A. R. Marathe and C.-T. Lin, "Weighted fuzzy Dempster–Shafer framework for multimodal information integration", IEEE Trans. Fuzzy Syst. , vol. 26, no. 1, pp. 338-352, Feb. 2018.
+Show in Context View Article
+Google Scholar
+47.
+R. Wang, X. Gao, J. Gao, Z. Gao and J. Kang, "An information transfer based novel framework for fault root cause tracing of complex electromechanical systems in the processing industry", Mech. Syst. Signal Process. , vol. 101, pp. 121-139, Feb. 2018.
+Show in Context CrossRef Google Scholar
+48.
+R. Wang, J. Gao, Z. Gao, X. Gao, H. Jiang and Z. Liang, "Interaction analysis–based information modeling of complex electromechanical systems in the processing industry", Proc. Inst. Mech. Eng. I J. Syst. Control Eng. , vol. 231, no. 8, pp. 638-651, 2017.
+Show in Context CrossRef Google Scholar
+49.
+R. Wang, J. Gao, Z. Gao, X. Gao and H. Jiang, "Analysis of multifractality of multivariable coupling relationship of complex electromechanical system in process industry", Proc. Inst. Mech. Eng. E J. Process Mech. Eng. , vol. 231, no. 6, pp. 1087-1100, 2017.
+Show in Context CrossRef Google Scholar
+50.
+P. Smets, "Data fusion in the transferable belief model", Proc. 3rd Int. Conf. Inf. Fusion (FUSI) , vol. 1, pp. PS21-PS33, Jul. 2000.
+Show in Context View Article
+Google Scholar
+51.
+C. E. Shannon, "A mathematical theory of communication", Bell Syst. Tech. J. , vol. 27, no. 3, pp. 379-423, Jul./Oct. 1948.
+Show in Context View Article
+Google Scholar
+52.
+J. Abellán, "Analyzing properties of Deng entropy in the theory of evidence", Chaos Solitons Fractals , vol. 95, pp. 195-199, Feb. 2017.
+Show in Context CrossRef Google Scholar
+53.
+J. Abellán and E. Bossé, "Drawbacks of uncertainty measures based on the pignistic transformation", IEEE Trans. Syst. Man Cybern. Syst. , vol. 48, no. 3, pp. 382-388, Mar. 2018.
+Show in Context View Article
+Google Scholar
+54.
+R. Jirousek and P. P. Shenoy, "A new definition of entropy of belief functions in the Dempster–Shafer theory", Int. J. Approx. Reasoning , vol. 92, pp. 49-65, Jan. 2018.
+Show in Context CrossRef Google Scholar
+55.
+Y. Li and Y. Deng, "Generalized ordered propositions fusion based on belief entropy", Int. J. Comput. Commun. Control , vol. 13, no. 5, pp. 792-807, 2018.
+Show in Context CrossRef Google Scholar
+56.
+F. Xiao, "Multi-sensor data fusion based on the belief divergence measure of evidences and the belief entropy", Inf. Fusion , vol. 46, pp. 23-32, Mar. 2019.
+Show in Context CrossRef Google Scholar
+57.
+A. D. Jaunzemis, M. J. Holzinger, M. W. Chan and P. P. Shenoy, "Evidence gathering for hypothesis resolution using judicial evidential reasoning", Inf. Fusion , vol. 49, pp. 26-45, Sep. 2019.
+Show in Context CrossRef Google Scholar
+58.
+J. Vandoni, E. Aldea and S. Le Hégarat-Mascle, "Evidential query-by-committee active learning for pedestrian detection in high-density crowds", Int. J. Approx. Reasoning , vol. 104, pp. 166-184, Jan. 2019.
+Show in Context CrossRef Google Scholar
+59.
+W. Zhu, H. Yang, Y. Jin and B. Liu, "A method for recognizing fatigue driving based on Dempster-Shafer theory and fuzzy neural network", Math. Problems Eng. , vol. 2017, Feb. 2017.
+Show in Context CrossRef Google Scholar
+60.
+Y. Zhang, Y. Liu, Z. Zhang and N. Zhao, "Collaborative fusion for distributed target classification using evidence theory in IOT environment", IEEE Access , vol. 6, pp. 62314-62323, 2018.
+Show in Context View Article
+Google Scholar
+61.
+J. Wang, K. Qiao and Z. Zhang, "An improvement for combination rule in evidence theory", Future Gener. Comput. Syst. , vol. 91, pp. 1-9, Feb. 2019.
+Show in Context CrossRef Google Scholar
+62.
+L. Pan and Y. Deng, "A new belief entropy to measure uncertainty of basic probability assignments based on belief function and plausibility function", Entropy , vol. 20, no. 11, pp. 842, 2018.
+Show in Context CrossRef Google Scholar
+63.
+D. Zhou, Y. Tang and W. Jiang, "A modified belief entropy in dempster-shafer framework", PLoS ONE , vol. 12, no. 5, 2017.
+Show in Context CrossRef Google Scholar
+64.
+D. Dheeru and E. K. Taniskidou, UCI Machine Learning Repository, 2017, [online] Available: http://archive.ics.uci.edu/ml.
+Show in Context Google Scholar
+65.
+W. Jiang, Y. Yang, Y. Luo and X. Qin, "Determining basic probability assignment based on the improved similarity measures of generalized fuzzy numbers", Int. J. Comput. Commun. Control , vol. 10, no. 3, pp. 333-347, 2015.
+Show in Context CrossRef Google Scholar
+66.
+B.-Y. Kang, Y. Li, Y. Deng, Y.-J. Zhang and X.-Y. Deng, "Determination of basic probability assignment based on interval numbers and its application", Dianzi Xuebao (Acta Electronica Sinica) , vol. 40, no. 6, pp. 1092-1096, 2012.
+Show in Context Google Scholar
+67.
+L. Tran and L. Duckstein, "Comparison of fuzzy numbers using a fuzzy distance measure", Fuzzy Sets Syst. , vol. 130, no. 3, pp. 331-341, 2002.
+Show in Context CrossRef Google Scholar
+IEEE Personal Account
+
+    Change username/password 
+
+Purchase Details
+
+    Payment Options
+    View Purchased Documents 
+
+Profile Information
+
+    Communications Preferences
+    Profession and Education
+    Technical interests 
+
+Need Help?
+
+    US & Canada: +1 800 678 4333
+    Worldwide: +1 732 981 0060
+    Contact & Support 
+
+Follow
+
+About IEEE Xplore | Contact Us | Help | Accessibility | Terms of Use | Nondiscrimination Policy | IEEE Ethics Reporting | Sitemap | IEEE Privacy Policy
+
+A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+
+© Copyright 2023 IEEE - All rights reserved.
+logo icon
+Explain
+↻

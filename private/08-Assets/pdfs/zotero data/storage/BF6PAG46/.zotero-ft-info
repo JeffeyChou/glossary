@@ -1,0 +1,16 @@
+Title:          An Improved Total Uncertainty Measure in the Evidence Theory and Its Application in Decision Making
+Subject:        Dempster­Shafer evidence theory (DS theory) has some superiorities in uncertain information processing for a large variety of applications. However, the problem of how to quantify the uncertainty of basic probability assignment (BPA) in DS theory framework remain unresolved. The goal of this paper is to define a new belief entropy for measuring uncertainty of BPA with desirable properties. The new entropy can be helpful for uncertainty management in practical applications such as decision making. The proposed uncertainty measure has two components. The first component is an improved version of Dubois­Prade entropy, which aims to capture the non-specificity portion of uncertainty with a consideration of the element number in frame of discernment (FOD). The second component is adopted from Nguyen entropy, which captures conflict in BPA. We prove that the proposed entropy satisfies some desired properties proposed in the literature. In addition, the proposed entropy can be reduced to Shannon entropy if the BPA is a probability distribution. Numerical examples are presented to show the efficiency and superiority of the proposed measure as well as an application in decision making.
+Keywords:       Dempster­Shafer evidence theory; uncertainty measure; belief entropy; conflict management; decision making
+Author:         Miao Qin, Yongchuan Tang and Junhao Wen
+Creator:        LaTeX with hyperref package
+Producer:       pdfTeX-1.40.18
+CreationDate:   04/24/20 14:28:38
+ModDate:        04/24/20 14:28:38
+Tagged:         no
+Form:           none
+Pages:          18
+Encrypted:      no
+Page size:      595.276 x 841.89 pts (A4) (rotated 0 degrees)
+File size:      649436 bytes
+Optimized:      no
+PDF version:    1.5
