@@ -4,23 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "98661dc6ecbe2531",
+        "id": "1c521ab7cd812991",
         "type": "tabs",
         "children": [
           {
-            "id": "6303ce936ad7bf3c",
+            "id": "567ecb091180747f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/概率论作业-第六章.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "stacked": true
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,14 +107,6 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "6f3bd3ea4865906d",
-            "type": "leaf",
-            "state": {
-              "type": "ReferenceListView",
-              "state": {}
-            }
           }
         ],
         "currentTab": 2
@@ -131,7 +122,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/概率论作业-第六章.md"
+                "file": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md"
               }
             }
           },
@@ -141,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/概率论作业-第六章.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,8 +178,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245,
-    "collapsed": true
+    "width": 245
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,14 +190,18 @@
       "zk-prefixer:创建时间戳笔记": false,
       "audio-recorder:开始/结束录音": false,
       "workspaces:管理工作区布局": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-statusbar-pomo:Start pomodoro": true,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
+      "obsidian-gallery:Gallery": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "6303ce936ad7bf3c",
+  "active": "567ecb091180747f",
   "lastOpenFiles": [
+    "term/Homework/数值分析作业-插值.md",
     "private/01-Diary/本周事务/概率论作业-第六章.md",
     "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
-    "term/Homework/数值分析作业-插值.md",
     "private/01-Diary/本周事务/信息论作业-2-1.md",
     "term/Homework/信息论基础-习题1-1.md",
     "term/Homework/信息论第二次作业-1-2.md",
