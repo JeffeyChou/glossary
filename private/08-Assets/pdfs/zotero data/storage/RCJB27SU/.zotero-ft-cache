@@ -1,0 +1,702 @@
+cancers
+Article
+The Role of the Lymph Node Ratio in Advanced Gastric Cancer After Neoadjuvant Chemotherapy
+Karol Rawicz-Pruszyn´ ski 1,*, Bogumiła Ciseł 1, Radosław Mlak 2 , Jerzy Mielko 1, Magdalena Skórzewska 1, Magdalena Kwietniewska 1, Agnieszka Pikuła 1, Katarzyna Ge˛ca 1, Katarzyna Se˛dłak 1, Andrzej Kurylcio 1 and Wojciech P. Polkowski 1
+1 Department of Surgical Oncology, Medical University of Lublin, 20-080 Lublin, Poland; bogumilacisel@uml.edu.pl (B.C.); jerzymielko@uml.edu.pl (J.M.); magdalenaskorzewska@uml.edu.pl (M.S.); magdalenakwietniewska@uml.edu.pl (M.K.); agnieszkapikula@uml.edu.pl (A.P.); kasiaa.geca@gmail.com (K.G.); sedlak.katarz@gmail.com (K.S.); andrzejkurylcio@uml.edu.pl (A.K.); wojciechpolkowski@uml.edu.pl (W.P.P.)
+2 Department of Human Physiology, Medical University of Lublin, 20-080 Lublin, Poland; radoslawmlak@uml.edu.pl
+* Correspondence: karolrawiczpruszynski@uml.edu.pl; Tel.: +48-81-531-8137; Fax: +48-81-531-8133
+Received: 24 October 2019; Accepted: 28 November 2019; Published: 1 December 2019
+Abstract: The ratio of positive lymph nodes (LNs) to the total LN harvest is called the LN ratio (LNR). It is an independent prognostic factor in gastric cancer (GC). The aim of the current study was to evaluate the impact of neoadjuvant chemotherapy (NAC) on the LNR (ypLNR) in patients with advanced GC. We retrospectively analyzed the data of patients with advanced GC, who underwent gastrectomy with N1 and N2 (D2) lymphadenectomy between August 2011 and January 2019 in the Department of Surgical Oncology at the Medical University of Lublin. The exclusion criteria were a lack of preoperative NAC administration, suboptimal lymphadenectomy (<D2 and/or removal of less than 15 lymph nodes), and a lack of data on tumor regression grading (TRG) in the ﬁnal pathological report. A total of 95 patients were eligible for the analysis. A positive correlation was found between the ypLNR and tumor diameter (p < 0.001), post treatment pathological Tumour (ypT) stage (p < 0.001), Laurén histological subtype (p = 0.0001), and the response to NAC (p < 0.0001). A multivariate analysis demonstrated that the ypLNR was an independent prognostic factor in patients with intestinal type GC (p = 0.0465) and in patients with no response to NAC (p = 0.0483). In the resection specimen, tumor diameter and depth of inﬁltration, Laurén histological subtype, and TRG may reﬂect the impact of NAC on LN status, as quantiﬁed by ypLNR in advanced GC.
+Keywords: gastric cancer; lymph node ratio; neoadjuvant chemotherapy
+
+1. Introduction
+In 2018, gastric cancer (GC) was diagnosed in 1,000,000 patients. The cause of an estimated 783,000 deaths, it was the ﬁfth-most frequently diagnosed cancer and the third leading cause of cancer deaths worldwide [1]. Surgery is globally accepted as the only curative treatment option. Radical surgery involves gastrectomy and adequate regional lymph node dissection [2–4]. The latter has been suggested as the most important surgery-dependent prognostic factor in GC [5]. According to the fourth version of the Japanese Gastric Cancer Association guidelines, D1 lymphadenectomy is deﬁned as lymph node (LN) removal from the perigastric area (stations 1–7, N1 tier), whereas N1 and N2 (D2) dissection extends along the lymph nodes at the coeliac axis and its branches (D1 plus no. 8a, 9, 10, 11p, 11d, 12a, and N2 tier) [4]. In contrast to the Far East, in the West it is recommended that surgical treatment be preceded by neoadjuvant (perioperative) chemotherapy [2,3,6,7]. LN metastases
+
+Cancers 2019, 11, 1914; doi:10.3390/cancers11121914
+
+www.mdpi.com/journal/cancers
+
+Cancers 2019, 11, 1914
+
+2 of 12
+
+are the only independent predictor of survival after chemotherapy and surgery [8], as reported in the analysis of pathologic tumor response and nodal status in the Perioperative Chemotherapy versus Surgery Alone for Resectable Gastroesophageal Cancer (MAGIC) trial [6]. The ratio of positive LNs to the total LN harvest is called the LN ratio (LNR). A recent meta-analysis of 27 studies conﬁrmed that as an independent prognostic factor in GC patients, higher LNR was signiﬁcantly related to shorter overall survival (OS) [9]. Although several studies investigated the eﬀect of neoadjuvant chemotherapy (NAC) on the nodal status in GC patients [7,8,10–13] and focused on the impact of NAC on the LNR in pancreatic [14], rectal [15], and breast cancer [16] patients, to the best of our knowledge, there are no data available on the inﬂuence of NAC on LNR in GC. Therefore, the aim of the current study is to evaluate the impact of NAC on LNR (ypLNR) in patients with advanced GC.
+2. Materials and Methods
+2.1. Study Subjects
+After obtaining institutional review board approval [KE-0254/297/2018], we collected data from a prospectively maintained database of all patients with histologically conﬁrmed and previously untreated primary advanced gastric adenocarcinoma, who were operated on between August 2011 and January 2019 in the Department of Surgical Oncology at the Medical University of Lublin (Poland). The exclusion criteria were a lack of preoperative NAC administration, suboptimal lymphadenectomy (<D2 and/or removal of less than 15 LN), and a lack of data on pathological tumor regression grading (TRG) in the ﬁnal pathological report. The post treatment clinical M0/post treatment pathological M1 (ycM0/ypM1) patients were included in the study, since these patients were operated on with curative intent. The metastatic setting was revealed only after the ﬁnal pathological assessment and was available after surgery. A ﬂowchart of the inclusion and exclusion criteria of the study is shown in Figure 1. Since NAC may signiﬁcantly impact the lymph node status [17], whereas inadequate lymphadenectomy (removal of <15 LNs) causes suboptimal pathological nodal (pN) staging [18], the ypLNR was not calculated in excluded patients. A total of 95 patients were eligible for analysis.
+
+Cancers 2019, 11, 1914
+
+3 of 12
+
+Figure 1. Flow chart of study inclusion and exclusion criteria.
+2.2. Preoperative Staging
+Between 2011 and 2015, preoperative staging was based on computed tomography (CT) (abdominal and chest CT, and pelvic CT in females) and endoscopic ultrasonography (EUS) if there were suspicions of early GC after initial diagnostic endoscopy. Since 2016, all consecutive patients with locally advanced GC but clinically non-metastatic (cM0) GC (based on CT), have been scheduled for a staging laparoscopy with peritoneal (washings) cytology prior to evaluation of the patient on Multi Disciplinary Team (MDT) meeting.
+2.3. Neoadjuvant (Perioperative) Chemotherapy
+The perioperative epirubicin, oxaliplatin, and capecitabine (EOX) regimen consisted of 50 mg/m2 epirubicin and 130 mg/m2 oxaliplatin on day 1, with 625 mg/m2 capecitabine administered twice daily on days 1–21. The perioperative regimen was repeated two to three times every three weeks. The docetaxel, oxapliplatin, ﬂuorouracil, and folinic acid (FLOT) chemotherapy consisted of oxaliplatin, 85 mg/m2; leucovorin, 200 mg/m2; and docetaxel, 50 mg/m2. Each was an intravenous infusion followed by ﬂuorouracil, 2600 mg/m2, as a 24-h continuous intravenous infusion on day 1, repeated every two weeks. The entire cohort was scheduled for adjuvant chemotherapy; however, due to poor performance status, patient preference, and postoperative complications, 16 patients (17%) did not receive postoperative systemic treatment.
+2.4. Tumor Regression Grading after NAC
+A modiﬁed Becker’s system was used to assess TRG [19,20]—complete response/no residual tumor (Grade 1), subtotal regression/<10% residual tumor (Grade 2), partial regression/10–50% residual tumor (Grade 3), and no regression/>50% residual tumor (Grade 4). Assessment of TRG with this
+
+Cancers 2019, 11, 1914
+
+4 of 12
+
+system is recommended by a panel of gastrointestinal pathology experts [20]. All patients were divided into two cohorts according to the TRG: patients with response to NAC (TRG = 1, 2, 3) and patients who did not respond to NAC (TRG = 4).
+2.5. Statistical Analysis
+All analyses were performed using MedCalc 15.8 (MedCalc Software, Ostend, Belgium). Data were expressed as a percentage (for categorized variable), mean, standard deviation, median, and range (for continuous variables). We considered p values < 0.05 as statistically signiﬁcant. Spearman’s correlation test was used to calculate correlation coeﬃcients. The comparison of ypLNR values in relation to the selected demographic and clinical variables was carried out with the use of the nonparametric U–Mann–Whitney test (the data had a non-normal distribution) and the Kruskal–Wallis test, if more than two groups were compared. Lymph node stations (LNS) were categorized into three groups: N1 tier (LNS 1–7), N2 tier (LNS 8–12a), and the complete D2 (N1 + N2) tier (LNS 1–12a). In each group, the ypLNR (the ratio of postneoadjuvant, metastatic LNs to the total LN harvest in the postoperative pathological report) was calculated for every patient. Overall survival (OS) time was deﬁned as the length of time from the date of surgery to the patient’s death by any cause (complete data) or to the last known observation (censored data). A univariate OS analysis was performed with the use of the Kaplan–Meier estimation method (log-rank), whereas Cox logistic regression models were used in the multivariate OS analysis, with statistically signiﬁcant factors from the univariate analysis (α < 0.05) included as variables. A total of 92 patients (96.8%) were included in the OS analysis. Three patients (3.2%) were lost from follow-up.
+2.6. Follow-Up
+Initially, patients were seen in the outpatient clinic three weeks after the surgery, then every three months during the ﬁrst postoperative year, every six months during the second postoperative year, and once a year thereafter. A CT scan and gastroscopy were performed 12 months after surgery, unless patients were symptomatic and/or had signs of recurrence.
+3. Results
+Among the 95 patients included in the study, 54 were males (56.8%) and 41 were females (43.2%), with the median age being 57 years. The median tumor size tumor upon pathological evaluation was 3.5 cm, and the majority of tumors were poorly diﬀerentiated (G3; 82.7%). There were 45 (47.4%) intestinal, 29 (30.5%) diﬀuse, and 21 (22.1%) mixed tumors. There were 44 patients (46.4%) who did not have tumor regression (TRG 4), 32 patients (33.7%) who presented with partial regression (TRG 3), 9 patients (9.4%) who presented with subtotal regression (TRG 2), and 10 patients (10.5%) who had complete response to NAC (TRG 1). There were 63 tumors (66.6%) that were at least ypT3. Additionally, 53 patients (55.8%) had lymph node metastases (N+) and 19 patients (20%) had distant metastases (ypM1) in the ﬁnal pathological evaluation. The median LN harvest was 28. The clinicopathological features of selected patients are shown in Table 1.
+
+Cancers 2019, 11, 1914
+
+Table 1. Clinicopathological variables.
+
+Variables
+
+No. of Patients n = 95 (%)
+
+Sex Male Female
+
+54 (56.8%) 41 (43.2%)
+
+Age (years) Average Standard deviation (±) Median (min-max)
+
+57.37 10.90 57 (31–77)
+
+Tumor maximal diameter (cm)
+
+Average
+
+4.2
+
+Standard deviation (±)
+
+2.7
+
+Median (min-max)
+
+3.5 (1–15)
+
+Upper 1/3 Middle 1/3 Distal 1/3
+
+Tumor location
+
+29 (31%) 27 (28%) 39 (41%)
+
+Tumor depth Mucosa Submucosa Muscularis Propria Subserosa Serosa
+
+2 (2%) 7 (7%) 35 (37%) 14 (15%) 37 (39%)
+
+Lauren histological subtype
+
+Intestinal
+
+45 (47.4%)
+
+Diﬀuse
+
+29 (30.5%)
+
+Mixed
+
+21 (22.1%)
+
+Grading
+
+G1
+
+6 (8%)
+
+G2
+
+27 (9.3%)
+
+G3
+
+62 (82.7%)
+
+No. of NAC cycles
+
+1
+
+2 (2%)
+
+2
+
+8 (8%)
+
+3
+
+56 (60%)
+
+4
+
+20 (21%)
+
+6
+
+6 (6.38%)
+
+8
+
+2 (2.13%)
+
+EOX FLOT
+
+NAC regimen
+
+83 (87.2%) 12 (12.8%)
+
+Tumor regression grading (TRG)
+
+(Classiﬁcation of response)
+
+Complete (Grade 1)
+
+10 (10.5%)
+
+Subtotal (Grade 2)
+
+9 (9.4%)
+
+Partial (Grade 3)
+
+32 (33.7%)
+
+Minimal/No regression (Grade 4)
+
+44 (46.4%)
+
+ypT
+
+T0
+
+6 (6.3%)
+
+T1
+
+6 (6.3%)
+
+T2
+
+20 (21%)
+
+T3
+
+40 (42%)
+
+T4
+
+23 (24.6%)
+
+5 of 12
+
+Cancers 2019, 11, 1914
+
+6 of 12
+
+Table 1. Cont.
+
+Variables
+
+No. of Patients n = 95 (%)
+
+ypN
+
+N0
+
+42 (44.2%)
+
+N1
+
+7 (7.4%)
+
+N2
+
+14 (14.4%)
+
+N3
+
+32 (34%)
+
+ypM
+
+M0
+
+76 (80%)
+
+M1
+
+19 (20%)
+
+No. of examined lymph nodes
+
+Mean
+
+32
+
+Standard deviation (±)
+
+14
+
+Median (min-max)
+
+28 (16–81)
+
+NAC: neoadjuvant chemotherapy. EOX: epirubicin, oxaliplatin and capecitabine. FLOT: docetaxel, oxapliplatin, ﬂuorouracil and folinic acid.
+
+3.1. ypLNR in Selected Subgroups
+The median ypLNR for the entire cohort was 0.07. In patients with a tumor diameter of <3.5 cm, the median ypLNR was signiﬁcantly lower than in the patients with larger (≥3.5 cm) tumors in N1 and N2, as well as in the combined N1 + N2 tiers (p = 0.0003, p = 0.009, and p = 0.0005, respectively). In patients with intestinal-type GC, the median ypLNR was signiﬁcantly lower than in patients with diﬀuse- and mixed-type GC in the N1, N2, and N1 + N2 tiers (p = 0.0005, p = 0.001, and p = 0.0005, respectively). In patients with response to NAC, the median ypLNR was signiﬁcantly lower than in patients without a NAC response in the N1, N2, and N1 + N2 tiers (p < 0.0001, p = 0.001, and p < 0.0001, respectively). In ypT4 patients, the median ypLNR was signiﬁcantly higher than in ypT0–T3 patients in the N1 and N1 + N2 tiers (p = 0.001 and p = 0.002, respectively). With respect to nodal status, a signiﬁcant diﬀerence was observed between ypN0 patients (ypLNR = 0) and ypN + patients (ypLNR >0) in the N1, N2, and D2 tiers (p < 0.0001). In ypM1 patients, the median ypLNR was signiﬁcantly higher than in ypM0 patients in the N1, N2, and N1 + N2 tiers (p < 0.0001, p = 0.04, and p = 0.001, respectively). No statistically signiﬁcant association was found between ypLNR and a patient’s sex, age, and tumor location and grading. Diﬀerences between ypLNR in the N1, N2, and the N1 + N2 tiers in relation to various clinicopathological features are presented in Table 2.
+
+Table 2. ypLNR in selected clinicopathological variables in the N1, N2, and N1 + N2 (D2) tiers.
+
+Variable:
+Male Female
+<57 ≥57
+<3.5 ≥3.5 cm
+Upper 1/3 Middle 1/3 Lower 1/3
+
+N1
+
+N2
+
+Me
+
+p
+
+Me
+
+p
+
+Sex ¥
+
+0.08 0.00
+
+0.64
+
+0.00 0.00
+
+0.56
+
+Age (years) ¥
+
+0.08 0.02
+
+0.54
+
+0.00 0.00
+
+0.83
+
+Maximal tumor dimension (cm) ¥
+
+0.00 0.38
+
+0.0003
+
+0.00 0.00
+
+0.009
+
+Tumor location #
+
+0.00
+
+0.00
+
+0.30
+
+0.09
+
+0.00
+
+0.28
+
+0.03
+
+0.00
+
+N1 + N2 (D2)
+
+Me
+
+p
+
+0.00 0.07
+
+0.41
+
+0.09 0.04
+
+0.40
+
+0.00 0.31
+
+0.0005
+
+0.02
+
+0.06
+
+0.09
+
+0.22
+
+Cancers 2019, 11, 1914
+
+7 of 12
+
+Table 2. Cont.
+
+Variable:
+
+N1
+
+Me
+
+p
+
+N2
+
+Me
+
+p
+
+N1 + N2 (D2)
+
+Me
+
+p
+
+Intestinal Diﬀuse Mixed
+
+Laurén histological subtype #
+
+0.00
+
+0.00
+
+0.00
+
+0.45 0.0005 0.00
+
+0.001
+
+0.30
+
+0.0005
+
+0.30
+
+0.14
+
+0.22
+
+Grading #
+
+G1
+
+0.01
+
+0.00
+
+0.01
+
+G2
+
+0.00
+
+0.27
+
+0.00
+
+0.73
+
+0.07
+
+0.46
+
+G3
+
+0.10
+
+0.00
+
+0.09
+
+Response to NAC (TRG)¥
+
+Response to NAC (TRG 1–3) No response to NAC (TRG 4)
+
+0.00 0.40
+
+<0.0001
+
+0.00 0.07
+
+0.0011
+
+0.00 0.30
+
+<0.0001
+
+ypT0-T3 ypT4
+
+ypT ¥
+
+0.00 0.50
+
+0.001
+
+0.00 0.08
+
+0.06
+
+0.00 0.31
+
+0.002
+
+N0 N1-N3b
+
+ypN ¥
+
+0.00 0.48
+
+<0.0001
+
+0.00 0.24
+
+<0.0001
+
+0.00 0.36
+
+<0.0001
+
+ypM ¥
+
+M0 M1
+
+0.00 0.53
+
+0.0001
+
+0.00 0.08
+
+0.04
+
+0.00 0.30
+
+0.001
+
+Me: median. TRG: tumor regression grading; ¥ U–Mann–Whitney test, # Kruskal–Wallis test.
+
+3.2. Correlation between ypLNR and Selected Clinicopathological Variables
+A signiﬁcant correlation was shown between the clinical Tumour (cT) stage and ypLNR in the N1 and N1 + N2 tiers (p = 0.0006 and p = 0.0024, respectively), whereas the correlation between the cT stage and ypLNR in N2 tier was nearly signiﬁcant (p = 0.06). The maximal tumor diameter and ypLNR showed a positive correlation in the N1 and N1 + N2 tiers (p < 0.0001 and p < 0.0001, respectively). A positive correlation was found between ypLNR and the Laurén histological subtype in the N1 and N1 + N2 tiers (both p = 0.0001). There was an upward trend in ypLNR value in intestinal-, mixed-, and diﬀuse-type GC, respectively. A positive correlation was found between ypLNR and response to NAC in the N1, N2, and N1 + N2 tiers (p < 0.0001, p = 0.0009, and p < 0.0001, respectively). Positive correlation was also observed between ypLNR and ypT in the N1 and N1 + N2 tiers (both p < 0.0001) and ypLNR and ypM in the N1, N2, and N1 + N2 tiers (p < 0.0001, p = 0.03, and p = 0.001, respectively). A positive correlation was found between ypLNR and ypN in the N1, N2, and N1 + N2 tiers (p < 0.0001, p < 0.0001, and p < 0.000, respectively). Results of the Spearman’s rank correlation coeﬃcient between ypLNR and selected clinicopathological variables are shown in Table 3.
+
+Cancers 2019, 11, 1914
+
+8 of 12
+
+Table 3. Spearman’s rank correlation coeﬃcient between ypLNR and selected clinicopathological variables.
+
+Variable (n = 95)
+Age cT Tumor max. diameter Grading Laurén histological subtype Response to NAC (TRG) No. of NAC cycles ypT ypN ypM
+
+N1
+R (Spearman)
+−0.015 0.344 0.455 0.166 0.399 0.528 0.120 0.436 0.903 0.405
+
+p
+0.88 0.0006 <0.0001 0.10 0.0001 <0.0001 0.24 <0.0001 <0.0001 <0.0001
+
+ypLNR
+
+N2
+
+R (Spearman)
+
+p
+
+0.005 0.192 0.246 0.068 0.0179 0.335 0.187 0.270 0.744 0.213
+
+0.96 0.06 0.01 0.51 0.8632 0.0009 0.07 0.008 <0.0001 0.03
+
+N1 + N2 (D2)
+
+R (Spearman)
+
+p
+
+−0.024 0.308 0.420 0.126 0.387 0.503 0.151 0.422 0.953 0.330
+
+0.82 0.002 <0.0001 0.22 0.0001 <0.0001 0.14 <0.0001 <0.0001 0.001
+
+3.3. Tumor Survival Analysis
+In the univariate analysis of OS, ypLNR > median showed prognostic signiﬁcance in patients with intestinal-type GC (11 vs. 37 months, p = 0.0114) and diﬀuse-type GC (15 vs. 39 months, p = 0.0008), as well as in patients with response to NAC (14 vs. 39 months; p = 0.0162) and in patients with no response to NAC (11 vs. 34 months; p = 0.0097). A multivariate analysis demonstrated that ypLNR was an independent prognostic factor in intestinal-type GC (p = 0.0465) and in patients with no response to NAC (TRG 4) (p = 0.0483). The results of the uni- and multivariate survival analysis are presented in Table 4. The median OS of patients with ypLNR ≤0.07 was 37 months, whereas in patients with ypLNR >0.07, the median OS was 11 months (p = 0.0002; log-rank test; HR 2.29; 95% CI: 1.36–3.84). The median follow-up for all patients, ypM0 patients and ypM1 patients was 20, 29 and 9 months, respectively. During follow-up, 71% of patients died. The date of data cut-oﬀ was 4 October, 2019.
+
+Table 4. The eﬀect of ypLNR on overall survival (OS) based on the Laurén classiﬁcation and TRG.
+
+Variable
+
+Univariate
+
+Months
+
+HR (95%CI) p
+
+Multivariate
+HR (95%CI) p
+
+ypLNR > median (0.00) ypLNR ≤ median (0.00)
+
+Intestinal-type GC
+
+11
+
+2.69 (1.09–6.64)
+
+37
+
+0.0114
+
+2.87 (1.02–8.06) * 0.0465
+
+ypLNR > median (0.30) ypLNR ≤ median (0.30)
+
+Diﬀuse-type GC
+
+15
+
+2.99 (1.18–7.60)
+
+39
+
+0.0008
+
+2.28 (0.60–8.47) 0.3488
+
+ypLNR > median (0.22) ypLNR ≤ median (0.22)
+
+Mixed-type GC
+
+10
+
+1.13 (0.41–3.14)
+
+15
+
+0.8150
+
+0.48 (0.07–3.17) 0.4453
+
+Response to NAC (TRG 1–3)
+
+ypLNR > median (0.00)
+
+14
+
+2.18 (0.97–4.91)
+
+ypLNR ≤ median (0.00)
+
+39
+
+0.0162
+
+2.38 (0.94–6.03) 0.0683
+
+No response to NAC (TRG 4)
+
+ypLNR > median (0.30)
+
+11
+
+2.29 (1.15–4.55)
+
+ypLNR ≤ median (0.30)
+
+34
+
+0.0097
+
+2.46 (1.01–5.99) ** 0.0483
+
+Tumor* grading, tumor maximal diameter, ypM, and ypT were signiﬁcant variables in univariate analysis. ** grading, tumor location, ypM, and ypT were signiﬁcant variables in univariate analysis.
+
+Cancers 2019, 11, 1914
+
+9 of 12
+
+4. Discussion
+The current study enabled us to distinguish a ypLNR high-risk group among GC patients after NAC. Tumor diameter ≥ 3.5 cm, Laurén intestinal subtype, lack of response to NAC (TRG 4), serosal inﬁltration, lymph node metastases, and distant metastases were signiﬁcantly associated with higher ypLNR.
+The inﬂuence of NAC on nodal status in GC patients has been investigated meticulously [21]. Wu et al. [22] evaluated the inﬂuence of clinical, pathological, and treatment variables on the total LN harvest and the number of metastatic LNs after NAC in patients with GC. The study showed that NAC for GC reduced the total LN count and increased the number of patients who had <15 LN harvested. Thus, a decrease in total LN harvest should be expected in patients undergoing resection after neoadjuvant chemotherapy. In a study conducted by Ji et al. [23], the total LN harvest was an independent prognostic factor in ypN0 GC patients, with a minimum LN harvest of 22. Interestingly, in these patients, surgery alone was even more beneﬁcial than neoadjuvant chemotherapy, as reported by Ronellenﬁtsch et al. [17]. However, in ypN+ patients, survival was longer in those who received NAC [17] and total LN harvest should exceed 30 in order to avoid stage migration after surgery [24].
+Recent data from Asian [25,26], North American [27], and European [28,29] populations showed that LNR is considered a more accurate and reliable parameter than TNM classiﬁcation in terms of GC prognosis. Additionally, LNR could be a better option to compensate for the stage migration eﬀect. The predictive value for prognosis increases with a higher number of retrieved lymph nodes, as shown in a high-volume study from Korea [30]. Moreover, LNR is a prognostic indicator for patients who develop GC liver metastases, as well as nodal and peritoneal recurrences after radical resection [31,32].
+The Laurén classiﬁcation remains an important clinical factor in treatment of GC. A recent study by Wang et al. demonstrated that LNR might be used as an independent predictor of survival in patients with diﬀuse-type GC [33]. Jimenez et al. [34] studied the chemosensitivity of GC according to Laurén subtypes. Diﬀuse-type GC was found to be less chemosensitive and was associated with increased mortality. The recent study by Xu et al. [35] focused on the prognostic value of TRG in perioperative treatment of advanced GC. The Laurén classiﬁcation and the ypT stage were independent factors for TRG, whereas TRG itself was a prognostic variable for ypN+ patients. In the present study, patients with response to NAC had signiﬁcantly lower ypLNR when compared to nonresponders. Moreover, the Laurén histological subtype analysis revealed an upward trend in ypLNR value—the mean ypLNR was lowest in intestinal-type GC, intermediate in mixed-type GC, and highest in diﬀuse-type GC. These results show the potential prognostic information of ypLNR in Western patients with advanced GC by means of response to NAC in diﬀerent histological subtypes.
+The accurate prediction of response to neoadjuvant and adjuvant chemotherapy remains a challenge [36–38]. Due to histological heterogeneity, tumor behavior throughout the clinical management of GC remains uncertain. Improved understanding of GC biology will successively favor tailored surgery. Further research could possibly introduce LNR as a new biomarker [39], since it is closely associated with epidermal growth factor receptor (EGFR) expression [40].
+In the era of NAC in GC, the potential eﬀect of systemic treatment on lymph node involvement should be investigated. LNR proved to be an important prognostic factor in the adjuvant setting.
+This study contains certain limitations. Due to its retrospective nature, it cannot identify causation. Due to the relatively small sample size, a subgroup stratiﬁcation analysis might be biased. Moreover, our pathological evaluation did not include assessment of molecular subtype, tumor budding, and lymph node regression, which could be of potential prognostic signiﬁcance in this setting.
+5. Conclusions
+In resection specimens, tumor diameter and depth of inﬁltration, Laurén histological subtype, and TRG may reﬂect the impact of NAC on LN status, as quantiﬁed by ypLNR in advanced GC. When validated in prospective studies, ypLNR could serve as a simple and objective parameter in the clinical evaluation of NAC.
+
+Cancers 2019, 11, 1914
+
+10 of 12
+
+Author Contributions: Conceptualization, K.R.-P. and J.M.; Data curation, B.C., R.M., J.M., M.S., M.K., A.P., K.G., K.S. and W.P.P.; Formal analysis, R.M., K.G., K.S. and A.K.; Investigation, K.R.-P., B.C., M.S. and A.P.; Methodology, R.M., J.M., M.K. and A.P.; Resources, M.S.; Software, K.R.-P., R.M., K.G. and K.S.; Supervision, B.C., A.K. and W.P.P.; Validation, K.R.-P., B.C., J.M., M.S. and W.P.P.; Writing—Original draft, K.R.-P. and M.K.; Writing—Review & editing, A.K. and W.P.P.
+Funding: This research received no external funding.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+References
+1. Bray, F.; Ferlay, J.; Soerjomataram, I.; Siegel, R.L.; Torre, L.A.; Jemal, A. Global cancer statistics 2018: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries. CA Cancer J. Clin. 2018, 68, 394–424. [CrossRef]
+2. Ajani, J.A.; D’Amico, T.A.; Almhanna, K.; Bentrem, D.J.; Chao, J.; Das, P.; Denlinger, C.S.; Fanta, P.; Farjah, F.; Fuchs, C.S.; et al. Gastric Cancer, Version 3.2016, NCCN Clinical Practice Guidelines in Oncology. J. Natl. Compr. Canc. Netw. 2016, 14, 1286–1312. [CrossRef]
+3. Smyth, E.C.; Verheij, M.; Allum, W.; Cunningham, D.; Cervantes, A.; Arnold, D.; Committee, E.G. Gastric cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. Ann. Oncol. 2016, 27, v38–v49. [CrossRef]
+4. Japanese Gastric Cancer Association. Japanese gastric cancer treatment guidelines 2014 (ver. 4). Gastric Cancer 2017, 20, 1–19. [CrossRef]
+5. Maruyama, K.; Sasako, M.; Kinoshita, T.; Sano, T.; Katai, H. Surgical treatment for gastric cancer: The Japanese approach. Semin. Oncol. 1996, 23, 360–368.
+6. Cunningham, D.; Allum, W.H.; Stenning, S.P.; Thompson, J.N.; Van de Velde, C.J.; Nicolson, M.; Scarﬀe, J.H.; Lofts, F.J.; Falk, S.J.; Iveson, T.J.; et al. Perioperative chemotherapy versus surgery alone for resectable gastroesophageal cancer. N. Engl. J. Med. 2006, 355, 11–20. [CrossRef]
+7. Al-Batran, S.E.; Homann, N.; Pauligk, C.; Illerhaus, G.; Martens, U.M.; Stoehlmacher, J.; Schmalenberg, H.; Luley, K.B.; Prasnikar, N.; Egger, M.; et al. Eﬀect of Neoadjuvant Chemotherapy Followed by Surgical Resection on Survival in Patients With Limited Metastatic Gastric or Gastroesophageal Junction Cancer: The AIO-FLOT3 Trial. JAMA Oncol. 2017, 3, 1237–1244. [CrossRef] [PubMed]
+8. Smyth, E.C.; Fassan, M.; Cunningham, D.; Allum, W.H.; Okines, A.F.; Lampis, A.; Hahne, J.C.; Rugge, M.; Peckitt, C.; Nankivell, M.; et al. Eﬀect of Pathologic Tumor Response and Nodal Status on Survival in the Medical Research Council Adjuvant Gastric Infusional Chemotherapy Trial. J. Clin. Oncol. 2016, 34, 2721–2727. [CrossRef] [PubMed]
+9. Zhu, J.; Xue, Z.; Zhang, S.; Guo, X.; Zhai, L.; Shang, S.; Zhang, Y.; Lu, H. Integrated analysis of the prognostic role of the lymph node ratio in node-positive gastric cancer: A meta-analysis. Int. J. Surg. 2018, 57, 76–83. [CrossRef] [PubMed]
+10. Davies, A.R.; Myoteri, D.; Zylstra, J.; Baker, C.R.; Wulaningsih, W.; Van Hemelrijck, M.; Maisey, N.; Allum, W.H.; Smyth, E.; Gossage, J.A.; et al. Lymph node regression and survival following neoadjuvant chemotherapy in oesophageal adenocarcinoma. Br. J. Surg. 2018, 105, 1639–1649. [CrossRef] [PubMed]
+11. Kurokawa, Y.; Shibata, T.; Sasako, M.; Sano, T.; Tsuburaya, A.; Iwasaki, Y.; Fukuda, H. Validity of response assessment criteria in neoadjuvant chemotherapy for gastric cancer (JCOG0507-A). Gastric Cancer 2014, 17, 514–521. [CrossRef] [PubMed]
+12. Oyama, K.; Fushida, S.; Kinoshita, J.; Makino, I.; Nakamura, K.; Hayashi, H.; Nakagawara, H.; Tajima, H.; Fujita, H.; Takamura, H.; et al. Eﬃcacy of pre-operative chemotherapy with docetaxel, cisplatin, and S-1 (DCS therapy) and curative resection for gastric cancer with pathologically positive para-aortic lymph nodes. J. Surg. Oncol. 2012, 105, 535–541. [CrossRef] [PubMed]
+13. Fu, T.; Bu, Z.D.; Li, Z.Y.; Zhang, L.H.; Wu, X.J.; Wu, A.W.; Shan, F.; Ji, X.; Dong, Q.S.; Ji, J.F. Neoadjuvant chemoradiation therapy for resectable esophago-gastric adenocarcinoma: A meta-analysis of randomized clinical trials. BMC Cancer 2015, 15, 322. [CrossRef]
+
+Cancers 2019, 11, 1914
+
+11 of 12
+
+14. Roland, C.L.; Yang, A.D.; Katz, M.H.; Chatterjee, D.; Wang, H.; Lin, H.; Vauthey, J.N.; Pisters, P.W.; Varadhachary, G.R.; Wolﬀ, R.A.; et al. Neoadjuvant therapy is associated with a reduced lymph node ratio in patients with potentially resectable pancreatic cancer. Ann. Surg. Oncol. 2015, 22, 1168–1175. [CrossRef] [PubMed]
+15. Chang, K.H.; Kelly, N.P.; Duﬀ, G.P.; Condon, E.T.; Waldron, D.; Coﬀey, J.C. Neoadjuvant therapy does not aﬀect lymph node ratio in rectal cancer. Surgeon 2016, 14, 270–273. [CrossRef]
+16. Tsai, J.; Bertoni, D.; Hernandez-Boussard, T.; Telli, M.L.; Wapnir, I.L. Lymph Node Ratio Analysis After Neoadjuvant Chemotherapy is Prognostic in Hormone Receptor-Positive and Triple-Negative Breast Cancer. Ann. Surg. Oncol. 2016, 23, 3310–3316. [CrossRef]
+17. Ronellenﬁtsch, U.; Schwarzbach, M.; Hofheinz, R.; Kienle, P.; Nowak, K.; Kieser, M.; Slanger, T.E.; Burmeister, B.; Kelsen, D.; Niedzwiecki, D.; et al. Predictors of overall and recurrence-free survival after neoadjuvant chemotherapy for gastroesophageal adenocarcinoma: Pooled analysis of individual patient data (IPD) from randomized controlled trials (RCTs). Eur. J. Surg. Oncol. 2017, 43, 1550–1558. [CrossRef]
+18. Claassen, Y.H.M.; de Steur, W.O.; Hartgrink, H.H.; Dikken, J.L.; van Sandick, J.W.; van Grieken, N.C.T.; Cats, A.; Trip, A.K.; Jansen, E.P.M.; Kranenbarg, W.M.M.; et al. Surgicopathological Quality Control and Protocol Adherence to Lymphadenectomy in the CRITICS Gastric Cancer Trial. Ann. Surg. 2018, 268, 1008–1013. [CrossRef]
+19. Becker, K.; Mueller, J.D.; Schulmacher, C.; Ott, K.; Fink, U.; Busch, R.; Bottcher, K.; Siewert, J.R.; Hoﬂer, H. Histomorphology and grading of regression in gastric carcinoma treated with neoadjuvant chemotherapy. Cancer 2003, 98, 1521–1530. [CrossRef]
+20. Tsekrekos, A.; Detlefsen, S.; Riddell, R.; Conner, J.; Mastracci, L.; Sheahan, K.; Shetye, J.; Lundell, L.; Vieth, M. Histopathologic tumor regression grading in patients with gastric carcinoma submitted to neoadjuvant treatment: Results of a Delphi survey. Hum. Pathol. 2019, 84, 26–34. [CrossRef]
+21. Ott, K.; Blank, S.; Ruspi, L.; Bauer, M.; Sisic, L.; Schmidt, T. Prognostic impact of nodal status and therapeutic implications. Transl. Gastroenterol. Hepatol. 2017, 2, 15. [CrossRef] [PubMed]
+22. Wu, Z.M.; Teng, R.Y.; Shen, J.G.; Xie, S.D.; Xu, C.Y.; Wang, L.B. Reduced lymph node harvest after neoadjuvant chemotherapy in gastric cancer. J. Int. Med. Res. 2011, 39, 2086–2095. [CrossRef] [PubMed]
+23. Ji, X.; Bu, Z.D.; Li, Z.Y.; Wu, A.W.; Zhang, L.H.; Zhang, J.; Wu, X.J.; Zong, X.L.; Li, S.X.; Shan, F.; et al. Prognostic signiﬁcance of the total number of harvested lymph nodes for lymph node-negative gastric cancer patients. BMC Cancer 2017, 17, 558. [CrossRef] [PubMed]
+24. Deng, J.; Liu, J.; Wang, W.; Sun, Z.; Wang, Z.; Zhou, Z.; Xu, H.; Liang, H. Validation of clinical signiﬁcance of examined lymph node count for accurate prognostic evaluation of gastric cancer for the eighth edition of the American Joint Committee on Cancer (AJCC) TNM staging system. Chin. J. Cancer Res. 2018, 30, 477–491. [CrossRef] [PubMed]
+25. Lin, D.; Li, Y.; Xu, H.; Chen, J.; Wang, B.; Liu, C.; Lu, P.; Alatengbaolide. Lymph node ratio is an independent prognostic factor in gastric cancer after curative resection (R0) regardless of the examined number of lymph nodes. Am. J. Clin. Oncol. 2013, 36, 325–330. [CrossRef]
+26. Zhou, Y.; Zhang, J.; Cao, S.; Li, Y. The evaluation of metastatic lymph node ratio staging system in gastric cancer. Gastric Cancer 2013, 16, 309–317. [CrossRef]
+27. Kutlu, O.C.; Watchell, M.; Dissanaike, S. Metastatic lymph node ratio successfully predicts prognosis in western gastric cancer patients. Surg. Oncol. 2015, 24, 84–88. [CrossRef]
+28. Marchet, A.; Mocellin, S.; Ambrosi, A.; Morgagni, P.; Garcea, D.; Marrelli, D.; Roviello, F.; de Manzoni, G.; Minicozzi, A.; Natalini, G.; et al. The ratio between metastatic and examined lymph nodes (N ratio) is an independent prognostic factor in gastric cancer regardless of the type of lymphadenectomy: Results from an Italian multicentric study in 1853 patients. Ann. Surg. 2007, 245, 543–552. [CrossRef]
+29. Nelen, S.D.; van Steenbergen, L.N.; Dassen, A.E.; van der Wurﬀ, A.A.; Lemmens, V.E.; Bosscha, K. The lymph node ratio as a prognostic factor for gastric cancer. Acta Oncol. 2013, 52, 1751–1759. [CrossRef]
+30. Kong, S.H.; Lee, H.J.; Ahn, H.S.; Kim, J.W.; Kim, W.H.; Lee, K.U.; Yang, H.K. Stage migration eﬀect on survival in gastric cancer surgery with extended lymphadenectomy: The reappraisal of positive lymph node ratio as a proper N-staging. Ann. Surg. 2012, 255, 50–58. [CrossRef]
+31. Li, M.X.; Jin, Z.X.; Zhou, J.G.; Ying, J.M.; Liang, Z.Y.; Mao, X.X.; Bi, X.Y.; Zhao, J.J.; Li, Z.Y.; Huang, Z.; et al. Prognostic Value of Lymph Node Ratio in Patients Receiving Combined Surgical Resection for Gastric Cancer Liver Metastasis: Results from Two National Centers in China. Medicine 2016, 95, e3395. [CrossRef]
+
+Cancers 2019, 11, 1914
+
+12 of 12
+
+32. Bilici, A.; Selcukbiricik, F.; Seker, M.; Oven, B.B.; Olmez, O.F.; Yildiz, O.; Olmuscelik, O.; Hamdard, J.; Acikgoz, O.; Cakir, A.; et al. Prognostic Signiﬁcance of Metastatic Lymph Node Ratio in Patients with pN3 Gastric Cancer Who Underwent Curative Gastrectomy. Oncol. Res. Treat. 2019, 42, 209–216. [CrossRef] [PubMed]
+33. Wang, H.; Xing, X.M.; Ma, L.N.; Liu, L.; Hao, J.; Feng, L.X.; Yu, Z. Metastatic lymph node ratio and Lauren classiﬁcation are independent prognostic markers for survival rates of patients with gastric cancer. Oncol. Lett. 2018, 15, 8853–8862. [CrossRef] [PubMed]
+34. Jimenez Fonseca, P.; Carmona-Bayonas, A.; Hernandez, R.; Custodio, A.; Cano, J.M.; Lacalle, A.; Echavarria, I.; Macias, I.; Mangas, M.; Visa, L.; et al. Lauren subtypes of advanced gastric cancer inﬂuence survival and response to chemotherapy: Real-world data from the AGAMENON National Cancer Registry. Br. J. Cancer 2017, 117, 775–782. [CrossRef] [PubMed]
+35. Xu, X.; Zheng, G.; Zhang, T.; Zhao, Y.; Zheng, Z. Is pathologic tumor regression grade after neo-adjuvant chemotherapy a promising prognostic indicator for patients with locally advanced gastric cancer? A cohort study evaluating tumor regression response. Cancer Chemother. Pharmacol. 2019, 84, 635–646. [CrossRef]
+36. Blackham, A.U.; Greenleaf, E.; Yamamoto, M.; Hollenbeak, C.; Gusani, N.; Coppola, D.; Pimiento, J.M.; Wong, J. Tumor regression grade in gastric cancer: Predictors and impact on outcome. J. Surg. Oncol. 2016, 114, 434–439. [CrossRef]
+37. Mansour, J.C.; Tang, L.; Shah, M.; Bentrem, D.; Klimstra, D.S.; Gonen, M.; Kelsen, D.P.; Brennan, M.F.; Coit, D.G. Does graded histologic response after neoadjuvant chemotherapy predict survival for completely resected gastric cancer? Ann. Surg. Oncol. 2007, 14, 3412–3418. [CrossRef]
+38. Foo, M.; Leong, T. Adjuvant therapy for gastric cancer: Current and future directions. World J. Gastroenterol. 2014, 20, 13718–13727. [CrossRef]
+39. Yamashita, K.; Hosoda, K.; Ema, A.; Watanabe, M. Lymph node ratio as a novel and simple prognostic factor in advanced gastric cancer. Eur. J. Surg. Oncol. 2016, 42, 1253–1260. [CrossRef]
+40. Ema, A.; Waraya, M.; Yamashita, K.; Kokubo, K.; Kobayashi, H.; Hoshi, K.; Shinkai, Y.; Kawamata, H.; Nakamura, K.; Nishimiya, H.; et al. Identiﬁcation of EGFR expression status association with metastatic lymph node density (ND) by expression microarray analysis of advanced gastric cancer. Cancer Med. 2015, 4, 90–100. [CrossRef]
+© 2019 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (http://creativecommons.org/licenses/by/4.0/).
+

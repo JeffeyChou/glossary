@@ -4,22 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1c521ab7cd812991",
+        "id": "9e3ad2738ce50841",
         "type": "tabs",
         "children": [
           {
-            "id": "567ecb091180747f",
+            "id": "1f7b928a3387f6d1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -109,7 +106,7 @@
             }
           },
           {
-            "id": "366864aaa787a8db",
+            "id": "e16382a5a086db08",
             "type": "leaf",
             "state": {
               "type": "ReferenceListView",
@@ -129,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md"
-              }
+              "state": {}
             }
           },
           {
@@ -140,7 +135,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,11 +195,11 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "567ecb091180747f",
+  "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
+    "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
     "term/Homework/数值分析作业-插值.md",
     "private/01-Diary/本周事务/概率论作业-第六章.md",
-    "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
     "private/01-Diary/本周事务/信息论作业-2-1.md",
     "term/Homework/信息论基础-习题1-1.md",
     "term/Homework/信息论第二次作业-1-2.md",
