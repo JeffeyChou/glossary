@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207,
-    "collapsed": true
+    "width": 207
   },
   "right": {
     "id": "6e7011190a6a4416",
@@ -179,13 +178,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245,
-    "collapsed": true
+    "width": 245
   },
   "left-ribbon": {
     "hiddenItems": {
       "templater-obsidian:Templater": true,
-      "table-editor-obsidian:Advanced Tables Toolbar": true,
       "graph:查看关系图谱": false,
       "daily-notes:打开/创建今天的日记": false,
       "command-palette:打开命令面板": true,
@@ -201,6 +198,7 @@
   },
   "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
+    "private/08-Assets/pdfs/zotero data/better-bibtex/cache.json",
     "private/08-Assets/Pasted image 20230521174238.png",
     "private/06-Cards/202305211741.md",
     "private/01-Diary/本周事务/推导RPS的包络.md",
@@ -245,7 +243,6 @@
     "private/08-Assets/Pasted image 20230510115520.png",
     "private/08-Assets/Pasted image 20230507223709.png",
     "private/08-Assets/Pasted image 20230507213856.png",
-    "private/08-Assets/Pasted image 20230507213855.png",
-    "private/08-Assets/Pasted image 20230507213854.png"
+    "private/08-Assets/Pasted image 20230507213855.png"
   ]
 }

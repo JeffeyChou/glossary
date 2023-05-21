@@ -14,7 +14,6 @@
   "templater-obsidian",
   "obsidian-shellcommands",
   "obsidian-collapse-all-plugin",
-  "table-editor-obsidian",
   "obsidian-pandoc-reference-list",
   "obsidian-advanced-slides",
   "obsidian-git",
@@ -22,6 +21,5 @@
   "various-complements",
   "quick-latex",
   "easy-typing-obsidian",
-  "obsidian-plugin-toc",
   "better-word-count"
 ]

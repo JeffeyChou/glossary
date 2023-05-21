@@ -51,4 +51,12 @@ $$
 $$
 \Gamma(n+1,1)=\frac{n!}{e}\left(\sum_{k=0}^n\frac{1}{k!}\right)
 $$
-ying
+因此， $F(i)$ 的解析结果为：
+$$
+F(i)=\sum\limits_{k=0}^i P(i,k)=e\times\Gamma(i+1,1)
+$$
+$F(i)$ 为整数，所以后者可以对 $\Gamma$ 函数取整数进一步化简公式， $\lfloor\Gamma(i+1,1)\rfloor=i!$
+
+---
+$P(N, i) (F(i)-1)|_{i=0}=-1$ 
+
