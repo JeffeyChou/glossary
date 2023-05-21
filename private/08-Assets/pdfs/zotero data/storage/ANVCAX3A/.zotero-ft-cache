@@ -1,0 +1,1078 @@
+Communications in Statistics - Theory and Methods
+ISSN: (Print) (Online) Journal homepage: https://www.tandfonline.com/loi/lsta20
+Entropy of Random Permutation Set
+Luyuan Chen & Yong Deng
+To cite this article: Luyuan Chen & Yong Deng (2023): Entropy of Random Permutation Set, Communications in Statistics - Theory and Methods, DOI: 10.1080/03610926.2023.2173975 To link to this article: https://doi.org/10.1080/03610926.2023.2173975
+Published online: 21 Feb 2023. Submit your article to this journal Article views: 68 View related articles View Crossmark data
+Full Terms & Conditions of access and use can be found at https://www.tandfonline.com/action/journalInformation?journalCode=lsta20
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS https://doi.org/10.1080/03610926.2023.2173975
+
+Entropy of Random Permutation Set
+Luyuan Chena and Yong Denga,b
+aInstitute of Fundamental and Frontier Science, University of Electronic Science and Technology of China, Chengdu, China; bSchool of Medicine, Vanderbilt University, Nashville, Tennessee, USA
+
+ABSTRACT
+Recently, a new kind of set, named Random Permutation Set (RPS), has been presented. RPS takes the permutation of a certain set into consideration, which can be regarded as an ordered extension of evidence theory. Uncertainty is an important feature of RPS. A straightforward question is how to measure the uncertainty of RPS. To address this issue, the entropy of RPS (RPS entropy) is presented in this article. The proposed RPS entropy is compatible with Deng entropy and Shannon entropy. In addition, RPS entropy meets probability consistency, additivity, and subadditivity. Numerical examples are designed to illustrate the efficiency of the proposed RPS entropy. Besides, a comparative analysis of the choice of applying RPS entropy, Deng entropy, and Shannon entropy is also carried out.
+
+ARTICLE HISTORY Received 16 April 2022 Accepted 11 January 2023
+KEYWORDS Random permutation set; entropy of random permutation set; Shannon entropy; Deng entropy; type-2 Deng entropy; uncertainty measure
+
+1. Introduction
+Uncertainty plays an important role in our daily life, different theories have been proposed to deal with uncertainty (Solaiman and Bossé 2019; Cuzzolin 2020; Xiao 2022), such as probability theory (Jaynes 2003), rough sets (Pawlak 1982), fuzzy sets (Zadeh 1996) Evidence theory (Yager, Alajlan, and Bazi 2019; Shams, Hatefi, and Nemati 2022), Z-numbers (Zadeh 1996; Liu, Tian, and Kang 2019), belief rule (Chang et al. 2021), etc (Xiao 2020).
+Most existing theories to deal with uncertainty are based on set theory. Owing to the technique of describing the collection of objects, set theory plays an important and fundamental role in math science (Jech et al. 2003). For instance, the set in probability theory refers to the sample space of an experiment, which contains all possible results of an experiment (Jech et al. 2003). In evidence theory, the set is the power set that considers all possible subsets of frame of discernment, which is a basis for basic probability assignment (BPA) (Dempster 2008; Shafer 1976).
+To model the uncertainty of mass function is an open issue (Dutta and Hazarika 2017; Wang et al. 2021). Recently, Song and Deng have explored a new finding in the meaning of the power set in evidence theory. Specifically, the power set can be explained from the view of Pascal’s triangle and combinatorial number (Song and Deng 2021). Then inspired by the idea of replacing combinatorial number with permutation numbers, Deng proposed a new type of set called Random permutation set (RPS) (Deng 2022). RPS consists of two important concepts, i.e., permutation event space (PES) and permutation mass function (PMF). Regarding a certain set, PES includes all the possible permutation results of all elements, while PMF describes the chance of a permutation result that would happen. RPS is compatible with
+CONTACT Yong Deng dengentropy@uestc.edu.cn Institute of Fundamental and Frontier Science, University of Electronic Science and Technology of China, Chengdu, China. © 2023 Taylor & Francis Group, LLC
+
+2
+
+L. CHEN AND Y. DENGA
+
+evidence theory and probability theory (Deng 2022). Order information is very important and should be seriously taken into consideration in the uncertainty information process (Balakrishnan, Buono, and Longobardi 2022a). RPS provides a new framework to handle order information.
+RPS provides a new perspective to deal with uncertainty regarding the order of elements. A straightforward question is how to measure the uncertainty of RPS. Reviewing the existing uncertainty measures, various kinds of entropy functions have been presented, such as Shannon entropy in probability theory (Shannon 2001), Deng entropy in evidence theory (Deng 2016), and fuzzy entropy in fuzzy sets (Szmidt and Kacprzyk 2001). In this article, the entropy of RPS is presented for handling the un-certainty measure. The entropy of RPS is compatible with Deng entropy and Shannon entropy. When the order of elements in permutation events is not considered, the pro-posed RPS entropy will degenerate into Deng entropy. When each permutation event contains just one element, the proposed RPS entropy will degenerate into Shannon entropy. Under the requirement of total uncertainty measure in evidence theory, the property of RPS entropy is also discussed, which shows that RPS entropy meets probability consistency, additivity, subadditivity, and dissatisfies set consistency and range. Several numeric examples are shown to illustrate the efficiency of the proposed RPS entropy. Besides, in order to explore practical applications for RPS entropy, a comparative analysis of the choice of applying RPS entropy, Deng entropy, and Shannon entropy is also carried out.
+The rest of this article is as follows. Section 2 introduces the preliminaries. Section 3 presents the entropy of RPS. Section 4 uses some numerical examples to illustrate the presented RPS entropy. Section 5 carries out a comparative analysis for applicable situations of three entropy measures. Section 6 makes a brief conclusion.
+
+2. Preliminaries In this section, we briefly review some preliminaries of this article.
+
+2.1. Evidence theory
+Evidence theory is an efficient method for expressing and processing uncertainty (Deng 2020; Song et al. 2016; Xiong, Su, and Qian 2021; Zhou et al. 2020). Researchers have developed evidence theory theoretically, especially for some open issues. For instance, the decision making model based on mass function (Song et al. 2022; Chen, Deng, and Cheong 2021), complex mass function (Xiao and Pedrycz 2022; Xiao, Cao, and Lin 2022; Xiao 2021a), and risk analysis (Shams, Hatefi, and Nemati 2022; Hatefi, Basiri, and Tamošaitiene˙ 2019). With the superiority in uncertain environment, evidence theory also has been widely applied in engineering fields (Gao, Pan, and Deng 2022; Ghosh, Saha, and Paul 2021; Gao et al. 2021).
+Following is the introduction of some basic conceptions about evidence theory (Dempster 2008; Shafer 1976).
+
+Definition 2.1. (Frame of discernment). Let , called the frame of discernment (FOD), denotes a fixed set of N mutually exclusive and exhaustive elements, indicated by
+
+= {ω1, ω2, . . . , ωN}
+
+(1)
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+3
+
+PS( ) is the power set of , which contains all subsets of and has 2N elements, indicated
+
+by
+
+PS( ) = {A1, A2, · · · , A2N }
+
+(2)
+
+= {∅, {ω1}, {ω2}, · · · , {ωN},
+
+{ω1, ω2}, {ω1, ω3}, · · · , {ω1, ωN}, · · · , }
+
+Definition 2.2. (Mass function). Given a FOD of , a basic probability assignment (BPA), also called a mass function, is a mapping from PS( ) to [0, 1], formally defined by:
+
+m : PS( ) → [0, 1]
+
+(3)
+
+constrained by
+
+m(∅) = 0 and m(A) = 1
+
+(4)
+
+A∈2
+
+A is called a focal element if m(A) > 0.
+
+Mass function, or called belief function, has more flexibility to model uncertainty than probability distribution (Khalaj and Khalaj 2022). As a result, a lots of measures on mass function are developed, such as negation, information volume (Gao, Pan, and Deng 2022; Chen and Deng 2022), and distance function (Khalaj et al. 2020).
+
+2.2. Shannon entropy
+Shannon entropy, which was proposed by Shannon, addressed the problem of quantitative measurement of information (Shannon 2001). The related definition is described below:
+
+Definition 2.3. Given a probability distribution in a certain state space, Shannon entropy is defined as
+
+n
+
+HSE(p) = − pilogbpi
+
+(5)
+
+i=1
+
+where n is the number of basic states, b is the base of logarithm. pi denotes the probability of
+
+state i appears,
+
+n i=1
+
+pi
+
+=
+
+1.
+
+2.3. Deng entropy
+Complex system has many factors, interacting with each other (Hatefi et al. 2021; Wei et al. 2021; Wang, Fang, and Zio 2022). Entropy plays a significant role in uncertainty modelling, especially in complex systems (Wen and Cheong 2021; Xiao 2021b; Babajanyan, Allahverdyan, and Cheong 2020) and pattern recognition (Balakrishnan, Buono, and Longobardi 2022b). Deng entropy (Deng 2016) is a kind of belief entropy, which measures the uncertainty in evidence theory and applied in many fields (Xiao 2019; Liao, Ren, and Fang 2020). One possible advantage of Deng entropy is to model the complex system since the assumption of each factor can not be reasonably modeled by Shannon entropy based on the exclusive condition (Özkan 2018; Özkan and Mert 2021).
+
+4
+
+L. CHEN AND Y. DENGA
+
+Definition 2.4. (Deng entropy). Given a mass function distribution defined on
+
+entropy is defined as Deng (2016):
+
+HDE(m) = −
+A∈PS(
+
+m(A) m(A) log 2|A| − 1
+)
+
+, Deng (6)
+
+An important feature of Deng entropy is that it is compatible with Shannon entropy. Some extension of Deng entropy are proposed such as Deng extropy (Buono and Longobardi 2020; Kazemi et al. 2021), modified belief entropy (Ullah, Youn, and Han 2021), and the unified formulation (Balakrishnan, Buono, and Longobardi 2022c).
+
+2.4. Random permutation set
+RPS is a novel set consisting of PES and PMF (Deng 2022). Some basic definitions of RPS are given as follows.
+
+Definition 2.5. (Permutation event space). Given a fixed set of N mutually exclusive and exhaustive elements = {θ1, θ2, . . . , θN}, its PES is a set of all possible permutations of defined as follows:
+
+PES (Γ ) ={ Aij | i = 0, . . . , N; j = 1, . . . , P(N, i) }
+
+(7)
+
+={ ∅, (θ1) , (θ2) , . . . , (θN) , (θ1, θ2) , (θ2, θ1) , . . . , (θN−1, θN) ,
+
+(θN , θN−1) , . . . , (θ1, θ2, . . . , θN) , . . . , (θN, θN−1, . . . , θ1) }
+
+(8)
+
+in
+
+which
+
+P(N,
+
+i)
+
+is
+
+the
+
+i-permutation
+
+of
+
+N
+
+defined
+
+as
+
+P(N,
+
+i)
+
+=
+
+N! (N−i)!
+
+.
+
+The
+
+element
+
+Aij
+
+in
+
+PES
+
+is called the permutation event, which is a tuple representing a possible permutation of ,
+
+where i indicates the index for the cardinality of Aij and j denotes the index for the possible permutation.
+
+Definition 2.6. (Random permutation set). Given a fixed set of N mutually exclusive and exhaustive elements = {θ1, θ2, . . . , θN}, its RPS is a set of pairs defined as follows:
+
+RPS (Γ ) = A, M (A) | A ∈ PES (Γ )
+
+(9)
+
+where M is called the PMF, which is defined as:
+
+M : PES( ) → [0, 1]
+
+(10)
+
+constrained by M (∅) = 0 and A∈PES( ) M (A) = 1.
+
+Some important properties of RPS are discussed in Deng (2022). RPS has desirable compatibility for evidence theory and probability theory. The PES of RPS degenerates into the power set when the order in permutation events is not considered, and further degenerates into the sample space in probability theory when each permutation event just has a single element. Similarly, the PMF of RPS can degenerate into BPA and probability distribution under the corresponding conditions.
+
+3. Proposed entropy of RPS For measuring the uncertainty of RPS, the entropy of RPS is presented in this section.
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+5
+
+Definition 3.1. (Entropy of RPS). Given a RPS denoted as RPS (Γ ) = Aij, M Aij |Aij ∈ PES (Γ ) , the entropy of RPS is defined as:
+
+HRPS M
+
+N P(N,i)
+
+=−
+
+M Aij log
+
+i=1 j=1
+
+M Aij F (i) − 1
+
+(11)
+
+where
+
+P(N,
+
+i)
+
+=
+
+N! (N−i)!
+
+is
+
+the
+
+i-permutation
+
+of
+
+N
+
+and
+
+F
+
+(i)
+
+=
+
+i k=0
+
+P
+
+(i,
+
+k)
+
+=
+
+i k=0
+
+i! (i−k)!
+
+is
+
+the sum from 0-permutation of i to i-permutation of i.
+
+To illustrate the property of RPS entropy, the relationship between RPS entropy, Shannon entropy, and Deng entropy is discussed in Propositions 3.1–3.2. Besides, Klir and Wierman (1999) defined five requirement for total uncertainty measure in evidence theory. As an ordered extension of evidence theory, the property of√RPS entropy is also analyzed based on five requirement, as shown in Propositions 3.3–3.7. ’ ’ means that RPS entropy meets the requirement, while ’×’ means that RPS entropy does not satisfy the requirement. Explanation will be provided for the unsatisfied requirement. Finally, the computation complexity of RPS entropy is analyzed in Proposition 3.8.
+
+Proposition 3.1. If the order of elements in permutation event is ignored, the proposed RPS entropy will degenerate into Deng entropy in evidence theory.
+
+Proof. If the order of elements in permutation event is ignored, the permutation number
+
+P(N, i) degenerates into combinatorial number C(N, i), and F(i) should be calculated as
+
+F(i) =
+
+i k=0
+
+C(i,
+
+k)
+
+=
+
+2i.
+
+HRPS M
+
+N P(N,i)
+
+=−
+
+M Aij log
+
+i=1 j=1
+
+M Aij F (i) − 1
+
+(12)
+
+N C(N,i)
+
+=−
+
+M Aij log
+
+i=1 j=1
+
+M Aij 2i − 1
+
+2N
+= − M (Ai) log
+i=1
+
+M (Ai) 2|Ai| − 1
+
+As discussed in Deng (2021), under the situation of ignoring the order of elements in permutation event, the PES of RPS degenerates to the power set, and the PMF of RPS degenerates to BPA in evidence theory. Hence Equation (12) is also calculated as
+
+HRPS M = −
+
+m(Ai) log
+
+Ai∈PS( )
+
+m(Ai) 2|Ai| − 1
+
+(13)
+
+= HDE(m)
+
+Therefore, when the order of elements in permutation event is ignored, the proposed RPS entropy degenerates to Deng entropy.
+
+Proposition 3.2. When each permutation event is limited to containing just one element, the proposed RPS entropy will degenerate into Shannon entropy in probability theory.
+
+6
+
+L. CHEN AND Y. DENGA
+
+Figure 1. The relationship between the proposed RPS entropy, Deng entropy and Shannon entropy.
+
+Proof. If each permutation event is limited to containing just one element, i = 1, F(i) = F(1) = 2.
+
+HRPS M
+
+N P(N,i)
+
+=−
+
+M Aij log
+
+i=1 j=1
+
+M Aij F (i) − 1
+
+(14)
+
+P(N,1)
+= − M A1j log
+j=1
+
+M A1j F(1) − 1
+
+N
+= − M A1j log M A1j
+j=1
+
+As discussed in Ref. (Deng 2022), under the situation of containing just one element in each permutation event, the PES of RPS degenerates to the sample space, and the PMF of RPS degenerates to probability distribution. Hence Equation (14) is also calculated as
+
+N
+
+HRPS M = − pj log pj
+
+(15)
+
+j=1
+
+= HSE(p)
+
+Therefore, when each permutation event is limited to containing just one element, the proposed RPS entropy degenerates to Shannon entropy.
+
+Therefore, when each permutation event just has one element, the proposed RPS entropy degenerates to Shannon entropy.
+In conclusion, from Propositions 3.1 and 3.2, we can observe that the proposed RPS entropy is compatible with Deng entropy and Shannon entropy, as shown in Figure 1. To some degree, the proposed RPS entropy can be seen as a Type-2 Deng entropy since the classical Deng entropy measures uncertainty of combination events while the proposed RPS entropy measures uncertainty of permutation events. Following discusses the property of RPS entropy under five requirements for total uncertainty measure.
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+7
+
+√ Proposition 3.3. Probabilistic consistency ( ). When all permutation events contain one element, RPS entropy degenerates to Shannon entropy.
+
+Proof. As shown in Proposition 3.2, it has been proofed that when all permutation events contain one element, RPS entropy degenerates to Shannon entropy. Hence Proposition 3.3 is verified.
+
+Proposition 3.4. Set consistency (×). Given the permutation mass function that M (Γ ) = 1, RPS entropy equals to the Hartley measure log2(|Γ |).
+Proof. For example, under the set Γ = {τ1, τ2, τ3}, the PMF is given as M (τ1, τ2, τ3) = 1, hence HRPS = log215 > log23. Hence RPS entropy does not meet set consistency.
+Explanation: In evidence theory, M (Γ ) = 1 corresponds to m(Γ ) = 1, which represents a total ignorance about the system. In other words, log2(|Γ |) denotes the maximum total uncertainty measure in evidence theory, which is actually the maximum Shannon entropy. However, RPS can express more information, especially the sequence information, than evidence theory and probability theory. It is rational that RPS entropy is larger than Shannon entropy under the same assignment value. Therefore, set consistency is not reasonable for RPS entropy.
+
+Proposition 3.5. Range (×). The range of RPS entropy is [0, log2(|Γ |)].
+
+Proof. According to Ref. Deng and Deng (2022), it has been proved that the maximum entropy of RPS is calculated as follows:
+
+N
+
+HRmPS = log
+
+[P (N, i) (F (i) − 1)]
+
+(16)
+
+i=1
+
+where P (N, i)
+
+=
+
+(N
+
+N! −
+
+i)!
+
+,
+
+F
+
+(i)
+
+=
+
+i j=0
+
+P
+
+i, j
+
+.
+
+Therefore, the range of RPS entropy is [0, HRmPS], which is inconsistent with Proposition
+
+3.5.
+
+Explanation: log2(|Γ |) denotes the maximum Shannon entropy. As proven in Propositions 3.1 and 3.2, RPS entropy is compatible with Deng entropy and Shannon entropy. The reason is that as an ordered extension of evidence theory, RPS expresses more information than evidence theory and probability theory. Therefore, it is rational that the maximum RPS entropy is larger than the maximum Shannon entropy. It is reasonable that RPS entropy does not satisfy range. Actually, many uncertainty measures in evidence theory does not satisfy this requirement (Zhou and Deng 2022).
+
+Proposition 3.6.
+
+Additivity
+
+√ ( ):
+
+Let
+
+M3
+
+be a PMF on the space X × Y, M1
+
+and M2
+
+its
+
+marginal PMFs respectively where these marginals are not interactive satisfying: M3(A × B) =
+
+M1(A) × M2(B), A ∈ X and B ∈ Y, M3(C) = 0 if C = A × B. Then RPS entropy satisfies
+
+HRPS M3 = HRPS M1 + HRPS M2
+
+(17)
+
+8
+
+L. CHEN AND Y. DENGA
+
+Proof. Considering the premise that the number of joint PMFs is (F(|X|) − 1) × (F(|Y|) − 1). Assume that X × Y be the product space of the sets X = {x1, x2} and Y = {y1, y2, y3}. M1 on X and M2 on Y are given as
+M1 (x1) = α1, M1 (x1, x2) = α2, M1 (x2, x1) = α3
+M2 y1 = β1, M2 y2, y3 = β2
+
+where α1 + α2 + α3 = 1, β1 + β2 = 1. The joint PMF M3 on X×Y is calculated as
+
+M3 (z11) = α1β1, M3 (z12, z13) = α1β2, M3 (z11, z21) = α2β1, M3 (z21, z11) = α3β1
+
+M3 (z12, z13, z22, z23) = α2β2, M3 (z22, z23, z12, z13) = α3β2
+
+where zij = (xi, yj).
+
+HRPS M3 (z11) + HRPS M3 (z12, z13)
+
+=
+
+α1β1
+
+×
+
+log
+
+[F(1)
+
+α1β1 − 1][F(1)
+
+−
+
+1]
+
++
+
+α1β2
+
+×
+
+log
+
+[F(1)
+
+α1β2 − 1][F(2)
+
+−
+
+1]
+
+= α1β1 ×
+
+log
+
+α1 F(1) −
+
+1
+
++
+
+log
+
+β1 F(1) −
+
+1
+
++ α1β2 ×
+
+log
+
+α1 F(1) −
+
+1
+
++
+
+log
+
+β2 F(2) −
+
+1
+
+= β1HRPS M1 (x1) + α1HRPS M2 y1 + β2HRPS M1 (x1) + α1HRPS M2 y2, y3
+
+= HRPS M1 (x1) × (β1 + β2) + α1 × HRPS M2 y1 + HRPS M2 y2, y3
+
+= HRPS M1 (x1) + α1HRPS M2
+
+(18)
+
+Similarly, it can be calculated that
+
+HRPS M3 (z11, z21) + HRPS M3 (z12, z13, z22, z23)
+
+= HRPS M1 (x1, x2) + α2HRPS M2
+
+(19)
+
+HRPS M3 (z21, z11) + HRPS M3 (z22, z23, z12, z13)
+
+= HRPS M1 (x2, x1) + α2HRPS M2
+
+(20)
+
+The sum of left items of Equations (18)–(20) is:
+
+HRPS M1 (x1) + α1HRPS M2 + HRPS M1 (x1, x2) + α2HRPS M2
+
++ HRPS M1 (x2, x1) + α3HRPS M2
+
+= HRPS M1 + (α1 + α2 + α3) HRPS M2
+
+= HRPS M1 + HRPS M2
+
+(21)
+
+Therefore, we can obtain that HRPS M3 = HRPS M1 + HRPS M2 . Proposition 3.6 is verified.
+
+Proposition 3.7.
+
+Subadditivity
+
+√ ( ).
+
+Let
+
+M3
+
+be a PMF on the space X × Y, M1 and M2 its
+
+marginal PMFs respectively. Then RPS entropy satisfies
+
+HRPS M3 ≤ HRPS M1 + HRPS M2
+
+(22)
+
+Proof. Two cases are considered: If the PMFs of X and Y are independent, then HRPS M3 = HRPS M1 + HRPS M2 , which has been proven in Proposition 3.6. If the PMFs of X and
+Y are dependent, the joint PMFs obtained from X and Y can derive more information and
+reduce the uncertainty about X and Y. Hence HRPS M3 = HRPS M1 < HRPS M2 . As a result, HRPS M3 ≤ HRPS M1 + HRPS M2 , Proposition 3.7 is verified.
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+9
+
+In conclusion, based on Propositions 3.3–3.7, we can find that RPS entropy meets three requirement (probability consistency, additivity, and subadditivity) and dissatisfies the two requirement (set consistency and range), which shows the effectiveness of RPS entropy in uncertainty measure. Especially for the additivity, there are very few uncertainty measurements that complete the additivity verification based on the joint distribution, which shows the advantage of RPS entropy.
+
+Proposition 3.8. The computation complexity of RPS entropy is O(f (N)), where f (N) =
+
+N i=0
+
+P
+
+(N
+
+,
+
+i)
+
+=
+
+N i=0
+
+N! (N −
+
+i)! .
+
+The computation complexity of RPS entropy depends on the size of PES. Since the PES considers all the possible permutation of elements, whose space size is factorial about N. Correspondingly, the computation complexity of RPS entropy is also factorial about N, which is equal to O(f (N)).
+
+4. Numerical examples and discussions In this section, some numerical examples are shown to illustrate the presented entropy of RPS.
+
+Example 4.1. Given the fixed set of Γ = {X, Y, Z}, a RPS defined on is given as follows:
+
+RPS1( ) = {< (X), 0.4 >, < (Y, Z), 0.1 >, < (X, Y, Z), 0.15 >, < (Y, Z, X), 0.35 >} (23)
+
+Based on Equation (11), the associated entropy of RPS1 is calculated as
+
+3 P(3,i)
+
+HRPS1 M = −
+
+M Aij log
+
+i=1 j=1
+
+M Aij F (i) − 1
+
+(24)
+
+= −0.4 ∗ log
+
+0.4 F(1) − 1
+
+− 0.1 ∗ log
+
+0.1 F(2) − 1
+
+− 0.15 ∗ log
+
+0.15 F(3) − 1
+
+− 0.35 ∗ log
+
+0.35 F(3) − 1
+
+= −0.4 ∗ log
+
+0.4 2−1
+
+− 0.1 ∗ log
+
+0.1 5−1
+
+− 0.15 ∗ log
+
+0.15 16 − 1
+
+− 0.35 ∗ log
+
+0.35 16 − 1
+
+= 2.8975
+
+Followed by Example 4.1, consider the following two scenarios: • If the order of elements in permutation events is ignored, (X, Y, Z) and (Y, Z, X) are the
+same sets in Equation (23), the RPS1 is updated as
+
+RPS2( ) = {< (X), 0.4 >, < (Y, Z), 0.1 >, < (X, Y, Z), 0.5 >}
+
+(25)
+
+The associated RPS2 entropy is calculated as
+
+HRPS2 M = −0.4 ∗ log
+
+0.4 F(1) − 1
+
+− 0.1 ∗ log
+
+0.1 F(2) − 1
+
+− 0.5 ∗ log
+
+0.5 F(3) − 1
+
+10
+
+L. CHEN AND Y. DENGA
+
+= −0.4 ∗ log
+
+0.4 2−1
+
+− 0.1 ∗ log
+
+0.1 3−1
+
+− 0.5 ∗ log
+
+0.5 7−1
+
+= 1.8656
+
+(26)
+
+Actually, when the order of elements in permutation events is ignored, the PES degenerates into the power set in evidence theory, i.e., PES( ) is the same as PS( ). Therefore, the RPS2 in Equation (25) can be regarded a mass function in evidence theory, just as
+
+m({X}) = 0.4, m({Y, Z}) = 0.1, m({X, Y, Z}) = 0.5
+
+(27)
+
+Based on Equation (6), the associated Deng entropy is calculated as
+
+HDE (m) = −0.4 ∗ log
+
+0.4 21 − 1
+
+− 0.1 ∗ log
+
+0.1 22 − 1
+
+− 0.5 ∗ log
+
+0.5 23 − 1
+
+(28)
+
+= 1.8656
+
+which is the same as HRPS2 in Equation (26). As a result, if the order of elements in PES is ignored, the proposed RPS entropy will degenerate into Deng entropy in evidence theory. • For the RPS2 in Equation (23), let A1 = (X), A2 = (Y, Z), A3 = (X, Y, Z). If these permutation events just contain one element, and they are mutually exclusive and independent,
+just as
+
+RPS3( ) = {< (A1), 0.4 >, < (A2), 0.1 >, < (A3), 0.5 >}
+
+(29)
+
+The associated entropy of RPS3 is calculated as
+
+HRPS3 M = 0.4 ∗ log
+
+0.4 F(1) − 1
+
++ 0.1 ∗ log
+
+0.1 F(1) − 1
+
++ 0.5 ∗ log
+
+0.5 F(1) − 1
+
+= −(0.4 ∗ log
+
+0.4 2−1
+
++ 0.1 ∗ log
+
+0.1 2−1
+
++ 0.5 ∗ log
+
+0.5 2−1
+
+)
+
+= 1.3610
+
+(30)
+
+Actually, when each permutation event just contains one element and they are mutually exclusive and independent, the PES is equivalent to the sample space composed of basic events in probability theory. Therefore, the RPS3 in Equation (29) can be regarded a probability distribution, just as
+
+p(X) = 0.4, p(Y) = 0.1, p(Z) = 0.5
+
+(31)
+
+Based on Equation (5), the Shannon entropy is calculated as
+
+HSE(p) = −0.4 ∗ log (0.4) − 0.1 ∗ log (0.1) − 0.5 ∗ log (0.5)
+
+(32)
+
+= 1.3610
+
+which is the same as HRPS3 in Equation (30). As a result, if each permutation event just contains one element and they are mutually exclusive and independent, the proposed RPS entropy will degenerate into Shannon entropy. Based on the discussion of these two scenarios, it can be concluded that the proposed RPS entropy is compatible with Deng entropy and Shannon entropy, as shown in Figure 2.
+
+Example 4.2. Given a fixed set of Γ = {1, 2, 3, . . . , 10}. A RPS defined on is shown as follows.
+RPS(Γ ) = {< (3, 4, 5), 0.05 >, < (6), 0.05 >, < (X), 0.8 >, < (1, 2, 3, . . . , 10), 0.1 >}
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+11
+
+Figure 2. The proposed RPS entropy is compatible with Deng entropy and Shannon entropy.
+
+Table 1. Different entropy values when X changes.
+
+X
+
+Deng entropy
+
+Desert entropy
+
+1 1,2 1,2,3 1,2,3,4 1,2,3,4,5 1,2,3,4,5,6 1,2,3,4,5,6,7 1,2,3,4,5,6,7,8 1,2,3,4,5,6,7,8,9 1,2,3,4,5,6,7,8,9,10
+
+2.1622 3.4301 4.4080 5.2877 6.1255 6.9440 7.7531 8.5576 9.3599 10.1610
+
+1.6517 3.1938 4.0123 4.5766 5.0035 5.2760 5.6129 5.9012 6.1527 6.3752
+
+Wang entropy
+2.8261 3.3100 3.6345 3.8943 4.1109 4.2762 4.4625 4.6286 4.7785 4.9150
+
+RPS entropy
+3.5406 5.1406 6.6662 8.3406 10.2161 12.2876 14.5341 16.9342 19.4701 22.1277
+
+If the order in permutation events is ignored, the RPS is a mass function in evidence theory.
+m({3, 4, 5}) = 0.05, m({6}) = 0.05, m({X}) = 0.8, m(Γ ) = 0.1
+when X changes from 1 to 1, 2, 3, . . . , 10, the values of Deng entropy and the RPS entropy are calculated. Besides, another two uncertainty measures in evidence theory, i.e., Desert entropy Dezert and Tchamova (2022) and Wang entropy Wang and Song (2018), are also compared to RPS entropy. The results by four kinds of entropy measures are shown in Table 1 and Figure 3.
+From Table 1 and Figure 3, the results show that as the size of X rises, Deng entropy, Desert entropy, Wang entropy, and the proposed RPS entropy all increase monotonously. It is reasonable that the entropy values increase when the uncertainty involving a set increases. Importantly, regarding Deng entropy and RPS entropy, we can find that the value of RPS entropy is always larger than that of Deng entropy with respect to the same size of X. It is reasonable that the uncertainty of a RPS is larger than that in a mass function under the same distribution value, since RPS takes permutation of a certain set into account while a mass function does not consider that. As a result, this example shows the effectiveness of RPS entropy in measuring uncertainty. Following provides another example to show the advantage of RPS entropy.
+
+12
+
+L. CHEN AND Y. DENGA
+
+Figure 3. The trend of four entropy measures when X changes.
+Figure 4. The trend of entropy values in Example 4.3. Example 4.3. Given a fixed set of Γ = {1, 2}, a RPS defined on Γ is shown as below.
+RPS(Γ ) = {< (1), 0.2 >, < (1, 2), α >, < (2, 1), β >} which satisfies α + β = 0.8. As the change of α from 0.1 to 0.8, RPS entropy, Deng entropy, Desert entropy, and Wang entropy are implemented to calculate the uncertainty, the results are shown in Figure 4.
+In Figure 4, it can be obtained that no matter how α and β change, the values computed by Deng entropy, Desert entropy, and Wang entropy remain the same. The reason is that the three entropy measures cannot distinguish between (1, 2) and (2,1), the RPS is actually a mass function which is m: m(1) = 0.2,m(1, 2) = 0.8 or m(2, 1) = 0.8. In contrast, the results by RPS entropy are always changed and have a fluctuation, which means that RPS entropy can identify the difference between (1, 2) and (2, 1). As a result, when it is referred to the
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+13
+
+Table 2. The variation of computation complexity of RPS entropy.
+
+N
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+O(f(N)) O(2) O(5) O(16) O(65) O(326) O(1957)
+
+7 O(13700)
+
+8 O(109601)
+
+9 O(986410)
+
+Figure 5. The variation of computation complexity of RP S entropy.
+ordered information, only RPS entropy can measure the uncertainty effectively, which shows the advantage of RPS entropy.
+Example 4.4. Given a fixed set Γ with N elements. When N is changed from 1 to 9, the variation of the computation complexity of RPS entropy is calculated, as shown in Table 2 and Figure 5.
+From Table 2 and Figure 5, we can find that the computation complexity grows rapidly, especially at the turning point N = 7. In the case of N < 7, the computation complexity of RPS entropy is at the thousand-digit level, while in the case of N > 7, the computation complexity is very high at a one hundred thousand-digit level. The reason is that as the increase of N, the permutation of elements has a factorial growth. Therefore, it is hard to compute RPS entropy if the size of Γ is large.
+5. Comparison and analysis
+In this section, the selection of RPS entropy, Deng entropy, and Shannon entropy is compared and discussed in different situations. For better understanding, a scenario of threat assessment is designed. Suppose a military campaign between H1 and H2, H1 aims to make a full strategy to beat H2. According to the current available information, H1 knows that H2 has three aircraft that may be involved in combat, represented by ω11, ω2 and ω3, respectively. After careful consideration, H1 lists three possible scenarios of aircraft attack, which correspond to the choice for three entropy measures.
+
+14
+
+L. CHEN AND Y. DENGA
+
+5.1. Scenario 1: using Shannon entropy
+
+Scenario 1: The enemy can only send one aircraft to participate in the battle due to some constraints like time, resource, or geographic environment.
+In Scenario 1, the enemy will only send one aircraft in battle, the decision space in such a situation is modeled as Γ = {ω1, ω2, ω3}, where events are mutually exclusive. Therefore, it is better to use probability theory to manage with the uncertainty and make decision. For example, if two commanders make two different strategies in the form of probability distribution:
+
+P1 : p1 (ω1) = 0.4, p1 (ω2) = 0.25, p1 (ω3) = 0.35 P2 : p2 (ω1) = 0.5, p2 (ω2) = 0.3, p2 (ω3) = 0.2
+
+Correspondingly, Shannon entropy is applied to measure the average degree of information inherent in a probability. The entropy measures of P1 and P2 are calculated as:
+
+HSE (P1) = 1.5589, HSE (P2) = 1.4855
+
+(33)
+
+Based on the principle that the information with larger entropy is more uncertain, we can conclude that the decision of the second commander is more clearer where HSE(P2) = 1.4855 < HSE(P1) = 1.5589. Therefore, it is more sensible to adopt the suggestion of the second commander to make decision. As a result, in the case of mutually exclusive events,
+Shannon entropy is chosen to measure the uncertainty of information represented by proba-
+bility distribution.
+
+5.2. Scenario 2: using Deng entropy
+
+Scenario 2: The enemy will send more than one aircraft together in the battle at the same time. For example, the enemy may send two aircraft ω1 and ω3 to participate the battle.
+In Scenario 2, H2 may send more than one aircraft simultaneously, which can be represented by the combination of different aircraft, such as {ω1, ω2}. Unlike Scenario 1, the events can be non exclusive which thus contain more uncertain information. Obviously, probability theory cannot deal with such uncertain information. As a generalization of probability theory, evidence theory meets weaker condition than probability theory and has the ability for directly representing uncertain information and unknown information. Therefore, it is recommended to use evidence theory to deal with the situation of Scenario 2. The decision space can be represented by the power set in evidence theory:
+
+Γ = {{ω1} , {ω2} , {ω3} , {ω1, ω2} , . . . , {ω1, ω2, ω3}}
+
+(34)
+
+in which events are mutually non exclusive. Assume two commanders provide the assessment denoted by mass function:
+
+m1 : m1 ({ω1}) = 0.4, m1 ({ω2, ω3}) = 0.25, m1 ({ω1, ω3}) = 0.35
+
+(35)
+
+m2 : m2 ({ω1, ω3}) = 0.4, m2 ({ω2}) = 0.25, m2 ({ω2, ω3}) = 0.35
+
+As shown in Equation (35), m1 and m2 are not only distributed in single propositions, but also in multiple propositions. The uncertainty in a mass function comes from two aspects: one is the discord which describes the uncertainty from different support to different propositions. The other is non specificity which describes the uncertainty from multiple propositions. Unfortunately, Shannon entropy can just measure part of uncertainty caused by the discord.
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+15
+
+Deng entropy can well address this problem by measuring the discord and the non specificity comprehensively. For comparison, Deng entropy and Shannon entropy are applied to measure the uncertainty of m1 and m2:
+
+HDE (m1) = 2.5098, HDE (m2) = 2.7476
+
+(36)
+
+HSE m1 = 1.5589, HSE m2 = 1.5589
+
+where m1 and m2 are the degenerated mass functions by not considering the information about multisets, and are actually equivalent to two probability distributions:
+
+m1 : m1 (α1) = 0.4, m1 (α2) = 0.25, m1 (α3) = 0.35
+
+(37)
+
+m2 : m2 (α1) = 0.4, m2 (α2) = 0.25, m2 (α3) = 0.35
+
+Compared to HDE and HSE in Equation (36), we can find that Shannon entropy cannot measure the difference between m1 and m2 where HSE(m1) = HSE(m2) = 1.5589. Whereas Deng entropy can distinguish the uncertainty between m1 and m2 with HDE(m2) > HDE(m1). In conclusion, in the case of non exclusive events, Deng entropy is recommended to measure
+the uncertainty of information denoted by mass function.
+
+5.3. Scenario 3: using RPS entropy
+
+Scenario 3: The enemy will send more than one aircraft in battle, and importantly, organize different aircraft to coordinate operations sequentially. For example, the enemy may dispatch aircraft ω1 with smaller firepower to attract the opponent’s attention, and then send aircraft ω2 and ω3 with more firepower to counterattack.
+In Scenario 3, the commanders consider not only the combination of aircraft, but also the order of aircraft in the combination. The order of aircraft can be viewed as a permutation of aircraft, where evidence theory cannot model this kind of information. As an ordered extension of evidence theory, RPS takes both the occurrence chance and the internal order of an event into consideration. Therefore, under a more uncertain situation involving the order, RPS is strongly recommended. The decision space of Scenario 3 is denoted by PES:
+
+Γ = {(ω1) , (ω2) , (ω3) , (ω1, ω2) , (ω2, ω1) , . . . , (ω1, ω2, ω3) , (ω3, ω2, ω1)}
+
+Assume two strategies are given by the commanders based on PMF:
+
+M1 : M1 (ω1, ω3) = 0.6, M1 (ω3, ω1) = 0.1, M1 (ω1, ω2, ω3) = 0.3
+
+(38)
+
+M2 : M2 (ω1, ω3) = 0.4, M2 (ω3, ω1) = 0.3, M2 (ω1, ω2, ω3) = 0.3
+
+As shown in Equation (38), except for the chance that an event happens and the cardinality of an event (non exclusive event), PMF also contains the internal ordered information for an event. For example, (ω1, ω3) is different from (ω3, ω1) in PMF, but is the same in mass function. Hence Deng entropy is not applicable in such a situation. To deal with the uncertainty caused by non exclusive and ordered events, RPS entropy is an efficient tool for a given PMF. For comparison, RPS entropy, Deng entropy and Shannon entropy are applied to calculate the uncertainty of the above two PMFs:
+
+HRPS M1 = 3.8675, HRPS M2 = 4.1430
+
+(39)
+
+HDE M1 = 2.8330, HDE M2 = 2.8330
+
+HSE M1 = 0.8813, HSE M2 = 0.8813
+
+16
+
+L. CHEN AND Y. DENGA
+
+Figure 6. The selection of RPS entropy, Deng entropy and Shannon entropy.
+
+where M1 and M2 are the first-order degenerated PMFs without the ordered information, and are actually two mass functions:
+
+M1 : M1 (ω1, ω3) = 0.7, M1 (ω1, ω2, ω3) = 0.3
+
+(40)
+
+M2 : M2 (ω1, ω3) = 0.7, M2 (ω1, ω2, ω3) = 0.3
+
+where M1 and M2 are the second-order degenerated PMFs without the ordered and multisets information, and are actually two probability distributions:
+
+M1 : M1 (α1) = 0.7, M1 (α2) = 0.3
+
+(41)
+
+M2 : M2 (α1) = 0.7, M2 (α2) = 0.3
+
+As shown HDE and HSE in Equation (39), neither Deng entropy nor Shannon entropy can discriminate M1 from M2, where HDE(M1) = HDE(M2) and HSE(M1 ) = HSE(M2 ). It is because that both of them just measure the amount of partial information in PMF. However, RPS entropy has the ability to model the uncertainty systematically, where HRPS(M1) < HRPS(M2). As a result, in the non exclusive and ordered case, RPS entropy is recommended to calculate the uncertainty of information represented by PMF.
+In conclusion, the applicable situation for three entropy measures is illustrated in
+Figure 6. When it refers to information with mutually exclusive events, Shannon entropy
+is recommended to measure the uncertainty. When it comes to more complex information
+with non-exclusive events, Deng entropy is better for measuring the uncertainty. When it is
+with highly complex information with ordered events, RPS entropy is encouraged to measure
+the uncertainty.
+
+6. Conclusion
+RPS considers the permutation of elements for a certain set. Entropy is an important function to measure uncertainty, while the uncertainty measure for RPS is still an open problem. To address this problem, the entropy of RPS (RPS entropy) is presented in this article. Several properties of RPS entropy have been discussed and analyzed: • The compatibility: RPS entropy is compatible with Deng entropy and Shannon entropy. • The requirement for total uncertain measure: RPS entropy meets the requirement of
+probability consistency, additivity, and subadditivity, and does not satisfy the requirement of set consistency and range. • Computation complexity: The computation complexity of RPS entropy is O(f (N)), where f (N) is a factorial function. Numerical examples are used to illustrate the properties of RPS entropy. In addition, the choices of using RPS entropy, Deng entropy, and Shannon entropy are compared and
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+17
+
+discussed, which provide a reference for practical applications of three entropy measures. In conclusion, RPS is a novel methodology for modeling ordered information, and entropy is an efficient method for measuring uncertainty. Therefore, the proposed RPS entropy correlates ordered information with entropy naturally, which is beneficial for dealing with and explore ordered information from the perspective of entropy.
+In our future work, RPS entropy can be further extended from three directions. First, since the computation complexity of RPS entropy is factorial, which is relatively high and not suitable for large sets, how to design an efficient algorithm to fast the computation of RPS entropy is an interesting topic. Second, except for Shannon entropy, the relationship between RPS entropy and other classic entropies like Renyi entropy and Tsallis entropy is worth further discovery. Third, RPS entropy can be applied to solve practical applications, especially containing ordered information, such as priority, reliability, and time domain information.
+
+Acknowledgements
+The authors greatly appreciate the editor’s encouragement and the reviews’ suggestions.
+
+Funding
+The authors are very thankful to Research assistant Jixiang Deng to discuss many problems of this work. The work is supported by National Natural Science Foundation of China (Grant No. 61973332).
+
+Declaration of interests
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+References
+Babajanyan, S. G., A. E. Allahverdyan, and K. H. Cheong. 2020. Energy and entropy: Path from game theory to statistical mechanics. Physical Review Research 2 (4): 043055.
+Balakrishnan, N., F. Buono, and M. Longobardi. 2022. On cumulative entropies in terms of moments of order statistics. Methodology and Computing in Applied Probability 24 (1):345–59. doi:10.1007/s11009-021-09850-0.
+Balakrishnan, N., F. Buono, and M. Longobardi. 2022. On Tsallis extropy with an application to pattern recognition. Statistics & Probability Letters 180:109241. doi:10.1016/j.spl.2021.109241.
+Balakrishnan, N., F. Buono, and M. Longobardi. 2022. A unified formulation of entropy and its application. Physica A: Statistical Mechanics and its Applications 596:127214. doi:10.1016/ j.physa.2022.127214.
+Buono, F., and M. Longobardi. 2020. A dual measure of uncertainty: The Deng extropy. Entropy 22 (5):582. doi:10.3390/e22050582.
+Chang, L., L. Zhang, C. Fu, and Y.-W. Chen. 2021. Transparent digital twin for output control using belief rule base. IEEE Transactions on cybernetics.
+Chen, L., Y. Deng, and K. H. Cheong. 2021. Probability transformation of mass function: A weighted network method based on the ordered visibility graph. Engineering Applications of Artificial Intelligence 105:104438. doi:10.1016/j.engappai.2021.104438.
+Chen, X., and Y. Deng. 2022. An evidential software risk evaluation model. Mathematics 10 (13):2325. doi:10.3390/math10132325.
+
+18
+
+L. CHEN AND Y. DENGA
+
+Cuzzolin, F. 2020. The geometry of uncertainty: The geometry of imprecise probabilities. Springer Nature.
+Dempster, A. P. 2008. Upper and lower probabilities induced by a multivalued mapping. In Classic works of the Dempster-Shafer theory of belief functions, 57–72. Springer.
+Deng, Y. 2016. Deng entropy. Chaos, Solitons & Fractals 91:549–53. Deng, Y. 2020. Uncertainty measure in evidence theory. Science China Information Sciences 63 (11):
+1–19. doi:10.1007/s11432-020-3006-9 Deng, Y. 2022. Random Permutation Set. International Journal of Computers Communications &
+Control 17 (1): 4542. Dutta, P., and G. C. Hazarika. 2017. Construction of families of probability boxes and corresponding
+membership functions at different fractiles. Expert Systems 34 (3):e12202. doi:10.1111/exsy.12202. Gao, F., S. Tan, H. Shi, and Z. Mu. 2021. A status-relevant blocks fusion approach for opera-
+tional status monitoring. Engineering Applications of Artificial Intelligence 106:104455. doi:10.1016/j. engappai.2021.104455. Gao, X., L. Pan, and Y. Deng. 2022. A generalized divergence of information volume and its applications. Engineering Applications of Artificial Intelligence 108:104584. doi:10.1016/j.engappai.2021.104584. Ghosh, N., S. Saha, and R. Paul. 2021. iDCR: Improved Dempster combination rule for multisensor fault diagnosis. Engineering Applications of Artificial Intelligence 104:104369. doi:10.1016/j. engappai.2021.104369. Hatefi, S. M., H. Asadi, G. Shams, J. Tamošaitiene˙, and Z. Turskis. 2021. Model for the sustainable material selection by applying integrated Dempster-Shafer evidence theory and additive ratio assessment (ARAS) method. Sustainability 13 (18):10438. doi:10.3390/su131810438 Hatefi, S. M., M. E. Basiri, and J. Tamošaitiene˙. 2019. An evidential model for environmental risk assessment in projects using Dempster–Shafer theory of evidence. Sustainability 11 (22):6329. doi:10.3390/su11226329 Jaynes, E. T. 2003. Probability theory: The logic of science. Cambridge University Press. Jech, T. J., T. Jech, Thomas J Jech, Great Britain Mathematician, Thomas J. Jech, and Grande-Bretagne Mathématicien. 2003. Set theory. Vol. 14. Springer. Kazemi, M. R., S. Tahmasebi, F. Buono, and M. Longobardi. 2021. Fractional Deng entropy and extropy and some applications. Entropy 23 (5):623. doi:10.3390/e23050623. Khalaj, F, and M. Khalaj. 2022. Developed cosine similarity measure on belief function theory: An application in medical diagnosis. Communications in Statistics- Theory and Methods 51 (9):2858–69. doi:10.1080/03610926.2020.1782935. Khalaj, M., R. Tavakkoli-Moghaddam, F. Khalaj, and A. Siadat. 2020. New definition of the cross entropy based on the Dempster-Shafer theory and its application in a decision-making process. Communications in Statistics- Theory and Methods 49 (4):909–23. doi:10.1080/03610926.2018.1554123. Klir, G., and M. Wierman. 1999. Uncertainty-based information: elements of generalized information theory. Vol. 15. Springer Science & Business Media. Liao, H., Z. Ren, and R. Fang. 2020. A Deng-entropy-based evidential reasoning approach for multiexpert multi-criterion decision-making with uncertainty. International Journal of Computational Intelligence Systems 13 (1):1281. doi:10.2991/ijcis.d.200814.001. Liu, Q., Y. Tian, and B. Kang. 2019. Derive knowledge of Z-number from the perspective of Dempster–Shafer evidence theory. Engineering Applications of Artificial Intelligence 85:754–64. doi:10.1016/j.engappai.2019.08.005 Özkan, K. 2018. Comparing Shannon entropy with Deng entropy and improved Deng entropy for measuring biodiversity when a priori data is not clear. Forestist 68 (2):136–40. Özkan, K., and M. Ahmet 2021. Comparisons of deng entropy-based taxonomic diversity measures with the other diversity measures and introduction to the new proposed (reinforced) estimators. Forestist. Pawlak, Z. 1982. Rough sets. International journal of computer & information sciences 11 (5):341–56. doi:10.1007/BF01001956 Shafer, G. 1976. A mathematical theory of evidence. Vol. 42. Princeton university press. Shams, G., S. M. Hatefi, and S. Nemati. 2022. A Dempster-Shafer evidence theory for environmental risk assessment in failure modes and effects analysis of oil and gas exploitation plant. Scientia Iranica 0 (0):0. doi:10.24200/sci.2022.56162.4580.
+
+COMMUNICATIONS IN STATISTICS—THEORY AND METHODS
+
+19
+
+Shannon, C. E. 2001. A mathematical theory of communication. ACM SIGMOBILE mobile computing and communications review 5 (1):3–55. doi:10.1145/584091.584093
+Solaiman, B., and É. Bossé. 2019. Possibility Theory for the Design of Information Fusion Systems. Springer.
+Song, M., C. Sun, D. Cai, S. Hong, and H. Li. 2022. Classifying vaguely labeled data based on evidential fusion. Information Sciences 583:159–73. doi:10.1016/j.ins.2021.11.005.
+Song, Y., X. Wang, L. Lei, and S. Yue. 2016. Uncertainty measure for interval-valued belief structures. Measurement 80:241–50. doi:10.1016/j.measurement.2015.11.032
+Song, Y., and Y. Deng. 2021. Entropic explanation of power set. International Journal of Computers Communications & Control 16 (4).
+Szmidt, E, and J. Kacprzyk. 2001. Entropy for intuitionistic fuzzy sets. Fuzzy Sets and Systems 118 (3):467–77. doi:10.1016/S0165-0114(98)00402-3.
+Ullah, I., J. Youn, and Y.-H. Han. Multisensor data fusion based on modified belief entropy in Dempster–Shafer theory for smart environment. IEEE Access. 9:37813–22. doi:10.1109/ACCESS.2021.3063242.
+Wang, H., X. Deng, W. Jiang, and J. Geng. 2021. A new belief divergence measure for Dempster–Shafer theory based on belief and plausibility function and its application in multi-source data fusion. Engineering Applications of Artificial Intelligence 97:104030 doi:10.1016/j.engappai.2020.104030.
+Wang, H., Y.-P. Fang, and E. Zio. 2022. Resilience-oriented optimal post-disruption reconfiguration for coupled traffic-power systems. Reliability Engineering & System Safety 222:108408. doi:10.1016/j.ress.2022.108408.
+Wei, B., F. Xiao, F. Fang, and Y. Shi. Velocity-free event-triggered control for multiple Euler–Lagrange systems with communication time delays. IEEE Transactions on Automatic Control 66 (11):5599–605. doi:10.1109/TAC.2021.3054064.
+Wen, T., and K. H. Cheong. 2021. The fractal dimension of complex networks: A review. Information Fusion 73:87–102. doi:10.1016/j.inffus.2021.02.001
+Xiao, F.. 2019. EFMCDM: Evidential fuzzy multicriteria decision making based on belief entropy. IEEE Transactions on Fuzzy Systems 28 (7):1477–91.
+Xiao, F. 2020. Generalization of Dempster–Shafer theory: A complex mass function. Applied Intelligence 50 (10):3266–75. doi:10.1007/s10489-019-01617-y
+Xiao, F. 2021. CEQD: A complex mass function to predict interference effects. IEEE Transactions on Cybernetics. doi:10.1109/TCYB.2020.3040770.
+Xiao, F. 2021. On the maximum entropy negation of a complex-valued distribution. IEEE Transactions on Fuzzy Systems 29 (11):3259–69. doi:10.1109/TFUZZ.2020.3016723
+Xiao, F. 2022. Generalized quantum evidence theory. Applied Intelligence. doi:10.1007/s10489 -022-04181-0
+Xiao, F., Z. Cao, and C.-T. Lin. 2022. A complex weighted discounting multisource information fusion with its application in pattern classification. IEEE Transactions on Knowledge and Data Engineering. doi:10.1109/TKDE.2022.3206871.
+Xiao, F., and W. Pedrycz. 2022. Negation of the quantum mass function for multisource quantum information fusion with its application to pattern classification. IEEE Transactions on Pattern Analysis and Machine Intelligence. doi: 10.1109/TPAMI.2022.3167045.
+Xiong, L., X. Su, and H. Qian. 2021. Conflicting evidence combination from the perspective of networks. Information Sciences 580:408–18. doi:10.1016/j.ins.2021.08.088.
+Yager, R. R., N. Alajlan, and Y. Bazi. 2019. Uncertain database retrieval with measure-based belief function attribute values. Information Sciences 501:761–70. doi:10.1016/j.ins.2019.03.074
+Zadeh, L. A. 1996. Fuzzy sets. In Fuzzy sets, fuzzy logic, and fuzzy systems: selected papers by Lotfi A Zadeh, 394–432. World Scientific.
+Zhou, M., Y.-W. Chen, X.-B. Liu, B.-Y. Cheng, and J.-B. Yang. 2020. Weight assignment method for multiple attribute decision making with dissimilarity and conflict of belief distributions. Computers & Industrial Engineering 147:106648 doi:10.1016/j.cie.2020.106648.
+Zhou, Q., and Y. Deng. 2022. Fractal-based belief entropy. Information Sciences 587:265–82. doi:10.1016/j.ins.2021.12.032
+

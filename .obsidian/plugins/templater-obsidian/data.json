@@ -1,0 +1,64 @@
+{
+  "command_timeout": 50,
+  "templates_folder": "private/09-Templates",
+  "templates_pairs": [
+    [
+      "toDOCX",
+      "CALL conda.bat activate base && python ./private/08-Assets/Scripts/paper2docx.py <% tp.file.path() %>"
+    ],
+    [
+      "annotate_pdf",
+      "CALL conda.bat activate base && python ./private/08-Assets/Scripts/annotate_pdf.py <% tp.file.path() %>\n"
+    ],
+    [
+      "export_slides_embedding",
+      "CALL conda.bat activate base && python ./private/08-Assets/Scripts/export_slides_embedding.py <% tp.file.path() %>"
+    ],
+    [
+      "auto_transfer",
+      "CALL conda.bat activate base && python ./private/08-Assets/Scripts/auto_transfer.py <% tp.file.path() %>"
+    ],
+    [
+      "author_count",
+      "CALL conda.bat activate base && python ./private/08-Assets/Scripts/author_count.py <% tp.file.path() %>"
+    ],
+    [
+      "ref_list",
+      "CALL conda.bat activate base && python ./private/08-Assets/Scripts/ref_list.py <% tp.file.path() %>"
+    ],
+    [
+      "export_project",
+      "CALL conda.bat activate base && python ./private/08-Assets/Scripts/export_project.py <% tp.file.path() %>"
+    ],
+    [
+      "archived_task_gantt",
+      "CALL conda.bat activate base && python ./private/08-Assets/Scripts/archived_task_gantt.py <% tp.file.path() %>"
+    ],
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": true,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": false,
+  "folder_templates": [
+    {
+      "folder": "private/01-Diary/本周事务",
+      "template": "private/09-Templates/草稿模板.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "enabled_templates_hotkeys": [
+    ""
+  ],
+  "startup_templates": [
+    "private/09-Templates/草稿模板.md",
+    "private/09-Templates/日志模板.md",
+    "private/09-Templates/FastStart-StartupScript.md"
+  ],
+  "enable_ribbon_icon": true
+}
