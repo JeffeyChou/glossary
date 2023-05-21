@@ -100,3 +100,15 @@ $$
 
 ![](private/08-Assets/Pasted%20image%2020230521235951.png)
 
+The given expression can be simplified as follows:
+
+$$\begin{align*} \sum_{i=1}^{n} \frac{i!}{(n-i)!} &= \sum_{i=1}^{n} \frac{n!}{(n-i)!i!} \\
+&= \sum_{i=1}^{n} \binom{n}{i} \cdot n! \\
+&= n \cdot \sum_{i=1}^{n} \binom{n-1}{i-1} \cdot (n-1)! \\
+&= n \cdot \sum_{k=0}^{n-1} \binom{n-1}{k} \cdot (n-1)! \\
+&= n \cdot \sum_{k=0}^{n-1} \binom{n-1}{k} \cdot (n-1)! \\
+&= n \cdot 2^{n-1} \cdot (n-1)! \\
+&= n \cdot 2^{n-1} \cdot (n-1)! \\
+\end{align*}$$
+
+Therefore, the sum $\sum\limits_{i=1}^{n} \frac{i! }{(n-i)!}$ simplifies to $n \cdot 2^{n-1} \cdot (n-1)!$.
