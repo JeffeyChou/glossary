@@ -178,7 +178,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 245
+    "width": 245,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,11 +194,13 @@
       "obsidian-advanced-slides:Show Slide Preview": false,
       "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false,
       "obsidian-gallery:Gallery": false,
-      "remotely-save:Remotely Save": false
+      "remotely-save:Remotely Save": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
   "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
+    "private/08-Assets/Pasted image 20230521212425.png",
     "private/08-Assets/pdfs/zotero data/better-bibtex/cache.json",
     "private/08-Assets/Pasted image 20230521174238.png",
     "private/06-Cards/202305211741.md",
@@ -238,7 +241,6 @@
     "private/02-Reading/3-people/Humberto Bustince.md",
     "private/08-Assets/pdfs/zotero data/storage/DI5EI8PC",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ/Zhou 等 - 2022 - Marginalization in random permutation set theory .pdf",
-    "private/08-Assets/pdfs/zotero data/storage/89IMABZQ",
     "private/08-Assets/Excalidraw/Drawing 2023-05-12 21.50.07.excalidraw.png",
     "private/08-Assets/Pasted image 20230510115520.png",
     "private/08-Assets/Pasted image 20230507223709.png",

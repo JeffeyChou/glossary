@@ -17,10 +17,15 @@
   "blue-topaz-theme@@colorful-ordered-list": true,
   "blue-topaz-theme@@folder-icons": true,
   "blue-topaz-theme@@file-bg-shape-option": "file-bg-pill",
-  "blue-topaz-theme@@blockquote-style-change-options": "blockquote-style-speech-bubble-one",
+  "blue-topaz-theme@@blockquote-style-change-options": "blockquote-style-speech-bubble-two",
   "blue-topaz-theme@@print-strong-color@@dark": "#DE9256",
   "blue-topaz-theme@@print-em-color@@dark": "#A0E9F7",
   "blue-topaz-theme@@show-full-metadata": true,
   "blue-topaz-theme@@prompt-options": "blowUpModal",
-  "blue-topaz-theme@@loading-page-style-option": "loading-animation-cat"
+  "blue-topaz-theme@@loading-page-style-option": "loading-animation-cat",
+  "blue-topaz-theme@@font-family-change-to-default": false,
+  "blue-topaz-theme@@font-family-h1": "'LXGW WenKai', '霞鹜文楷 GB'",
+  "blue-topaz-theme@@font-family-h2": "'LXGW WenKai', '霞鹜文楷 GB'",
+  "blue-topaz-theme@@font-family-h3": "'LXGW WenKai', '霞鹜文楷 GB'",
+  "blue-topaz-theme@@font-family-h4": "'LXGW WenKai', '霞鹜文楷 GB'"
 }
