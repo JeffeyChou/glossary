@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "14960df8e3518172",
+            "id": "1f7b928a3387f6d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/能见度工创PPT.md",
+                "file": "private/01-Diary/本周事务/推导RPS的包络.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,16 +108,9 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
-          },
-          {
-            "id": "643f357d90bec482",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "4f101d806a54a17c",
@@ -130,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/能见度工创PPT.md"
+                "file": "private/01-Diary/本周事务/推导RPS的包络.md"
               }
             }
           },
@@ -140,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/能见度工创PPT.md",
+                "file": "private/01-Diary/本周事务/推导RPS的包络.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +179,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 245,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,9 +199,12 @@
       "remotely-save:Remotely Save": false
     }
   },
-  "active": "14960df8e3518172",
+  "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
+    "private/08-Assets/Pasted image 20230521174238.png",
+    "private/06-Cards/202305211741.md",
     "private/01-Diary/本周事务/推导RPS的包络.md",
+    "private/01-Diary/本周事务/能见度工创PPT.md",
     "private/08-Assets/pdfs/zotero data/zotero.sqlite.tmp",
     "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite.tmp",
     "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite-journal",
@@ -241,8 +238,6 @@
     "private/01-Diary/本周事务/().md",
     "private/02-Reading/3-people/Zhensong.Chen.md",
     "private/02-Reading/3-people/Humberto Bustince.md",
-    "private/02-Reading/summary/2022-04-02_文献阅读小结.md",
-    "private/02-Reading/summary/2022-05-24_文献阅读小结.md",
     "private/08-Assets/pdfs/zotero data/storage/DI5EI8PC",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ/Zhou 等 - 2022 - Marginalization in random permutation set theory .pdf",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ",
