@@ -88,3 +88,29 @@ $$
 <!--Upload failed, remote server returned an error: Imgur is temporarily over capacity. Please try again later.-->
 ![](private/08-Assets/Pasted%20image%2020230521213626.png)
 
+The expression you provided can be simplified as follows:
+
+$$\begin{align*}
+\sum\limits_{i=1}^{n}\left[\frac{n!}{(n-i)!}\left (\sum\limits_{k=0}^i \frac{i!}{	(i-k)!}\right)\right]
+\end{align*}$$
+
+$$
+e \begin{align*}
+\sum\limits_{i=1}^{n}\left(\frac{n!}{(n-i)!} \times \Gamma(i+1,1)\right)
+\end{align*}
+$$
+
+
+Certainly! We can use Stirling's approximation to approximate the expression involving factorials. Stirling's approximation states that for large values of $n$ , $n!$ can be approximated as:
+
+�!≈2��(��)�n!≈2πn​(en​)n
+
+Using Stirling's approximation, we can approximate the expression as follows:
+
+$$\begin{align*} \sum\limits_{i=1}^{n}\left[\frac{n!}{(n-i)!} \cdot (i+1)^i\right] &\approx \sum\limits_{i=1}^{n}\left[\frac{\sqrt{2\pi n}\left(\frac{n}{e}\right)^n}{\sqrt{2\pi (n-i)}\left(\frac{n-i}{e}\right)^{n-i}} \cdot (i+1)^i\right] \ &= \sum\limits_{i=1}^{n}\left[\sqrt{\frac{n}{n-i}}\left(\frac{n}{n-i}\right)^{n-i} \cdot (i+1)^i\right] \ &= \sum\limits_{i=1}^{n}\left[\sqrt{\frac{n}{n-i}} \cdot \left(\frac{n}{n-i}\right)^{n-i} \cdot \left(1+\frac{1}{i}\right)^i \cdot i^i\right] \end{align*}$$
+
+Now, we can use the asymptotic approximation for the term $\left(1+\frac{1}{i}\right)^i$, which approaches $e$ as $i$ approaches infinity. So, we can replace $\left(1+\frac{1}{i}\right)^i$ with $e$ in the expression:
+
+$$\begin{align*} \sum\limits_{i=1}^{n}\left[\sqrt{\frac{n}{n-i}} \cdot \left(\frac{n}{n-i}\right)^{n-i} \cdot \left(1+\frac{1}{i}\right)^i \cdot i^i\right] &\approx \sum\limits_{i=1}^{n}\left[\sqrt{\frac{n}{n-i}} \cdot \left(\frac{n}{n-i}\right)^{n-i} \cdot e \cdot i^i\right] \ &= e \sum\limits_{i=1}^{n}\left[\sqrt{\frac{n}{n-i}} \cdot \left(\frac{n}{n-i}\right)^{n-i} \cdot i^i\right] \end{align*}$$
+
+This approximation provides an asymptotic approximation of the given expression using Stirling's formula and the asymptotic behavior of $\left(1+\frac{1}{i}\right)^i$..
