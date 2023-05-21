@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/数值分析作业-数值微分.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-数值积分.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             }
           },
           {
-            "id": "cdf6cc36700d5503",
+            "id": "773a6decf3c20a3b",
             "type": "leaf",
             "state": {
               "type": "ReferenceListView",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/数值分析作业-数值微分.md"
+                "file": "private/01-Diary/本周事务/数值分析作业-数值积分.md"
               }
             }
           },
@@ -141,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/数值分析作业-数值微分.md",
+                "file": "private/01-Diary/本周事务/数值分析作业-数值积分.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,6 +205,12 @@
   },
   "active": "1f7b928a3387f6d1",
   "lastOpenFiles": [
+    "private/08-Assets/Pasted image 20230521154426.png",
+    "private/01-Diary/本周事务/数值分析作业-数值积分.md",
+    "private/08-Assets/Pasted image 20230521154335.png",
+    "private/08-Assets/Pasted image 20230521154325.png",
+    "private/08-Assets/Pasted image 20230521152448.png",
+    "private/01-Diary/本周事务/数值分析作业-数值微分.md",
     "private/01-Diary/本周事务/概率论作业-第六章.md",
     "private/01-Diary/本周事务/数值分析作业-拟合和最小二乘法.md",
     "term/Homework/数值分析作业-插值.md",
@@ -228,9 +234,6 @@
     "private/02-Reading/summary/2022-05-24_文献阅读小结.md",
     "private/09-Templates/大牛页面模板.md",
     "private/02-Reading/3-people/Luis Martínez.md",
-    "private/08-Assets/Scripts/常用工具.md",
-    "private/00-MOC/任务看板.md",
-    "private/00-MOC/本周事务表.md",
     "private/08-Assets/pdfs/zotero data/storage/DI5EI8PC",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ/Zhou 等 - 2022 - Marginalization in random permutation set theory .pdf",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ",
@@ -247,7 +250,6 @@
     "private/08-Assets/Pasted image 20230507213856.png",
     "private/08-Assets/Pasted image 20230507213855.png",
     "private/08-Assets/Pasted image 20230507213854.png",
-    "private/08-Assets/Pasted image 20230507213851.png",
-    "images/etlt-extract-tweak-load-transform.png"
+    "private/08-Assets/Pasted image 20230507213851.png"
   ]
 }
