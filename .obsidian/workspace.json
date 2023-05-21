@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "private/01-Diary/本周事务/推导RPS的包络.md",
+                "file": "private/01-Diary/本周事务/能见度工创PPT.md",
                 "mode": "source",
                 "source": false
               }
@@ -130,7 +130,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "private/01-Diary/本周事务/推导RPS的包络.md"
+                "file": "private/01-Diary/本周事务/能见度工创PPT.md"
               }
             }
           },
@@ -140,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "private/01-Diary/本周事务/推导RPS的包络.md",
+                "file": "private/01-Diary/本周事务/能见度工创PPT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,8 +186,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,6 +207,7 @@
   },
   "active": "14960df8e3518172",
   "lastOpenFiles": [
+    "private/01-Diary/本周事务/推导RPS的包络.md",
     "private/08-Assets/pdfs/zotero data/zotero.sqlite.tmp",
     "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite.tmp",
     "private/08-Assets/pdfs/zotero data/better-bibtex.sqlite-journal",
@@ -215,7 +215,6 @@
     "private/08-Assets/pdfs/zotero data/translators/Databrary.js",
     "private/08-Assets/pdfs/zotero data/translators/CFF.js",
     "private/08-Assets/pdfs/zotero data/zotero.sqlite-journal",
-    "private/01-Diary/本周事务/推导RPS的包络.md",
     "private/06-Cards/202305211618.md",
     "private/01-Diary/本周事务/数值分析作业-数值积分.md",
     "private/08-Assets/Pasted image 20230521154426.png",
@@ -247,7 +246,6 @@
     "private/08-Assets/pdfs/zotero data/storage/DI5EI8PC",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ/Zhou 等 - 2022 - Marginalization in random permutation set theory .pdf",
     "private/08-Assets/pdfs/zotero data/storage/89IMABZQ",
-    "LiteratureNotes",
     "private/08-Assets/Excalidraw/Drawing 2023-05-12 21.50.07.excalidraw.png",
     "private/08-Assets/Pasted image 20230510115520.png",
     "private/08-Assets/Pasted image 20230507223709.png",
