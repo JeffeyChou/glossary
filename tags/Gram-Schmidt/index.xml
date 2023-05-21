@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gram-Schmidt on</title><link>https://glossary.jiefengzhou.com/tags/Gram-Schmidt/</link><description>Recent content in Gram-Schmidt on</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="https://glossary.jiefengzhou.com/tags/Gram-Schmidt/index.xml" rel="self" type="application/rss+xml"/><item><title>Gram-Schmidt</title><link>https://glossary.jiefengzhou.com/term/ref/Gram-Schmidt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://glossary.jiefengzhou.com/term/ref/Gram-Schmidt/</guid><description>Gram-Schmidt正交化是一种将线性无关的向量组转化为一组正交向量组的方法。其计算过程如下：
+假设有一组线性无关的向量组 $v_1, v_2, \cdots, v_n$，则可以通过以下步骤将其转化为一组正交向量组 $u_1, u_2, \cdots, u_n$：
+1.令 $u_1 = v_1$。
+2.令 $u_2 = v_2 - \frac{\langle v_2, u_1 \rangle}{\langle u_1, u_1 \rangle} u_1$。</description></item></channel></rss>
