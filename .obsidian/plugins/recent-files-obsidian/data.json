@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "推导RPS的包络",
+      "path": "private/01-Diary/本周事务/推导RPS的包络.md"
+    },
+    {
       "basename": "数值分析作业-数值积分",
       "path": "private/01-Diary/本周事务/数值分析作业-数值积分.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Chapter5-",
       "path": "private/01-Diary/本周事务/Chapter5-.md"
-    },
-    {
-      "basename": "slider test",
-      "path": "private/03-Projects/09-Slides/slider test.md"
     }
   ],
   "omittedPaths": [],
