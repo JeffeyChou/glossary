@@ -88,7 +88,15 @@ $$
 \begin{align*}
 S(n)&= \sum\limits_{i=1}^{n}[ P(n,i)(F(i)-1) ] \\
 &= \sum\limits_{i=1}^{n}P(n,i)F(i) - \sum\limits_{i=1}^{n}P(n,i)\\
-&= \sum\limits_{i=1}^{n}P(n,i)F(i) - e \Gamma(i+1, 1)+1\\
-&= 
+&= \sum\limits_{i=1}^{n}P(n,i)F(i) - e \Gamma(n+1, 1)+1\\
+&= \sum\limits_{i=1}^{n} \frac{n!}{	(n-i)!} \lfloor e \times i! \rfloor - \lfloor e \times n! \rfloor+1\\
+
 \end{align*}
 $$
+
+$\sum\limits_{i=1}^{n}\left(\frac{n! \times i!}{(n-i)!}\right)$
+
+首先，可以将分子中的 $n!$ 提出来，得到：
+
+$$n!\sum\limits_{i=1}^{n}\left(\frac{i!}{(n-i)!}\right)$$
+
