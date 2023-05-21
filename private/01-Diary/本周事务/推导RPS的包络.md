@@ -31,10 +31,24 @@ $$
 # $F(i)$ 的推导
 
 首先，根据 $F(i)$ 的定义式以及 $\Gamma$ 函数的定义式，有：$$
-F(i)=e \Gamma(i+1,1) 
+F(i)=e \Gamma(i+1,1)=\lfloor e (i)! \rfloor
 $$
 如果只考虑整数情况，可以对解析式进行向下取整。
 
 
 
 ![](private/08-Assets/Pasted%20image%2020230521174238.png)
+
+- 证明过程：
+$$
+\sum\limits_{k=0}^n P(n,k)=n!\left(\sum\limits_{k=0}^n\frac{1}{(n-k)!}\right)=n!\left(\sum\limits_{k=0}^n\frac{1}{k!}\right)
+$$
+由不完全形式的 $\Gamma$ 函数的定义
+$$
+\Gamma(n+1,x)=\int_x^\infty t^n e^{-t}dt=n!e^{-x}\sum\limits_{k=0}^n\left(\frac{x^k}{k!}\right)
+$$
+在上式中令 $x=1$ ，得到：
+$$
+\Gamma(n+1,1)=\frac{n!}{e}\left(\sum_{k=0}^n\frac{1}{k!}\right)
+$$
+ying
