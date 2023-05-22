@@ -1,0 +1,13 @@
+.DS_Store
+public
+resources
+.idea
+content/.obsidian
+assets/indices/linkIndex.json
+assets/indices/contentIndex.json
+linkmap
+content/.trash/
+content/.vscode/
+content/private/
+content/.obsidian
+content/.stfolder
