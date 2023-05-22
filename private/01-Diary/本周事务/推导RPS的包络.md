@@ -89,10 +89,11 @@ $$
 S(n)&= \sum\limits_{i=1}^{n}[ P(n,i)(F(i)-1) ] \\
 &= \sum\limits_{i=1}^{n}P(n,i)F(i) - \sum\limits_{i=1}^{n}P(n,i)\\
 &= \sum\limits_{i=1}^{n}P(n,i)F(i) - e \Gamma(n+1, 1)+1\\
-&= \sum\limits_{i=1}^{n} \frac{n!}{	(n-i)!} \lfloor e \times i! \rfloor - \lfloor e \times n! \rfloor+1\\
+&= \sum\limits_{i=1}^{n} \frac{n!}{	(n-i)!} e \Gamma(i+1,1) \rfloor - \lfloor e \times n! \rfloor+1\\
 &= n! \times \lfloor e \sum\limits_{i=1}^{n} \frac{i! }{	(n-i)!} \rfloor - \lfloor e \times n! \rfloor+1
 \end{align*}
 $$
+
 
 
 定义 $\theta(n)=\sum\limits_{i=1}^{n} \frac{i! }{	(n-i)!}$
